@@ -1,0 +1,320 @@
+﻿name: 🚀 Deploy GaiaOps Website to Sevalla
+
+on:
+  # Trigger deployment on push to main branch
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'astro.config.mjs'
+      - 'tsconfig.json'
+  
+  # Allow manual deployment from Actions tab
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+
+# Set permissions for deployment
+permissions:
+  contents: read
+  deployments: write
+  id-token: write
+
+# Environment variables
+env:
+  NODE_VERSION: '22'
+  ASTRO_TELEMETRY_DISABLED: true
+
+jobs:
+  # Build and test job
+  build-and-test:
+    name: 🔨 Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📥 Install dependencies
+        run: npm ci
+
+      - name: 🔍 Run linting
+        run: npm run lint
+        continue-on-error: true
+
+      - name: 🧪 Run tests
+        run: npm run test
+        continue-on-error: true
+
+      - name: 🏗️ Build Astro site
+        run: npm run build
+        env:
+          # Add any build-time environment variables here
+          PUBLIC_SITE_URL: ${{ secrets.PRODUCTION_URL || 'https://gaiaops.com' }}
+
+      - name: 📊 Generate build info
+        run: |
+          echo "Build completed at: $(date)" > dist/build-info.txt
+          echo "Commit: ${{ github.sha }}" >> dist/build-info.txt
+          echo "Branch: ${{ github.ref_name }}" >> dist/build-info.txt
+          echo "Build number: ${{ github.run_number }}" >> dist/build-info.txt
+
+      - name: 🗜️ Optimize build artifacts
+        run: |
+          # Remove any unnecessary files
+          find dist -name "*.map" -type f -delete
+          # Create a tarball for faster upload
+          tar -czf gaiaops-build.tar.gz -C dist .
+
+      - name: 📤 Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaiaops-build
+          path: gaiaops-build.tar.gz
+          retention-days: 7
+
+  # Deploy to development environment
+  deploy-development:
+    name: 🚀 Deploy to Development
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    environment: 
+      name: development
+      url: ${{ steps.deploy.outputs.deployment-url }}
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📥 Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: gaiaops-build
+
+      - name: 🗃️ Extract build artifacts
+        run: |
+          mkdir -p dist
+          tar -xzf gaiaops-build.tar.gz -C dist
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 🚀 Deploy to Sevalla Development
+        id: deploy
+        uses: sevalla-hosting/sevalla-deploy@v1
+        with:
+          # Use deploy hook for development environment
+          deploy-hook: ${{ secrets.SEVALLA_DEV_DEPLOY_HOOK }}
+          site-directory: dist
+          environment: development
+        env:
+          SEVALLA_API_TOKEN: ${{ secrets.SEVALLA_API_TOKEN }}
+
+      - name: 💬 Comment deployment status
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `🚀 **Development Deployment Complete!**
+              
+              **Environment:** Development
+              **URL:** ${{ steps.deploy.outputs.deployment-url }}
+              **Commit:** \`${{ github.sha }}\`
+              **Build:** #${{ github.run_number }}
+              
+              The latest changes are now live on the development environment for testing.`
+            })
+
+  # Deploy to production environment  
+  deploy-production:
+    name: 🌟 Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [build-and-test, deploy-development]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment: 
+      name: production
+      url: https://gaiaops.com
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📥 Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: gaiaops-build
+
+      - name: 🗃️ Extract build artifacts
+        run: |
+          mkdir -p dist
+          tar -xzf gaiaops-build.tar.gz -C dist
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 🌟 Deploy to Sevalla Production
+        id: deploy
+        uses: sevalla-hosting/sevalla-deploy@v1
+        with:
+          # Use deploy hook for production environment
+          deploy-hook: ${{ secrets.SEVALLA_PROD_DEPLOY_HOOK }}
+          site-directory: dist
+          environment: production
+          wait-for-deployment: true
+        env:
+          SEVALLA_API_TOKEN: ${{ secrets.SEVALLA_API_TOKEN }}
+
+      - name: 🏥 Health check
+        run: |
+          echo "🔍 Running health check on production deployment..."
+          sleep 30
+          
+          # Basic health check
+          if curl -f -s https://gaiaops.com > /dev/null; then
+            echo "✅ Production site is responding"
+          else
+            echo "❌ Production site health check failed"
+            exit 1
+          fi
+
+      - name: 📊 Update deployment status
+        if: success()
+        run: |
+          echo "🎉 Production deployment successful!"
+          echo "📈 Deployment metrics:"
+          echo "  - Build time: ${{ github.event.head_commit.timestamp }}"
+          echo "  - Deploy time: $(date)"
+          echo "  - URL: https://gaiaops.com"
+
+  # Lighthouse performance audit (runs after production deployment)
+  lighthouse-audit:
+    name: 🔍 Lighthouse Performance Audit
+    runs-on: ubuntu-latest
+    needs: deploy-production
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔍 Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://gaiaops.com
+          configPath: '.lighthouserc.json'
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  # Notification job (runs regardless of success/failure)
+  notify-deployment:
+    name: 📢 Notify Deployment Status
+    runs-on: ubuntu-latest
+    needs: [deploy-production, lighthouse-audit]
+    if: always() && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: 📊 Determine deployment status
+        id: status
+        run: |
+          if [[ "${{ needs.deploy-production.result }}" == "success" ]]; then
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "message=🎉 GaiaOps website successfully deployed to production!" >> $GITHUB_OUTPUT
+            echo "color=good" >> $GITHUB_OUTPUT
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+            echo "message=❌ GaiaOps website deployment to production failed!" >> $GITHUB_OUTPUT
+            echo "color=danger" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📢 Slack notification
+        if: env.SLACK_WEBHOOK_URL != ''
+        uses: 8398a7/action-slack@v3
+        with:
+          status: custom
+          custom_payload: |
+            {
+              "text": "${{ steps.status.outputs.message }}",
+              "attachments": [{
+                "color": "${{ steps.status.outputs.color }}",
+                "fields": [
+                  {
+                    "title": "Repository",
+                    "value": "${{ github.repository }}",
+                    "short": true
+                  },
+                  {
+                    "title": "Branch",
+                    "value": "${{ github.ref_name }}",
+                    "short": true
+                  },
+                  {
+                    "title": "Commit",
+                    "value": "${{ github.sha }}",
+                    "short": true
+                  },
+                  {
+                    "title": "Build",
+                    "value": "#${{ github.run_number }}",
+                    "short": true
+                  }
+                ]
+              }]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      # Alternative: Email notification
+      - name: 📧 Email notification
+        if: env.SMTP_SERVER != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "${{ steps.status.outputs.message }}"
+          body: |
+            GaiaOps Website Deployment Report
+            
+            Status: ${{ steps.status.outputs.status }}
+            Repository: ${{ github.repository }}
+            Branch: ${{ github.ref_name }}
+            Commit: ${{ github.sha }}
+            Build: #${{ github.run_number }}
+            
+            Production URL: https://gaiaops.com
+            Development URL: https://dev.gaiaops.com
+            
+            View deployment details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          to: ${{ secrets.NOTIFICATION_EMAIL }}
+          from: GaiaOps CI/CD <noreply@gaiaops.com>
