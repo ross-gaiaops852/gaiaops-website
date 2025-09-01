@@ -1,0 +1,222 @@
+﻿name: 🚀 GaiaOps Website CI/CD Pipeline
+
+on:
+  # Trigger on push to main and development branches
+  push:
+    branches: [ main, development ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'astro.config.mjs'
+      - 'tsconfig.json'
+  
+  # Allow manual workflow runs
+  workflow_dispatch:
+
+# Set permissions for quality checks and monitoring
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+# Environment variables
+env:
+  NODE_VERSION: '22'
+  ASTRO_TELEMETRY_DISABLED: true
+
+jobs:
+  # Build, test and quality assurance job
+  build-and-test:
+    name: 🔨 Build, Test & Quality Checks
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📥 Install dependencies
+        run: npm ci
+
+      - name: 🔍 Run linting
+        run: npm run lint:check
+
+      - name: 🎨 Check code formatting
+        run: npm run format:check
+
+      - name: ✅ Run type checking
+        run: npm run check
+
+      - name: 🏗️ Build Astro site
+        run: npm run build
+        env:
+          PUBLIC_SITE_URL: ${{ github.ref == 'refs/heads/main' && 'https://gaiaops-production-n8rje.sevalla.page' || 'https://gaiaops-dev-f1kaz.sevalla.page' }}
+
+      - name: 📊 Generate build info
+        run: |
+          echo "Build completed at: $(date)" > dist/build-info.txt
+          echo "Commit: ${{ github.sha }}" >> dist/build-info.txt
+          echo "Branch: ${{ github.ref_name }}" >> dist/build-info.txt
+          echo "Build number: ${{ github.run_number }}" >> dist/build-info.txt
+
+      - name: 📤 Upload build artifacts for testing
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaiaops-build-${{ github.ref_name }}
+          path: dist/
+          retention-days: 1
+
+  # Wait for Sevalla deployment and run quality checks
+  wait-and-monitor:
+    name: 📊 Monitor Deployment & Quality Checks
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/development'
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⏱️ Wait for Sevalla deployment
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            SITE_URL="https://gaiaops-production-n8rje.sevalla.page"
+            ENV="Production"
+          else
+            SITE_URL="https://gaiaops-dev-f1kaz.sevalla.page"
+            ENV="Development"
+          fi
+          
+          echo "Waiting for $ENV deployment to complete..."
+          sleep 60  # Give Sevalla time to deploy
+          
+          # Check if site is responding with new content
+          for i in {1..10}; do
+            if curl -f -s $SITE_URL > /dev/null; then
+              echo "✅ $ENV site is responding"
+              break
+            else
+              echo "⏳ Waiting for $ENV site... (attempt $i/10)"
+              sleep 30
+            fi
+          done
+
+      - name: 🏥 Run site health check
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            SITE_URL="https://gaiaops-production-n8rje.sevalla.page"
+          else
+            SITE_URL="https://gaiaops-dev-f1kaz.sevalla.page"
+          fi
+          
+          echo "Running health check on $SITE_URL"
+          
+          # Basic health check
+          if curl -f -s -o /dev/null -w "%{http_code}" $SITE_URL | grep -q "200"; then
+            echo "✅ Site health check passed"
+          else
+            echo "❌ Site health check failed"
+            exit 1
+          fi
+
+  # Lighthouse performance audit (runs after production deployment)
+  lighthouse-audit:
+    name: 🔍 Lighthouse Performance Audit
+    runs-on: ubuntu-latest
+    needs: wait-and-monitor
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔍 Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://gaiaops-production-n8rje.sevalla.page
+          configPath: '.lighthouserc.json'
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  # Notification job (runs regardless of success/failure)
+  notify-status:
+    name: 📢 Notify Build & Quality Status
+    runs-on: ubuntu-latest
+    needs: [build-and-test, wait-and-monitor, lighthouse-audit]
+    if: always()
+
+    steps:
+      - name: 📊 Determine overall status
+        id: status
+        run: |
+          if [[ "${{ needs.build-and-test.result }}" == "success" && "${{ needs.wait-and-monitor.result }}" == "success" ]]; then
+            if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+              echo "status=success" >> $GITHUB_OUTPUT
+              echo "message=✅ GaiaOps production build and quality checks passed!" >> $GITHUB_OUTPUT
+              echo "color=good" >> $GITHUB_OUTPUT
+              echo "url=https://gaiaops-production-n8rje.sevalla.page" >> $GITHUB_OUTPUT
+            else
+              echo "status=success" >> $GITHUB_OUTPUT
+              echo "message=✅ GaiaOps development build and quality checks passed!" >> $GITHUB_OUTPUT
+              echo "color=good" >> $GITHUB_OUTPUT
+              echo "url=https://gaiaops-dev-f1kaz.sevalla.page" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+            echo "message=❌ GaiaOps build or quality checks failed!" >> $GITHUB_OUTPUT
+            echo "color=danger" >> $GITHUB_OUTPUT
+            echo "url=N/A" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 💬 Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const status = '${{ steps.status.outputs.status }}';
+            const message = status === 'success' 
+              ? '✅ **Quality Checks Passed!**\n\nYour changes look good. The build completed successfully and all quality checks passed.'
+              : '❌ **Quality Checks Failed**\n\nPlease review the failed checks and fix any issues before merging.';
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `${message}\n\n**Details:**\n- Build: ${{ needs.build-and-test.result }}\n- Health Check: ${{ needs.wait-and-monitor.result }}\n- Branch: \`${{ github.ref_name }}\`\n- Commit: \`${{ github.sha }}\``
+            })
+
+      - name: 📧 Optional: Email notification
+        if: env.SMTP_SERVER != '' && github.ref == 'refs/heads/main'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "${{ steps.status.outputs.message }}"
+          body: |
+            GaiaOps Website Build Report
+            
+            Status: ${{ steps.status.outputs.status }}
+            Repository: ${{ github.repository }}
+            Branch: ${{ github.ref_name }}
+            Commit: ${{ github.sha }}
+            Build: #${{ github.run_number }}
+            
+            Site URL: ${{ steps.status.outputs.url }}
+            
+            View build details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          to: ${{ secrets.NOTIFICATION_EMAIL }}
+          from: GaiaOps CI/CD <noreply@gaiaops.com>

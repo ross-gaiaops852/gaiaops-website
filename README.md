@@ -41,3 +41,4 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<-rw-r--r-- 1 rcart 197609 109 Aug 16 02:21 ClickUp GitHub integration test for task 86d01mqmk -->
