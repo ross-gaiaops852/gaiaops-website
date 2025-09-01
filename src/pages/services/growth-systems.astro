@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Growth Systems Playbooks | GaiaOps"
+  description="Build systematic growth capabilities through optimized lead management and automated business development. Foundation → Advanced → Complete levels."
+>
+  <Header />
+  
+  <main id="main-content" class="service-page">
+    <!-- ABOVE THE FOLD: Clean & Simple -->
+    <section class="hero">
+      <div class="container">
+        <h1>Build Predictable Revenue Growth</h1>
+        <p class="hero-subtitle">Generate qualified leads and accelerate conversions with systematic growth engines</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Get Started</a>
+          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELOW THE FOLD: Progressive Detail -->
+    <section class="problem-section">
+      <div class="container">
+        <h2>The Growth Systems Problem</h2>
+        <p class="problem-description">
+          Reactive sales approaches, inconsistent lead generation, low conversion rates, and unpredictable revenue 
+          make it impossible to plan for growth or invest confidently in your firm's future.
+        </p>
+      </div>
+    </section>
+
+    <section class="solution-section">
+      <div class="container">
+        <h2>Our Solution: Systematic Growth Playbooks</h2>
+        <p class="solution-description">
+          Build predictable revenue through optimized lead management, intelligent scoring systems, 
+          and automated business development that consistently fills your pipeline with qualified opportunities.
+        </p>
+      </div>
+    </section>
+
+    <section class="playbooks-section">
+      <div class="container">
+        <h2>Available Growth Systems Playbooks</h2>
+        
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Foundation Playbook</h3>
+            <div class="level-specs">40 hours • 6 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Lead tracking workflows, proposal templates, basic CRM</p>
+            <ul>
+              <li>Systematic lead tracking and management</li>
+              <li>Standardized proposal templates and processes</li>
+              <li>Basic CRM implementation and optimization</li>
+              <li>Pipeline management and forecasting</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> 50% improvement in lead conversion, systematic sales process</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Advanced Playbook</h3>
+            <div class="level-specs">45 hours • 7 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Advanced lead scoring, competitive intelligence tools</p>
+            <ul>
+              <li>Advanced lead scoring and prioritization</li>
+              <li>Competitive intelligence and market analysis</li>
+              <li>Automated nurturing and follow-up sequences</li>
+              <li>Strategic business development optimization</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> 30% increase in qualified opportunities, competitive advantage</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Complete Playbook</h3>
+            <div class="level-specs">55 hours • 8 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Predictive conversion optimization, automated competitive positioning</p>
+            <ul>
+              <li>AI-powered conversion optimization</li>
+              <li>Automated competitive positioning and messaging</li>
+              <li>Predictive opportunity identification</li>
+              <li>Strategic growth acceleration systems</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> Predictive growth optimization, systematic market expansion</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideal-state">
+      <div class="container">
+        <h2>Your Ideal State</h2>
+        <div class="ideal-content">
+          <p class="ideal-vision">
+            <strong>Systematic growth with predictive opportunity identification:</strong> 
+            Your business development operates as a predictable growth engine with automated lead 
+            qualification, intelligent competitive positioning, and systematic expansion that 
+            consistently delivers qualified opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Systematize Your Growth?</h2>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Start Foundation Playbook</a>
+          <a href="/assessment" class="btn btn-secondary">Take Operational Assessment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+.track-hero {
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-8) 0;
+}
+
+.level-card {
+  border-left: 4px solid var(--color-teal-primary);
+}
+
+.cta-section {
+  background: var(--color-teal-primary);
+}
+
+.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-teal-primary);
+}
+
+.btn-secondary:hover {
+  color: var(--color-teal-primary);
+}
+</style>

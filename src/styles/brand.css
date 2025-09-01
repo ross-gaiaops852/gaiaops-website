@@ -1,0 +1,229 @@
+/* GaiaOps Brand System - CSS Custom Properties */
+
+:root {
+  /* Primary Brand Colors */
+  --color-teal-primary: #4A9B8B;
+  --color-teal-primary-hover: #3a8070;
+  --color-navy-primary: #1E3A5F;
+  --color-navy-primary-hover: #162d47;
+  --color-orange-accent: #E07A47;
+  --color-orange-accent-hover: #d4653d;
+
+  /* Supporting Colors */
+  --color-dark-gray: #2D3748;
+  --color-medium-gray: #4A5568;
+  --color-light-gray: #E2E8F0;
+  --color-off-white: #F7FAFC;
+  --color-white: #FFFFFF;
+
+  /* Status Colors */
+  --color-success-green: #48BB78;
+  --color-warning-orange: #ED8936;
+  --color-error-red: #F56565;
+  --color-info-blue: #4299E1;
+
+  /* Track-Specific Colors */
+  --color-track-coordination: var(--color-teal-primary);
+  --color-track-client: var(--color-navy-primary);
+  --color-track-resource: var(--color-orange-accent);
+  --color-track-quality: var(--color-success-green);
+  --color-track-intelligence: var(--color-info-blue);
+  --color-track-growth: var(--color-teal-primary);
+  --color-track-strategic: var(--color-navy-primary);
+
+  /* Typography Scale */
+  --font-family-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-secondary: 'Crimson Pro', Georgia, 'Times New Roman', Times, serif;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font Sizes - Typography Hierarchy */
+  --font-size-h1: 2.5rem;    /* 40px */
+  --font-size-h2: 2rem;      /* 32px */
+  --font-size-h3: 1.5rem;    /* 24px */
+  --font-size-h4: 1.25rem;   /* 20px */
+  --font-size-body: 1rem;    /* 16px */
+  --font-size-large: 1.125rem; /* 18px */
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-caption: 0.75rem; /* 12px */
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+
+  /* Spacing System - 8px Grid */
+  --spacing-1: 0.5rem;   /* 8px */
+  --spacing-2: 1rem;     /* 16px */
+  --spacing-3: 1.5rem;   /* 24px */
+  --spacing-4: 2rem;     /* 32px */
+  --spacing-6: 3rem;     /* 48px */
+  --spacing-8: 4rem;     /* 64px */
+  --spacing-12: 6rem;    /* 96px */
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;  /* 6px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /* Container Sizes */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}
+
+/* Progressive Level Colors */
+:root {
+  --color-foundation-bg: #f0fdfa;      /* Light teal background */
+  --color-foundation-border: #5eead4;   /* Teal-200 */
+  --color-advanced-bg: #e0f2fe;        /* Light blue background */
+  --color-advanced-border: #7dd3fc;     /* Blue-300 */
+  --color-complete-bg: #f8fafc;        /* Navy-tinted background */
+  --color-complete-border: #cbd5e1;     /* Slate-300 */
+}
+
+/* Button Variations */
+.btn-primary {
+  background-color: var(--color-teal-primary);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-teal-primary-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-navy-primary);
+  border: 2px solid var(--color-navy-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-navy-primary);
+  color: var(--color-white);
+}
+
+.btn-accent {
+  background-color: var(--color-orange-accent);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-orange-accent-hover);
+}
+
+/* Component Base Styles */
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-3);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Typography Classes */
+.text-h1 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.text-h2 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+.text-h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+.text-h4 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+}
+
+.text-body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-large {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-small {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-2);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: var(--spacing-4);
+}
+
+.mb-6 {
+  margin-bottom: var(--spacing-6);
+}
+
+.py-6 {
+  padding-top: var(--spacing-6);
+  padding-bottom: var(--spacing-6);
+}
+
+.py-8 {
+  padding-top: var(--spacing-8);
+  padding-bottom: var(--spacing-8);
+}
+
+.py-12 {
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-12);
+}

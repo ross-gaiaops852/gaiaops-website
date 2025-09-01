@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Quality Assurance Playbooks | GaiaOps"
+  description="Ensure consistent deliverable quality and eliminate quality surprises through systematic QA processes. Foundation → Advanced → Complete levels."
+>
+  <Header />
+  
+  <main id="main-content" class="service-page">
+    <!-- ABOVE THE FOLD: Clean & Simple -->
+    <section class="hero">
+      <div class="container">
+        <h1>Eliminate Quality Surprises Forever</h1>
+        <p class="hero-subtitle">Build client trust and eliminate costly rework with systematic quality excellence</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Get Started</a>
+          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELOW THE FOLD: Progressive Detail -->
+    <section class="problem-section">
+      <div class="container">
+        <h2>The Quality Assurance Problem</h2>
+        <p class="problem-description">
+          Inconsistent deliverables, last-minute quality issues, compliance risks, and client dissatisfaction 
+          create costly rework cycles and damage your firm's reputation in competitive markets.
+        </p>
+      </div>
+    </section>
+
+    <section class="solution-section">
+      <div class="container">
+        <h2>Our Solution: Systematic Quality Excellence Playbooks</h2>
+        <p class="solution-description">
+          Ensure consistent quality through automated processes, predictive risk assessment, 
+          and continuous improvement systems that prevent surprises and build client confidence.
+        </p>
+      </div>
+    </section>
+
+    <section class="playbooks-section">
+      <div class="container">
+        <h2>Available Quality Assurance Playbooks</h2>
+        
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Foundation Playbook</h3>
+            <div class="level-specs">40 hours • 6 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Document version control, quality checklists, compliance tracking</p>
+            <ul>
+              <li>Centralized document version control</li>
+              <li>Standardized quality checklists and processes</li>
+              <li>Compliance tracking and audit trails</li>
+              <li>Quality metrics and reporting dashboards</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> 70% reduction in quality issues, consistent compliance</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Advanced Playbook</h3>
+            <div class="level-specs">45 hours • 7 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Automated quality scoring, risk assessment workflows</p>
+            <ul>
+              <li>Automated quality scoring and assessment</li>
+              <li>Risk identification and mitigation workflows</li>
+              <li>Advanced compliance monitoring and alerts</li>
+              <li>Quality trend analysis and optimization</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> Proactive quality management, zero compliance surprises</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Complete Playbook</h3>
+            <div class="level-specs">55 hours • 8 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> AI-powered quality risk prediction, continuous improvement recommendations</p>
+            <ul>
+              <li>AI-powered quality risk prediction</li>
+              <li>Automated continuous improvement recommendations</li>
+              <li>Predictive compliance management</li>
+              <li>Strategic quality optimization across all projects</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> Predictive quality excellence, competitive quality advantage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideal-state">
+      <div class="container">
+        <h2>Your Ideal State</h2>
+        <div class="ideal-content">
+          <p class="ideal-vision">
+            <strong>Zero quality surprises with predictive quality management:</strong> 
+            Your deliverables maintain consistent excellence through automated quality monitoring, 
+            predictive risk identification, and continuous improvement systems that enhance your 
+            reputation and client satisfaction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-flexibility">
+      <div class="container">
+        <h2>We Work With Your Current Tools</h2>
+        <p class="flexibility-description">
+          Whether you're using SharePoint, Google Drive, quality management software, or compliance systems - we'll integrate with your preferred platforms while implementing systematic quality excellence.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Ensure Quality Excellence?</h2>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Start Foundation Playbook</a>
+          <a href="/assessment" class="btn btn-secondary">Take Operational Assessment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-2);
+}
+
+.track-hero {
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-8) 0;
+}
+
+.track-badge, .track-hero h1, .track-description, .progressive-levels, .level-indicator, .level, .arrow {
+  /* Inherit shared hero styles */
+}
+
+.implementation-levels, .level-card, .level-header, .level-content, .impact {
+  /* Inherit shared implementation styles */
+}
+
+.level-card {
+  border-left: 4px solid var(--color-success-green);
+}
+
+.ideal-state, .system-flexibility, .cta-section {
+  /* Inherit shared section styles */
+}
+
+.cta-section {
+  background: var(--color-success-green);
+}
+
+.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-success-green);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-off-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-success-green);
+}
+
+/* Mobile styles inherited */
+</style>
