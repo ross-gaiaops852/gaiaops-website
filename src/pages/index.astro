@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import TrackCard from '../components/ui/TrackCard.astro';
+import Icon from '../components/Icon.astro';
 import { tracks } from '../utils/trackData.ts';
 ---
 
@@ -18,25 +19,37 @@ import { tracks } from '../utils/trackData.ts';
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <h1>Systematic Playbooks On Autopilot</h1>
+            <h1>Multiply Your Environmental Impact</h1>
             
-            <p class="subtitle">The wrong processes or outdated systems can cost environmental consultancies 30% more revenue over time. We help you strategically implement proven operational playbooks to make sure that doesn't happen.</p>
+            <p class="subtitle">Transform operational chaos into systematic excellence. Environmental consultancies use our proven playbooks to serve 50% more clients without hiring additional staff.</p>
             
-            <p class="teaser">Sound interesting? Keep reading...</p>
 
             <div class="hero-ctas">
-              <a href="/contact" class="btn btn-primary-orange">Book Discovery Call</a>
-              <a href="/assessment" class="btn btn-secondary-white">Take Operational Assessment</a>
+              <button class="btn btn-primary-orange" onclick="alert('Assessment coming soon!')">Take Operational Assessment</button>
+              <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-secondary-white">Book Discovery Call</a>
             </div>
           </div>
 
           <div class="hero-image">
-            <div class="success-visual">
-              <div>
-                <strong>Operational Transformation Visual</strong><br>
-                Before/After Dashboard<br>
-                (Manual Processes → Automated Workflows)<br>
-                <em>System visualization showing efficiency gains</em>
+            <div class="metrics-dashboard">
+              <h3>Your Results With GaiaOps</h3>
+              <div class="metric-cards">
+                <div class="metric-card">
+                  <span class="metric-label">Client Capacity</span>
+                  <span class="metric-value">↑ 50%</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-label">Admin Time</span>
+                  <span class="metric-value">↓ 40%</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-label">Team Utilization</span>
+                  <span class="metric-value">↑ 85%</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-label">Profit Margin</span>
+                  <span class="metric-value">↑ 25%</span>
+                </div>
               </div>
             </div>
           </div>
@@ -46,151 +59,497 @@ import { tracks } from '../utils/trackData.ts';
       </div>
     </section>
 
-    <!-- 2. Results Section -->
-    <section class="results-section">
+    <!-- 2. Problems Section -->
+    <section class="problems-section">
       <div class="container">
-        <div class="results-content">
-          <div class="results-text">
-            <h2>Systematic Excellence Results</h2>
-            <p>Get expert guidance on implementing operational playbooks into your consultancy. Identify high-impact opportunities, eliminate inefficiencies, and develop a roadmap for systematic operational success.</p>
+        <div class="problems-content">
+          <div class="problem-cards">
+            <div class="problem-card">
+              <div class="problem-icon">
+                <Icon name="x-circle" type="outline" class="w-8 h-8 text-white" />
+              </div>
+              <h3>Turning Away Projects</h3>
+              <p>Your team is at capacity, forcing you to decline meaningful environmental work</p>
+            </div>
             
-            <div class="results-ctas">
-              <a href="/contact" class="btn btn-primary-orange">Book Discovery Call</a>
-              <a href="/assessment" class="btn btn-secondary-white">Take Operational Assessment</a>
+            <div class="problem-card">
+              <div class="problem-icon">
+                <Icon name="clock" type="outline" class="w-8 h-8 text-white" />
+              </div>
+              <h3>Working Evenings</h3>
+              <p>Spending nights on admin work instead of with family or recharging</p>
+            </div>
+            
+            <div class="problem-card">
+              <div class="problem-icon">
+                <Icon name="chart-bar-square" type="outline" class="w-8 h-8 text-white" />
+              </div>
+              <h3>Losing to Competitors</h3>
+              <p>Watching other firms win projects because they can deliver faster or cheaper</p>
+            </div>
+            
+            <div class="problem-card">
+              <div class="problem-icon">
+                <Icon name="user-group" type="outline" class="w-8 h-8 text-white" />
+              </div>
+              <h3>Staff Burnout</h3>
+              <p>Talented team members leaving due to overwhelming workloads and chaos</p>
             </div>
           </div>
 
-          <div class="results-stats">
-            <div class="stat-item">
-              <div class="stat-icon">📈</div>
-              <div class="number">35%</div>
-              <div class="label">More Efficiency<br><span class="detail">average increase in operational productivity</span></div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">🎯</div>
-              <div class="number">100%</div>
-              <div class="label">Less Chaos<br><span class="detail">stop firefighting and start systematizing</span></div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">⚡</div>
-              <div class="number">45%</div>
-              <div class="label">Less Manual Work<br><span class="detail">average reduction in administrative overhead</span></div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon">💰</div>
-              <div class="number">5-10%</div>
-              <div class="label">More Revenue<br><span class="detail">average net profit increase, $50K for every $1M!</span></div>
+          <div class="problem-description">
+            <h2>The Hidden Cost of Operational Chaos</h2>
+            <p>Every day, environmental consultancies face challenges that limit their impact. You started this work to protect our planet, but operational inefficiencies keep getting in the way.</p>
+            
+            <div class="impact-stats">
+              <div class="stat-item">
+                <span class="stat-number">30%</span>
+                <span class="stat-label">Revenue lost to inefficiency</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2-3 hours</span>
+                <span class="stat-label">Daily admin overhead per person</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">40%</span>
+                <span class="stat-label">Projects declined due to capacity</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="section-cta" style="text-align: center; padding: 2rem 0;">
+        <p style="font-size: 1.125rem; margin-bottom: 1rem; color: #2C3E50;">Ready to break free from operational chaos?</p>
+        <button class="btn btn-secondary" onclick="alert('Assessment coming soon!')" style="margin-right: 1rem;">Take the Free Assessment</button>
+        <span style="margin: 0 1rem; color: #6B7280;">or</span>
+        <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary-orange">Book a Discovery Call</button>
+      </div>
     </section>
 
-    <!-- 3. Services Section -->
-    <section class="services-section">
+    <!-- 3. Choose Your Future Section -->
+    <section class="stakes-section">
+      <div class="container">
+        <h2>Where Will You Be in 12 Months?</h2>
+        <p class="subtitle">The path you take today determines tomorrow's reality</p>
+        
+        <div class="futures-comparison">
+          <div class="failure-column">
+            <h3>Without Change...</h3>
+            <ul class="failure-points">
+              <li>Still at capacity → Missing growth opportunities</li>
+              <li>Same stress levels → No improvement in quality of life</li>
+              <li>Competitors advancing → Falling behind in the market</li>
+              <li>Team frustrated → Talent looking elsewhere</li>
+            </ul>
+            <p class="bottom-line">Another year older, but not further ahead</p>
+          </div>
+          
+          <div class="success-column">
+            <h3>With GaiaOps...</h3>
+            <ul class="success-points">
+              <li>30-50% more revenue → Same team, more impact</li>
+              <li>Predictable operations → Peace of mind at night</li>
+              <li>Market leadership → Known for operational excellence</li>
+              <li>Team thriving → Engaged and empowered</li>
+            </ul>
+            <p class="bottom-line">The successful firm you always envisioned</p>
+          </div>
+        </div>
+        
+        <p class="transition-statement">The difference between these futures? The operational systems you implement now.</p>
+      </div>
+
+      <div class="section-cta" style="text-align: center; padding: 2rem 0; background-color: #F8F9FA;">
+        <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #1B365D;">Choose the successful path forward</p>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary-orange">Start Your Transformation</a>
+      </div>
+    </section>
+
+    <!-- 4. Guide Authority Section -->
+    <section class="guide-authority" style="background-color: white; padding: 4rem 0;">
+      <div class="container">
+        <h2 style="color: #1B365D; text-align: center;">Built for Growing Environmental Consultancies</h2>
+        <p style="text-align: center; color: #2C3E50; font-size: 1.125rem; margin-bottom: 2rem;">We understand your unique challenges because we've dedicated ourselves to solving them</p>
+        
+        <div class="empathy-statement" style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+          <p style="font-size: 1.1rem; color: #2C3E50; line-height: 1.7;">
+            You didn't start your consultancy to wrestle with spreadsheets and chase invoices. You started it to protect watersheds, restore habitats, and solve environmental challenges. Yet operational inefficiencies keep pulling you away from that mission.
+          </p>
+        </div>
+        
+        <div class="authority-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 900px; margin: 0 auto;">
+          <div class="foundation-column">
+            <h3 style="color: #2A7F7E; margin-bottom: 1rem;">Our Foundation</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem;"><strong>Hundreds of hours</strong> researching environmental consultancy operations</li>
+              <li style="margin-bottom: 1rem;"><strong>Specialized focus</strong> on growing environmental firms ready to scale</li>
+              <li style="margin-bottom: 1rem;"><strong>Deep understanding</strong> of regulatory requirements and field coordination</li>
+              <li style="margin-bottom: 1rem;"><strong>Systematic frameworks</strong> developed for environmental consulting workflows</li>
+            </ul>
+          </div>
+          
+          <div class="difference-column">
+            <h3 style="color: #2A7F7E; margin-bottom: 1rem;">What Makes Us Different</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem;"><strong>Industry-specific expertise</strong> - We exclusively serve environmental consultancies</li>
+              <li style="margin-bottom: 1rem;"><strong>Complete operational systems</strong> - Beyond software, we implement integrated workflows</li>
+              <li style="margin-bottom: 1rem;"><strong>Human-centric AI automation</strong> - Smart technology that enhances your team</li>
+              <li style="margin-bottom: 1rem;"><strong>Flexible implementation</strong> - Works with existing tools or helps deploy better ones</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="trust-signal" style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #E2E8F0;">
+          <p style="color: #2A7F7E; font-size: 1.125rem; font-style: italic;">
+            "Empowering environmental consultancies throughout California and the West Coast to multiply their impact through systematic operational excellence"
+          </p>
+        </div>
+
+        <div class="section-cta" style="text-align: center; padding: 3rem 0 1rem;">
+          <p style="font-size: 1.125rem; color: #2C3E50; margin-bottom: 1.5rem;">Ready to see how we can transform your operations?</p>
+          <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary-orange">Book Your Discovery Call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Your Path to Operational Excellence Section -->
+    <section class="plan-section" style="background-color: #F8F9FA;">
+      <div class="container">
+        <div class="section-header">
+          <h2 style="color: #1B365D;">Your Path to Operational Excellence</h2>
+          <p class="section-subtitle" style="color: #2C3E50;">A proven process that transforms chaos into systematic success</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number" style="background-color: #2A7F7E; color: white;">1</div>
+            <Icon name="magnifying-glass" class="step-icon" style="color: #2A7F7E;" />
+            <h3 style="color: #1B365D;">Identify Your Biggest Bottleneck</h3>
+            <p style="color: #2C3E50;">Take our free operational assessment to pinpoint exactly where inefficiencies are costing you time and revenue</p>
+          </div>
+          
+          <div class="step-connector" style="color: #2A7F7E;">→</div>
+          
+          <div class="step-item">
+            <div class="step-number" style="background-color: #2A7F7E; color: white;">2</div>
+            <Icon name="cog" class="step-icon" style="color: #2A7F7E;" />
+            <h3 style="color: #1B365D;">Deploy Your First Playbook</h3>
+            <p style="color: #2C3E50;">We'll implement a targeted solution in 6-8 weeks, with full training and documentation for your team</p>
+          </div>
+          
+          <div class="step-connector" style="color: #2A7F7E;">→</div>
+          
+          <div class="step-item">
+            <div class="step-number" style="background-color: #2A7F7E; color: white;">3</div>
+            <Icon name="arrow-trending-up" class="step-icon" style="color: #2A7F7E;" />
+            <h3 style="color: #1B365D;">Expand Systematically</h3>
+            <p style="color: #2C3E50;">Add new operational playbooks as you grow, building a complete excellence framework</p>
+          </div>
+        </div>
+        
+        <div class="plan-cta">
+          <button class="btn btn-primary-orange" onclick="alert('Assessment coming soon!')">Start Your Assessment</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Solutions Section -->
+    <section class="solutions-section">
       <div class="container">
         <h2>What Can GaiaOps Do for You?</h2>
+        <p class="section-note">Start with any track and expand systematically as you grow</p>
         
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Client Onboarding Automation</h3>
-            <p>Automated intake forms, document collection, client portals, and standardized kickoff processes that eliminate manual coordination.</p>
-            <div class="benefit">60-80% reduction in onboarding administration time</div>
-          </div>
+        <!-- Row 1: 2 cards centered -->
+        <div class="tracks-grid row-2">
+          <a href="/solutions/client-relationships" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="users" type="outline" />
+              </div>
+              <h3>Client Relationships Management</h3>
+              <div class="benefit-metric">60% faster client onboarding</div>
+            </div>
+          </a>
           
-          <div class="service-card">
-            <h3>Project Management & Resource Allocation</h3>
-            <p>Capacity planning, resource allocation systems, project templates, and budget tracking that optimizes team utilization.</p>
-            <div class="benefit">30% improvement in team utilization and project efficiency</div>
-          </div>
-          
-          <div class="service-card">
-            <h3>Quality Assurance Workflows</h3>
-            <p>Standardized review processes, document version control, compliance tracking, and quality checkpoints.</p>
-            <div class="benefit">40% reduction in quality issues and rework cycles</div>
-          </div>
-          
-          <div class="service-card">
-            <h3>Reporting & Documentation Automation</h3>
-            <p>Automated data aggregation, template-driven report generation, and client-ready dashboard creation.</p>
-            <div class="benefit">50% reduction in reporting time and manual data compilation</div>
-          </div>
-          
-          <div class="service-card">
-            <h3>Business Development Pipeline</h3>
-            <p>Lead tracking systems, proposal automation, client relationship management, and conversion optimization.</p>
-            <div class="benefit">25% improvement in proposal conversion and client acquisition</div>
-          </div>
-          
-          <div class="service-card">
-            <h3>Multi-Party Coordination Systems</h3>
-            <p>Stakeholder communication workflows, project coordination automation, and partner management systems.</p>
-            <div class="benefit">Seamless collaboration and reduced coordination overhead</div>
-          </div>
+          <a href="/solutions/resource-optimization" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="cpu-chip" type="outline" />
+              </div>
+              <h3>Resource Optimization Systems</h3>
+              <div class="benefit-metric">30% better team utilization</div>
+            </div>
+          </a>
         </div>
 
-        <div class="services-ctas">
-          <a href="/contact" class="btn btn-primary-orange">Book Discovery Call</a>
-          <a href="/assessment" class="btn btn-secondary-white">Take Operational Assessment</a>
+        <!-- Row 2: 3 cards -->
+        <div class="tracks-grid row-3">
+          <a href="/solutions/quality-assurance" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="shield-check" type="outline" />
+              </div>
+              <h3>Quality Assurance Workflows</h3>
+              <div class="benefit-metric">50% reduction in quality issues</div>
+            </div>
+          </a>
+          
+          <a href="/solutions/business-intelligence" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="presentation-chart-line" type="outline" />
+              </div>
+              <h3>Business Intelligence Systems</h3>
+              <div class="benefit-metric">75% faster report generation</div>
+            </div>
+          </a>
+          
+          <a href="/solutions/growth-systems" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="rocket-launch" type="outline" />
+              </div>
+              <h3>Growth Systems Automation</h3>
+              <div class="benefit-metric">50% more clients, same team size</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Premium Divider -->
+        <div class="premium-divider">
+          <div class="divider-line"></div>
+          <span class="divider-label">Premium Tracks (Excellence Plan Only)</span>
+          <div class="divider-line"></div>
+        </div>
+
+        <!-- Row 3: 2 premium cards centered -->
+        <div class="tracks-grid row-2">
+          <a href="/solutions/multi-party-coordination" class="track-card-link">
+            <div class="track-card premium-card">
+              <div class="premium-badge">PREMIUM</div>
+              <div class="track-icon premium-icon">
+                <Icon name="share" type="outline" />
+              </div>
+              <h3>Multi-Party Coordination Systems</h3>
+              <p class="premium-description">Advanced stakeholder orchestration with automated workflows, compliance tracking, and real-time coordination dashboards for complex multi-party projects.</p>
+              <div class="benefit-metric">40% reduction in coordination overhead</div>
+            </div>
+          </a>
+          
+          <a href="/solutions/strategic-advantage" class="track-card-link">
+            <div class="track-card premium-card">
+              <div class="premium-badge">PREMIUM</div>
+              <div class="track-icon premium-icon">
+                <Icon name="trophy" type="outline" />
+              </div>
+              <h3>Strategic Advantage Track</h3>
+              <p class="premium-description">Market differentiation through operational excellence, competitive intelligence systems, and strategic positioning frameworks that command premium pricing.</p>
+              <div class="benefit-metric">Industry leadership positioning</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="solutions-ctas">
+          <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary-orange">Book Discovery Call</a>
+          <button class="btn btn-secondary-white" onclick="alert('Assessment coming soon!')">Take Operational Assessment</button>
         </div>
       </div>
     </section>
 
-    <!-- 4. Pricing Section -->
+    <!-- 7. Social Proof Section -->
+    <section class="social-proof" style="background-color: #F8F9FA; padding: 4rem 0;">
+      <div class="container">
+        <h2 style="color: #1B365D; text-align: center;">Built on Industry Research, Ready for Your Tech Stack</h2>
+        <p style="text-align: center; color: #2C3E50; font-size: 1.125rem; margin-bottom: 3rem;">We've studied the tools environmental consultancies actually use</p>
+        
+        <!-- Research Stats Grid -->
+        <div class="research-stats">
+          <div class="stat-card">
+            <div class="stat-number">75%</div>
+            <p>of firms struggle with data silos between systems</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20-30%</div>
+            <p>revenue lost to billing inefficiencies</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">52%</div>
+            <p>of firms developing AI strategies</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">87%</div>
+            <p>need digital field collection systems</p>
+          </div>
+        </div>
+        
+        <!-- Tech Stack Logos -->
+        <h3 style="text-align: center; color: #1B365D; margin-bottom: 2rem;">We can work with and integrate all your tools</h3>
+        
+        <div class="logo-carousel-container">
+          <button class="carousel-nav prev" id="prevBtn">‹</button>
+          <div class="logo-carousel-viewport">
+            <div class="logo-carousel" id="logoCarousel">
+            <div class="logo-slide">
+              <div class="logo-item microsoft">Microsoft 365</div>
+              <div class="logo-item clickup featured">ClickUp</div>
+              <div class="logo-item arcgis">ArcGIS</div>
+              <div class="logo-item google">Google Workspace</div>
+            </div>
+            <div class="logo-slide">
+              <div class="logo-item slack">Slack</div>
+              <div class="logo-item quickbooks">QuickBooks</div>
+              <div class="logo-item modflow">MODFLOW</div>
+              <div class="logo-item airtable">Airtable</div>
+            </div>
+            <div class="logo-slide">
+              <div class="logo-item dropbox">Dropbox</div>
+              <div class="logo-item aermod">AERMOD</div>
+              <div class="logo-item monday">Monday.com</div>
+              <div class="logo-item teams">Microsoft Teams</div>
+            </div>
+            <div class="logo-slide">
+              <div class="logo-item xero">Xero</div>
+              <div class="logo-item asana">Asana</div>
+              <div class="logo-item sampleserve">SampleServe</div>
+              <div class="logo-item hubspot">HubSpot</div>
+            </div>
+            <div class="logo-slide">
+              <div class="logo-item salesforce">Salesforce</div>
+              <div class="logo-item qgis">QGIS</div>
+              <div class="logo-item aldoa">Aldoa</div>
+              <div class="logo-item evx">EVX</div>
+            </div>
+          </div>
+          <button class="carousel-nav next" id="nextBtn">›</button>
+        </div>
+        
+        <p style="text-align: center; margin-top: 2rem; color: #6B7280;">Plus 40+ other environmental and business tools</p>
+        
+        <div class="section-cta" style="text-align: center; padding: 3rem 0 1rem;">
+          <p style="font-size: 1.125rem; color: #2C3E50; margin-bottom: 1.5rem;">Ready to integrate your tools into a unified operational system?</p>
+          <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary" style="background-color: #D97642; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; margin-right: 1rem;">Book Discovery Call</a>
+          <a href="" onclick="alert('Assessment coming soon!'); return false;" class="btn btn-secondary" style="background-color: white; color: #1B365D; border: 2px solid #1B365D; padding: 10px 22px; border-radius: 8px; text-decoration: none; display: inline-block;">See How You Compare</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.getElementById('logoCarousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slides = carousel.querySelectorAll('.logo-slide');
+        let currentSlide = 0;
+        let autoScrollInterval;
+
+        function updateCarousel() {
+          const translateX = -currentSlide * 20;
+          carousel.style.transform = `translateX(${translateX}%)`;
+        }
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          updateCarousel();
+        }
+
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          updateCarousel();
+        }
+
+        function startAutoScroll() {
+          autoScrollInterval = setInterval(nextSlide, 4000);
+        }
+
+        function stopAutoScroll() {
+          clearInterval(autoScrollInterval);
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          stopAutoScroll();
+          setTimeout(startAutoScroll, 2000);
+        });
+
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          stopAutoScroll();
+          setTimeout(startAutoScroll, 2000);
+        });
+
+        // Pause auto-scroll on hover
+        carousel.addEventListener('mouseenter', stopAutoScroll);
+        carousel.addEventListener('mouseleave', startAutoScroll);
+
+        // Initialize
+        updateCarousel();
+        startAutoScroll();
+      });
+    </script>
+
+    <!-- 8. Pricing Section -->
     <section class="pricing-section">
       <div class="container">
         <div class="pricing-grid">
           <div class="pricing-card">
-            <h3>Foundation Playbooks</h3>
-            <div class="price">$2,500</div>
-            <div class="period">Per Month</div>
-            <div class="description">Systematize your core operations with proven playbook implementation for smaller consultancies (5-10 employees).</div>
-            <a href="/contact" class="btn btn-primary-orange">Book Discovery Call</a>
+            <h3>Digital Operations Jumpstart</h3>
+            <div class="price">$7,497</div>
+            <div class="period">one-time</div>
+            <div class="description">Single implementation over 6-8 weeks. Test our methodology with one complete playbook.</div>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary-orange">Book Discovery Call</a>
             <ul class="features">
-              <li>One active playbook implementation</li>
-              <li>Monthly strategy consultations</li>
-              <li>Unlimited optimizations</li>
-              <li>Integration with existing tools</li>
-              <li>Team training and documentation</li>
+              <li>One complete playbook implementation</li>
+              <li>6-8 week delivery timeline</li>
+              <li>Choice from 5 core tracks</li>
+              <li>Full team training included</li>
+              <li>Documentation and SOPs</li>
+              <li>30-day post-implementation support</li>
             </ul>
           </div>
           
           <div class="pricing-card featured">
-            <h3>Growth Playbooks</h3>
-            <div class="price">$3,000</div>
-            <div class="period">Per Month</div>
-            <div class="description">Advanced systematic implementation for growing environmental consultancies ready to scale operations (11-18 employees).</div>
-            <a href="/contact" class="btn btn-primary-orange">Book Discovery Call</a>
+            <h3>Systematic Growth</h3>
+            <div class="price">$2,997</div>
+            <div class="period">per month + $1,997 setup</div>
+            <div class="description">6-8 implementations per year. Perfect pace for sustainable transformation.</div>
+            <a href="/pricing" class="btn btn-primary-orange">View Pricing Details</a>
             <ul class="features">
-              <li>Multiple concurrent playbook tracks</li>
-              <li>Bi-weekly strategy sessions</li>
-              <li>Priority implementation support</li>
-              <li>Custom workflow development</li>
-              <li>Performance analytics dashboard</li>
-              <li>Team leadership training</li>
+              <li>6-8 implementations per year</li>
+              <li>Access to 5 core tracks</li>
+              <li>Monthly 90-minute strategy sessions</li>
+              <li>Unlimited optimizations between implementations</li>
+              <li>48-hour support response time</li>
+              <li>Quarterly business reviews</li>
             </ul>
           </div>
           
           <div class="pricing-card">
-            <h3>Excellence Playbooks</h3>
-            <div class="price">$3,500</div>
-            <div class="period">Per Month</div>
-            <div class="description">Complete operational transformation for established consultancies seeking market leadership (19-25 employees).</div>
-            <a href="/contact" class="btn btn-primary-orange">Book Discovery Call</a>
+            <h3>Operations Excellence</h3>
+            <div class="price">$4,997</div>
+            <div class="period">per month + $2,997 setup</div>
+            <div class="description">10-12 implementations per year. Accelerated transformation with premium tracks.</div>
+            <a href="/pricing" class="btn btn-primary-orange">Start Your Journey</a>
             <ul class="features">
-              <li>Full operational transformation</li>
-              <li>Weekly strategic guidance</li>
+              <li>10-12 implementations per year</li>
+              <li>All 7 tracks including premium</li>
+              <li>Bi-weekly 90-minute strategy sessions</li>
+              <li>Same-day priority support</li>
               <li>Dedicated success manager</li>
-              <li>Industry benchmark analysis</li>
-              <li>Competitive differentiation strategy</li>
-              <li>Executive team development</li>
+              <li>Annual strategic planning session</li>
             </ul>
           </div>
         </div>
+        
+        <p style="text-align: center; color: #6B7280; font-size: 0.875rem; margin-top: 2rem;">
+          <strong>30-day satisfaction guarantee</strong> on your first implementation
+        </p>
       </div>
     </section>
 
-    <!-- 5. Framework Section -->
+    <!-- 8. Framework Section - COMMENTED OUT for StoryBrand Implementation -->
+    <!-- 
     <section class="framework-section">
       <div class="container">
         <h2>Progressive Excellence Framework</h2>
@@ -236,8 +595,10 @@ import { tracks } from '../utils/trackData.ts';
         </div>
       </div>
     </section>
+    -->
 
-    <!-- 6. Social Proof Section -->
+    <!-- 9. Social Proof Section - COMMENTED OUT (we have social proof earlier) -->
+    <!-- 
     <section class="social-proof">
       <div class="container">
         <div class="social-proof-content">
@@ -259,13 +620,22 @@ import { tracks } from '../utils/trackData.ts';
         </div>
       </div>
     </section>
+    -->
 
-    <!-- 7. Final CTA Section -->
-    <section class="final-cta">
+    <!-- 9. Final CTA Section -->
+    <section class="final-cta-section">
       <div class="container">
-        <h2>Ready to Transform Your Operations?</h2>
-        <p class="subtitle">Start your systematic operational excellence journey today</p>
-        <a href="/contact" class="btn btn-primary-orange">Book Discovery Call</a>
+        <div class="cta-hero-box">
+          <h2>Ready to Transform Your Operations?</h2>
+          <p class="subtitle">Start your journey to operational excellence today</p>
+          
+          <div class="cta-buttons">
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary-white">Book Discovery Call</a>
+            <button class="btn btn-secondary-outline" onclick="alert('Assessment coming soon!')">Take Operational Assessment</button>
+          </div>
+          
+          <p class="alternative-text">Not ready to commit? Take our free Digital Operations Assessment to see where you stand.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -415,103 +785,459 @@ import { tracks } from '../utils/trackData.ts';
   color: var(--color-teal-primary);
 }
 
-.success-visual {
-  background: rgba(255, 255, 255, 0.1);
+.metrics-dashboard {
+  background: var(--color-white);
   padding: 2rem;
   border-radius: var(--radius-lg);
-  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
 }
 
-/* 2. Results Section */
-.results-section {
-  background: var(--color-white);
+.metrics-dashboard h3 {
+  color: var(--color-navy-primary);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.metric-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, rgba(74, 155, 139, 0.05) 0%, rgba(74, 155, 139, 0.1) 100%);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid rgba(74, 155, 139, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-teal-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.metric-card:hover::before {
+  transform: scaleX(1);
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(74, 155, 139, 0.15);
+  background: linear-gradient(135deg, rgba(74, 155, 139, 0.08) 0%, rgba(74, 155, 139, 0.15) 100%);
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-dark-gray);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+}
+
+/* 2. Problems Section */
+.problems-section {
+  background: var(--color-off-white);
   padding: 5rem 0;
 }
 
-.results-content {
+.problems-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
 }
 
-.results-section h2 {
+.problem-description {
+  text-align: left;
+}
+
+.problem-description h2 {
   font-family: var(--font-family-primary);
   font-size: 2.5rem;
   color: var(--color-navy-primary);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.results-section p {
-  font-size: 1.1rem;
+.problem-description p {
+  font-size: 1.125rem;
   color: var(--color-dark-gray);
-  margin-bottom: 2rem;
   line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-.results-stats {
+.impact-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.impact-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  border-left: 4px solid var(--color-teal-primary);
+  padding-left: 1rem;
+}
+
+.impact-stats .stat-number {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.impact-stats .stat-label {
+  font-size: 0.95rem;
+  color: var(--color-dark-gray);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.problem-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-.stat-item {
-  text-align: center;
-  padding: 2rem;
+.problem-card {
   background: var(--color-white);
+  padding: 2rem;
   border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border: 1px solid var(--color-light-gray);
   position: relative;
   overflow: hidden;
 }
 
-.stat-item::before {
+.problem-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--color-teal-primary) 0%, var(--color-orange-accent) 100%);
+  background: var(--color-teal-primary);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
 }
 
-.stat-item:hover {
+.problem-card:hover::before {
+  transform: translateX(0);
+}
+
+.problem-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(74, 155, 139, 0.15);
+  box-shadow: 0 12px 32px rgba(74, 155, 139, 0.15);
+  border-color: var(--color-teal-primary);
 }
 
-.stat-icon {
+.problem-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, #4a7a6b 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.problem-icon .w-8 {
+  width: 2rem;
+}
+
+.problem-icon .h-8 {
+  height: 2rem;
+}
+
+.problem-icon .text-white {
+  color: var(--color-white);
+}
+
+.problem-card h3 {
+  color: var(--color-navy-primary);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+}
+
+.problem-card p {
+  color: var(--color-dark-gray);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 3. Stakes Section */
+.stakes-section {
+  background: var(--color-white);
+  padding: 5rem 0;
+}
+
+.stakes-section h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  color: var(--color-navy-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.stakes-section .subtitle {
+  font-size: 1.2rem;
+  color: var(--color-dark-gray);
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.futures-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.failure-column,
+.success-column {
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.failure-column {
+  background: #F9FAFB;
+  border-left: 3px solid #E5E7EB;
+}
+
+.success-column {
+  background: #F0FDF4;
+  border-left: 3px solid #2A7F7E;
+}
+
+.failure-column h3,
+.success-column h3 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.failure-column h3 {
+  color: #6B7280;
+}
+
+.success-column h3 {
+  color: #047857;
+}
+
+.failure-points,
+.success-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.failure-points li,
+.success-points li {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.failure-points li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #DC2626;
+  font-weight: bold;
+}
+
+.success-points li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: bold;
+}
+
+.failure-points li {
+  color: #6B7280;
+}
+
+.success-points li {
+  color: #374151;
+}
+
+.bottom-line {
+  font-style: italic;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.failure-column .bottom-line {
+  color: #6B7280;
+  border-top-color: #E5E7EB;
+}
+
+.success-column .bottom-line {
+  color: #047857;
+  border-top-color: #2A7F7E;
+}
+
+.transition-statement {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-navy-primary);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 4. Plan Section */
+.plan-section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-family-primary);
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  display: block;
+  line-height: 1.2;
 }
 
-.stat-item .number {
-  font-size: 3rem;
+.section-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.step-item {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(42, 127, 126, 0.15);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
   font-weight: var(--font-weight-bold);
-  color: var(--color-teal-primary);
-  margin-bottom: 0.5rem;
+  margin: 0 auto 1rem;
 }
 
-.stat-item .label {
-  font-size: 1rem;
-  color: var(--color-navy-primary);
+.step-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1.5rem;
+  opacity: 0.8;
+}
+
+.step-item h3 {
+  font-size: 1.25rem;
   font-weight: var(--font-weight-semibold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
-.stat-item .detail {
-  font-size: 0.85rem;
-  color: var(--color-dark-gray);
-  font-weight: var(--font-weight-normal);
-  text-transform: none;
+.step-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
 }
 
-/* 3. Services Section */
+.step-connector {
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.plan-cta {
+  text-align: center;
+}
+
+.plan-cta .btn {
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.plan-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 118, 66, 0.3);
+}
+
+/* 5. Services Section */
 .services-section {
   background: var(--color-off-white);
   padding: 5rem 0;
@@ -578,7 +1304,381 @@ import { tracks } from '../utils/trackData.ts';
   line-height: 1.5;
 }
 
-/* 4. Pricing Section */
+/* 6. Solutions Section */
+.solutions-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.solutions-section h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  color: var(--color-navy-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-note {
+  text-align: center;
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.tracks-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tracks-grid.row-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tracks-grid.row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.track-card-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.track-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid var(--color-light-gray);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-card-link:hover .track-card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: #e5e5e5;
+}
+
+.track-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-teal-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.track-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+}
+
+
+.track-card p {
+  color: var(--color-dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.benefit-metric {
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+
+.premium-divider {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0 3rem;
+  gap: 1rem;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-light-gray);
+}
+
+.divider-label {
+  color: var(--color-navy-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 1rem;
+  background: var(--color-off-white);
+}
+
+.premium-card {
+  background: var(--color-white);
+  border-color: var(--color-light-gray);
+  padding: 2.5rem;
+  position: relative;
+}
+
+.premium-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #D97642;
+  color: var(--color-white);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.premium-icon {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.premium-icon svg {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.premium-description {
+  color: var(--color-dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding: 0 0.5rem;
+}
+
+.solutions-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* 7. Social Proof Section */
+.research-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E2E8F0;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.02);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: #2A7F7E;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: #2C3E50;
+  margin: 0;
+}
+
+.logo-carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 60px;
+}
+
+.logo-carousel-viewport {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.logo-carousel {
+  display: flex;
+  width: 500%;
+  transition: transform 0.5s ease;
+}
+
+.logo-slide {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 20%;
+  flex-shrink: 0;
+  padding: 2rem 1rem;
+}
+
+.logo-item {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-item.microsoft { color: #4285F4; }
+.logo-item.google { color: #EA4335; }
+.logo-item.quickbooks { color: #2CA01C; }
+.logo-item.arcgis { color: #0079BF; }
+.logo-item.clickup.featured { 
+  color: #7B68EE; 
+  background: #F0FAF9;
+  border: 2px solid #2A7F7E;
+}
+.logo-item.slack { color: #4A154B; }
+.logo-item.dropbox { color: #0061FF; }
+.logo-item.teams { color: #5B5FC7; }
+.logo-item.airtable { color: #FCB400; }
+.logo-item.asana { color: #F06A6A; }
+.logo-item.monday { color: #FFCC00; }
+.logo-item.salesforce { color: #00A1E0; }
+.logo-item.modflow { color: #1E88E5; }
+.logo-item.aermod { color: #43A047; }
+.logo-item.xero { color: #13B5EA; }
+.logo-item.sampleserve { color: #795548; }
+.logo-item.hubspot { color: #FF7A59; }
+.logo-item.qgis { color: #589632; }
+.logo-item.aldoa { color: #6A1B9A; }
+.logo-item.evx { color: #E65100; }
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 2px solid #E2E8F0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2A7F7E;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.carousel-nav:hover {
+  border-color: #2A7F7E;
+  background: #F0FAF9;
+}
+
+.carousel-nav.prev {
+  left: 0;
+}
+
+.carousel-nav.next {
+  right: 0;
+}
+
+@media (max-width: 900px) {
+  .logo-slide {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .logo-carousel-container {
+    max-width: 700px;
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .research-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .logo-slide {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .logo-carousel-container {
+    max-width: 500px;
+    padding: 0 50px;
+    margin: 1rem auto;
+  }
+  
+  .carousel-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .logo-item {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-slide {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem 0.25rem;
+  }
+  
+  .logo-carousel-container {
+    max-width: 400px;
+    padding: 0 40px;
+  }
+  
+  .logo-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* 8. Pricing Section */
 .pricing-section {
   background: var(--color-white);
   padding: 5rem 0;
@@ -716,7 +1816,7 @@ import { tracks } from '../utils/trackData.ts';
   font-weight: bold;
 }
 
-/* 5. Framework Section */
+/* 7. Framework Section */
 .framework-section {
   background: var(--color-white);
   padding: 5rem 0;
@@ -782,7 +1882,7 @@ import { tracks } from '../utils/trackData.ts';
   font-weight: bold;
 }
 
-/* 6. Social Proof Section */
+/* 8. Social Proof Section */
 .social-proof {
   background: var(--color-off-white);
   padding: 4rem 0;
@@ -851,40 +1951,92 @@ import { tracks } from '../utils/trackData.ts';
   font-size: 0.9rem;
 }
 
-/* 7. Final CTA Section */
-.final-cta {
-  background: var(--color-navy-primary);
-  color: var(--color-white);
-  padding: 4rem 0;
-  text-align: center;
+/* 9. Final CTA Section */
+.final-cta-section {
+  background: var(--color-white);
+  padding: 5rem 0;
 }
 
-.final-cta h2 {
+.cta-hero-box {
+  background: linear-gradient(135deg, var(--color-orange-accent) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.cta-hero-box h2 {
   font-family: var(--font-family-primary);
   margin-bottom: 1rem;
   font-size: 2.5rem;
   color: var(--color-white);
+  font-weight: var(--font-weight-bold);
 }
 
-.final-cta .subtitle {
+.cta-hero-box .subtitle {
+  margin-bottom: 3rem;
+  opacity: 0.95;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
   margin-bottom: 2rem;
-  opacity: 0.9;
-  font-size: 1.2rem;
+  flex-wrap: wrap;
 }
 
-.btn-white {
+.btn-primary-white {
   background: var(--color-white);
+  color: var(--color-orange-accent);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary-white:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
   color: var(--color-navy-primary);
+}
+
+.btn-secondary-outline {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   padding: 1rem 2rem;
   border-radius: var(--radius-md);
   font-weight: var(--font-weight-medium);
   text-decoration: none;
   transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.btn-white:hover {
+.btn-secondary-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+.cta-hero-box .alternative-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 1rem;
 }
 
 /* Additional utility styles */
@@ -907,7 +2059,7 @@ import { tracks } from '../utils/trackData.ts';
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   .hero-grid,
-  .results-content,
+  .problems-content,
   .framework-content,
   .social-proof-content {
     grid-template-columns: 1fr;
@@ -915,12 +2067,32 @@ import { tracks } from '../utils/trackData.ts';
     gap: 2rem;
   }
 
+  .problem-description {
+    text-align: center;
+    order: -1;
+  }
+
+  .problem-description h2 {
+    font-size: 2rem;
+  }
+
+  .impact-stats {
+    margin-top: 2rem;
+  }
+
+  .impact-stats .stat-item {
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid var(--color-teal-primary);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
 
   .hero-ctas,
-  .results-ctas,
   .services-ctas {
     flex-direction: column;
     gap: 1rem;
@@ -932,13 +2104,64 @@ import { tracks } from '../utils/trackData.ts';
     gap: 1rem;
   }
 
-  .results-stats {
+  .problem-cards {
     grid-template-columns: 1fr;
   }
 
-  .services-grid,
-  .pricing-grid {
+  .steps-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .step-connector {
+    display: none;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .futures-comparison {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stakes-section h2 {
+    font-size: 2rem;
+  }
+
+  .authority-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .guide-authority h2 {
+    font-size: 2rem !important;
+  }
+
+  .services-grid,
+  .pricing-grid,
+  .tracks-grid.row-2,
+  .tracks-grid.row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .tracks-grid.row-2,
+  .tracks-grid.row-3 {
+    max-width: none;
+  }
+
+  .premium-divider {
+    margin: 3rem 0 2rem;
+  }
+
+  .premium-card {
+    padding: 2rem !important;
+  }
+
+  .premium-description {
+    text-align: center;
+    padding: 0;
   }
 
   .pricing-card.featured {
@@ -957,8 +2180,28 @@ import { tracks } from '../utils/trackData.ts';
   .pricing-section h2,
   .framework-section h2,
   .social-proof h2,
-  .final-cta h2 {
+  .cta-hero-box h2 {
     font-size: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .final-cta-section {
+    padding: 3rem 0;
+  }
+  
+  .cta-hero-box {
+    padding: 3rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .cta-hero-box .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 }
 </style>

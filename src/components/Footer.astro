@@ -4,40 +4,50 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-grid">
-      <div class="footer-section">
+      <div class="footer-section footer-brand">
         <img src="/images/logos/gaiaops-white.png" alt="GaiaOps" class="footer-logo" />
         <p class="footer-description">
-          Progressive Operational Excellence for Environmental Consultancies
+          Multiply Your Environmental Impact
         </p>
       </div>
       
       <div class="footer-section">
-        <h4 class="footer-heading">Core Services</h4>
+        <h4 class="footer-heading">Solutions</h4>
         <ul class="footer-links">
-          <li><a href="/services/multi-party-coordination">Multi-Party Coordination</a></li>
-          <li><a href="/services/client-relationships">Client Relationships</a></li>
-          <li><a href="/services/resource-optimization">Resource Optimization</a></li>
-          <li><a href="/services/quality-assurance">Quality Assurance</a></li>
+          <li><a href="/solutions">Solutions Overview</a></li>
+          <li><a href="/solutions/multi-party-coordination">Multi-Party Coordination</a></li>
+          <li><a href="/solutions/client-relationships">Client Relationships</a></li>
+          <li><a href="/solutions/resource-optimization">Resource Optimization</a></li>
+          <li><a href="/solutions/quality-assurance">Quality Assurance</a></li>
+          <li><a href="/solutions/business-intelligence">Business Intelligence</a></li>
+          <li><a href="/solutions/growth-systems">Growth Systems</a></li>
+          <li><a href="/solutions/strategic-advantage">Strategic Advantage</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
-        <h4 class="footer-heading">Advanced Services</h4>
+        <h4 class="footer-heading">How We Help</h4>
         <ul class="footer-links">
-          <li><a href="/services/business-intelligence">Business Intelligence</a></li>
-          <li><a href="/services/growth-systems">Growth Systems</a></li>
-          <li><a href="/services/strategic-advantage">Strategic Advantage</a></li>
+          <li><a href="/how-we-help">How We Help</a></li>
+          <li><a href="/framework">Digital Operations Maturity Framework</a></li>
+          <li><a href="/resources">Resources</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h4 class="footer-heading">Company</h4>
         <ul class="footer-links">
-          <li><a href="/how-it-works">How It Works</a></li>
-          <li><a href="/pricing">Pricing</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/resources">Resources</a></li>
+          <li><a href="/pricing">Pricing</a></li>
           <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4 class="footer-heading">Get Started</h4>
+        <ul class="footer-links">
+          <li><a href="/assessment">Take Assessment</a></li>
+          <li><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;">Book Discovery Call</a></li>
         </ul>
       </div>
     </div>
@@ -62,9 +72,13 @@
   padding: var(--spacing-6) var(--spacing-2) var(--spacing-4);
 }
 
+.footer-brand {
+  text-align: left;
+}
+
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--spacing-4);
   margin-bottom: var(--spacing-4);
 }
