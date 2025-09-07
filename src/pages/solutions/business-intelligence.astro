@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Business Intelligence Playbooks | GaiaOps"
+  description="Transform data into strategic insights through automated reporting and predictive analytics. Foundation → Advanced → Complete levels."
+>
+  <Header />
+  
+  <main id="main-content" class="service-page">
+    <!-- ABOVE THE FOLD: Clean & Simple -->
+    <section class="hero">
+      <div class="container">
+        <h1>Turn Data into Strategic Advantage</h1>
+        <p class="hero-subtitle">Reveal opportunities and predict outcomes with automated intelligence systems</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Get Started</a>
+          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELOW THE FOLD: Progressive Detail -->
+    <section class="problem-section">
+      <div class="container">
+        <h2>The Business Intelligence Problem</h2>
+        <p class="problem-description">
+          Manual reporting, data scattered across systems, delayed insights, and reactive decision-making 
+          prevent you from spotting opportunities and optimizing performance in real-time.
+        </p>
+      </div>
+    </section>
+
+    <section class="solution-section">
+      <div class="container">
+        <h2>Our Solution: Automated Intelligence Playbooks</h2>
+        <p class="solution-description">
+          Transform data chaos into strategic insights through automated reporting, predictive analytics, 
+          and real-time dashboards that enable proactive decision-making and competitive advantage.
+        </p>
+      </div>
+    </section>
+
+    <section class="playbooks-section">
+      <div class="container">
+        <h2>Available Business Intelligence Playbooks</h2>
+        
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Foundation Playbook</h3>
+            <div class="level-specs">45 hours • 6 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Template-driven reports, client dashboards, basic data aggregation</p>
+            <ul>
+              <li>Standardized reporting templates and processes</li>
+              <li>Client-facing dashboards and visibility</li>
+              <li>Basic data aggregation and analysis</li>
+              <li>Key performance indicator tracking</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> 80% reduction in manual reporting time, consistent insights</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Advanced Playbook</h3>
+            <div class="level-specs">50 hours • 7 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Real-time performance dashboards, automated KPI tracking</p>
+            <ul>
+              <li>Real-time performance dashboards</li>
+              <li>Automated KPI tracking and alerts</li>
+              <li>Advanced analytics and trend identification</li>
+              <li>Strategic business intelligence reporting</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> Real-time business visibility, proactive decision making</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Complete Playbook</h3>
+            <div class="level-specs">60 hours • 8 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> AI-powered business insights, predictive modeling, strategic recommendations</p>
+            <ul>
+              <li>AI-powered business insight generation</li>
+              <li>Predictive modeling and forecasting</li>
+              <li>Automated strategic recommendations</li>
+              <li>Competitive intelligence and market analysis</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> Predictive business intelligence, strategic competitive advantage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideal-state">
+      <div class="container">
+        <h2>Your Ideal State</h2>
+        <div class="ideal-content">
+          <p class="ideal-vision">
+            <strong>Automatic business intelligence with predictive strategic guidance:</strong> 
+            Your business operates with complete data visibility, automated insights, and predictive 
+            recommendations that guide strategic decisions and reveal opportunities before competitors 
+            recognize them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Transform Your Data into Intelligence?</h2>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Start Foundation Playbook</a>
+          <a href="/assessment" class="btn btn-secondary">Take Operational Assessment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+.track-hero {
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-8) 0;
+}
+
+.level-card {
+  border-left: 4px solid var(--color-info-blue);
+}
+
+.cta-section {
+  background: var(--color-info-blue);
+}
+
+.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-info-blue);
+}
+
+.btn-secondary:hover {
+  color: var(--color-info-blue);
+}
+
+/* Inherit all other styles from shared component patterns */
+</style>

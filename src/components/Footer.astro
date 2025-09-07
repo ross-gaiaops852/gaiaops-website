@@ -1,0 +1,154 @@
+---
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-section footer-brand">
+        <img src="/images/logos/gaiaops-white.png" alt="GaiaOps" class="footer-logo" />
+        <p class="footer-description">
+          Multiply Your Environmental Impact
+        </p>
+      </div>
+      
+      <div class="footer-section">
+        <h4 class="footer-heading">Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="/solutions">Solutions Overview</a></li>
+          <li><a href="/solutions/multi-party-coordination">Multi-Party Coordination</a></li>
+          <li><a href="/solutions/client-relationships">Client Relationships</a></li>
+          <li><a href="/solutions/resource-optimization">Resource Optimization</a></li>
+          <li><a href="/solutions/quality-assurance">Quality Assurance</a></li>
+          <li><a href="/solutions/business-intelligence">Business Intelligence</a></li>
+          <li><a href="/solutions/growth-systems">Growth Systems</a></li>
+          <li><a href="/solutions/strategic-advantage">Strategic Advantage</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4 class="footer-heading">How We Help</h4>
+        <ul class="footer-links">
+          <li><a href="/how-we-help">How We Help</a></li>
+          <li><a href="/framework">Digital Operations Maturity Framework</a></li>
+          <li><a href="/resources">Resources</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4 class="footer-heading">Get Started</h4>
+        <ul class="footer-links">
+          <li><a href="/assessment">Take Assessment</a></li>
+          <li><a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;">Book Discovery Call</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        © 2025 GaiaOps. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background-color: var(--color-navy-primary);
+  color: var(--color-white);
+}
+
+.footer-container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: var(--spacing-6) var(--spacing-2) var(--spacing-4);
+}
+
+.footer-brand {
+  text-align: left;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+  margin-bottom: var(--spacing-2);
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: var(--line-height-relaxed);
+  font-family: var(--font-family-primary);
+}
+
+.footer-heading {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-white);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--spacing-1);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-small);
+  transition: color var(--transition-normal);
+}
+
+.footer-links a:hover {
+  color: var(--color-teal-primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: var(--spacing-4);
+  text-align: center;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-small);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: var(--spacing-4) var(--spacing-2) var(--spacing-3);
+  }
+  
+  .footer-grid {
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-3);
+  }
+  
+  .footer-logo {
+    height: 28px;
+  }
+}
+</style>

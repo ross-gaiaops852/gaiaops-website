@@ -1,0 +1,390 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Multi-Party Coordination Track | GaiaOps"
+  description="Transform coordination chaos into seamless collaboration. Foundation → Advanced → Complete levels for environmental consultancy project management."
+>
+  <Header />
+  
+  <main id="main-content" class="service-page">
+    <!-- ABOVE THE FOLD: Clean & Simple -->
+    <section class="hero">
+      <div class="container">
+        <h1>Stop Project Delays and Partner Frustration</h1>
+        <p class="hero-subtitle">Transform coordination chaos into seamless collaboration</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Get Started</a>
+          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELOW THE FOLD: Progressive Detail -->
+    <section class="problem-section">
+      <div class="container">
+        <h2>The Multi-Party Coordination Problem</h2>
+        <p class="problem-description">
+          Environmental consultancies struggle with project delays, communication breakdowns, and partner frustration 
+          when managing complex projects across multiple stakeholders. Manual coordination leads to missed deadlines, 
+          confused partners, and stressed project managers.
+        </p>
+      </div>
+    </section>
+
+    <section class="solution-section">
+      <div class="container">
+        <h2>Our Solution: Systematic Coordination Playbooks</h2>
+        <p class="solution-description">
+          Three proven playbooks that transform coordination chaos into seamless collaboration through 
+          systematic processes, automated workflows, and intelligent partner management.
+        </p>
+      </div>
+    </section>
+
+    <section class="playbooks-section">
+      <div class="container">
+        <h2>Available Coordination Playbooks</h2>
+        
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Foundation Playbook</h3>
+            <div class="level-specs">40 hours • 6 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Airtable-based central project dashboard with basic partner integrations</p>
+            <ul>
+              <li>Centralized project tracking dashboard</li>
+              <li>Basic partner communication workflows</li>
+              <li>Standardized status update processes</li>
+              <li>Document sharing and version control</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> 40% reduction in coordination meetings, clear project visibility</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Advanced Playbook</h3>
+            <div class="level-specs">50 hours • 7 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> n8n automation for real-time data sync across 5+ systems</p>
+            <ul>
+              <li>Automated cross-platform synchronization</li>
+              <li>Real-time status updates and notifications</li>
+              <li>Intelligent task assignment and routing</li>
+              <li>Performance analytics and bottleneck identification</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> Zero manual status updates, proactive issue resolution</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Complete Playbook</h3>
+            <div class="level-specs">60 hours • 8 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> RAG-enabled AI Oracle with predictive analytics and unlimited partner coordination</p>
+            <ul>
+              <li>AI-powered project risk prediction</li>
+              <li>Intelligent resource allocation recommendations</li>
+              <li>Automated partner relationship optimization</li>
+              <li>Predictive timeline and milestone adjustments</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> Eliminate coordination surprises, strategic partner advantage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideal-state">
+      <div class="container">
+        <h2>Your Ideal State</h2>
+        <div class="ideal-content">
+          <p class="ideal-vision">
+            <strong>Seamless partner collaboration with zero coordination meetings:</strong> 
+            Projects flow smoothly across all partners with automated status synchronization, 
+            proactive issue resolution, and strategic relationship optimization that gives you 
+            competitive advantage in multi-stakeholder projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-flexibility">
+      <div class="container">
+        <h2>We Work With Your Current Tools</h2>
+        <p class="flexibility-description">
+          Whether you're using Smartsheet, Monday, Excel, or custom databases - we'll integrate with whatever systems your partners prefer while showing you what's possible with our full orchestration stack.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Transform Your Coordination?</h2>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Start Foundation Playbook</a>
+          <a href="/assessment" class="btn btn-secondary">Take Operational Assessment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+.container {
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+/* ABOVE THE FOLD: Clean Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-12) 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-3);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-large);
+  font-family: var(--font-family-primary);
+  opacity: 0.95;
+  margin-bottom: var(--spacing-6);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--spacing-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* BELOW THE FOLD: Progressive Detail Sections */
+.problem-section,
+.solution-section {
+  padding: var(--spacing-8) 0;
+  text-align: center;
+}
+
+.problem-section {
+  background: var(--color-off-white);
+}
+
+.problem-section h2,
+.solution-section h2 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  color: var(--color-dark-gray);
+  margin-bottom: var(--spacing-4);
+}
+
+.problem-description,
+.solution-description {
+  font-size: var(--font-size-large);
+  font-family: var(--font-family-primary);
+  color: var(--color-medium-gray);
+  line-height: var(--line-height-relaxed);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.playbooks-section {
+  padding: var(--spacing-8) 0;
+}
+
+.playbooks-section h2 {
+  text-align: center;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  color: var(--color-dark-gray);
+  margin-bottom: var(--spacing-6);
+}
+
+.level-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-4);
+  overflow: hidden;
+  border-left: 4px solid var(--color-teal-primary);
+}
+
+.level-header {
+  background: var(--color-off-white);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.level-header h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  color: var(--color-dark-gray);
+  margin-bottom: var(--spacing-1);
+}
+
+.level-specs {
+  color: var(--color-medium-gray);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+}
+
+.level-content {
+  padding: var(--spacing-4);
+}
+
+.level-content ul {
+  margin: var(--spacing-2) 0;
+  padding-left: var(--spacing-3);
+}
+
+.level-content li {
+  margin-bottom: var(--spacing-1);
+  color: var(--color-medium-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+.impact {
+  background: var(--color-foundation-bg);
+  color: var(--color-success-green);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-success-green);
+  margin-top: var(--spacing-2);
+  line-height: var(--line-height-relaxed);
+}
+
+.ideal-state {
+  background: var(--color-off-white);
+  padding: var(--spacing-8) 0;
+}
+
+.ideal-state h2 {
+  text-align: center;
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-dark-gray);
+}
+
+.ideal-vision {
+  font-size: var(--font-size-large);
+  font-family: var(--font-family-primary);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.system-flexibility {
+  padding: var(--spacing-8) 0;
+}
+
+.system-flexibility h2 {
+  text-align: center;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-dark-gray);
+}
+
+.flexibility-description {
+  text-align: center;
+  font-size: var(--font-size-large);
+  font-family: var(--font-family-primary);
+  color: var(--color-medium-gray);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: var(--line-height-relaxed);
+}
+
+/* Shared Button Styles */
+.btn {
+  padding: 14px var(--spacing-4);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  font-size: var(--font-size-body);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.cta-section {
+  background: var(--color-navy-primary);
+  color: var(--color-white);
+  padding: var(--spacing-8) 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-2);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: var(--color-orange-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-orange-accent);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-orange-accent-hover);
+  border-color: var(--color-orange-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy-primary);
+  transform: translateY(-2px);
+}
+</style>

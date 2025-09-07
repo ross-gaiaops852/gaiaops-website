@@ -1,0 +1,247 @@
+---
+export interface Props {
+  icon: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  foundationLevel: string;
+  advancedLevel: string;
+  completeLevel: string;
+  idealState: string;
+  href: string;
+  color: string;
+}
+
+const {
+  icon,
+  title,
+  subtitle,
+  description,
+  foundationLevel,
+  advancedLevel,
+  completeLevel,
+  idealState,
+  href,
+  color
+} = Astro.props;
+---
+
+<div class="track-card" style={`--track-color: ${color}`}>
+  <div class="track-header">
+    <div class="track-icon">{icon}</div>
+    <div class="track-title-group">
+      <h3 class="track-title">{title}</h3>
+      <p class="track-subtitle">{subtitle}</p>
+    </div>
+  </div>
+  
+  <div class="track-description">
+    <p>{description}</p>
+  </div>
+  
+  <div class="progressive-levels">
+    <div class="level">
+      <div class="level-name">Foundation</div>
+      <div class="level-description">{foundationLevel}</div>
+    </div>
+    <div class="level-arrow">→</div>
+    <div class="level">
+      <div class="level-name">Advanced</div>
+      <div class="level-description">{advancedLevel}</div>
+    </div>
+    <div class="level-arrow">→</div>
+    <div class="level">
+      <div class="level-name">Complete</div>
+      <div class="level-description">{completeLevel}</div>
+    </div>
+  </div>
+  
+  <div class="ideal-state">
+    <div class="ideal-label">Ideal State:</div>
+    <div class="ideal-description">{idealState}</div>
+  </div>
+  
+  <div class="track-cta">
+    <a href={href} class="track-link">Explore Available Playbooks</a>
+  </div>
+</div>
+
+<style>
+.track-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-4);
+  border-left: 4px solid var(--track-color);
+  transition: all var(--transition-slow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-primary);
+}
+
+.track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.track-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.track-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.track-title-group {
+  flex: 1;
+}
+
+.track-title {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: var(--spacing-1);
+  line-height: var(--line-height-normal);
+}
+
+.track-subtitle {
+  font-style: italic;
+  color: var(--color-medium-gray);
+  margin: 0;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+}
+
+.track-description {
+  color: var(--color-medium-gray);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-3);
+  font-size: var(--font-size-body);
+}
+
+.progressive-levels {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin-bottom: var(--spacing-3);
+  font-size: var(--font-size-small);
+}
+
+.level {
+  flex: 1;
+  text-align: center;
+  padding: var(--spacing-2) var(--spacing-1);
+  background: var(--color-off-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-light-gray);
+}
+
+.level-name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--track-color);
+  margin-bottom: 4px;
+  font-size: var(--font-size-small);
+}
+
+.level-description {
+  color: var(--color-medium-gray);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-normal);
+}
+
+.level-arrow {
+  color: var(--track-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-large);
+  opacity: 0.8;
+}
+
+.ideal-state {
+  background: var(--color-foundation-bg);
+  border: 1px solid var(--color-foundation-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.ideal-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-success-green);
+  margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-small);
+}
+
+.ideal-description {
+  color: var(--color-success-green);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.9;
+}
+
+.track-cta {
+  margin-top: auto;
+}
+
+.track-link {
+  display: inline-block;
+  background-color: var(--track-color);
+  color: var(--color-white);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-small);
+  transition: all var(--transition-normal);
+  width: 100%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.track-link:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.track-link:focus {
+  outline: 2px solid var(--track-color);
+  outline-offset: 2px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .track-card {
+    padding: var(--spacing-3);
+  }
+  
+  .track-header {
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .track-icon {
+    font-size: 1.75rem;
+  }
+  
+  .progressive-levels {
+    flex-direction: column;
+    gap: var(--spacing-1);
+    align-items: stretch;
+  }
+  
+  .level-arrow {
+    transform: rotate(90deg);
+    font-size: var(--font-size-body);
+  }
+  
+  .level {
+    padding: var(--spacing-1) var(--spacing-2);
+  }
+}
+</style>

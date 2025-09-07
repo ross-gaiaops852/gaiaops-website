@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Digital Operations Maturity Framework - GaiaOps" description="Understand the Digital Operations Maturity Framework and how it guides your transformation journey.">
+  <Header />
+  
+  <main id="main-content">
+    <section class="hero">
+      <div class="container">
+        <h1>Digital Operations Maturity Framework</h1>
+        <p>Coming Soon - Under Construction</p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+.hero {
+  background: linear-gradient(135deg, var(--color-navy-primary) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+</style>

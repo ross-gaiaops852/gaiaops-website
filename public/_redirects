@@ -1,0 +1,10 @@
+# Redirect services to solutions URLs
+/services /solutions 301
+/services/ /solutions/ 301
+/services/multi-party-coordination /solutions/multi-party-coordination 301
+/services/client-relationships /solutions/client-relationships 301
+/services/resource-optimization /solutions/resource-optimization 301
+/services/quality-assurance /solutions/quality-assurance 301
+/services/business-intelligence /solutions/business-intelligence 301
+/services/growth-systems /solutions/growth-systems 301
+/services/strategic-advantage /solutions/strategic-advantage 301

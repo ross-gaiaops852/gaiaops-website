@@ -1,0 +1,162 @@
+---
+export interface Level {
+  name: string;
+  hours: string;
+  weeks: string;
+  description: string;
+  features: string[];
+  impact: string;
+}
+
+export interface Props {
+  levels: Level[];
+  trackColor: string;
+}
+
+const { levels, trackColor } = Astro.props;
+---
+
+<div class="progressive-showcase" style={`--track-color: ${trackColor}`}>
+  <h2>Available Playbooks in This Operational Area</h2>
+  
+  <div class="levels-container">
+    {levels.map((level, index) => (
+      <div class="level-card">
+        <div class="level-header">
+          <h3 class="level-name">{level.name}</h3>
+          <div class="level-specs">
+            {level.hours} • {level.weeks}
+          </div>
+        </div>
+        
+        <div class="level-content">
+          <p class="level-description">
+            <strong>Playbook delivery:</strong> {level.description}
+          </p>
+          
+          <ul class="feature-list">
+            {level.features.map(feature => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+          
+          <div class="impact-statement">
+            <strong>Impact:</strong> {level.impact}
+          </div>
+        </div>
+        
+        {index < levels.length - 1 && (
+          <div class="progression-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+.progressive-showcase {
+  padding: 4rem 0;
+}
+
+.progressive-showcase h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.levels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.level-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-left: 4px solid var(--track-color);
+  position: relative;
+}
+
+.level-header {
+  background: #f9fafb;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.level-name {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.level-specs {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.level-content {
+  padding: 2rem;
+}
+
+.level-description {
+  margin-bottom: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.feature-list {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.feature-list li {
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.impact-statement {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #10b981;
+  margin-top: 1.5rem;
+  line-height: 1.5;
+}
+
+.progression-arrow {
+  position: absolute;
+  right: 2rem;
+  bottom: -1rem;
+  background: var(--track-color);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .levels-container {
+    gap: 3rem;
+  }
+  
+  .progression-arrow {
+    bottom: -1.5rem;
+  }
+}
+</style>

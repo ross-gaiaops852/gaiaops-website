@@ -1,0 +1,415 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Resource Optimization Playbooks | GaiaOps"
+  description="Maximize team utilization and optimize project profitability through systematic resource management. Foundation → Advanced → Complete levels."
+>
+  <Header />
+  
+  <main id="main-content" class="service-page">
+    <!-- ABOVE THE FOLD: Clean & Simple -->
+    <section class="hero">
+      <div class="container">
+        <h1>Maximize Team Performance and Profitability</h1>
+        <p class="hero-subtitle">Eliminate bottlenecks and boost project profitability through strategic resource allocation</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Get Started</a>
+          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELOW THE FOLD: Progressive Detail -->
+    <section class="problem-section">
+      <div class="container">
+        <h2>The Resource Optimization Problem</h2>
+        <p class="problem-description">
+          Chaotic capacity management leads to overworked teams, underutilized talent, project bottlenecks, 
+          and unpredictable profitability that prevents sustainable growth and team satisfaction.
+        </p>
+      </div>
+    </section>
+
+    <section class="solution-section">
+      <div class="container">
+        <h2>Our Solution: Strategic Resource Management Playbooks</h2>
+        <p class="solution-description">
+          Transform capacity chaos into strategic allocation through intelligent planning, skills-based matching, 
+          and predictive demand forecasting that maximizes both team utilization and project profitability.
+        </p>
+      </div>
+    </section>
+
+    <section class="playbooks-section">
+      <div class="container">
+        <h2>Available Resource Optimization Playbooks</h2>
+        
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Foundation Playbook</h3>
+            <div class="level-specs">45 hours • 6 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Capacity planning dashboards, project templates, budget tracking</p>
+            <ul>
+              <li>Real-time capacity planning dashboards</li>
+              <li>Standardized project templates and workflows</li>
+              <li>Budget tracking and profitability analysis</li>
+              <li>Resource allocation optimization tools</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> 30% improvement in team utilization, better project profitability</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Advanced Playbook</h3>
+            <div class="level-specs">50 hours • 7 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> Real-time optimization algorithms, skills-based matching</p>
+            <ul>
+              <li>Intelligent resource allocation algorithms</li>
+              <li>Skills-based project matching and assignment</li>
+              <li>Real-time capacity optimization recommendations</li>
+              <li>Advanced profitability analytics and forecasting</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> 50% improvement in utilization rates, strategic capacity expansion</p>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-header">
+            <h3>Complete Playbook</h3>
+            <div class="level-specs">60 hours • 8 weeks</div>
+          </div>
+          <div class="level-content">
+            <p><strong>Playbook delivery:</strong> AI-powered demand forecasting, automated contractor sourcing</p>
+            <ul>
+              <li>AI-powered demand forecasting and capacity planning</li>
+              <li>Automated contractor sourcing and onboarding</li>
+              <li>Predictive project staffing recommendations</li>
+              <li>Strategic resource optimization across multiple projects</li>
+            </ul>
+            <p class="impact"><strong>Impact:</strong> Eliminate capacity bottlenecks, predictive scaling capabilities</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideal-state">
+      <div class="container">
+        <h2>Your Ideal State</h2>
+        <div class="ideal-content">
+          <p class="ideal-vision">
+            <strong>Perfect resource utilization with predictive capacity planning:</strong> 
+            Your team operates at optimal capacity with intelligent workload balancing, predictive 
+            scaling recommendations, and automated resource acquisition that eliminates bottlenecks 
+            before they impact project delivery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-flexibility">
+      <div class="container">
+        <h2>We Work With Your Current Tools</h2>
+        <p class="flexibility-description">
+          Whether you're using Microsoft Project, Asana, Trello, custom spreadsheets, or resource planning software - we'll integrate with your preferred systems while demonstrating the power of unified resource intelligence.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Optimize Your Resources?</h2>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Start Foundation Playbook</a>
+          <a href="/assessment" class="btn btn-secondary">Take Operational Assessment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-2);
+}
+
+.track-hero {
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-8) 0;
+}
+
+.track-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-2);
+  backdrop-filter: blur(10px);
+}
+
+.track-hero h1 {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-2);
+  line-height: var(--line-height-tight);
+}
+
+.track-description {
+  font-size: var(--font-size-large);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-4);
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+}
+
+.progressive-levels {
+  margin-top: var(--spacing-4);
+}
+
+.level-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  justify-content: center;
+}
+
+.level {
+  background: rgba(255, 255, 255, 0.15);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+}
+
+.arrow {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.implementation-levels {
+  padding: var(--spacing-8) 0;
+}
+
+.implementation-levels h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-6);
+  color: var(--color-dark-gray);
+}
+
+.level-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-4);
+  overflow: hidden;
+  border-left: 4px solid var(--color-orange-accent);
+}
+
+.level-header {
+  background: var(--color-off-white);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.level-header h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  color: var(--color-dark-gray);
+  margin-bottom: var(--spacing-1);
+}
+
+.level-specs {
+  color: var(--color-medium-gray);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+}
+
+.level-content {
+  padding: var(--spacing-4);
+}
+
+.level-content ul {
+  margin: var(--spacing-2) 0;
+  padding-left: var(--spacing-3);
+}
+
+.level-content li {
+  margin-bottom: var(--spacing-1);
+  color: var(--color-medium-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+.impact {
+  background: var(--color-foundation-bg);
+  color: var(--color-success-green);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-success-green);
+  margin-top: var(--spacing-2);
+  line-height: var(--line-height-relaxed);
+}
+
+.ideal-state {
+  background: var(--color-off-white);
+  padding: var(--spacing-8) 0;
+}
+
+.ideal-state h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-dark-gray);
+}
+
+.ideal-vision {
+  font-size: var(--font-size-large);
+  font-family: var(--font-family-primary);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.system-flexibility {
+  padding: var(--spacing-8) 0;
+}
+
+.system-flexibility h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-dark-gray);
+}
+
+.flexibility-description {
+  text-align: center;
+  font-size: var(--font-size-large);
+  font-family: var(--font-family-primary);
+  color: var(--color-medium-gray);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: var(--line-height-relaxed);
+}
+
+.cta-section {
+  background: var(--color-orange-accent);
+  color: var(--color-white);
+  padding: var(--spacing-8) 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-2);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px var(--spacing-4);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  font-size: var(--font-size-body);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-orange-accent);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-off-white);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-orange-accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .track-hero {
+    padding: var(--spacing-6) 0;
+  }
+  
+  .track-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .level-indicator {
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+  
+  .level-indicator .arrow {
+    transform: rotate(90deg);
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .implementation-levels {
+    padding: var(--spacing-6) 0;
+  }
+  
+  .ideal-state {
+    padding: var(--spacing-6) 0;
+  }
+  
+  .system-flexibility {
+    padding: var(--spacing-6) 0;
+  }
+  
+  .cta-section {
+    padding: var(--spacing-6) 0;
+  }
+}
+</style>

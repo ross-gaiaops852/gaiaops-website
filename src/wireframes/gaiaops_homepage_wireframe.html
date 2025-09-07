@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GaiaOps Homepage - Complete StoryBrand Wireframe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --teal-primary: #4A9B8B;
+            --navy-primary: #1E3A5F;
+            --orange-accent: #E07A47;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --text-gray: #6c757d;
+            --purple-primary: #8B5CF6;
+            --yellow-accent: #F59E0B;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-secondary: 'Crimson Pro', serif;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--navy-primary);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: var(--white);
+            padding: 1rem 0;
+            border-bottom: 1px solid #e9ecef;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--navy-primary);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--navy-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--teal-primary);
+        }
+
+        .nav-ctas {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--orange-accent);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--teal-primary);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Mobile Navigation */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--navy-primary);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* 1. Hero Section */
+        .hero-section {
+            background: var(--light-gray);
+            padding: 5rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-secondary);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            color: var(--purple-primary);
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: var(--text-gray);
+            line-height: 1.4;
+        }
+
+        .hero-content .teaser {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: var(--navy-primary);
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-ctas .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-hero-primary {
+            background: var(--purple-primary);
+            color: var(--white);
+        }
+
+        .btn-hero-secondary {
+            background: var(--yellow-accent);
+            color: var(--navy-primary);
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .success-visual {
+            width: 100%;
+            height: 400px;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            text-align: center;
+            padding: 2rem;
+            border: 2px dashed #e9ecef;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            opacity: 0.6;
+            flex-wrap: wrap;
+        }
+
+        .client-logos .logo-placeholder {
+            height: 40px;
+            width: 120px;
+            background: #e9ecef;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        /* 2. Results Section (like 3rd Brain's stats) */
+        .results-section {
+            background: var(--navy-primary);
+            color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .results-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .results-text h2 {
+            font-family: var(--font-secondary);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+
+        .results-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .results-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .results-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: left;
+        }
+
+        .stat-card .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* 3. Services Section (What Can GaiaOps Do for You?) */
+        .services-section {
+            background: var(--white);
+            padding: 5rem 0;
+        }
+
+        .services-section h2 {
+            font-family: var(--font-secondary);
+            font-size: 2.5rem;
+            color: var(--purple-primary);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: var(--navy-primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--yellow-accent);
+            padding-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .service-card .benefit {
+            background: var(--light-gray);
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: var(--navy-primary);
+            border-left: 4px solid var(--teal-primary);
+        }
+
+        .services-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* 4. Pricing Section */
+        .pricing-section {
+            background: var(--navy-primary);
+            padding: 5rem 0;
+            color: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            color: var(--navy-primary);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.featured {
+            background: var(--yellow-accent);
+            transform: scale(1.05);
+            border: 3px solid var(--orange-accent);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--navy-primary);
+        }
+
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .period {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card .description {
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            color: var(--text-gray);
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card .features {
+            text-align: left;
+        }
+
+        .pricing-card .features li {
+            list-style: none;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .pricing-card .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--teal-primary);
+            font-weight: bold;
+        }
+
+        /* 5. Framework Section (Progressive Excellence) */
+        .framework-section {
+            background: var(--white);
+            padding: 5rem 0;
+        }
+
+        .framework-section h2 {
+            font-family: var(--font-secondary);
+            font-size: 2.5rem;
+            color: var(--purple-primary);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .framework-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .framework-visual {
+            text-align: center;
+        }
+
+        .maturity-pyramid {
+            width: 100%;
+            height: 400px;
+            background: var(--light-gray);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            border: 2px dashed #e9ecef;
+        }
+
+        .framework-levels {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .level-item {
+            background: var(--navy-primary);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .level-item:hover {
+            background: var(--purple-primary);
+            transform: translateX(5px);
+        }
+
+        .level-item .expand {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* 6. Social Proof Section */
+        .social-proof {
+            background: var(--light-gray);
+            padding: 4rem 0;
+        }
+
+        .social-proof-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .social-proof h2 {
+            font-family: var(--font-secondary);
+            font-size: 2.5rem;
+            color: var(--teal-primary);
+            margin-bottom: 1rem;
+        }
+
+        .social-proof p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 1.1rem;
+            color: var(--navy-primary);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--teal-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            color: var(--navy-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info span {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* 7. Final CTA Section */
+        .final-cta {
+            background: var(--navy-primary);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-family: var(--font-secondary);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            color: var(--white);
+        }
+
+        .final-cta .subtitle {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-size: 1.2rem;
+        }
+
+        .final-cta .btn-white {
+            background: var(--white);
+            color: var(--navy-primary);
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                transform: translateY(-100vh);
+                transition: transform 0.3s ease;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-ctas {
+                gap: 0.5rem;
+            }
+
+            .nav-ctas .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero-grid,
+            .results-content,
+            .framework-content,
+            .social-proof-content {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .results-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Wireframe Annotation Styles */
+        .wireframe-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #856404;
+        }
+
+        .section-label {
+            position: fixed;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            background: var(--purple-primary);
+            color: var(--white);
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            z-index: 1000;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">GaiaOps</a>
+                
+                <ul class="nav-menu">
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/how-it-works">How It Works</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/resources">Resources</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="nav-ctas">
+                    <a href="/assessment" class="btn btn-primary">Operational Assessment</a>
+                    <a href="/discovery-call" class="btn btn-secondary">Book A Call</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Systematic Playbooks On Autopilot</h1>
+                    
+                    <p class="subtitle">The wrong processes or outdated systems can cost environmental consultancies 30% more revenue over time. We help you strategically implement proven operational playbooks to make sure that doesn't happen.</p>
+                    
+                    <p class="teaser">Sound interesting? Keep reading...</p>
+
+                    <div class="hero-ctas">
+                        <a href="/assessment" class="btn btn-hero-primary">Take Strategy Assessment</a>
+                        <a href="/case-studies" class="btn btn-hero-secondary">Download Case Studies</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="success-visual">
+                        <div>
+                            <strong>Operational Transformation Visual</strong><br>
+                            Before/After Dashboard<br>
+                            (Manual Processes → Automated Workflows)<br>
+                            <em>Similar to 3rd Brain's system visualization</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Logos (like 3rd Brain's trust indicators) -->
+            <div class="client-logos">
+                <div class="logo-placeholder">EcoConsult</div>
+                <div class="logo-placeholder">GreenTech</div>
+                <div class="logo-placeholder">EnviroPlus</div>
+                <div class="logo-placeholder">SustainCorp</div>
+                <div class="logo-placeholder">EarthFirst</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Results Section (like 3rd Brain's "Make Better Tech Decisions") -->
+    <section class="results-section">
+        <div class="container">
+            <div class="results-content">
+                <div class="results-text">
+                    <h2>Systematic Excellence Results</h2>
+                    <p>Get expert guidance on implementing operational playbooks into your consultancy. Identify high-impact opportunities, eliminate inefficiencies, and develop a roadmap for systematic operational success.</p>
+                    
+                    <div class="results-ctas">
+                        <a href="/assessment" class="btn btn-hero-primary">Take Strategy Assessment</a>
+                        <a href="/case-studies" class="btn btn-hero-secondary">Download Case Studies</a>
+                    </div>
+                </div>
+
+                <div class="results-stats">
+                    <div class="stat-card">
+                        <div class="number">35%</div>
+                        <div class="label">More Efficiency<br>average increase in operational productivity</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">100%</div>
+                        <div class="label">Less Chaos<br>stop firefighting and start systematizing</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">45%</div>
+                        <div class="label">Less Manual Work<br>average reduction in administrative overhead</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">5-10%</div>
+                        <div class="label">More Revenue<br>average net profit increase, $50K for every $1M!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services Section (like 3rd Brain's "What Can 3rd Brain Do for You?") -->
+    <section class="services-section">
+        <div class="container">
+            <h2>What Can GaiaOps Do for You?</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Client Onboarding Automation</h3>
+                    <p>Automated intake forms, document collection, client portals, and standardized kickoff processes that eliminate manual coordination.</p>
+                    <div class="benefit">60-80% reduction in onboarding administration time</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Project Management & Resource Allocation</h3>
+                    <p>Capacity planning, resource allocation systems, project templates, and budget tracking that optimizes team utilization.</p>
+                    <div class="benefit">30% improvement in team utilization and project efficiency</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Quality Assurance Workflows</h3>
+                    <p>Standardized review processes, document version control, compliance tracking, and quality checkpoints.</p>
+                    <div class="benefit">40% reduction in quality issues and rework cycles</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Reporting & Documentation Automation</h3>
+                    <p>Automated data aggregation, template-driven report generation, and client-ready dashboard creation.</p>
+                    <div class="benefit">50% reduction in reporting time and manual data compilation</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Business Development Pipeline</h3>
+                    <p>Lead tracking systems, proposal automation, client relationship management, and conversion optimization.</p>
+                    <div class="benefit">25% improvement in proposal conversion and client acquisition</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Multi-Party Coordination Systems</h3>
+                    <p>Stakeholder communication workflows, project coordination automation, and partner management systems.</p>
+                    <div class="benefit">Seamless collaboration and reduced coordination overhead</div>
+                </div>
+            </div>
+
+            <div class="services-ctas">
+                <a href="/assessment" class="btn btn-hero-primary">Take Strategy Assessment</a>
+                <a href="/case-studies" class="btn btn-hero-secondary">Download Case Studies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Pricing Section (like 3rd Brain's pricing cards) -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Foundation Playbooks</h3>
+                    <div class="price">$2,500</div>
+                    <div class="period">Per Month</div>
+                    <div class="description">Systematize your core operations with proven playbook implementation for smaller consultancies (5-10 employees).</div>
+                    <a href="/discovery-call" class="btn btn-primary">Book A Call</a>
+                    <ul class="features">
+                        <li>One active playbook implementation</li>
+                        <li>Monthly strategy consultations</li>
+                        <li>Unlimited optimizations</li>
+                        <li>Integration with existing tools</li>
+                        <li>Team training and documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Growth Playbooks</h3>
+                    <div class="price">$3,000</div>
+                    <div class="period">Per Month</div>
+                    <div class="description">Advanced systematic implementation for growing environmental consultancies ready to scale operations (11-18 employees).</div>
+                    <a href="/discovery-call" class="btn btn-primary">Book A Call</a>
+                    <ul class="features">
+                        <li>Multiple concurrent playbook tracks</li>
+                        <li>Bi-weekly strategy sessions</li>
+                        <li>Priority implementation support</li>
+                        <li>Custom workflow development</li>
+                        <li>Performance analytics dashboard</li>
+                        <li>Team leadership training</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Excellence Playbooks</h3>
+                    <div class="price">$3,500</div>
+                    <div class="period">Per Month</div>
+                    <div class="description">Complete operational transformation for established consultancies seeking market leadership (19-25 employees).</div>
+                    <a href="/discovery-call" class="btn btn-primary">Book A Call</a>
+                    <ul class="features">
+                        <li>Full operational transformation</li>
+                        <li>Weekly strategic guidance</li>
+                        <li>Dedicated success manager</li>
+                        <li>Industry benchmark analysis</li>
+                        <li>Competitive differentiation strategy</li>
+                        <li>Executive team development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Framework Section (like 3rd Brain's "Levels of Digital Operations") -->
+    <section class="framework-section">
+        <div class="container">
+            <h2>Progressive Excellence Framework</h2>
+            
+            <div class="framework-content">
+                <div class="framework-visual">
+                    <div class="maturity-pyramid">
+                        <div>
+                            <strong>Digital Operations Maturity Pyramid</strong><br>
+                            Levels 0-5 Visual Framework<br>
+                            (Similar to 3rd Brain's isometric pyramid)<br>
+                            <em>Foundation → Advanced → Complete → Optimized → Leadership</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="framework-levels">
+                    <div class="level-item">
+                        <span><strong>Level 5:</strong> Market Leadership Operations</span>
+                        <span class="expand">+</span>
+                    </div>
+                    <div class="level-item">
+                        <span><strong>Level 4:</strong> Optimized Digital Systems</span>
+                        <span class="expand">+</span>
+                    </div>
+                    <div class="level-item">
+                        <span><strong>Level 3:

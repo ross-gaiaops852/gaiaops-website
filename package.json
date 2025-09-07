@@ -18,7 +18,8 @@
     "deploy:prod": "npm run build && echo 'Ready for production deployment'"
   },
   "dependencies": {
-    "astro": "^5.13.2"
+    "astro": "^5.13.2",
+    "heroicons": "^2.2.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.40.0",
