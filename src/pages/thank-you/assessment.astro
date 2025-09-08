@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="Thank You - Assessment - GaiaOps" description="Thank you for taking the operational assessment. Your results will be available shortly.">
+  <Header />
+  
+  <main id="main-content">
+    <section class="hero">
+      <div class="container">
+        <h1>Thank You</h1>
+        <p>This page is under construction.</p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+.hero {
+  background: linear-gradient(135deg, var(--color-navy-primary) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+</style>
