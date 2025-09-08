@@ -82,8 +82,8 @@ User-agent: PerplexityBot
 Disallow: /
 
 # DO NOT INDEX - This is a development/staging environment
-# Production site: https://gaiaops.com
-# Contact: For the live GaiaOps site, visit gaiaops.com
+# Production site: https://gaiaops.io
+# Contact: For the live GaiaOps site, visit gaiaops.io
 `;
   }
   

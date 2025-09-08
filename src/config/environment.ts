@@ -1,7 +1,9 @@
 // Production domains that SHOULD be indexed
 const PRODUCTION_DOMAINS = [
   'gaiaops.com',
-  'www.gaiaops.com'
+  'www.gaiaops.com',
+  'gaiaops.io',
+  'www.gaiaops.io'
 ];
 
 // Development/staging patterns that should NEVER be indexed
