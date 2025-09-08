@@ -5,11 +5,17 @@ export interface Props {
   image?: string;
 }
 
+import { getEnvironmentConfig } from '../config/environment';
+
 const { 
   title, 
   description = "GaiaOps - Progressive Operational Excellence for Environmental Consultancies", 
   image = "/og-image.jpg" 
 } = Astro.props;
+
+// Get comprehensive environment configuration
+const config = getEnvironmentConfig(new URL(Astro.url));
+const { shouldIndex } = config;
 ---
 
 <!doctype html>
@@ -21,6 +27,55 @@ const {
     <link rel="icon" type="image/png" href="/images/logos/gaiaops-icon.png" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Protection System - Multi-layer approach -->
+    {!shouldIndex ? (
+      <>
+        <!-- Primary robots directive -->
+        <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+        
+        <!-- Search engine specific directives -->
+        <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+        <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet" />
+        <meta name="slurp" content="noindex, nofollow" />
+        <meta name="duckduckbot" content="noindex, nofollow" />
+        
+        <!-- Additional crawler protection -->
+        <meta name="AdsBot-Google" content="noindex, nofollow" />
+        <meta name="facebookbot" content="noindex, nofollow" />
+        <meta name="twitterbot" content="noindex, nofollow" />
+        <meta name="linkedinbot" content="noindex, nofollow" />
+        
+        <!-- AI crawler protection -->
+        <meta name="ChatGPT-User" content="noindex, nofollow" />
+        <meta name="GPTBot" content="noindex, nofollow" />
+        <meta name="Claude-Web" content="noindex, nofollow" />
+        
+        <!-- Development environment markers -->
+        <meta name="environment" content={config.isProduction ? 'production' : 'development'} />
+        <meta name="hostname" content={config.hostname} />
+        <meta name="seo-protection" content="active" />
+        <meta name="production-site" content="https://gaiaops.com" />
+        
+        <!-- Additional protection -->
+        <meta name="revisit-after" content="never" />
+        <meta name="rating" content="noindex" />
+      </>
+    ) : (
+      <>
+        <!-- Production: Positive SEO signals -->
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        
+        <!-- Canonical URL for production -->
+        <link rel="canonical" href={`https://gaiaops.com${Astro.url.pathname}`} />
+        
+        <!-- Production environment marker -->
+        <meta name="environment" content="production" />
+        <meta name="seo-protection" content="disabled" />
+      </>
+    )}
     
     <!-- Google Fonts Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
