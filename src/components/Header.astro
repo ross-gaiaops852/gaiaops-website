@@ -29,20 +29,23 @@
     <!-- Desktop Navigation -->
     <div class="nav-menu" id="nav-menu">
       <div class="nav-dropdown mobile-dropdown">
-        <button 
-          class="nav-link dropdown-trigger mobile-dropdown-trigger" 
-          id="solutions-button"
-          aria-expanded="false"
-          aria-haspopup="true"
-          aria-controls="solutions-menu"
-          tabindex="0"
-          type="button"
-        >
-          Solutions
-          <svg class="chevron-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
+        <div class="nav-dropdown-wrapper">
+          <a href="/solutions" class="nav-link dropdown-main-link">Solutions</a>
+          <button 
+            class="dropdown-trigger dropdown-arrow" 
+            id="solutions-button"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="solutions-menu"
+            tabindex="0"
+            type="button"
+            aria-label="Toggle Solutions menu"
+          >
+            <svg class="chevron-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
         <div 
           class="dropdown-menu mobile-submenu" 
           id="solutions-menu"
@@ -98,20 +101,23 @@
       <a href="/pricing" class="nav-link">Pricing</a>
       <a href="/about" class="nav-link">About</a>
       <div class="nav-dropdown mobile-dropdown">
-        <button 
-          class="nav-link dropdown-trigger mobile-dropdown-trigger" 
-          id="resources-button"
-          aria-expanded="false"
-          aria-haspopup="true"
-          aria-controls="resources-menu"
-          tabindex="0"
-          type="button"
-        >
-          Resources
-          <svg class="chevron-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
+        <div class="nav-dropdown-wrapper">
+          <a href="/resources" class="nav-link dropdown-main-link">Resources</a>
+          <button 
+            class="dropdown-trigger dropdown-arrow" 
+            id="resources-button"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="resources-menu"
+            tabindex="0"
+            type="button"
+            aria-label="Toggle Resources menu"
+          >
+            <svg class="chevron-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
         <div 
           class="dropdown-menu mobile-submenu" 
           id="resources-menu"
@@ -333,8 +339,8 @@
     }
     
     // Mouse hover support for dropdowns (desktop only)
-    function setupHoverSupport(button, menu) {
-      const dropdown = button.parentElement;
+    function setupHoverSupport(button, menu, wrapper) {
+      const dropdown = wrapper || button.parentElement;
       
       dropdown.addEventListener('mouseenter', function() {
         if (isMobileView()) return; // Skip hover on mobile
@@ -370,7 +376,8 @@
     
     // Solutions dropdown
     if (solutionsButton && solutionsMenu) {
-      setupHoverSupport(solutionsButton, solutionsMenu);
+      const solutionsWrapper = solutionsButton.closest('.nav-dropdown-wrapper').parentElement;
+      setupHoverSupport(solutionsButton, solutionsMenu, solutionsWrapper);
       
       solutionsButton.addEventListener('click', function(e) {
         e.preventDefault(); // Prevent any default button behavior
@@ -420,7 +427,8 @@
     
     // Resources dropdown
     if (resourcesButton && resourcesMenu) {
-      setupHoverSupport(resourcesButton, resourcesMenu);
+      const resourcesWrapper = resourcesButton.closest('.nav-dropdown-wrapper').parentElement;
+      setupHoverSupport(resourcesButton, resourcesMenu, resourcesWrapper);
       
       resourcesButton.addEventListener('click', function(e) {
         e.preventDefault(); // Prevent any default button behavior
@@ -697,6 +705,37 @@
 
 .nav-dropdown {
   position: relative;
+}
+
+.nav-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dropdown-main-link {
+  /* Inherits nav-link styles */
+}
+
+.dropdown-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-arrow:hover {
+  background-color: rgba(74, 155, 139, 0.1);
+}
+
+.dropdown-arrow:focus-visible {
+  outline: 2px solid var(--color-teal-primary);
+  outline-offset: 2px;
 }
 
 .dropdown-menu {
@@ -1042,16 +1081,24 @@
   }
   
   /* Mobile dropdown styling - Override desktop styles completely */
-  .nav-menu .mobile-dropdown-trigger {
+  .nav-menu .nav-dropdown-wrapper {
     justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-menu .dropdown-main-link {
+    flex: 1;
+  }
+  
+  .nav-menu .dropdown-arrow {
+    padding: 0.5rem;
   }
   
   .nav-menu .chevron-icon {
     transition: transform 0.2s ease;
-    margin-left: auto;
   }
   
-  .nav-menu .mobile-dropdown-trigger[aria-expanded="true"] .chevron-icon {
+  .nav-menu .dropdown-arrow[aria-expanded="true"] .chevron-icon {
     transform: rotate(180deg);
   }
   

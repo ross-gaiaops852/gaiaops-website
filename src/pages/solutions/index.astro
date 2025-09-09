@@ -3,87 +3,809 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import TrackCard from '../../components/ui/TrackCard.astro';
+import Icon from '../../components/Icon.astro';
 import { tracks } from '../../utils/trackData.ts';
 ---
 
 <BaseLayout 
-  title="Services - Progressive Excellence Framework | GaiaOps"
-  description="Advance through six operational tracks to transform chaos into systematic excellence. Foundation → Advanced → Complete levels for environmental consultancies."
+  title="7 Proven Tracks to Transform Your Environmental Operations | GaiaOps"
+  description="Stop fixing problems one at a time. Build a complete operational system that scales your environmental impact with our 7 proven transformation tracks."
 >
   <Header />
   
-  <main id="main-content" class="tracks-overview">
-    <section class="hero">
+  <main id="main-content">
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
       <div class="container">
-        <h1>7 Operational Tracks to Transform Your Practice</h1>
-        <p class="hero-description">
-          Choose the track that addresses your most pressing challenge, then expand systematically as you grow. Each track contains proven methodologies with measurable results.
+        <nav class="breadcrumb">
+          <a href="/">Home</a>
+          <span>></span>
+          <span>Solutions</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>7 Proven Tracks to Transform Your Environmental Operations</h1>
+          <p class="subtitle">Stop fixing problems one at a time. Build a complete operational system that scales your environmental impact.</p>
+          
+          <div class="hero-ctas">
+            <a href="/assessment" class="btn btn-primary-orange">Take the Assessment</a>
+            <a href="/book-call" class="btn btn-secondary-white">Book Discovery Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Introduction Section -->
+    <section class="introduction-section">
+      <div class="container">
+        <div class="intro-content">
+          <div class="lead-quote">
+            <p>"Every environmental consultancy faces operational challenges. The difference between thriving and surviving is having a systematic approach to solving them."</p>
+          </div>
+          
+          <div class="intro-text">
+            <div class="problem-statement">
+              <p>You didn't start your environmental consultancy to spend 40% of your time on administrative tasks, chase down project information across disconnected systems, or turn away qualified opportunities because you're at capacity. Yet that's exactly where most firms find themselves—trapped in operational chaos that limits their environmental impact.</p>
+            </div>
+            
+            <div class="solution-preview">
+              <p>Our 7-track operational system isn't another band-aid solution. It's a comprehensive transformation framework that addresses every operational bottleneck systematically, helping you serve 50% more clients with your existing team while actually improving work-life balance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Track Cards Grid -->
+    <section class="operational-tracks">
+      <div class="container">
+        <div class="section-header">
+          <h2>Choose Your Transformation Path</h2>
+          <p class="section-subtitle">Start with any track and expand systematically as you grow</p>
+        </div>
+        
+        <!-- Row 1: 2 cards centered -->
+        <div class="tracks-grid row-2">
+          <a href="/solutions/client-relationships" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="users" />
+              </div>
+              <h3>Client Relationships Management</h3>
+              <div class="benefit-metric">60% faster client onboarding</div>
+            </div>
+          </a>
+          
+          <a href="/solutions/resource-optimization" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="cpu-chip" />
+              </div>
+              <h3>Resource Optimization Systems</h3>
+              <div class="benefit-metric">30% better team utilization</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Row 2: 3 cards -->
+        <div class="tracks-grid row-3">
+          <a href="/solutions/quality-assurance" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="shield-check" />
+              </div>
+              <h3>Quality Assurance Workflows</h3>
+              <div class="benefit-metric">50% reduction in quality issues</div>
+            </div>
+          </a>
+          
+          <a href="/solutions/business-intelligence" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="presentation-chart-line" />
+              </div>
+              <h3>Business Intelligence Systems</h3>
+              <div class="benefit-metric">75% faster report generation</div>
+            </div>
+          </a>
+          
+          <a href="/solutions/growth-systems" class="track-card-link">
+            <div class="track-card">
+              <div class="track-icon">
+                <Icon name="rocket-launch" />
+              </div>
+              <h3>Growth Systems Automation</h3>
+              <div class="benefit-metric">50% more clients, same team size</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Premium Divider -->
+        <div class="premium-divider">
+          <div class="divider-line"></div>
+          <span class="divider-label">Premium Tracks (Excellence Plan Only)</span>
+          <div class="divider-line"></div>
+        </div>
+
+        <!-- Row 3: 2 premium cards centered -->
+        <div class="tracks-grid row-2">
+          <a href="/solutions/multi-party-coordination" class="track-card-link">
+            <div class="track-card premium-card">
+              <div class="premium-badge">PREMIUM</div>
+              <div class="track-icon premium-icon">
+                <Icon name="share" />
+              </div>
+              <h3>Multi-Party Coordination Systems</h3>
+              <p class="premium-description">Advanced stakeholder orchestration with automated workflows, compliance tracking, and real-time coordination dashboards for complex multi-party projects.</p>
+              <div class="benefit-metric">40% reduction in coordination overhead</div>
+            </div>
+          </a>
+          
+          <a href="/solutions/strategic-advantage" class="track-card-link">
+            <div class="track-card premium-card">
+              <div class="premium-badge">PREMIUM</div>
+              <div class="track-icon premium-icon">
+                <Icon name="trophy" />
+              </div>
+              <h3>Strategic Advantage Track</h3>
+              <p class="premium-description">Market differentiation through operational excellence, competitive intelligence systems, and strategic positioning frameworks that command premium pricing.</p>
+              <div class="benefit-metric">Industry leadership positioning</div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- CTA After Track Cards -->
+        <div class="section-cta">
+          <p class="cta-text">Ready to start your transformation journey?</p>
+          <div class="cta-buttons">
+            <a href="/assessment" class="btn btn-primary-orange">Take the Assessment</a>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-secondary">Book Discovery Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Progressive Excellence Framework -->
+    <section class="progressive-framework">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Power of Progressive Transformation</h2>
+        </div>
+        
+        <div class="framework-progression">
+          <div class="framework-card">
+            <div class="framework-icon">
+              <Icon name="chart-bar-square" type="outline" />
+            </div>
+            <h3>Foundation (Months 1-4)</h3>
+            <p>Establish core operational systems using existing tools and proven methodologies. Focus on immediate pain points with systematic approaches that create stability and predictable outcomes across your highest-impact areas.</p>
+          </div>
+          
+          <div class="framework-arrow">
+            <Icon name="arrow-right" type="outline" />
+          </div>
+          
+          <div class="framework-card">
+            <div class="framework-icon">
+              <Icon name="cog" type="outline" />
+            </div>
+            <h3>Optimization (Months 5-8)</h3>
+            <p>Automate routine processes and optimize workflows between operational areas. Implement data-driven decision making and advanced coordination systems that eliminate bottlenecks and reduce administrative overhead.</p>
+          </div>
+          
+          <div class="framework-arrow">
+            <Icon name="arrow-right" type="outline" />
+          </div>
+          
+          <div class="framework-card">
+            <div class="framework-icon">
+              <Icon name="trophy" type="outline" />
+            </div>
+            <h3>Excellence (Months 9-12)</h3>
+            <p>Deploy AI-enhanced strategic systems and predictive capabilities. Achieve systematic operational excellence that scales seamlessly, enabling significant capacity expansion without proportional increases in management complexity.</p>
+          </div>
+        </div>
+        
+        <div class="framework-highlight-cta">
+          <h3>Combined Result</h3>
+          <p>Our systematic approach delivers an average of 30% efficiency gains within the first 6 months, enabling most firms to serve 50% more clients without additional staff.</p>
+        </div>
+        
+        <!-- CTA After Progressive Framework -->
+        <div class="section-cta">
+          <p class="cta-text">Want to see your systematic transformation roadmap?</p>
+          <div class="cta-buttons">
+            <a href="/assessment" class="btn btn-primary-orange">Get Your Assessment</a>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-secondary">Schedule Strategy Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Synergy Showcase -->
+    <section class="synergy-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Multiple Tracks Multiply Results</h2>
+          <p class="synergy-intro">Individual tracks deliver focused improvements, but operational transformation accelerates exponentially when tracks work together. Each combination creates new capabilities that wouldn't exist in isolation.</p>
+        </div>
+        
+        <div class="synergy-cards-grid">
+          <div class="synergy-card">
+            <div class="synergy-icon">
+              <Icon name="users" type="outline" />
+            </div>
+            <div class="synergy-equation">
+              <span class="synergy-combo">Client + Resource</span>
+              <span class="equals">=</span>
+              <span class="synergy-result">Perfect Project Matching</span>
+            </div>
+            <p class="synergy-description">When client requirements automatically match with team capabilities, you eliminate project delays, improve utilization rates, and deliver better outcomes for everyone.</p>
+          </div>
+          
+          <div class="synergy-card">
+            <div class="synergy-icon">
+              <Icon name="shield-check" type="outline" />
+            </div>
+            <div class="synergy-equation">
+              <span class="synergy-combo">Quality + Intelligence</span>
+              <span class="equals">=</span>
+              <span class="synergy-result">Predictive Quality Control</span>
+            </div>
+            <p class="synergy-description">Business intelligence systems identify quality trends before they become issues, while automated workflows ensure consistent excellence across all deliverables.</p>
+          </div>
+          
+          <div class="synergy-card">
+            <div class="synergy-icon">
+              <Icon name="arrow-trending-up" type="outline" />
+            </div>
+            <div class="synergy-equation">
+              <span class="synergy-combo">Growth + Multi-Party</span>
+              <span class="equals">=</span>
+              <span class="synergy-result">Complex Project Scalability</span>
+            </div>
+            <p class="synergy-description">Systematic growth processes combined with stakeholder coordination capabilities let you confidently pursue larger, more complex projects that competitors can't handle.</p>
+          </div>
+          
+          <div class="synergy-card premium-synergy">
+            <div class="synergy-icon">
+              <Icon name="check-circle" type="outline" />
+            </div>
+            <div class="synergy-equation">
+              <span class="synergy-combo">All Tracks Combined</span>
+              <span class="equals">=</span>
+              <span class="synergy-result">Operational Excellence</span>
+            </div>
+            <p class="synergy-description">Full transformation creates a self-reinforcing system where every improvement amplifies others, resulting in 2-3x capacity gains with improved quality and team satisfaction.</p>
+          </div>
+        </div>
+        
+        <!-- CTA After Synergy Showcase -->
+        <div class="section-cta">
+          <p class="cta-text">Ready to unlock multiplicative results across your operations?</p>
+          <div class="cta-buttons">
+            <a href="/assessment" class="btn btn-primary-orange">Discover Your Synergies</a>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-secondary">Plan Your Transformation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Your Path to Operational Excellence -->
+    <section class="plan-section" style="background-color: #F8F9FA;">
+      <div class="container">
+        <div class="section-header">
+          <h2 style="color: #1B365D;">Your Path to Operational Excellence</h2>
+          <p class="section-subtitle" style="color: #2C3E50;">A proven process that transforms chaos into systematic success</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number" style="background-color: #2A7F7E; color: white;">1</div>
+            <Icon name="magnifying-glass" class="step-icon" style="color: #2A7F7E;" />
+            <h3 style="color: #1B365D;">Identify Your Biggest Bottleneck</h3>
+            <p style="color: #2C3E50;">Take our free operational assessment to pinpoint exactly where inefficiencies are costing you time and revenue</p>
+          </div>
+          
+          <div class="step-connector" style="color: #2A7F7E;">→</div>
+          
+          <div class="step-item">
+            <div class="step-number" style="background-color: #2A7F7E; color: white;">2</div>
+            <Icon name="cog" class="step-icon" style="color: #2A7F7E;" />
+            <h3 style="color: #1B365D;">Deploy Your First Playbook</h3>
+            <p style="color: #2C3E50;">We'll implement a targeted solution in 6-8 weeks, with full training and documentation for your team</p>
+          </div>
+          
+          <div class="step-connector" style="color: #2A7F7E;">→</div>
+          
+          <div class="step-item">
+            <div class="step-number" style="background-color: #2A7F7E; color: white;">3</div>
+            <Icon name="arrow-trending-up" class="step-icon" style="color: #2A7F7E;" />
+            <h3 style="color: #1B365D;">Expand Systematically</h3>
+            <p style="color: #2C3E50;">Add new operational playbooks as you grow, building a complete excellence framework</p>
+          </div>
+        </div>
+        
+        <div class="plan-cta">
+          <a href="/assessment" class="btn btn-primary-orange">Start Your Assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Social Proof Section -->
+    <section class="social-proof" style="background-color: #F8F9FA; padding: 4rem 0;">
+      <div class="container">
+        <h2 style="color: #1B365D; text-align: center;">Built on Industry Research, Ready for Your Tech Stack</h2>
+        <p style="text-align: center; color: #2C3E50; font-size: 1.125rem; margin-bottom: 3rem;">We've studied the tools environmental consultancies actually use</p>
+        
+        <!-- Research Stats Grid -->
+        <div class="research-stats">
+          <div class="stat-card">
+            <div class="stat-number">75%</div>
+            <p>of firms struggle with data silos between systems</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20-30%</div>
+            <p>revenue lost to billing inefficiencies</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">52%</div>
+            <p>of firms developing AI strategies</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">87%</div>
+            <p>need digital field collection systems</p>
+          </div>
+        </div>
+        
+        <!-- Tech Stack Logos -->
+        <h3 style="text-align: center; color: #1B365D; margin-bottom: 2rem;">We can work with and integrate all your tools</h3>
+        
+        <div class="logo-carousel-container">
+          <button class="carousel-nav prev" id="prevBtn">‹</button>
+          <div class="logo-carousel-viewport">
+            <div class="logo-carousel" id="logoCarousel">
+            <div class="logo-slide">
+              <div class="logo-item microsoft">Microsoft 365</div>
+              <div class="logo-item clickup featured">ClickUp</div>
+              <div class="logo-item arcgis">ArcGIS</div>
+              <div class="logo-item google">Google Workspace</div>
+            </div>
+            <div class="logo-slide">
+              <div class="logo-item slack">Slack</div>
+              <div class="logo-item quickbooks">QuickBooks</div>
+              <div class="logo-item modflow">MODFLOW</div>
+              <div class="logo-item airtable">Airtable</div>
+            </div>
+            <div class="logo-slide">
+              <div class="logo-item dropbox">Dropbox</div>
+              <div class="logo-item aermod">AERMOD</div>
+              <div class="logo-item monday">Monday.com</div>
+              <div class="logo-item teams">Microsoft Teams</div>
+            </div>
+            <div class="logo-slide">
+              <div class="logo-item xero">Xero</div>
+              <div class="logo-item asana">Asana</div>
+              <div class="logo-item sampleserve">SampleServe</div>
+              <div class="logo-item hubspot">HubSpot</div>
+            </div>
+            <div class="logo-slide">
+              <div class="logo-item salesforce">Salesforce</div>
+              <div class="logo-item qgis">QGIS</div>
+              <div class="logo-item aldoa">Aldoa</div>
+              <div class="logo-item evx">EVX</div>
+            </div>
+          </div>
+          <button class="carousel-nav next" id="nextBtn">›</button>
+        </div>
+        
+        <p style="text-align: center; margin-top: 2rem; color: #6B7280;">Plus 40+ other environmental and business tools</p>
+        
+        <div class="section-cta" style="text-align: center; padding: 3rem 0 1rem;">
+          <p style="font-size: 1.125rem; color: #2C3E50; margin-bottom: 1.5rem;">Ready to integrate your tools into a unified operational system?</p>
+          <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary" style="background-color: #D97642; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; margin-right: 1rem;">Book Discovery Call</a>
+          <a href="" onclick="alert('Assessment coming soon!'); return false;" class="btn btn-secondary" style="background-color: white; color: #1B365D; border: 2px solid #1B365D; padding: 10px 22px; border-radius: 8px; text-decoration: none; display: inline-block;">See How You Compare</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Track Selector Preview -->
+    <section class="track-selector-preview" style="background: linear-gradient(135deg, rgba(74, 155, 139, 0.03) 0%, rgba(30, 58, 95, 0.03) 100%); padding: 5rem 0;">
+      <div class="container">
+        <div class="section-header">
+          <h2>Find Your Starting Point</h2>
+          <p class="teaser-message">Preview: Sample questions from our comprehensive assessment</p>
+        </div>
+        
+        <div class="selector-content">
+          <div class="intro-container" style="max-width: 650px; margin: 0 auto 2rem auto; padding: 0 1rem; text-align: center; width: 100%;">
+            <p class="intro-text" style="text-align: center; margin: 0 auto; display: block; font-size: 1.125rem; color: #6B7280; line-height: 1.6;">Our assessment evaluates your current operational maturity across all seven tracks to recommend your optimal transformation sequence.</p>
+          </div>
+          
+          <div class="progress-indicator">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 30%;"></div>
+            </div>
+            <p class="progress-text">Assessment Preview (4 of 25 questions)</p>
+          </div>
+          
+          <div class="question-cards">
+            <!-- Question 1 -->
+            <div class="question-card">
+              <div class="question-header">
+                <div style="width: 24px; height: 24px; color: #4A9B8B;">
+                  <Icon name="presentation-chart-line" type="outline" class="question-icon" />
+                </div>
+                <div class="question-number">1 of 4</div>
+              </div>
+              <h3>What's your biggest operational challenge right now?</h3>
+              <div class="options-grid">
+                <label class="option-item">
+                  <input type="radio" name="q1" value="onboarding">
+                  <span class="option-text">Client onboarding takes too long</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="availability">
+                  <span class="option-text">Can't tell who's available for projects</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="quality">
+                  <span class="option-text">Quality issues despite best efforts</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="reports">
+                  <span class="option-text">Reports take forever to compile</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="growth">
+                  <span class="option-text">Missing growth opportunities</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="coordination">
+                  <span class="option-text">Partner coordination is chaos</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q1" value="differentiation">
+                  <span class="option-text">Need competitive differentiation</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-card">
+              <div class="question-header">
+                <div style="width: 24px; height: 24px; color: #4A9B8B;">
+                  <Icon name="clock" type="outline" class="question-icon" />
+                </div>
+                <div class="question-number">2 of 4</div>
+              </div>
+              <h3>How much time does your team spend on admin tasks?</h3>
+              <div class="options-grid">
+                <label class="option-item">
+                  <input type="radio" name="q2" value="less-20">
+                  <span class="option-text">Less than 20%</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q2" value="20-30">
+                  <span class="option-text">20-30%</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q2" value="30-40">
+                  <span class="option-text">30-40%</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q2" value="more-40">
+                  <span class="option-text">More than 40%</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-card">
+              <div class="question-header">
+                <div style="width: 24px; height: 24px; color: #4A9B8B;">
+                  <Icon name="rocket-launch" type="outline" class="question-icon" />
+                </div>
+                <div class="question-number">3 of 4</div>
+              </div>
+              <h3>What would have the biggest impact on your business?</h3>
+              <div class="options-grid">
+                <label class="option-item">
+                  <input type="radio" name="q3" value="delivery">
+                  <span class="option-text">Faster project delivery</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q3" value="margins">
+                  <span class="option-text">Higher project margins</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q3" value="capacity">
+                  <span class="option-text">More client capacity</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q3" value="utilization">
+                  <span class="option-text">Better team utilization</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q3" value="quality-issues">
+                  <span class="option-text">Reduced quality issues</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q3" value="position">
+                  <span class="option-text">Strategic market position</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-card">
+              <div class="question-header">
+                <div style="width: 24px; height: 24px; color: #4A9B8B;">
+                  <Icon name="users" type="outline" class="question-icon" />
+                </div>
+                <div class="question-number">4 of 4</div>
+              </div>
+              <h3>How do you currently manage multiple stakeholder communications?</h3>
+              <div class="options-grid">
+                <label class="option-item">
+                  <input type="radio" name="q4" value="email-spreadsheets">
+                  <span class="option-text">Email chains and spreadsheets</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q4" value="basic-pm-tool">
+                  <span class="option-text">Basic project management tool</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q4" value="disconnected-systems">
+                  <span class="option-text">Multiple disconnected systems</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q4" value="manual-meetings">
+                  <span class="option-text">Manual coordination meetings</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q4" value="shared-drives">
+                  <span class="option-text">Shared drives and documents</span>
+                </label>
+                <label class="option-item">
+                  <input type="radio" name="q4" value="struggle-daily">
+                  <span class="option-text">We struggle with this daily</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cta-section">
+            <a href="/assessment" class="btn btn-primary-orange">Take the Full Assessment</a>
+            <p class="cta-description">Get your complete operational analysis and custom transformation roadmap</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions About GaiaOps Solutions</h2>
+          <p class="section-subtitle">Get answers to common questions about our service tiers, implementation process, and transformation approach.</p>
+        </div>
+        
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+              <span>Which service tier is right for my firm?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-1" hidden>
+              <p>The right tier depends on your current operational maturity and transformation goals. Digital Operations Jumpstart is perfect for testing our methodology with a single implementation. Systematic Growth suits firms ready for steady, sustainable transformation at 6-8 implementations per year. Operations Excellence is ideal for firms committed to rapid transformation across all operational areas with 10-12 implementations annually.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+              <span>How long does each implementation take?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-2" hidden>
+              <p>Individual implementations typically take 6-8 weeks from kickoff to completion. This includes discovery, system setup, team training, and transition to full operational use. The timeline may vary slightly based on the complexity of your existing systems and team availability for training sessions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+              <span>Can I start with one track and add others later?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-3" hidden>
+              <p>Absolutely. Our progressive approach is designed for exactly this scenario. Many clients start with Client Relationships or Resource Optimization, then systematically add tracks as they see results. Each track is built to integrate seamlessly with others, and we help you plan the optimal sequence based on your specific business priorities.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+              <span>What's included in the assessment?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-4" hidden>
+              <p>The comprehensive assessment evaluates your current operations across all seven tracks, identifies your biggest opportunities for efficiency gains, and provides a customized roadmap for transformation. You'll receive a detailed report showing where you stand today, specific recommendations for improvement, and a prioritized implementation sequence tailored to your goals.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+              <span>Do you work with firms of all sizes?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-5" hidden>
+              <p>We primarily work with established environmental consulting firms (typically 5+ employees) who are ready to systematize their operations for growth. Our methodology is most effective for firms that have moved beyond startup phase and want to build scalable operational systems. If you're a smaller firm with big growth ambitions, the Digital Operations Jumpstart can be an excellent starting point.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+              <span>What happens if I need to pause or cancel my subscription?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-6" hidden>
+              <p>We understand that business needs can change. You can pause your subscription for up to 90 days or cancel with 30 days' notice. All systems and documentation you've received remain yours permanently. If you pause, we'll help ensure a smooth transition back when you're ready to resume. Our 30-day satisfaction guarantee also protects your initial investment.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-7">
+              <span>How do you measure success and ROI?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-7" hidden>
+              <p>We track operational efficiency gains, client satisfaction improvements, and capacity increases as primary success metrics. Most clients see 30-50% efficiency improvements within 6-12 months, along with measurable improvements in project delivery times, client retention rates, and team satisfaction. We provide quarterly business reviews to track progress and adjust strategies as needed.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-8">
+              <span>Can I integrate GaiaOps systems with my existing software?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-8" hidden>
+              <p>Yes, our systems are designed to work with popular environmental consulting tools including ArcGIS, AutoCAD, ClickUp, Monday.com, HubSpot, QuickBooks, and most CRM/project management platforms. We focus on optimizing your workflows within existing tools rather than forcing software changes, though we may recommend specific integrations that dramatically improve efficiency.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-cta">
+          <h3>Still Have Questions?</h3>
+          <p>Contact us directly or book a discovery call to discuss your specific situation.</p>
+          <div class="faq-cta-buttons">
+            <a href="/contact" class="btn btn-secondary">Contact Us</a>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary-orange">Book Discovery Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Pricing Preview -->
+    <section class="pricing-preview">
+      <div class="container">
+        <div class="section-header">
+          <h2>Investment in Your Operational Future</h2>
+          <p class="section-subtitle">Choose the engagement model that matches your transformation goals and organizational readiness</p>
+        </div>
+        
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Digital Operations Jumpstart</h3>
+            <div class="price">$7,497</div>
+            <div class="period">one-time</div>
+            <div class="description">Single implementation over 6-8 weeks. Test our methodology with one complete playbook.</div>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ross-gaiaops/discovery-call'});return false;" class="btn btn-primary-orange">Book Discovery Call</a>
+            <ul class="features">
+              <li>One complete playbook implementation</li>
+              <li>6-8 week delivery timeline</li>
+              <li>Choice from 5 core tracks</li>
+              <li>Full team training included</li>
+              <li>Documentation and SOPs</li>
+              <li>30-day post-implementation support</li>
+            </ul>
+          </div>
+          
+          <div class="pricing-card featured">
+            <h3>Systematic Growth</h3>
+            <div class="price">$2,997</div>
+            <div class="period">per month + $1,997 setup</div>
+            <div class="description">6-8 implementations per year. Perfect pace for sustainable transformation.</div>
+            <a href="/pricing" class="btn btn-primary-orange">View Pricing Details</a>
+            <ul class="features">
+              <li>6-8 implementations per year</li>
+              <li>Access to 5 core tracks</li>
+              <li>Monthly 90-minute strategy sessions</li>
+              <li>Unlimited optimizations between implementations</li>
+              <li>48-hour support response time</li>
+              <li>Quarterly business reviews</li>
+            </ul>
+          </div>
+          
+          <div class="pricing-card">
+            <h3>Operations Excellence</h3>
+            <div class="price">$4,997</div>
+            <div class="period">per month + $2,997 setup</div>
+            <div class="description">10-12 implementations per year. Accelerated transformation with premium tracks.</div>
+            <a href="/pricing" class="btn btn-primary-orange">Start Your Journey</a>
+            <ul class="features">
+              <li>10-12 implementations per year</li>
+              <li>All 7 tracks including premium</li>
+              <li>Bi-weekly 90-minute strategy sessions</li>
+              <li>Same-day priority support</li>
+              <li>Dedicated success manager</li>
+              <li>Annual strategic planning session</li>
+            </ul>
+          </div>
+        </div>
+        
+        <p style="text-align: center; color: #6B7280; font-size: 0.875rem; margin-top: 2rem;">
+          <strong>30-day satisfaction guarantee</strong> on your first implementation
         </p>
-        <div class="cta-buttons">
-          <a href="/assessment" class="btn btn-primary">Take Operational Assessment</a>
-          <a href="/contact" class="btn btn-secondary">Book Playbook Strategy Call</a>
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <a href="/pricing" class="btn btn-secondary">View Complete Pricing Details</a>
         </div>
       </div>
     </section>
 
-    <section class="framework-intro">
+    <!-- 10. Bottom CTA Section -->
+    <section class="final-cta-section">
       <div class="container">
-        <h2>Progressive Playbook Delivery System</h2>
-        <div class="framework-grid">
-          <div class="framework-item">
-            <h3>Foundation Playbooks</h3>
-            <p>Core operational playbooks using existing tools (6 weeks)</p>
+        <div class="cta-hero-box">
+          <h2>Ready to Transform Your Environmental Operations?</h2>
+          <p class="subtitle">Start with one track, scale to complete excellence</p>
+          
+          <div class="trust-signals">
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="shield-check" type="outline" />
+              </div>
+              <span>Proven methodologies with measurable results</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="clock" type="outline" />
+              </div>
+              <span>Systematic 6-8 week implementation cycles</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="trophy" type="outline" />
+              </div>
+              <span>30-day satisfaction guarantee</span>
+            </div>
           </div>
-          <div class="framework-item">
-            <h3>Advanced Playbooks</h3>
-            <p>Automation and optimization playbooks (7 weeks)</p>
+          
+          <div class="cta-buttons">
+            <a href="/assessment" class="btn btn-primary-white">Take the Assessment</a>
+            <a href="/book-call" class="btn btn-secondary-outline-white">Book Discovery Call</a>
           </div>
-          <div class="framework-item">
-            <h3>Complete Playbooks</h3>
-            <p>AI-enhanced strategic playbooks (8 weeks)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="tracks-grid">
-      <div class="container">
-        <h2>7 Operational Tracks - Choose Your Starting Point</h2>
-        <div class="tracks">
-          {tracks.map(track => (
-            <TrackCard
-              icon={track.icon}
-              title={track.title}
-              subtitle={track.subtitle}
-              description={track.description}
-              foundationLevel={track.foundationLevel}
-              advancedLevel={track.advancedLevel}
-              completeLevel={track.completeLevel}
-              idealState={track.idealState}
-              href={track.href}
-              color={track.color}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="subscription-model">
-      <div class="container">
-        <h2>Subscription-Based Unlimited Implementations</h2>
-        <div class="subscription-grid">
-          <div class="subscription-item">
-            <h3>Monthly Subscription</h3>
-            <p>$2,500-3,500/month based on company size. Includes unlimited playbook implementations across all operational areas.</p>
-          </div>
-          <div class="subscription-item">
-            <h3>Assessment-Driven Priority</h3>
-            <p>Digital Operations Assessment identifies optimal playbook sequence and operational readiness for maximum impact.</p>
-          </div>
-          <div class="subscription-item">
-            <h3>6-8 Week Delivery Cycles</h3>
-            <p>Each playbook delivered systematically with proven methodologies and measurable results within 6-8 weeks.</p>
-          </div>
+          
+          <p class="alternative-text">Stop letting operations limit your environmental impact. Start building systems that scale.</p>
         </div>
       </div>
     </section>
@@ -93,151 +815,2236 @@ import { tracks } from '../../utils/trackData.ts';
 </BaseLayout>
 
 <style>
+/* Reuse homepage base styles */
+.btn {
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: var(--font-size-body);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary-orange {
+  background-color: var(--color-orange-accent);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn-primary-orange:hover {
+  background-color: var(--color-orange-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 122, 71, 0.3);
+}
+
+.btn-secondary-white {
+  background-color: var(--color-white);
+  color: var(--color-navy-primary);
+  border: 2px solid var(--color-white);
+}
+
+.btn-secondary-white:hover {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-navy-primary);
+  border: 2px solid var(--color-navy-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-navy-primary);
+  color: var(--color-white);
+}
+
+.btn-secondary-outline {
+  background-color: transparent;
+  color: var(--color-teal-primary);
+  border: 2px solid var(--color-teal-primary);
+}
+
+.btn-secondary-outline:hover {
+  background-color: var(--color-teal-primary);
+  color: var(--color-white);
+}
+
+/* Container and layout */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.hero {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  color: white;
-  padding: 5rem 0;
-  text-align: center;
+/* Breadcrumb Section */
+.breadcrumb-section {
+  background-color: var(--color-off-white);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-light-gray);
 }
 
-.hero h1 {
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumb a {
+  color: var(--color-teal-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: var(--color-medium-gray);
+}
+
+/* Hero Section - Match homepage exactly */
+.hero-section {
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  color: var(--color-white);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-family: var(--font-family-primary);
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.hero-content .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+/* Section headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+  color: var(--color-dark-gray);
   margin-bottom: 1rem;
 }
 
-.hero-description {
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-medium-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Introduction Section */
+.introduction-section {
+  padding: 5rem 0;
+  background-color: var(--color-white);
+}
+
+.intro-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Lead Quote - Pull quote styling */
+.lead-quote {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.lead-quote p {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  line-height: 1.4;
+  font-style: italic;
+  position: relative;
+  padding: 2rem 3rem;
+  background: linear-gradient(135deg, rgba(74, 155, 139, 0.05) 0%, rgba(30, 58, 95, 0.05) 100%);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-teal-primary);
+  margin: 0;
+}
+
+.lead-quote p::before,
+.lead-quote p::after {
+  content: '"';
+  font-size: 2rem;
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-bold);
+  position: absolute;
+}
+
+.lead-quote p::before {
+  top: 0.5rem;
+  left: 1rem;
+}
+
+.lead-quote p::after {
+  bottom: -0.5rem;
+  right: 1rem;
+}
+
+/* Intro Text - Two column layout */
+.intro-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.problem-statement,
+.solution-preview {
+  background: var(--color-off-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.problem-statement::before {
+  content: "The Challenge";
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-orange-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.solution-preview::before {
+  content: "Our Solution";
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-teal-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.problem-statement p,
+.solution-preview p {
+  font-size: var(--font-size-body);
+  color: var(--color-dark-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Operational Tracks - Match homepage track grid exactly */
+.operational-tracks {
+  padding: 5rem 0;
+  background-color: var(--color-white);
+}
+
+.tracks-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tracks-grid.row-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tracks-grid.row-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.track-card-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.track-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid var(--color-light-gray);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-card-link:hover .track-card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: #e5e5e5;
+}
+
+.track-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-teal-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.track-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+}
+
+.track-card p {
+  color: var(--color-dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.benefit-metric {
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Premium Divider */
+.premium-divider {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0 3rem;
+  gap: 1rem;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-light-gray);
+}
+
+.divider-label {
+  background: var(--color-white);
+  padding: 0 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-medium-gray);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Premium Cards */
+.premium-card {
+  background: var(--color-white);
+  border-color: var(--color-light-gray);
+  padding: 2.5rem;
+  position: relative;
+}
+
+.premium-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #D97642;
+  color: var(--color-white);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.premium-icon {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.premium-icon svg {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.premium-description {
+  color: var(--color-dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding: 0 0.5rem;
+}
+
+/* Progressive Framework */
+.progressive-framework {
+  padding: 4rem 0;
+  background-color: var(--color-off-white);
+}
+
+.framework-progression {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.framework-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 2px solid var(--color-light-gray);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.framework-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: #e5e5e5;
+}
+
+.framework-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-teal-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.framework-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.framework-card h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.framework-card p {
+  color: var(--color-medium-gray);
+  line-height: 1.6;
+  font-size: var(--font-size-body);
+  margin-top: auto;
+  text-align: left;
+}
+
+.framework-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-teal-primary);
+  font-size: 2rem;
+  background: rgba(74, 155, 139, 0.1);
+  padding: 1rem;
+  border-radius: 50%;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.framework-arrow svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2;
+}
+
+/* Framework Highlight - Match homepage CTA style */
+.framework-highlight-cta {
+  background: linear-gradient(135deg, var(--color-orange-accent) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.framework-highlight-cta h3 {
+  font-family: var(--font-family-primary);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.framework-highlight-cta p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-white);
+  opacity: 0.95;
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+}
+
+/* Synergy Section */
+.synergy-section {
+  padding: 4rem 0;
+  background-color: var(--color-off-white);
+}
+
+.synergy-intro {
+  font-size: 1.125rem;
+  color: var(--color-medium-gray);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.synergy-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.synergy-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 2px solid var(--color-light-gray);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.synergy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-teal-primary);
+}
+
+.premium-synergy {
+  border: 2px solid var(--color-teal-primary);
+  background: linear-gradient(135deg, rgba(74, 155, 139, 0.05) 0%, rgba(30, 58, 95, 0.05) 100%);
+}
+
+.premium-synergy:hover {
+  border-color: var(--color-orange-accent);
+  box-shadow: 0 12px 32px rgba(224, 122, 71, 0.2);
+}
+
+.synergy-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+  color: var(--color-teal-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.synergy-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.premium-synergy .synergy-icon {
+  color: var(--color-orange-accent);
+}
+
+.synergy-equation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.synergy-combo {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  font-size: 1.125rem;
+}
+
+.equals {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-medium-gray);
+  margin: 0.25rem 0;
+}
+
+.synergy-result {
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.premium-synergy .synergy-result {
+  color: var(--color-orange-accent);
+}
+
+.synergy-description {
+  color: var(--color-medium-gray);
+  line-height: 1.6;
+  font-size: var(--font-size-body);
+  margin: 0;
+}
+
+/* Plan Section - Homepage styles */
+.plan-section {
+  padding: 5rem 0;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.step-item {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(42, 127, 126, 0.15);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+}
+
+.step-item h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.step-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.step-connector {
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.step-connector:first-of-type {
+  left: calc(33.33% - 1rem);
+}
+
+.step-connector:last-of-type {
+  left: calc(66.66% - 1rem);
+}
+
+.plan-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.plan-cta .btn {
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.plan-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 118, 66, 0.3);
+}
+
+/* Success Indicators */
+.success-indicators {
+  padding: 4rem 0;
+  background-color: var(--color-white);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--color-off-white);
+  border-radius: var(--radius-lg);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-medium-gray);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Testimonial - Reuse homepage testimonial styling */
+.testimonial-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-card blockquote {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-dark-gray);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-semibold);
+}
+
+.author-info h4 {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 0.25rem;
+}
+
+.author-info span {
+  font-size: var(--font-size-sm);
+  color: var(--color-medium-gray);
+}
+
+/* Track Selector Preview */
+.track-selector-preview {
+  padding: 4rem 0;
+  background-color: var(--color-off-white);
+}
+
+.selector-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.selector-content p {
+  font-size: var(--font-size-body);
+  color: var(--color-medium-gray);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.preview-questions {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.question-preview {
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Pricing Preview */
+.pricing-preview {
+  padding: 4rem 0;
+  background-color: var(--color-white);
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pricing-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+.pricing-card.recommended {
+  border: 2px solid var(--color-teal-primary);
+  transform: scale(1.05);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+  margin-bottom: 1.5rem;
+}
+
+.price-period {
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-medium-gray);
+}
+
+.features-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.features-list li {
+  padding: 0.5rem 0;
+  color: var(--color-medium-gray);
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.guarantee {
+  text-align: center;
+  color: var(--color-medium-gray);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Final CTA Section - Reuse homepage structure */
+.final-cta-section {
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  padding: 5rem 0;
+  color: var(--color-white);
+}
+
+.cta-hero-box {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-hero-box h2 {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+  margin-bottom: 1rem;
+}
+
+.cta-hero-box .subtitle {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   opacity: 0.9;
+}
+
+.trust-signals {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.trust-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-sm);
+}
+
+.trust-signal svg {
+  color: var(--color-orange-accent);
 }
 
 .cta-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
-.btn {
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s;
+.alternative-text {
+  font-size: var(--font-size-body);
+  opacity: 0.8;
+  font-style: italic;
 }
 
-.btn-primary {
-  background-color: white;
-  color: #059669;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tracks-grid.row-2,
+  .tracks-grid.row-3 {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+  
+  .framework-progression {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+  
+  .framework-arrow {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
 }
 
-.btn-primary:hover {
-  background-color: #f9fafb;
+@media (max-width: 768px) {
+  /* Hide framework arrows on mobile devices */
+  .framework-arrow {
+    display: none;
+  }
+  
+  .premium-card {
+    padding: 2rem !important;
+  }
+  
+  .premium-description {
+    text-align: center;
+    padding: 0;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  /* Introduction section responsive */
+  .lead-quote p {
+    font-size: 1.25rem;
+    padding: 1.5rem 2rem;
+  }
+  
+  .lead-quote p::before,
+  .lead-quote p::after {
+    font-size: 1.5rem;
+  }
+  
+  .intro-text {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .problem-statement,
+  .solution-preview {
+    padding: 1.5rem;
+  }
+  
+  .synergy-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .step-connector {
+    display: none;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .trust-signals {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .cta-hero-box h2 {
+    font-size: 2rem;
+  }
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
+@media (max-width: 480px) {
+  .hero-ctas,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.btn-secondary:hover {
-  background-color: white;
-  color: #059669;
-}
-
-.framework-intro {
-  padding: 4rem 0;
-  background-color: #f9fafb;
-}
-
-.framework-intro h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #1f2937;
-}
-
-.framework-grid {
+/* Social Proof Section Styles */
+.research-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto 4rem;
 }
 
-.framework-item {
-  text-align: center;
-  padding: 2rem;
+.stat-card {
   background: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E2E8F0;
+  transition: all 0.2s ease;
 }
 
-.framework-item h3 {
-  font-size: 1.5rem;
-  color: #059669;
+.stat-card:hover {
+  transform: scale(1.02);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: #2A7F7E;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: #2C3E50;
+  margin: 0;
+}
+
+.logo-carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 60px;
+}
+
+.logo-carousel-viewport {
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.logo-carousel {
+  display: flex;
+  width: 500%;
+  transition: transform 0.5s ease;
+  max-width: none;
+}
+
+.logo-slide {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 20%;
+  flex-shrink: 0;
+  padding: 2rem 1rem;
+}
+
+.logo-item {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-item.microsoft { color: #4285F4; }
+.logo-item.google { color: #EA4335; }
+.logo-item.quickbooks { color: #2CA01C; }
+.logo-item.arcgis { color: #0079BF; }
+.logo-item.clickup.featured { 
+  color: #7B68EE; 
+  background: #F0FAF9;
+  border: 2px solid #2A7F7E;
+}
+.logo-item.slack { color: #4A154B; }
+.logo-item.dropbox { color: #0061FF; }
+.logo-item.teams { color: #5B5FC7; }
+.logo-item.airtable { color: #FCB400; }
+.logo-item.asana { color: #F06A6A; }
+.logo-item.monday { color: #FFCC00; }
+.logo-item.salesforce { color: #00A1E0; }
+.logo-item.modflow { color: #1E88E5; }
+.logo-item.aermod { color: #43A047; }
+.logo-item.xero { color: #13B5EA; }
+.logo-item.sampleserve { color: #795548; }
+.logo-item.hubspot { color: #FF7A59; }
+.logo-item.qgis { color: #589632; }
+.logo-item.aldoa { color: #6A1B9A; }
+.logo-item.evx { color: #E65100; }
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 2px solid #E2E8F0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2A7F7E;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.carousel-nav:hover {
+  border-color: #2A7F7E;
+  background: #F0FAF9;
+}
+
+.carousel-nav.prev {
+  left: 0;
+}
+
+.carousel-nav.next {
+  right: 0;
+}
+
+@media (max-width: 900px) {
+  .logo-slide {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .logo-carousel-container {
+    max-width: 100%;
+    padding: 0 40px;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .research-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .logo-slide {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .logo-carousel-container {
+    max-width: 100%;
+    padding: 0 40px;
+    margin: 1rem 0;
+  }
+  
+  .carousel-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .logo-item {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-slide {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem 0.25rem;
+  }
+  
+  .logo-carousel-container {
+    max-width: 100%;
+    padding: 0 30px;
+    margin: 1rem 0;
+  }
+  
+  .logo-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Track Selector Preview Enhanced Styles - Updated Icons 2024 */
+.track-selector-preview .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.track-selector-preview .teaser-message {
+  color: var(--color-teal-primary);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.track-selector-preview .intro-container {
+  max-width: 650px !important;
+  margin: 0 auto 2rem auto !important;
+  padding: 0 1rem !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.track-selector-preview .selector-content .intro-container {
+  max-width: 650px !important;
+  margin: 0 auto 2rem auto !important;
+  padding: 0 1rem !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.track-selector-preview .intro-text {
+  text-align: center !important;
+  font-size: 1.125rem !important;
+  color: var(--color-dark-gray) !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+  display: block !important;
+}
+
+.track-selector-preview .selector-content .intro-container .intro-text {
+  text-align: center !important;
+  font-size: 1.125rem !important;
+  color: var(--color-dark-gray) !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+  display: block !important;
+}
+
+.progress-indicator {
+  max-width: 400px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+.question-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.question-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E7EB;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.question-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 1rem;
 }
 
-.tracks-grid {
-  padding: 4rem 0;
+.track-selector-preview .question-header svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: #4A9B8B !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
 }
 
-.tracks-grid h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #1f2937;
+.question-card .question-header svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: #4A9B8B !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
 }
 
-.tracks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+.question-icon {
+  width: 16px !important;
+  height: 16px !important;
+  color: #4A9B8B !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
 }
 
-.subscription-model {
-  background-color: var(--color-navy-primary);
+svg.question-icon {
+  width: 16px !important;
+  height: 16px !important;
+  color: #4A9B8B !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+}
+
+.question-header div svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: #4A9B8B !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+}
+
+.question-header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-header div svg * {
+  color: #4A9B8B !important;
+  stroke: #4A9B8B !important;
+}
+
+.question-number {
+  background: var(--color-teal-primary);
   color: var(--color-white);
-  padding: var(--spacing-8) 0;
-}
-
-.subscription-model h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-6);
-}
-
-.subscription-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-4);
-}
-
-.subscription-item {
-  background: rgba(255, 255, 255, 0.1);
-  padding: var(--spacing-4);
-  border-radius: var(--radius-lg);
-  text-align: center;
-}
-
-.subscription-item h3 {
-  font-size: var(--font-size-h4);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
   font-weight: var(--font-weight-semibold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-2);
+}
+
+.question-card h3 {
+  color: var(--color-navy-primary);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #F9FAFB;
+  border: 2px solid #E5E7EB;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.option-item:hover {
+  background: #F0FAF9;
+  border-color: var(--color-teal-primary);
+  transform: translateY(-1px);
+}
+
+.option-item input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.75rem;
+  accent-color: var(--color-teal-primary);
+  cursor: pointer;
+}
+
+.option-item:has(input:checked) {
+  background: #F0FAF9;
+  border-color: var(--color-teal-primary);
+  box-shadow: 0 0 0 3px rgba(74, 155, 139, 0.1);
+}
+
+.option-text {
+  color: var(--color-dark-gray);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+}
+
+.option-item:has(input:checked) .option-text {
+  color: var(--color-navy-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cta-section {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cta-section .btn {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+}
+
+.cta-description {
+  color: var(--color-dark-gray);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .question-cards {
+    max-width: 900px;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .question-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 600px;
+  }
+  
+  .question-card {
+    padding: 1.5rem;
+  }
+  
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .option-item {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .question-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .question-number {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-card {
+    padding: 1rem;
+  }
+  
+  .question-card h3 {
+    font-size: 1.125rem;
+  }
+  
+  .option-item {
+    padding: 0.5rem 0.6rem;
+  }
+  
+  .option-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Homepage Pricing Section Styles */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: var(--color-white);
+  border: 2px solid var(--color-light-gray);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(74, 155, 139, 0.15);
+  border-color: var(--color-teal-primary);
+}
+
+.pricing-card:hover .price {
+  color: var(--color-orange-accent);
+  transform: scale(1.05);
+}
+
+.pricing-card:hover h3 {
   color: var(--color-teal-primary);
 }
 
-.subscription-item p {
-  color: rgba(255, 255, 255, 0.9);
+.pricing-card.featured {
+  border-color: var(--color-teal-primary);
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(74, 155, 139, 0.2);
+  position: relative;
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 16px 40px rgba(74, 155, 139, 0.25);
+  border-color: var(--color-orange-accent);
+}
+
+.pricing-card.featured::before {
+  content: 'RECOMMENDED';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-orange-accent);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+}
+
+.pricing-card h3 {
+  color: var(--color-navy-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.pricing-card.featured h3 {
+  color: var(--color-teal-primary);
+}
+
+.pricing-card .price {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.pricing-card .period {
+  font-size: 0.9rem;
+  color: var(--color-dark-gray);
+  margin-bottom: 2rem;
+}
+
+.pricing-card .description {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  color: var(--color-dark-gray);
+}
+
+.pricing-card .btn {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card:hover .btn {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(224, 122, 71, 0.3);
+}
+
+.pricing-card .features {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card .features li {
+  list-style: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pricing-card .features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-teal-primary);
+  font-weight: bold;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-4px);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Final CTA Section Styles */
+.final-cta-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.cta-hero-box {
+  background: linear-gradient(135deg, var(--color-orange-accent) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.cta-hero-box h2 {
+  font-family: var(--font-family-primary);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+}
+
+.cta-hero-box .subtitle {
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+}
+
+.trust-signals {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.trust-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-white);
+}
+
+.trust-signal svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: white !important;
+  flex-shrink: 0;
+}
+
+.trust-signal div svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: white !important;
+  flex-shrink: 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary-white {
+  background: var(--color-white);
+  color: var(--color-orange-accent);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-white:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary-outline-white {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-outline-white:hover {
+  background: var(--color-white);
+  color: var(--color-teal-primary);
+  transform: translateY(-2px);
+}
+
+.cta-hero-box .alternative-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 3rem 0;
+  }
+  
+  .cta-hero-box {
+    padding: 3rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .cta-hero-box h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-hero-box .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .trust-signals {
+    text-align: center;
+  }
+}
+
+/* Section CTA Styles */
+.section-cta {
+  text-align: center;
+  padding: 3rem 0 1rem;
+  margin-top: 2rem;
+}
+
+.section-cta .cta-text {
+  font-size: 1.25rem;
+  color: var(--color-navy-primary);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.section-cta .cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section-cta .btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+@media (max-width: 768px) {
+  .section-cta {
+    padding: 2rem 0 1rem;
+  }
+  
+  .section-cta .cta-text {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-cta .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .section-cta .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-cta {
+    padding: 1.5rem 0 0.5rem;
+  }
+  
+  .section-cta .cta-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-cta .btn {
+    max-width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  transition: all var(--transition-normal);
+  gap: 1rem;
+}
+
+.faq-question:hover {
+  background-color: var(--color-off-white);
+  color: var(--color-teal-primary);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--color-teal-primary);
+  outline-offset: -2px;
+  background-color: var(--color-off-white);
+}
+
+.faq-question span {
+  flex: 1;
+  text-align: left;
+}
+
+.icon-chevron {
+  flex-shrink: 0;
+  color: var(--color-teal-primary);
+  transition: transform 300ms ease;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease, padding 300ms ease;
+  background-color: var(--color-white);
+}
+
+.faq-answer[hidden] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.faq-answer:not([hidden]) {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--color-dark-gray);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
   line-height: var(--line-height-relaxed);
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.faq-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-cta h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  margin-bottom: 0.5rem;
+}
+
+.faq-cta p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-large);
+  margin-bottom: 1.5rem;
+}
+
+.faq-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Mobile responsiveness for FAQ */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 3rem 0;
+  }
+  
+  .faq-accordion {
+    margin: 0 1rem;
+  }
+  
+  .faq-question {
+    padding: 1rem;
+    font-size: var(--font-size-body);
+  }
+  
+  .faq-answer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .faq-answer:not([hidden]) {
+    padding-bottom: 1rem;
+  }
+  
+  .faq-cta {
+    margin: 2rem 1rem 0;
+    padding: 1.5rem;
+  }
+  
+  .faq-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .faq-cta-buttons .btn {
+    min-width: 200px;
+  }
 }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('logoCarousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slides = carousel.querySelectorAll('.logo-slide');
+    let currentSlide = 0;
+    let autoScrollInterval;
+
+    function updateCarousel() {
+      const translateX = -currentSlide * 20;
+      carousel.style.transform = `translateX(${translateX}%)`;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    function startAutoScroll() {
+      autoScrollInterval = setInterval(nextSlide, 4000);
+    }
+
+    function stopAutoScroll() {
+      clearInterval(autoScrollInterval);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      stopAutoScroll();
+      setTimeout(startAutoScroll, 2000);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      stopAutoScroll();
+      setTimeout(startAutoScroll, 2000);
+    });
+
+    // Pause auto-scroll on hover
+    carousel.addEventListener('mouseenter', stopAutoScroll);
+    carousel.addEventListener('mouseleave', startAutoScroll);
+
+    // Initialize
+    updateCarousel();
+    startAutoScroll();
+
+    // FAQ Accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const chevron = item.querySelector('.icon-chevron');
+      
+      question.addEventListener('click', () => {
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other items (optional - remove these lines to allow multiple open)
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            const otherQuestion = otherItem.querySelector('.faq-question');
+            const otherAnswer = otherItem.querySelector('.faq-answer');
+            const otherChevron = otherItem.querySelector('.icon-chevron');
+            
+            otherQuestion.setAttribute('aria-expanded', 'false');
+            otherAnswer.setAttribute('hidden', '');
+            otherAnswer.style.maxHeight = '0px';
+            otherChevron.style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Toggle current item
+        if (isExpanded) {
+          // Close
+          question.setAttribute('aria-expanded', 'false');
+          answer.setAttribute('hidden', '');
+          answer.style.maxHeight = '0px';
+          chevron.style.transform = 'rotate(0deg)';
+        } else {
+          // Open
+          question.setAttribute('aria-expanded', 'true');
+          answer.removeAttribute('hidden');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          chevron.style.transform = 'rotate(180deg)';
+        }
+      });
+      
+      // Keyboard accessibility
+      question.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          question.click();
+        }
+      });
+    });
+  });
+</script>
