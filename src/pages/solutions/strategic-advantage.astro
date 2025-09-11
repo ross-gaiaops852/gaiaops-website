@@ -2,143 +2,564 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+import TrackCard from '../../components/ui/TrackCard.astro';
+import { tracks } from '../../utils/trackData.ts';
 ---
 
 <BaseLayout 
-  title="Strategic Advantage Playbooks (Premium) | GaiaOps"
-  description="Create sustainable competitive advantage through operational differentiation and strategic positioning. Premium track for market leadership."
+  title="Create Unbeatable Competitive Differentiation | Strategic Advantage | GaiaOps"
+  description="Build operational capabilities that position your firm as the obvious choice for high-value engagements. Pre-built solutions for competitive positioning, innovation pipelines, and market disruption."
 >
   <Header />
   
-  <main id="main-content" class="service-page">
-    <!-- ABOVE THE FOLD: Clean & Simple -->
-    <section class="hero">
+  <main id="main-content">
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
       <div class="container">
-        <h1>Create Unbeatable Market Position</h1>
-        <p class="hero-subtitle">Position your firm as the obvious choice for premium clients through strategic differentiation</p>
-        <div class="hero-cta">
-          <a href="/contact" class="btn btn-primary">Get Started</a>
-          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        <div class="hero-content">
+          <h1>Create Unbeatable Competitive Differentiation</h1>
+          <p class="subtitle">Build operational capabilities that position your firm as the obvious choice for high-value engagements</p>
+          
+          <div class="hero-ctas">
+            <a href="/contact" class="btn btn-primary-orange">Get Started</a>
+            <a href="/assessment" class="btn btn-secondary-white">Take Assessment</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BELOW THE FOLD: Progressive Detail -->
+    <!-- 2. The Problem Section -->
     <section class="problem-section">
       <div class="container">
-        <h2>The Strategic Positioning Problem</h2>
-        <p class="problem-description">
-          Competing on price, lacking differentiation, and being seen as a commodity provider 
-          prevents you from attracting premium clients and commanding the rates your expertise deserves.
-        </p>
+        <div class="problem-content">
+          <h2>The Strategic Advantage Challenge</h2>
+          
+          <div class="problem-pullquote">
+            <p>"In a market where everyone claims expertise, operational excellence becomes your unfair advantage"</p>
+          </div>
+          
+          <div class="problem-columns">
+            <div class="problem-column">
+              <p>Environmental consultancies compete in an increasingly commoditized market. Without clear differentiation, you're forced to compete on price, chase the same RFPs as everyone else, and struggle to justify premium rates. Traditional differentiators like expertise and experience are table stakes—operational excellence is the new competitive frontier.</p>
+            </div>
+            <div class="problem-column">
+              <p>Lack of strategic positioning creates a downward spiral: commoditized services lead to price pressure, reduced margins limit investment capacity, and your firm gets stuck in the middle market. Meanwhile, operationally excellent competitors command premium prices, attract the best talent, and win the most impactful projects that advance environmental sustainability.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="solution-section">
-      <div class="container">
-        <h2>Our Solution: Strategic Advantage Playbooks (Premium)</h2>
-        <p class="solution-description">
-          Create sustainable competitive advantage through operational differentiation, strategic positioning, 
-          and market leadership capabilities that make you the obvious choice for premium engagements.
-        </p>
-      </div>
-    </section>
-
+    <!-- 3. Playbooks Portfolio Section -->
     <section class="playbooks-section">
       <div class="container">
-        <h2>Available Strategic Advantage Playbooks</h2>
+        <div class="section-header">
+          <h2>Strategic Advantage Playbooks</h2>
+          <p class="section-subtitle">Pre-built solutions for competitive differentiation</p>
+        </div>
         
-        <div class="level-card premium">
-          <div class="level-header">
-            <h3>Foundation Playbook</h3>
-            <div class="level-specs">50 hours • 7 weeks</div>
+        <div class="playbooks-grid">
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-teal-primary);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Competitive Positioning Framework</h3>
+              <p>Analyze and enhance your unique value proposition with operational proof points</p>
+              <div class="playbook-meta">
+                <span class="metric">Increases premium pricing ability by 30%</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Market position analysis, value chain assessment, strategic problem identification</p>
-            <ul>
-              <li>Comprehensive market position analysis</li>
-              <li>Value chain assessment and optimization</li>
-              <li>Strategic problem identification and prioritization</li>
-              <li>Competitive landscape mapping and analysis</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> Clear strategic positioning, competitive differentiation foundation</p>
-          </div>
-        </div>
 
-        <div class="level-card premium">
-          <div class="level-header">
-            <h3>Advanced Playbook</h3>
-            <div class="level-specs">55 hours • 8 weeks</div>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-navy-primary);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Innovation Pipeline System</h3>
+              <p>Systematic approach to service innovation and new offering development</p>
+              <div class="playbook-meta">
+                <span class="metric">Launches 3x more successful services</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Unique value proposition development, competitive differentiation strategy</p>
-            <ul>
-              <li>Unique value proposition development</li>
-              <li>Competitive differentiation strategy creation</li>
-              <li>Strategic capability development planning</li>
-              <li>Market leadership positioning framework</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> Unique market positioning, sustainable competitive advantages</p>
-          </div>
-        </div>
 
-        <div class="level-card premium">
-          <div class="level-header">
-            <h3>Complete Playbook</h3>
-            <div class="level-specs">60 hours • 8 weeks</div>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-orange-accent);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Thought Leadership Platform</h3>
+              <p>Content generation and distribution system for market authority building</p>
+              <div class="playbook-meta">
+                <span class="metric">Generates 50% more inbound leads</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Chief Problem Officer methodology, predictive market analysis, bespoke advantage creation</p>
-            <ul>
-              <li>Chief Problem Officer methodology implementation</li>
-              <li>Predictive market analysis and opportunity identification</li>
-              <li>Bespoke competitive advantage creation</li>
-              <li>Strategic market leadership framework</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> Market leadership capabilities, predictive competitive advantage</p>
+
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-success-green);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Strategic Partnership Orchestrator</h3>
+              <p>Identify, evaluate, and manage strategic partnerships for market expansion</p>
+              <div class="playbook-meta">
+                <span class="metric">Opens 40% more market opportunities</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="ideal-state premium-state">
-      <div class="container">
-        <h2>Your Ideal State</h2>
-        <div class="ideal-content">
-          <p class="ideal-vision">
-            <strong>Market leadership through operational differentiation:</strong> 
-            Your firm becomes the recognized authority in your specialty through systematic 
-            operational advantages that competitors cannot replicate, enabling premium pricing 
-            and strategic market positioning that attracts the most valuable projects.
-          </p>
-        </div>
-      </div>
-    </section>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-info-blue);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Market Disruption Planner</h3>
+              <p>Identify and exploit market gaps with operational capabilities competitors can't match</p>
+              <div class="playbook-meta">
+                <span class="metric">Captures 35% more market share</span>
+              </div>
+            </div>
+          </div>
 
-    <section class="premium-notice">
-      <div class="container">
-        <div class="premium-content">
-          <h3>Premium Strategic Track</h3>
-          <p>This track is available to clients who have completed Foundation level implementations in at least 3 core operational tracks. Strategic Advantage builds upon your operational excellence to create market differentiation.</p>
-          <div class="prerequisites">
-            <h4>Prerequisites:</h4>
-            <ul>
-              <li>Foundation level completion in Multi-Party Coordination</li>
-              <li>Foundation level completion in Client Relationships</li>
-              <li>Foundation level completion in Resource Optimization</li>
-              <li>Demonstrated operational maturity and systematic excellence</li>
-            </ul>
+          <div class="playbook-card featured">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Custom Strategic Advantage Playbook</h3>
+              <p>Tailored differentiation system designed for your unique strengths and market position</p>
+              <div class="playbook-meta">
+                <span class="metric">Creates your specific competitive moat</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-section premium-cta">
+    <!-- 4. Implementation Process -->
+    <section class="process-section">
       <div class="container">
-        <h2>Ready to Create Strategic Advantage?</h2>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Discuss Strategic Advantage</a>
-          <a href="/assessment" class="btn btn-secondary">Assess Track Readiness</a>
+        <div class="section-header">
+          <h2>Your Implementation Journey</h2>
+          <p class="section-subtitle">From commoditized services to market leadership in 4 steps</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <Icon name="magnifying-glass" class="step-icon" />
+            <h3>Discovery & Assessment</h3>
+            <p>We analyze your current market position, competitive landscape, and operational capabilities to identify the highest-impact strategic advantages for your situation.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <Icon name="shield-check" class="step-icon" />
+            <h3>Playbook Selection</h3>
+            <p>Together we prioritize playbooks based on your immediate needs, available resources, and strategic goals for market differentiation.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <Icon name="cog" class="step-icon" />
+            <h3>Build & Integration</h3>
+            <p>We implement your selected playbooks within your existing tech stack, customizing workflows and training your team for optimal adoption.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <Icon name="rocket-launch" class="step-icon" />
+            <h3>Launch & Optimize</h3>
+            <p>Go live with strategic advantage systems, then continuously optimize based on market feedback and competitive intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Ideal State Section -->
+    <section class="ideal-state-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Your Strategic Advantage Transformation</h2>
+        </div>
+        
+        <div class="ideal-state-content">
+          <p class="lead-text">Imagine being the firm clients call first for their most critical projects. Your operational excellence speaks for itself, your thought leadership drives market conversations, and your strategic positioning makes you the obvious choice for high-value engagements.</p>
+          
+          <div class="transformation-grid">
+            <div class="before-after">
+              <div class="before">
+                <h4>Before</h4>
+                <ul>
+                  <li><span class="icon-red"><Icon name="currency-dollar" type="outline" /></span>Competing on price</li>
+                  <li><span class="icon-red"><Icon name="arrow-trending-down" type="outline" /></span>Commoditized services</li>
+                  <li><span class="icon-red"><Icon name="exclamation-triangle" type="outline" /></span>Reactive market positioning</li>
+                  <li><span class="icon-red"><Icon name="x-circle" type="outline" /></span>Limited strategic options</li>
+                  <li><span class="icon-red"><Icon name="stop" type="outline" /></span>Operational constraints</li>
+                </ul>
+              </div>
+              <div class="after">
+                <h4>After</h4>
+                <ul>
+                  <li><span class="icon-teal"><Icon name="banknotes" type="outline" /></span>Premium price justification</li>
+                  <li><span class="icon-teal"><Icon name="star" type="outline" /></span>Differentiated value delivery</li>
+                  <li><span class="icon-teal"><Icon name="rocket-launch" type="outline" /></span>Proactive market leadership</li>
+                  <li><span class="icon-teal"><Icon name="arrows-pointing-out" type="outline" /></span>Expanded strategic choices</li>
+                  <li><span class="icon-teal"><Icon name="trophy" type="outline" /></span>Operational superiority</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p class="closing-text">The result: Premium positioning that commands higher fees, operational excellence that competitors can't match, and market leadership in environmental sustainability impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Tool Integration Section -->
+    <section class="tools-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>We Work With Your Current Tools</h2>
+          <p class="section-subtitle">Our playbooks integrate seamlessly with the platforms you already use</p>
+        </div>
+        
+        <div class="tools-grid">
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="cog" type="outline" /></span>
+              <h3>Project Management</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Monday.com</span>
+              <span class="tool-item">Smartsheet</span>
+              <span class="tool-item">Asana</span>
+              <span class="tool-item">ClickUp</span>
+              <span class="tool-item">Microsoft Project</span>
+              <span class="tool-item">Trello</span>
+              <span class="tool-item">Basecamp</span>
+              <span class="tool-item">Wrike</span>
+              <span class="tool-item">Jira</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="share" type="outline" /></span>
+              <h3>Communication</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Microsoft Teams</span>
+              <span class="tool-item">Slack</span>
+              <span class="tool-item">Zoom</span>
+              <span class="tool-item">Google Workspace</span>
+              <span class="tool-item">Discord</span>
+              <span class="tool-item">Mattermost</span>
+              <span class="tool-item">Webex</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="presentation-chart-line" type="outline" /></span>
+              <h3>Document Management</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">SharePoint</span>
+              <span class="tool-item">Dropbox</span>
+              <span class="tool-item">Box</span>
+              <span class="tool-item">OneDrive</span>
+              <span class="tool-item">Google Drive</span>
+              <span class="tool-item">NetDocuments</span>
+              <span class="tool-item">Confluence</span>
+              <span class="tool-item">Evernote</span>
+              <span class="tool-item">Notion</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="chart-bar-square" type="outline" /></span>
+              <h3>Data & Analytics</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Power BI</span>
+              <span class="tool-item">Tableau</span>
+              <span class="tool-item">Excel</span>
+              <span class="tool-item">Google Sheets</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="magnifying-glass" type="outline" /></span>
+              <h3>Field Data Collection</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Survey123</span>
+              <span class="tool-item">Fieldmaps</span>
+              <span class="tool-item">Fulcrum</span>
+              <span class="tool-item">SampleServe</span>
+              <span class="tool-item">Wildnote</span>
+              <span class="tool-item">QNOPY</span>
+              <span class="tool-item">Locus Mobile</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="globe-alt" type="outline" /></span>
+              <h3>Environmental Modeling</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">ArcGIS</span>
+              <span class="tool-item">QGIS</span>
+              <span class="tool-item">AERMOD</span>
+              <span class="tool-item">MODFLOW</span>
+              <span class="tool-item">MIKE Suite</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="beaker" type="outline" /></span>
+              <h3>Laboratory & Compliance</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">LabVantage</span>
+              <span class="tool-item">CloudLIMS</span>
+              <span class="tool-item">VelocityEHS</span>
+              <span class="tool-item">ERA Environmental</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="building-office" type="outline" /></span>
+              <h3>Business Systems</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">QuickBooks</span>
+              <span class="tool-item">Xero</span>
+              <span class="tool-item">Salesforce</span>
+              <span class="tool-item">HubSpot</span>
+              <span class="tool-item">Toggl</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="leaf" type="outline" /></span>
+              <h3>Environmental Platforms</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Aldoa</span>
+              <span class="tool-item">EVX Software</span>
+              <span class="tool-item">Coretime</span>
+              <span class="tool-item">Scoro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Expected Results -->
+    <section class="results-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Proven Results</h2>
+          <p class="section-subtitle">What to expect from strategic advantage systems</p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">30%</div>
+            <div class="stat-label">Increase in premium pricing</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3x</div>
+            <div class="stat-label">More successful service launches</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50%</div>
+            <div class="stat-label">Growth in inbound leads</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">35%</div>
+            <div class="stat-label">Market share expansion</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Related Tracks -->
+    <section class="related-tracks-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tracks That Work Well Together</h2>
+          <p class="section-subtitle">Multiply your strategic advantage with complementary tracks</p>
+        </div>
+        
+        <div class="related-tracks-grid">
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="arrow-trending-up" type="outline" />
+            </div>
+            <h3>Growth Systems</h3>
+            <p>Leverage your strategic advantage to accelerate growth</p>
+            <a href="/solutions/growth-systems" class="track-link">Learn More →</a>
+          </div>
+          
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="chart-bar" type="outline" />
+            </div>
+            <h3>Business Intelligence</h3>
+            <p>Use data to identify and exploit competitive opportunities</p>
+            <a href="/solutions/business-intelligence" class="track-link">Learn More →</a>
+          </div>
+          
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="users" type="outline" />
+            </div>
+            <h3>Client Relationships</h3>
+            <p>Deliver differentiated value that creates lasting partnerships</p>
+            <a href="/solutions/client-relationships" class="track-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Strategic Advantage Questions</h2>
+          <p class="section-subtitle">Common questions about strategic advantage playbooks and implementation</p>
+        </div>
+        
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+              <span>How is Strategic Advantage different from general business strategy consulting?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-1" hidden>
+              <p>Our Strategic Advantage playbooks focus specifically on building operational capabilities that create competitive differentiation. Rather than just planning strategy, we implement systems that make your strategic advantages real and sustainable.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+              <span>What if we're a smaller firm competing against large consultancies?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-2" hidden>
+              <p>Size isn't everything. Our playbooks help smaller firms create operational advantages that larger competitors can't match—agility, specialization, personalized service. We turn your size into a competitive weapon rather than a limitation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+              <span>How do we identify our strategic advantages if we're not sure what they are?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-3" hidden>
+              <p>Our Competitive Positioning Framework includes comprehensive analysis tools to identify your latent advantages. Often, firms have significant differentiators they're not fully leveraging. We help you discover and amplify these advantages.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+              <span>Can Strategic Advantage playbooks help us enter new markets?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-4" hidden>
+              <p>Yes, our Market Disruption Planner specifically addresses market entry strategies, helping you identify underserved niches and build operational capabilities to dominate them before competitors notice the opportunity.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+              <span>How long does it take to see competitive advantages materialize?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-5" hidden>
+              <p>Some advantages, like operational efficiency, appear within weeks. Market positioning advantages typically take 3-6 months to establish. The key is that once built, these advantages compound over time, creating an increasingly strong competitive moat.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+              <span>What if our competitors copy our operational improvements?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-6" hidden>
+              <p>By the time competitors recognize and attempt to copy your advantages, you'll have moved further ahead. Our playbooks create continuous improvement systems that keep you ahead of the replication curve.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Bottom CTA -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="cta-hero-box">
+          <h2>Ready to dominate your market?</h2>
+          <p class="subtitle">Transform your operational capabilities into unbeatable competitive advantages</p>
+          
+          <div class="trust-signals">
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="shield-check" type="outline" />
+              </div>
+              <span>Proven strategic advantage methodologies</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="clock" type="outline" />
+              </div>
+              <span>6-8 week implementation timeline</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="trophy" type="outline" />
+              </div>
+              <span>30% increase in premium pricing ability</span>
+            </div>
+          </div>
+          
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary-orange">Start Your First Playbook</a>
+            <a href="/assessment" class="btn btn-secondary-white">Take Assessment</a>
+          </div>
+          
+          <p class="closing-text">Stop competing on price. Start building strategic advantages that dominate your market.</p>
         </div>
       </div>
     </section>
@@ -148,101 +569,925 @@ import Footer from '../../components/Footer.astro';
 </BaseLayout>
 
 <style>
-.track-hero {
+/* Hero Section */
+.hero-section {
   background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
   color: var(--color-white);
-  padding: var(--spacing-8) 0;
-}
-
-.level-card.premium {
-  border-left: 4px solid var(--color-navy-primary);
-  background: linear-gradient(145deg, var(--color-white) 0%, var(--color-off-white) 100%);
+  padding: 5rem 0;
   position: relative;
   overflow: hidden;
 }
 
-.level-card.premium::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--color-navy-primary), var(--color-orange-accent));
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.premium-state {
-  background: linear-gradient(135deg, var(--color-off-white) 0%, #f1f5f9 100%);
-}
-
-.premium-notice {
-  background: var(--color-navy-primary);
+.hero-content h1 {
+  font-family: var(--font-family-primary);
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
   color: var(--color-white);
-  padding: var(--spacing-8) 0;
 }
 
-.premium-content {
+.hero-content .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-white);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Problem Section */
+.problem-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.problem-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.problem-content h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+}
+
+.problem-pullquote {
+  background: var(--color-white);
+  border-left: 4px solid var(--color-teal-primary);
+  padding: 2rem;
+  margin: 2rem auto 3rem;
+  max-width: 800px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.problem-pullquote p {
+  font-size: var(--font-size-large);
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dark-gray);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+  position: relative;
+}
+
+.problem-pullquote p::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--color-teal-primary);
+  position: absolute;
+  left: -1rem;
+  top: -0.5rem;
+  line-height: 1;
+}
+
+.problem-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.problem-column p {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+/* Playbooks Section */
+.playbooks-section {
+  padding: 5rem 0;
+}
+
+.playbooks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.playbook-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.playbook-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.playbook-card.featured {
+  border: 2px solid var(--color-teal-primary);
+}
+
+.playbook-card {
+  display: flex;
+  min-height: 160px;
+}
+
+.playbook-image {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: var(--font-weight-semibold);
+}
+
+.playbook-content {
+  width: 60%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.playbook-content h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 0.75rem;
+}
+
+.playbook-content p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.playbook-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric {
+  font-size: var(--font-size-small);
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Process Section */
+.process-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.step-item {
+  text-align: center;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.step-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.step-number {
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-large);
+  margin: 0 auto 1rem;
+}
+
+.step-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-teal-primary);
+  margin-bottom: 1rem;
+}
+
+.step-item h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.step-item p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+}
+
+.step-connector {
+  font-size: 2rem;
+  color: var(--color-teal-primary);
+  font-weight: bold;
+}
+
+/* Ideal State Section */
+.ideal-state-section {
+  padding: 5rem 0;
+}
+
+.ideal-state-content {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 
-.premium-content h3 {
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-2);
-  color: var(--color-orange-accent);
+.lead-text {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
 }
 
-.prerequisites {
-  background: rgba(255, 255, 255, 0.1);
-  padding: var(--spacing-3);
-  border-radius: var(--radius-lg);
-  margin-top: var(--spacing-3);
+.transformation-grid {
+  margin: 3rem 0;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   text-align: left;
 }
 
-.prerequisites h4 {
-  color: var(--color-white);
-  margin-bottom: var(--spacing-2);
-  font-weight: var(--font-weight-semibold);
+.before, .after {
+  background: var(--color-off-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
 }
 
-.prerequisites ul {
+.before h4, .after h4 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+}
+
+.before h4 {
+  color: var(--color-orange-accent);
+}
+
+.after h4 {
+  color: var(--color-teal-primary);
+}
+
+.before ul, .after ul {
   list-style: none;
   padding: 0;
 }
 
-.prerequisites li {
-  padding: var(--spacing-1) 0;
-  position: relative;
-  padding-left: var(--spacing-3);
+.before li, .after li {
+  padding: 0.5rem 0;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.prerequisites li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--color-orange-accent);
-  font-weight: bold;
+.icon-red {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: #ef4444;
+  flex-shrink: 0;
 }
 
-.premium-cta {
-  background: linear-gradient(135deg, var(--color-navy-primary) 0%, var(--color-dark-gray) 100%);
+.icon-teal {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-teal-primary);
+  flex-shrink: 0;
 }
 
-.btn-primary {
-  background-color: var(--color-orange-accent);
+.closing-text {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin-top: 2rem;
+}
+
+/* Tools Section */
+.tools-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.tool-category-card {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--color-teal-primary);
+  transition: all var(--transition-normal);
+}
+
+.tool-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.category-icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-teal-primary);
+  flex-shrink: 0;
+}
+
+.category-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tool-category-card h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-item {
+  background: var(--color-off-white);
+  color: var(--color-dark-gray);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+}
+
+.tool-item:hover {
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+/* Results Section */
+.results-section {
+  padding: 5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Related Tracks Section */
+.related-tracks-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.related-tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.related-track-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.related-track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.related-track-card .track-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-teal-primary);
+  margin: 0 auto 1rem;
+}
+
+.related-track-card h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.related-track-card p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+.track-link {
+  color: var(--color-teal-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+}
+
+.track-link:hover {
+  color: var(--color-teal-primary-hover);
+}
+
+/* FAQ Section */
+.faq-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  transition: all var(--transition-normal);
+  gap: 1rem;
+}
+
+.faq-question:hover {
+  background-color: var(--color-off-white);
+  color: var(--color-teal-primary);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--color-teal-primary);
+  outline-offset: -2px;
+  background-color: var(--color-off-white);
+}
+
+.faq-question span {
+  flex: 1;
+  text-align: left;
+}
+
+.icon-chevron {
+  flex-shrink: 0;
+  color: var(--color-teal-primary);
+  transition: transform 300ms ease;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease, padding 300ms ease;
+  background-color: var(--color-white);
+}
+
+.faq-answer[hidden] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.faq-answer:not([hidden]) {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--color-dark-gray);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  padding-top: 1rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.cta-hero-box {
+  background: linear-gradient(135deg, var(--color-orange-accent) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.cta-hero-box h2 {
+  font-family: var(--font-family-primary);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
   color: var(--color-white);
 }
 
-.btn-primary:hover {
-  background-color: var(--color-orange-accent-hover);
+.cta-hero-box .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
 }
 
-.btn-secondary:hover {
-  color: var(--color-navy-primary);
+.trust-signals {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.trust-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-small);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.closing-text {
+  margin-top: 1.5rem;
+  font-size: var(--font-size-large);
+  opacity: 0.9;
+}
+
+/* Common Section Styles */
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-2);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-large);
+  color: var(--color-dark-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary-orange {
+  background-color: var(--color-orange-accent);
+  color: var(--color-white);
+  border-color: var(--color-orange-accent);
+}
+
+.btn-primary-orange:hover {
+  background-color: var(--color-orange-accent-hover);
+  border-color: var(--color-orange-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 122, 71, 0.3);
+}
+
+.btn-secondary-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-secondary-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-teal-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  .step-connector {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Problem Section */
+  .problem-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .problem-pullquote {
+    margin: 2rem 1rem 3rem;
+    padding: 1.5rem;
+  }
+  
+  .problem-pullquote p::before {
+    left: -0.5rem;
+  }
+  
+  /* Playbooks Grid */
+  .playbooks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .playbook-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .playbook-image, .playbook-content {
+    width: 100%;
+  }
+  
+  .image-placeholder {
+    height: 120px;
+  }
+  
+  /* Steps */
+  .step-connector {
+    display: none;
+  }
+  
+  /* Before/After */
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Tools Grid */
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tool-category-card {
+    padding: 1.25rem;
+  }
+  
+  .category-header {
+    gap: 0.5rem;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  /* Related Tracks */
+  .related-tracks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Trust Signals */
+  .trust-signals {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* CTA Buttons */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Section Headers */
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  /* Final CTA */
+  .cta-hero-box {
+    padding: 3rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .cta-hero-box h2 {
+    font-size: 2rem;
+  }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // FAQ Accordion functionality
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const chevron = item.querySelector('.icon-chevron');
+    
+    question.addEventListener('click', () => {
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other items (optional - remove these lines to allow multiple open)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherQuestion = otherItem.querySelector('.faq-question');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherChevron = otherItem.querySelector('.icon-chevron');
+          
+          otherQuestion.setAttribute('aria-expanded', 'false');
+          otherAnswer.setAttribute('hidden', '');
+          otherAnswer.style.maxHeight = '0px';
+          otherChevron.style.transform = 'rotate(0deg)';
+        }
+      });
+      
+      // Toggle current item
+      if (isExpanded) {
+        // Close
+        question.setAttribute('aria-expanded', 'false');
+        answer.setAttribute('hidden', '');
+        answer.style.maxHeight = '0px';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        // Open
+        question.setAttribute('aria-expanded', 'true');
+        answer.removeAttribute('hidden');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+    
+    // Keyboard accessibility
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        question.click();
+      }
+    });
+  });
+});
+</script>

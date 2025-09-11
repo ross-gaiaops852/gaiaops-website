@@ -2,125 +2,553 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+import TrackCard from '../../components/ui/TrackCard.astro';
+import { tracks } from '../../utils/trackData.ts';
 ---
 
 <BaseLayout 
-  title="Business Intelligence Playbooks | GaiaOps"
-  description="Transform data into strategic insights through automated reporting and predictive analytics. Foundation → Advanced → Complete levels."
+  title="Turn Data Into Strategic Advantage | Business Intelligence | GaiaOps"
+  description="Automate reporting and analytics to make data-driven decisions that accelerate growth. Pre-built solutions for executive dashboards, project analytics, and operational intelligence."
 >
   <Header />
   
-  <main id="main-content" class="service-page">
-    <!-- ABOVE THE FOLD: Clean & Simple -->
-    <section class="hero">
+  <main id="main-content">
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
       <div class="container">
-        <h1>Turn Data into Strategic Advantage</h1>
-        <p class="hero-subtitle">Reveal opportunities and predict outcomes with automated intelligence systems</p>
-        <div class="hero-cta">
-          <a href="/contact" class="btn btn-primary">Get Started</a>
-          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        <div class="hero-content">
+          <h1>Turn Data Into Strategic Advantage</h1>
+          <p class="subtitle">Automate reporting and analytics to make data-driven decisions that accelerate growth</p>
+          
+          <div class="hero-ctas">
+            <a href="/contact" class="btn btn-primary-orange">Get Started</a>
+            <a href="/assessment" class="btn btn-secondary-white">Take Assessment</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BELOW THE FOLD: Progressive Detail -->
+    <!-- 2. The Problem Section -->
     <section class="problem-section">
       <div class="container">
-        <h2>The Business Intelligence Problem</h2>
-        <p class="problem-description">
-          Manual reporting, data scattered across systems, delayed insights, and reactive decision-making 
-          prevent you from spotting opportunities and optimizing performance in real-time.
-        </p>
+        <div class="problem-content">
+          <h2>The Business Intelligence Challenge</h2>
+          
+          <div class="problem-pullquote">
+            <p>"You're drowning in data but starving for insights—spending hours creating reports instead of acting on them"</p>
+          </div>
+          
+          <div class="problem-columns">
+            <div class="problem-column">
+              <p>Environmental consultancies generate massive amounts of data across projects, finances, and operations. Yet most firms waste countless hours manually compiling reports, miss critical trends in their data, and make decisions based on gut feel rather than facts. Fragmented systems create information silos that hide opportunities.</p>
+            </div>
+            <div class="problem-column">
+              <p>Without automated intelligence systems, your leadership team operates partially blind: KPIs are outdated by the time they're reviewed, profitable patterns go unnoticed, and strategic decisions rely on incomplete information. Meanwhile, data-driven competitors identify opportunities faster, optimize operations better, and win more strategic engagements.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="solution-section">
-      <div class="container">
-        <h2>Our Solution: Automated Intelligence Playbooks</h2>
-        <p class="solution-description">
-          Transform data chaos into strategic insights through automated reporting, predictive analytics, 
-          and real-time dashboards that enable proactive decision-making and competitive advantage.
-        </p>
-      </div>
-    </section>
-
+    <!-- 3. Playbooks Portfolio Section -->
     <section class="playbooks-section">
       <div class="container">
-        <h2>Available Business Intelligence Playbooks</h2>
+        <div class="section-header">
+          <h2>Business Intelligence Playbooks</h2>
+          <p class="section-subtitle">Pre-built solutions for data-driven decision making</p>
+        </div>
         
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Foundation Playbook</h3>
-            <div class="level-specs">45 hours • 6 weeks</div>
+        <div class="playbooks-grid">
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-teal-primary);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Executive Dashboard Suite</h3>
+              <p>Real-time KPI tracking with automated insights and trend analysis</p>
+              <div class="playbook-meta">
+                <span class="metric">Saves 15 hours weekly on reporting</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Template-driven reports, client dashboards, basic data aggregation</p>
-            <ul>
-              <li>Standardized reporting templates and processes</li>
-              <li>Client-facing dashboards and visibility</li>
-              <li>Basic data aggregation and analysis</li>
-              <li>Key performance indicator tracking</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> 80% reduction in manual reporting time, consistent insights</p>
-          </div>
-        </div>
 
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Advanced Playbook</h3>
-            <div class="level-specs">50 hours • 7 weeks</div>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-navy-primary);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Project Analytics Platform</h3>
+              <p>Comprehensive project performance metrics with profitability analysis and predictions</p>
+              <div class="playbook-meta">
+                <span class="metric">Improves project selection by 40%</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Real-time performance dashboards, automated KPI tracking</p>
-            <ul>
-              <li>Real-time performance dashboards</li>
-              <li>Automated KPI tracking and alerts</li>
-              <li>Advanced analytics and trend identification</li>
-              <li>Strategic business intelligence reporting</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> Real-time business visibility, proactive decision making</p>
-          </div>
-        </div>
 
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Complete Playbook</h3>
-            <div class="level-specs">60 hours • 8 weeks</div>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-orange-accent);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Financial Intelligence System</h3>
+              <p>Automated financial reporting with cash flow forecasting and margin analysis</p>
+              <div class="playbook-meta">
+                <span class="metric">Increases profitability visibility by 60%</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> AI-powered business insights, predictive modeling, strategic recommendations</p>
-            <ul>
-              <li>AI-powered business insight generation</li>
-              <li>Predictive modeling and forecasting</li>
-              <li>Automated strategic recommendations</li>
-              <li>Competitive intelligence and market analysis</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> Predictive business intelligence, strategic competitive advantage</p>
+
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-success-green);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Client Intelligence Portal</h3>
+              <p>360-degree client view with relationship health scores and opportunity identification</p>
+              <div class="playbook-meta">
+                <span class="metric">Drives 25% more strategic decisions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-info-blue);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Operational Metrics Tracker</h3>
+              <p>Track and optimize operational efficiency with automated anomaly detection</p>
+              <div class="playbook-meta">
+                <span class="metric">Identifies 30% more improvement opportunities</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="playbook-card featured">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Custom Intelligence Playbook</h3>
+              <p>Tailored analytics solution designed for your specific metrics and decision-making needs</p>
+              <div class="playbook-meta">
+                <span class="metric">Delivers your critical insights</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ideal-state">
+    <!-- 4. Implementation Process -->
+    <section class="process-section">
       <div class="container">
-        <h2>Your Ideal State</h2>
-        <div class="ideal-content">
-          <p class="ideal-vision">
-            <strong>Automatic business intelligence with predictive strategic guidance:</strong> 
-            Your business operates with complete data visibility, automated insights, and predictive 
-            recommendations that guide strategic decisions and reveal opportunities before competitors 
-            recognize them.
-          </p>
+        <div class="section-header">
+          <h2>Your Implementation Journey</h2>
+          <p class="section-subtitle">From data chaos to systematic intelligence in 4 steps</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <Icon name="magnifying-glass" class="step-icon" />
+            <h3>Discovery & Assessment</h3>
+            <p>We analyze your current data sources, reporting needs, and existing tools to identify the highest-impact intelligence opportunities for your firm.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <Icon name="shield-check" class="step-icon" />
+            <h3>Playbook Selection</h3>
+            <p>Together we prioritize playbooks based on your decision-making priorities, data maturity, and strategic vision for intelligence-driven operations.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <Icon name="cog" class="step-icon" />
+            <h3>Build & Integration</h3>
+            <p>We implement your selected playbooks within your existing systems, creating automated intelligence workflows and training your team for data-driven decision making.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <Icon name="rocket-launch" class="step-icon" />
+            <h3>Launch & Optimize</h3>
+            <p>Go live with automated intelligence systems, then continuously optimize based on usage patterns and evolving business needs.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
+    <!-- 5. Ideal State Section -->
+    <section class="ideal-state-section">
       <div class="container">
-        <h2>Ready to Transform Your Data into Intelligence?</h2>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Start Foundation Playbook</a>
-          <a href="/assessment" class="btn btn-secondary">Take Operational Assessment</a>
+        <div class="section-header">
+          <h2>Your Business Intelligence Transformation</h2>
+        </div>
+        
+        <div class="ideal-state-content">
+          <p class="lead-text">Imagine making every strategic decision with complete confidence, backed by real-time data and predictive insights. Your leadership team operates with perfect visibility into performance, opportunities, and risks across all aspects of your practice.</p>
+          
+          <div class="transformation-grid">
+            <div class="before-after">
+              <div class="before">
+                <h4>Before</h4>
+                <ul>
+                  <li><span class="icon-red"><Icon name="clock" type="outline" /></span>Manual report compilation</li>
+                  <li><span class="icon-red"><Icon name="x-circle" type="outline" /></span>Delayed performance visibility</li>
+                  <li><span class="icon-red"><Icon name="users" type="outline" /></span>Gut-based decisions</li>
+                  <li><span class="icon-red"><Icon name="magnifying-glass" type="outline" /></span>Hidden insights in data</li>
+                  <li><span class="icon-red"><Icon name="cog" type="outline" /></span>Reactive management</li>
+                </ul>
+              </div>
+              <div class="after">
+                <h4>After</h4>
+                <ul>
+                  <li><span class="icon-teal"><Icon name="chart-bar-square" type="outline" /></span>Automated intelligence delivery</li>
+                  <li><span class="icon-teal"><Icon name="check-circle" type="outline" /></span>Real-time performance monitoring</li>
+                  <li><span class="icon-teal"><Icon name="users" type="outline" /></span>Data-driven strategy</li>
+                  <li><span class="icon-teal"><Icon name="magnifying-glass" type="outline" /></span>Proactive insight discovery</li>
+                  <li><span class="icon-teal"><Icon name="arrow-trending-up" type="outline" /></span>Predictive management</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p class="closing-text">The result: Strategic decisions made with confidence, operational efficiency driven by insights, and competitive advantage through intelligence that others can't match.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Tool Integration Section -->
+    <section class="tools-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>We Work With Your Current Tools</h2>
+          <p class="section-subtitle">Our playbooks integrate seamlessly with the platforms you already use</p>
+        </div>
+        
+        <div class="tools-grid">
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="cog" type="outline" /></span>
+              <h3>Project Management</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Monday.com</span>
+              <span class="tool-item">Smartsheet</span>
+              <span class="tool-item">Asana</span>
+              <span class="tool-item">ClickUp</span>
+              <span class="tool-item">Microsoft Project</span>
+              <span class="tool-item">Trello</span>
+              <span class="tool-item">Basecamp</span>
+              <span class="tool-item">Wrike</span>
+              <span class="tool-item">Jira</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="share" type="outline" /></span>
+              <h3>Communication</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Microsoft Teams</span>
+              <span class="tool-item">Slack</span>
+              <span class="tool-item">Zoom</span>
+              <span class="tool-item">Google Workspace</span>
+              <span class="tool-item">Discord</span>
+              <span class="tool-item">Mattermost</span>
+              <span class="tool-item">Webex</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="presentation-chart-line" type="outline" /></span>
+              <h3>Document Management</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">SharePoint</span>
+              <span class="tool-item">Dropbox</span>
+              <span class="tool-item">Box</span>
+              <span class="tool-item">OneDrive</span>
+              <span class="tool-item">Google Drive</span>
+              <span class="tool-item">NetDocuments</span>
+              <span class="tool-item">Confluence</span>
+              <span class="tool-item">Evernote</span>
+              <span class="tool-item">Notion</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="chart-bar-square" type="outline" /></span>
+              <h3>Data & Analytics</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Power BI</span>
+              <span class="tool-item">Tableau</span>
+              <span class="tool-item">Excel</span>
+              <span class="tool-item">Google Sheets</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="magnifying-glass" type="outline" /></span>
+              <h3>Field Data Collection</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Survey123</span>
+              <span class="tool-item">Fieldmaps</span>
+              <span class="tool-item">Fulcrum</span>
+              <span class="tool-item">SampleServe</span>
+              <span class="tool-item">Wildnote</span>
+              <span class="tool-item">QNOPY</span>
+              <span class="tool-item">Locus Mobile</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="globe-alt" type="outline" /></span>
+              <h3>Environmental Modeling</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">ArcGIS</span>
+              <span class="tool-item">QGIS</span>
+              <span class="tool-item">AERMOD</span>
+              <span class="tool-item">MODFLOW</span>
+              <span class="tool-item">MIKE Suite</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="beaker" type="outline" /></span>
+              <h3>Laboratory & Compliance</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">LabVantage</span>
+              <span class="tool-item">CloudLIMS</span>
+              <span class="tool-item">VelocityEHS</span>
+              <span class="tool-item">ERA Environmental</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="building-office" type="outline" /></span>
+              <h3>Business Systems</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">QuickBooks</span>
+              <span class="tool-item">Xero</span>
+              <span class="tool-item">Salesforce</span>
+              <span class="tool-item">HubSpot</span>
+              <span class="tool-item">Toggl</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="leaf" type="outline" /></span>
+              <h3>Environmental Platforms</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Aldoa</span>
+              <span class="tool-item">EVX Software</span>
+              <span class="tool-item">Coretime</span>
+              <span class="tool-item">Scoro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Expected Results -->
+    <section class="results-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Proven Results</h2>
+          <p class="section-subtitle">What to expect from systematic business intelligence</p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">15</div>
+            <div class="stat-label">Hours saved weekly on reporting</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">40%</div>
+            <div class="stat-label">Better project selection</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">60%</div>
+            <div class="stat-label">Improved profitability visibility</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">30%</div>
+            <div class="stat-label">More opportunities identified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Related Tracks -->
+    <section class="related-tracks-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tracks That Work Well Together</h2>
+          <p class="section-subtitle">Multiply your intelligence success with complementary tracks</p>
+        </div>
+        
+        <div class="related-tracks-grid">
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="users" type="outline" />
+            </div>
+            <h3>Growth Systems</h3>
+            <p>Use data insights to identify and pursue the best opportunities</p>
+            <a href="/solutions/growth-systems" class="track-link">Learn More →</a>
+          </div>
+          
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="shield-check" type="outline" />
+            </div>
+            <h3>Resource Optimization</h3>
+            <p>Make data-driven resource allocation decisions</p>
+            <a href="/solutions/resource-optimization" class="track-link">Learn More →</a>
+          </div>
+          
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="cpu-chip" type="outline" />
+            </div>
+            <h3>Strategic Advantage</h3>
+            <p>Leverage intelligence for competitive positioning</p>
+            <a href="/solutions/strategic-advantage" class="track-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Business Intelligence Questions</h2>
+          <p class="section-subtitle">Common questions about business intelligence playbooks and implementation</p>
+        </div>
+        
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+              <span>How is Business Intelligence different from just using Excel reports?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-1" hidden>
+              <p>While Excel is a valuable tool, our playbooks create automated, real-time intelligence systems that pull data from multiple sources, identify patterns, and deliver insights without manual compilation. You'll spend time acting on insights rather than creating reports.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+              <span>What if we don't have clean data to start with?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-2" hidden>
+              <p>Data cleanup is part of our implementation process. We help establish data standards, clean historical information, and create governance processes to maintain data quality going forward. Perfect data isn't required to start.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+              <span>Can these playbooks integrate with our existing project management and financial systems?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-3" hidden>
+              <p>Yes, our intelligence playbooks are designed to pull data from wherever it lives—project management tools, financial systems, CRMs, even spreadsheets. We create a unified intelligence layer without disrupting your current systems.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+              <span>How technical do our staff need to be to use these intelligence tools?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-4" hidden>
+              <p>The end-user experience is designed for non-technical users. Dashboards are intuitive, reports are automated, and insights are presented in plain language. Your team focuses on interpretation and action, not technical manipulation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+              <span>What kinds of insights will we actually get that we don't have now?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-5" hidden>
+              <p>Beyond basic metrics, you'll see patterns like which project types are most profitable, which clients are likely to expand, where capacity bottlenecks occur, and early warning signs of project or relationship issues.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Bottom CTA -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="cta-hero-box">
+          <h2>Ready to unlock your data's potential?</h2>
+          <p class="subtitle">Transform data chaos into strategic intelligence</p>
+          
+          <div class="trust-signals">
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="shield-check" type="outline" />
+              </div>
+              <span>Proven business intelligence methodologies</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="clock" type="outline" />
+              </div>
+              <span>6-8 week implementation timeline</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="trophy" type="outline" />
+              </div>
+              <span>15 hours saved weekly on reporting</span>
+            </div>
+          </div>
+          
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary-orange">Start Your First Playbook</a>
+            <a href="/assessment" class="btn btn-secondary-white">Take Assessment</a>
+          </div>
+          
+          <p class="closing-text">Stop making decisions in the dark. Start building systematic intelligence that drives success.</p>
         </div>
       </div>
     </section>
@@ -130,28 +558,925 @@ import Footer from '../../components/Footer.astro';
 </BaseLayout>
 
 <style>
-.track-hero {
+/* Hero Section */
+.hero-section {
   background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
   color: var(--color-white);
-  padding: var(--spacing-8) 0;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.level-card {
-  border-left: 4px solid var(--color-info-blue);
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.cta-section {
-  background: var(--color-info-blue);
+.hero-content h1 {
+  font-family: var(--font-family-primary);
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  color: var(--color-white);
 }
 
-.btn-primary {
+.hero-content .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-white);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Problem Section */
+.problem-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.problem-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.problem-content h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+}
+
+.problem-pullquote {
+  background: var(--color-white);
+  border-left: 4px solid var(--color-teal-primary);
+  padding: 2rem;
+  margin: 2rem auto 3rem;
+  max-width: 800px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.problem-pullquote p {
+  font-size: var(--font-size-large);
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dark-gray);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+  position: relative;
+}
+
+.problem-pullquote p::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--color-teal-primary);
+  position: absolute;
+  left: -1rem;
+  top: -0.5rem;
+  line-height: 1;
+}
+
+.problem-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.problem-column p {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+/* Playbooks Section */
+.playbooks-section {
+  padding: 5rem 0;
+}
+
+.playbooks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.playbook-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.playbook-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.playbook-card.featured {
+  border: 2px solid var(--color-teal-primary);
+}
+
+.playbook-card {
+  display: flex;
+  min-height: 160px;
+}
+
+.playbook-image {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: var(--font-weight-semibold);
+}
+
+.playbook-content {
+  width: 60%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.playbook-content h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 0.75rem;
+}
+
+.playbook-content p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.playbook-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric {
+  font-size: var(--font-size-small);
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Process Section */
+.process-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.step-item {
+  text-align: center;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.step-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.step-number {
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-large);
+  margin: 0 auto 1rem;
+}
+
+.step-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-teal-primary);
+  margin-bottom: 1rem;
+}
+
+.step-item h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.step-item p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+}
+
+.step-connector {
+  font-size: 2rem;
+  color: var(--color-teal-primary);
+  font-weight: bold;
+}
+
+/* Ideal State Section */
+.ideal-state-section {
+  padding: 5rem 0;
+}
+
+.ideal-state-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead-text {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+}
+
+.transformation-grid {
+  margin: 3rem 0;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+.before, .after {
+  background: var(--color-off-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.before h4, .after h4 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+}
+
+.before h4 {
+  color: var(--color-orange-accent);
+}
+
+.after h4 {
+  color: var(--color-teal-primary);
+}
+
+.before ul, .after ul {
+  list-style: none;
+  padding: 0;
+}
+
+.before li, .after li {
+  padding: 0.5rem 0;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-red {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.icon-teal {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-teal-primary);
+  flex-shrink: 0;
+}
+
+.closing-text {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin-top: 2rem;
+}
+
+/* Tools Section */
+.tools-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.tool-category-card {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--color-teal-primary);
+  transition: all var(--transition-normal);
+}
+
+.tool-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.category-icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-teal-primary);
+  flex-shrink: 0;
+}
+
+.category-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tool-category-card h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-item {
+  background: var(--color-off-white);
+  color: var(--color-dark-gray);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+}
+
+.tool-item:hover {
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+/* Results Section */
+.results-section {
+  padding: 5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Related Tracks Section */
+.related-tracks-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.related-tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.related-track-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.related-track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.related-track-card .track-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-teal-primary);
+  margin: 0 auto 1rem;
+}
+
+.related-track-card h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.related-track-card p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+.track-link {
+  color: var(--color-teal-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+}
+
+.track-link:hover {
+  color: var(--color-teal-primary-hover);
+}
+
+/* FAQ Section */
+.faq-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  transition: all var(--transition-normal);
+  gap: 1rem;
+}
+
+.faq-question:hover {
+  background-color: var(--color-off-white);
+  color: var(--color-teal-primary);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--color-teal-primary);
+  outline-offset: -2px;
+  background-color: var(--color-off-white);
+}
+
+.faq-question span {
+  flex: 1;
+  text-align: left;
+}
+
+.icon-chevron {
+  flex-shrink: 0;
+  color: var(--color-teal-primary);
+  transition: transform 300ms ease;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease, padding 300ms ease;
   background-color: var(--color-white);
-  color: var(--color-info-blue);
 }
 
-.btn-secondary:hover {
-  color: var(--color-info-blue);
+.faq-answer[hidden] {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-/* Inherit all other styles from shared component patterns */
+.faq-answer:not([hidden]) {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--color-dark-gray);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  padding-top: 1rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.cta-hero-box {
+  background: linear-gradient(135deg, var(--color-orange-accent) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.cta-hero-box h2 {
+  font-family: var(--font-family-primary);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--color-white);
+}
+
+.cta-hero-box .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.trust-signals {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.trust-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-small);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.closing-text {
+  margin-top: 1.5rem;
+  font-size: var(--font-size-large);
+  opacity: 0.9;
+}
+
+/* Common Section Styles */
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-2);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-large);
+  color: var(--color-dark-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary-orange {
+  background-color: var(--color-orange-accent);
+  color: var(--color-white);
+  border-color: var(--color-orange-accent);
+}
+
+.btn-primary-orange:hover {
+  background-color: var(--color-orange-accent-hover);
+  border-color: var(--color-orange-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 122, 71, 0.3);
+}
+
+.btn-secondary-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-secondary-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-teal-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  .step-connector {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Problem Section */
+  .problem-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .problem-pullquote {
+    margin: 2rem 1rem 3rem;
+    padding: 1.5rem;
+  }
+  
+  .problem-pullquote p::before {
+    left: -0.5rem;
+  }
+  
+  /* Playbooks Grid */
+  .playbooks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .playbook-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .playbook-image, .playbook-content {
+    width: 100%;
+  }
+  
+  .image-placeholder {
+    height: 120px;
+  }
+  
+  /* Steps */
+  .step-connector {
+    display: none;
+  }
+  
+  /* Before/After */
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Tools Grid */
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tool-category-card {
+    padding: 1.25rem;
+  }
+  
+  .category-header {
+    gap: 0.5rem;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  /* Related Tracks */
+  .related-tracks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Trust Signals */
+  .trust-signals {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* CTA Buttons */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Section Headers */
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  /* Final CTA */
+  .cta-hero-box {
+    padding: 3rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .cta-hero-box h2 {
+    font-size: 2rem;
+  }
+}
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // FAQ Accordion functionality
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const chevron = item.querySelector('.icon-chevron');
+    
+    question.addEventListener('click', () => {
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other items (optional - remove these lines to allow multiple open)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherQuestion = otherItem.querySelector('.faq-question');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherChevron = otherItem.querySelector('.icon-chevron');
+          
+          otherQuestion.setAttribute('aria-expanded', 'false');
+          otherAnswer.setAttribute('hidden', '');
+          otherAnswer.style.maxHeight = '0px';
+          otherChevron.style.transform = 'rotate(0deg)';
+        }
+      });
+      
+      // Toggle current item
+      if (isExpanded) {
+        // Close
+        question.setAttribute('aria-expanded', 'false');
+        answer.setAttribute('hidden', '');
+        answer.style.maxHeight = '0px';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        // Open
+        question.setAttribute('aria-expanded', 'true');
+        answer.removeAttribute('hidden');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+    
+    // Keyboard accessibility
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        question.click();
+      }
+    });
+  });
+});
+</script>

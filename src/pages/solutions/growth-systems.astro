@@ -2,125 +2,553 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+import TrackCard from '../../components/ui/TrackCard.astro';
+import { tracks } from '../../utils/trackData.ts';
 ---
 
 <BaseLayout 
-  title="Growth Systems Playbooks | GaiaOps"
-  description="Build systematic growth capabilities through optimized lead management and automated business development. Foundation → Advanced → Complete levels."
+  title="Systematize Growth to Scale Predictably | Growth Systems | GaiaOps"
+  description="Build repeatable business development systems that generate consistent pipeline and revenue growth. Pre-built solutions for pipeline management, proposal automation, and systematic growth."
 >
   <Header />
   
-  <main id="main-content" class="service-page">
-    <!-- ABOVE THE FOLD: Clean & Simple -->
-    <section class="hero">
+  <main id="main-content">
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
       <div class="container">
-        <h1>Build Predictable Revenue Growth</h1>
-        <p class="hero-subtitle">Generate qualified leads and accelerate conversions with systematic growth engines</p>
-        <div class="hero-cta">
-          <a href="/contact" class="btn btn-primary">Get Started</a>
-          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        <div class="hero-content">
+          <h1>Systematize Growth to Scale Predictably</h1>
+          <p class="subtitle">Build repeatable business development systems that generate consistent pipeline and revenue growth</p>
+          
+          <div class="hero-ctas">
+            <a href="/contact" class="btn btn-primary-orange">Get Started</a>
+            <a href="/assessment" class="btn btn-secondary-white">Take Assessment</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BELOW THE FOLD: Progressive Detail -->
+    <!-- 2. The Problem Section -->
     <section class="problem-section">
       <div class="container">
-        <h2>The Growth Systems Problem</h2>
-        <p class="problem-description">
-          Reactive sales approaches, inconsistent lead generation, low conversion rates, and unpredictable revenue 
-          make it impossible to plan for growth or invest confidently in your firm's future.
-        </p>
+        <div class="problem-content">
+          <h2>The Growth Systems Challenge</h2>
+          
+          <div class="problem-pullquote">
+            <p>"Growth shouldn't depend on relationships and luck—it should be a predictable, systematic process"</p>
+          </div>
+          
+          <div class="problem-columns">
+            <div class="problem-column">
+              <p>Environmental consultancies struggle with unpredictable pipelines, inconsistent proposal processes, and growth that depends too heavily on existing relationships. Without systematic business development, firms miss opportunities, waste resources on low-probability pursuits, and can't scale beyond founder-led sales.</p>
+            </div>
+            <div class="problem-column">
+              <p>The result? Revenue volatility, missed growth targets, and talented technical teams underutilized while waiting for the next project. Your firm's potential becomes constrained by ad-hoc business development instead of systematic growth processes.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="solution-section">
-      <div class="container">
-        <h2>Our Solution: Systematic Growth Playbooks</h2>
-        <p class="solution-description">
-          Build predictable revenue through optimized lead management, intelligent scoring systems, 
-          and automated business development that consistently fills your pipeline with qualified opportunities.
-        </p>
-      </div>
-    </section>
-
+    <!-- 3. Playbooks Portfolio Section -->
     <section class="playbooks-section">
       <div class="container">
-        <h2>Available Growth Systems Playbooks</h2>
+        <div class="section-header">
+          <h2>Growth Systems Playbooks</h2>
+          <p class="section-subtitle">Pre-built solutions for systematic business development</p>
+        </div>
         
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Foundation Playbook</h3>
-            <div class="level-specs">40 hours • 6 weeks</div>
+        <div class="playbooks-grid">
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-teal-primary);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Pipeline Management System</h3>
+              <p>Comprehensive CRM with automated lead tracking, opportunity scoring, and pipeline forecasting to predict revenue and identify bottlenecks.</p>
+              <div class="playbook-meta">
+                <span class="metric">Increases win rate by 35%</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Lead tracking workflows, proposal templates, basic CRM</p>
-            <ul>
-              <li>Systematic lead tracking and management</li>
-              <li>Standardized proposal templates and processes</li>
-              <li>Basic CRM implementation and optimization</li>
-              <li>Pipeline management and forecasting</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> 50% improvement in lead conversion, systematic sales process</p>
-          </div>
-        </div>
 
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Advanced Playbook</h3>
-            <div class="level-specs">45 hours • 7 weeks</div>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-navy-primary);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Proposal Automation Hub</h3>
+              <p>Streamlined proposal generation with templates, automated pricing, and collaboration tools to reduce time-to-submission and improve quality.</p>
+              <div class="playbook-meta">
+                <span class="metric">50% faster proposal turnaround</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Advanced lead scoring, competitive intelligence tools</p>
-            <ul>
-              <li>Advanced lead scoring and prioritization</li>
-              <li>Competitive intelligence and market analysis</li>
-              <li>Automated nurturing and follow-up sequences</li>
-              <li>Strategic business development optimization</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> 30% increase in qualified opportunities, competitive advantage</p>
-          </div>
-        </div>
 
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Complete Playbook</h3>
-            <div class="level-specs">55 hours • 8 weeks</div>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-orange-accent);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Business Development Dashboard</h3>
+              <p>Executive visibility into lead sources, conversion metrics, and growth performance with automated reporting and forecasting.</p>
+              <div class="playbook-meta">
+                <span class="metric">Improves forecast accuracy by 65%</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Predictive conversion optimization, automated competitive positioning</p>
-            <ul>
-              <li>AI-powered conversion optimization</li>
-              <li>Automated competitive positioning and messaging</li>
-              <li>Predictive opportunity identification</li>
-              <li>Strategic growth acceleration systems</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> Predictive growth optimization, systematic market expansion</p>
+
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-success-green);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Client Success Expansion System</h3>
+              <p>Systematic approach to identifying and pursuing expansion opportunities within existing clients through health scoring and engagement tracking.</p>
+              <div class="playbook-meta">
+                <span class="metric">Increases client lifetime value by 40%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-info-blue);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Lead Generation Engine</h3>
+              <p>Multi-channel lead generation system with content marketing, referral tracking, and automated nurture sequences to build consistent pipeline.</p>
+              <div class="playbook-meta">
+                <span class="metric">Generates 3x more qualified leads</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="playbook-card featured">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Custom Growth Playbook</h3>
+              <p>Tailored solution for your unique growth challenges, built specifically for your market position and business development needs.</p>
+              <div class="playbook-meta">
+                <span class="metric">Addresses your specific growth goals</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ideal-state">
+    <!-- 4. Implementation Process -->
+    <section class="process-section">
       <div class="container">
-        <h2>Your Ideal State</h2>
-        <div class="ideal-content">
-          <p class="ideal-vision">
-            <strong>Systematic growth with predictive opportunity identification:</strong> 
-            Your business development operates as a predictable growth engine with automated lead 
-            qualification, intelligent competitive positioning, and systematic expansion that 
-            consistently delivers qualified opportunities.
-          </p>
+        <div class="section-header">
+          <h2>Your Implementation Journey</h2>
+          <p class="section-subtitle">From unpredictable growth to systematic revenue generation in 4 steps</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <Icon name="magnifying-glass" class="step-icon" />
+            <h3>Discovery & Assessment</h3>
+            <p>We analyze your current business development processes, lead sources, and growth challenges to identify the highest-impact playbooks for your situation.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <Icon name="shield-check" class="step-icon" />
+            <h3>Playbook Selection</h3>
+            <p>Together we prioritize playbooks based on your immediate needs, available resources, and strategic goals for sustainable growth.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <Icon name="cog" class="step-icon" />
+            <h3>Build & Integration</h3>
+            <p>We implement your selected playbooks within your existing tech stack, customizing workflows and training your team for optimal adoption.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <Icon name="rocket-launch" class="step-icon" />
+            <h3>Launch & Optimize</h3>
+            <p>Go live with systematic growth processes, then continuously optimize based on pipeline performance and conversion metrics.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
+    <!-- 5. Ideal State Section -->
+    <section class="ideal-state-section">
       <div class="container">
-        <h2>Ready to Systematize Your Growth?</h2>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Start Foundation Playbook</a>
-          <a href="/assessment" class="btn btn-secondary">Take Operational Assessment</a>
+        <div class="section-header">
+          <h2>Your Growth Systems Transformation</h2>
+        </div>
+        
+        <div class="ideal-state-content">
+          <p class="lead-text">Imagine having a steady flow of qualified prospects, predictable proposal processes, and systematic client expansion. Your team focuses on delivering excellent work while growth systems automatically generate and nurture your next opportunities.</p>
+          
+          <div class="transformation-grid">
+            <div class="before-after">
+              <div class="before">
+                <h4>Before</h4>
+                <ul>
+                  <li><span class="icon-red"><Icon name="arrow-trending-down" type="outline" /></span>Inconsistent pipeline flow</li>
+                  <li><span class="icon-red"><Icon name="clock" type="outline" /></span>Rushed proposal development</li>
+                  <li><span class="icon-red"><Icon name="users" type="outline" /></span>Relationship-dependent growth</li>
+                  <li><span class="icon-red"><Icon name="magnifying-glass" type="outline" /></span>Ad-hoc lead generation</li>
+                  <li><span class="icon-red"><Icon name="exclamation-triangle" type="outline" /></span>Revenue volatility</li>
+                </ul>
+              </div>
+              <div class="after">
+                <h4>After</h4>
+                <ul>
+                  <li><span class="icon-teal"><Icon name="chart-bar" type="outline" /></span>Predictable pipeline management</li>
+                  <li><span class="icon-teal"><Icon name="cog" type="outline" /></span>Automated proposal workflows</li>
+                  <li><span class="icon-teal"><Icon name="rocket-launch" type="outline" /></span>Systematic growth processes</li>
+                  <li><span class="icon-teal"><Icon name="target" type="outline" /></span>Consistent lead generation</li>
+                  <li><span class="icon-teal"><Icon name="arrow-trending-up" type="outline" /></span>Stable revenue growth</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p class="closing-text">The result: Predictable revenue growth, efficient business development processes, and your firm positioned to consistently win high-value engagements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Tool Integration Section -->
+    <section class="tools-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>We Work With Your Current Tools</h2>
+          <p class="section-subtitle">Our playbooks integrate seamlessly with the platforms you already use</p>
+        </div>
+        
+        <div class="tools-grid">
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="cog" type="outline" /></span>
+              <h3>Project Management</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Monday.com</span>
+              <span class="tool-item">Smartsheet</span>
+              <span class="tool-item">Asana</span>
+              <span class="tool-item">ClickUp</span>
+              <span class="tool-item">Microsoft Project</span>
+              <span class="tool-item">Trello</span>
+              <span class="tool-item">Basecamp</span>
+              <span class="tool-item">Wrike</span>
+              <span class="tool-item">Jira</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="share" type="outline" /></span>
+              <h3>Communication</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Microsoft Teams</span>
+              <span class="tool-item">Slack</span>
+              <span class="tool-item">Zoom</span>
+              <span class="tool-item">Google Workspace</span>
+              <span class="tool-item">Discord</span>
+              <span class="tool-item">Mattermost</span>
+              <span class="tool-item">Webex</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="presentation-chart-line" type="outline" /></span>
+              <h3>Document Management</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">SharePoint</span>
+              <span class="tool-item">Dropbox</span>
+              <span class="tool-item">Box</span>
+              <span class="tool-item">OneDrive</span>
+              <span class="tool-item">Google Drive</span>
+              <span class="tool-item">NetDocuments</span>
+              <span class="tool-item">Confluence</span>
+              <span class="tool-item">Evernote</span>
+              <span class="tool-item">Notion</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="chart-bar-square" type="outline" /></span>
+              <h3>Data & Analytics</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Power BI</span>
+              <span class="tool-item">Tableau</span>
+              <span class="tool-item">Excel</span>
+              <span class="tool-item">Google Sheets</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="magnifying-glass" type="outline" /></span>
+              <h3>Field Data Collection</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Survey123</span>
+              <span class="tool-item">Fieldmaps</span>
+              <span class="tool-item">Fulcrum</span>
+              <span class="tool-item">SampleServe</span>
+              <span class="tool-item">Wildnote</span>
+              <span class="tool-item">QNOPY</span>
+              <span class="tool-item">Locus Mobile</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="globe-alt" type="outline" /></span>
+              <h3>Environmental Modeling</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">ArcGIS</span>
+              <span class="tool-item">QGIS</span>
+              <span class="tool-item">AERMOD</span>
+              <span class="tool-item">MODFLOW</span>
+              <span class="tool-item">MIKE Suite</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="beaker" type="outline" /></span>
+              <h3>Laboratory & Compliance</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">LabVantage</span>
+              <span class="tool-item">CloudLIMS</span>
+              <span class="tool-item">VelocityEHS</span>
+              <span class="tool-item">ERA Environmental</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="building-office" type="outline" /></span>
+              <h3>Business Systems</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">QuickBooks</span>
+              <span class="tool-item">Xero</span>
+              <span class="tool-item">Salesforce</span>
+              <span class="tool-item">HubSpot</span>
+              <span class="tool-item">Toggl</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="leaf" type="outline" /></span>
+              <h3>Environmental Platforms</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Aldoa</span>
+              <span class="tool-item">EVX Software</span>
+              <span class="tool-item">Coretime</span>
+              <span class="tool-item">Scoro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Expected Results -->
+    <section class="results-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Proven Results</h2>
+          <p class="section-subtitle">What to expect from systematic growth processes</p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">35%</div>
+            <div class="stat-label">Increase in proposal win rate</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50%</div>
+            <div class="stat-label">Faster proposal turnaround</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3x</div>
+            <div class="stat-label">More qualified leads generated</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">65%</div>
+            <div class="stat-label">Improvement in forecast accuracy</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Related Tracks -->
+    <section class="related-tracks-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tracks That Work Well Together</h2>
+          <p class="section-subtitle">Multiply your growth success with complementary tracks</p>
+        </div>
+        
+        <div class="related-tracks-grid">
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="users" type="outline" />
+            </div>
+            <h3>Client Relationships</h3>
+            <p>Combine systematic growth with client success management to maximize expansion and retention opportunities.</p>
+            <a href="/solutions/client-relationships" class="track-link">Learn More →</a>
+          </div>
+          
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="chart-bar" type="outline" />
+            </div>
+            <h3>Business Intelligence</h3>
+            <p>Integrate growth analytics with systematic processes to optimize conversion rates and identify new opportunities.</p>
+            <a href="/solutions/business-intelligence" class="track-link">Learn More →</a>
+          </div>
+          
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="cpu-chip" type="outline" />
+            </div>
+            <h3>Resource Optimization</h3>
+            <p>Optimize team allocation to support systematic growth while maintaining delivery excellence for new clients.</p>
+            <a href="/solutions/resource-optimization" class="track-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Growth Systems Questions</h2>
+          <p class="section-subtitle">Common questions about growth playbooks and implementation</p>
+        </div>
+        
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+              <span>How do you help firms move from relationship-dependent to systematic growth?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-1" hidden>
+              <p>We start by identifying your current lead sources and conversion patterns, then gradually introduce systematic processes that complement existing relationships. The goal isn't to replace relationships but to create predictable processes that generate new opportunities while maintaining current partnerships. This includes lead generation systems, proposal automation, and pipeline management.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+              <span>What if our team is already too busy with projects to focus on business development?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-2" hidden>
+              <p>That's exactly why systematic growth processes are essential. Our playbooks are designed to reduce the time investment required for business development while increasing results. We automate repetitive tasks, streamline proposal processes, and create systems that work in the background. Most clients find they actually save time while generating better outcomes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+              <span>How do you ensure growth systems work with our specific market and services?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-3" hidden>
+              <p>Every growth system is customized for your specific market, services, and client base. We analyze your successful past projects to identify patterns and create growth processes that attract similar opportunities. Whether you focus on remediation, compliance, renewable energy, or other specialties, we build systems that speak to your target market's specific needs and decision-making processes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+              <span>How quickly can we expect to see results from systematic growth processes?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-4" hidden>
+              <p>Most clients see improved lead quality and proposal efficiency within 4-6 weeks of implementation. Full growth transformation typically takes 3-4 months as systems mature and generate compound results. However, many see immediate benefits like better proposal organization and clearer pipeline visibility within the first month of implementation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+              <span>Do you provide training for our business development and marketing teams?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-5" hidden>
+              <p>Yes, comprehensive training is included with every playbook implementation. We provide role-specific training for business development, marketing, project management, and leadership teams. We also create documentation and best practices guides that your team can reference and update as your growth systems evolve.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Bottom CTA -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="cta-hero-box">
+          <h2>Ready to Systematize Your Growth?</h2>
+          <p class="subtitle">Transform unpredictable revenue into systematic business development</p>
+          
+          <div class="trust-signals">
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="shield-check" type="outline" />
+              </div>
+              <span>Proven growth methodologies</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="clock" type="outline" />
+              </div>
+              <span>6-8 week implementation timeline</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="trophy" type="outline" />
+              </div>
+              <span>35% increase in proposal win rates</span>
+            </div>
+          </div>
+          
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary-orange">Start Your Growth System</a>
+            <a href="/assessment" class="btn btn-secondary-white">Take Assessment</a>
+          </div>
+          
+          <p class="closing-text">Stop depending on luck and relationships. Start building systematic growth that scales.</p>
         </div>
       </div>
     </section>
@@ -130,26 +558,925 @@ import Footer from '../../components/Footer.astro';
 </BaseLayout>
 
 <style>
-.track-hero {
+/* Hero Section */
+.hero-section {
   background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
   color: var(--color-white);
-  padding: var(--spacing-8) 0;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.level-card {
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-family: var(--font-family-primary);
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.hero-content .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-white);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Problem Section */
+.problem-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.problem-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.problem-content h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+}
+
+.problem-pullquote {
+  background: var(--color-white);
   border-left: 4px solid var(--color-teal-primary);
+  padding: 2rem;
+  margin: 2rem auto 3rem;
+  max-width: 800px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
-.cta-section {
+.problem-pullquote p {
+  font-size: var(--font-size-large);
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dark-gray);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+  position: relative;
+}
+
+.problem-pullquote p::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--color-teal-primary);
+  position: absolute;
+  left: -1rem;
+  top: -0.5rem;
+  line-height: 1;
+}
+
+.problem-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.problem-column p {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+/* Playbooks Section */
+.playbooks-section {
+  padding: 5rem 0;
+}
+
+.playbooks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.playbook-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.playbook-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.playbook-card.featured {
+  border: 2px solid var(--color-teal-primary);
+}
+
+.playbook-card {
+  display: flex;
+  min-height: 160px;
+}
+
+.playbook-image {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: var(--font-weight-semibold);
+}
+
+.playbook-content {
+  width: 60%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.playbook-content h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 0.75rem;
+}
+
+.playbook-content p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.playbook-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric {
+  font-size: var(--font-size-small);
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Process Section */
+.process-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.step-item {
+  text-align: center;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.step-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.step-number {
   background: var(--color-teal-primary);
+  color: var(--color-white);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-large);
+  margin: 0 auto 1rem;
 }
 
-.btn-primary {
+.step-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-teal-primary);
+  margin-bottom: 1rem;
+}
+
+.step-item h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.step-item p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+}
+
+.step-connector {
+  font-size: 2rem;
+  color: var(--color-teal-primary);
+  font-weight: bold;
+}
+
+/* Ideal State Section */
+.ideal-state-section {
+  padding: 5rem 0;
+}
+
+.ideal-state-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead-text {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+}
+
+.transformation-grid {
+  margin: 3rem 0;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+.before, .after {
+  background: var(--color-off-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.before h4, .after h4 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+}
+
+.before h4 {
+  color: var(--color-orange-accent);
+}
+
+.after h4 {
+  color: var(--color-teal-primary);
+}
+
+.before ul, .after ul {
+  list-style: none;
+  padding: 0;
+}
+
+.before li, .after li {
+  padding: 0.5rem 0;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-red {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.icon-teal {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-teal-primary);
+  flex-shrink: 0;
+}
+
+.closing-text {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin-top: 2rem;
+}
+
+/* Tools Section */
+.tools-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.tool-category-card {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--color-teal-primary);
+  transition: all var(--transition-normal);
+}
+
+.tool-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.category-icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-teal-primary);
+  flex-shrink: 0;
+}
+
+.category-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tool-category-card h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-item {
+  background: var(--color-off-white);
+  color: var(--color-dark-gray);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+}
+
+.tool-item:hover {
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+/* Results Section */
+.results-section {
+  padding: 5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Related Tracks Section */
+.related-tracks-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.related-tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.related-track-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.related-track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.related-track-card .track-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-teal-primary);
+  margin: 0 auto 1rem;
+}
+
+.related-track-card h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.related-track-card p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+.track-link {
+  color: var(--color-teal-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+}
+
+.track-link:hover {
+  color: var(--color-teal-primary-hover);
+}
+
+/* FAQ Section */
+.faq-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  transition: all var(--transition-normal);
+  gap: 1rem;
+}
+
+.faq-question:hover {
+  background-color: var(--color-off-white);
+  color: var(--color-teal-primary);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--color-teal-primary);
+  outline-offset: -2px;
+  background-color: var(--color-off-white);
+}
+
+.faq-question span {
+  flex: 1;
+  text-align: left;
+}
+
+.icon-chevron {
+  flex-shrink: 0;
+  color: var(--color-teal-primary);
+  transition: transform 300ms ease;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease, padding 300ms ease;
+  background-color: var(--color-white);
+}
+
+.faq-answer[hidden] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.faq-answer:not([hidden]) {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--color-dark-gray);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  padding-top: 1rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.cta-hero-box {
+  background: linear-gradient(135deg, var(--color-orange-accent) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.cta-hero-box h2 {
+  font-family: var(--font-family-primary);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--color-white);
+}
+
+.cta-hero-box .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.trust-signals {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.trust-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-small);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.closing-text {
+  margin-top: 1.5rem;
+  font-size: var(--font-size-large);
+  opacity: 0.9;
+}
+
+/* Common Section Styles */
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--spacing-2);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-large);
+  color: var(--color-dark-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary-orange {
+  background-color: var(--color-orange-accent);
+  color: var(--color-white);
+  border-color: var(--color-orange-accent);
+}
+
+.btn-primary-orange:hover {
+  background-color: var(--color-orange-accent-hover);
+  border-color: var(--color-orange-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 122, 71, 0.3);
+}
+
+.btn-secondary-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-secondary-white:hover {
   background-color: var(--color-white);
   color: var(--color-teal-primary);
 }
 
-.btn-secondary:hover {
-  color: var(--color-teal-primary);
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  .step-connector {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Problem Section */
+  .problem-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .problem-pullquote {
+    margin: 2rem 1rem 3rem;
+    padding: 1.5rem;
+  }
+  
+  .problem-pullquote p::before {
+    left: -0.5rem;
+  }
+  
+  /* Playbooks Grid */
+  .playbooks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .playbook-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .playbook-image, .playbook-content {
+    width: 100%;
+  }
+  
+  .image-placeholder {
+    height: 120px;
+  }
+  
+  /* Steps */
+  .step-connector {
+    display: none;
+  }
+  
+  /* Before/After */
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Tools Grid */
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tool-category-card {
+    padding: 1.25rem;
+  }
+  
+  .category-header {
+    gap: 0.5rem;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  /* Related Tracks */
+  .related-tracks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Trust Signals */
+  .trust-signals {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* CTA Buttons */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Section Headers */
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  /* Final CTA */
+  .cta-hero-box {
+    padding: 3rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .cta-hero-box h2 {
+    font-size: 2rem;
+  }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // FAQ Accordion functionality
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const chevron = item.querySelector('.icon-chevron');
+    
+    question.addEventListener('click', () => {
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other items (optional - remove these lines to allow multiple open)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherQuestion = otherItem.querySelector('.faq-question');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherChevron = otherItem.querySelector('.icon-chevron');
+          
+          otherQuestion.setAttribute('aria-expanded', 'false');
+          otherAnswer.setAttribute('hidden', '');
+          otherAnswer.style.maxHeight = '0px';
+          otherChevron.style.transform = 'rotate(0deg)';
+        }
+      });
+      
+      // Toggle current item
+      if (isExpanded) {
+        // Close
+        question.setAttribute('aria-expanded', 'false');
+        answer.setAttribute('hidden', '');
+        answer.style.maxHeight = '0px';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        // Open
+        question.setAttribute('aria-expanded', 'true');
+        answer.removeAttribute('hidden');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+    
+    // Keyboard accessibility
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        question.click();
+      }
+    });
+  });
+});
+</script>

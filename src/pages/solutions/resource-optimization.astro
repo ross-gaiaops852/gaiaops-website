@@ -2,134 +2,553 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+import TrackCard from '../../components/ui/TrackCard.astro';
+import { tracks } from '../../utils/trackData.ts';
 ---
 
 <BaseLayout 
-  title="Resource Optimization Playbooks | GaiaOps"
-  description="Maximize team utilization and optimize project profitability through systematic resource management. Foundation → Advanced → Complete levels."
+  title="Maximize Team Capacity Without Adding Headcount | Resource Optimization | GaiaOps"
+  description="Optimize resource allocation and utilization to deliver more projects with your existing team. Pre-built solutions for capacity planning, skills optimization, and workload balancing."
 >
   <Header />
   
-  <main id="main-content" class="service-page">
-    <!-- ABOVE THE FOLD: Clean & Simple -->
-    <section class="hero">
+  <main id="main-content">
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
       <div class="container">
-        <h1>Maximize Team Performance and Profitability</h1>
-        <p class="hero-subtitle">Eliminate bottlenecks and boost project profitability through strategic resource allocation</p>
-        <div class="hero-cta">
-          <a href="/contact" class="btn btn-primary">Get Started</a>
-          <a href="/assessment" class="btn btn-secondary">Take Assessment</a>
+        <div class="hero-content">
+          <h1>Maximize Team Capacity Without Adding Headcount</h1>
+          <p class="subtitle">Optimize resource allocation and utilization to deliver more projects with your existing team</p>
+          
+          <div class="hero-ctas">
+            <a href="/contact" class="btn btn-primary-orange">Get Started</a>
+            <a href="/assessment" class="btn btn-secondary-white">Take Assessment</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BELOW THE FOLD: Progressive Detail -->
+    <!-- 2. The Problem Section -->
     <section class="problem-section">
       <div class="container">
-        <h2>The Resource Optimization Problem</h2>
-        <p class="problem-description">
-          Chaotic capacity management leads to overworked teams, underutilized talent, project bottlenecks, 
-          and unpredictable profitability that prevents sustainable growth and team satisfaction.
-        </p>
+        <div class="problem-content">
+          <h2>The Resource Optimization Challenge</h2>
+          
+          <div class="problem-pullquote">
+            <p>"You're either overwhelmed with work or worried about keeping everyone busy—rarely finding the profitable balance"</p>
+          </div>
+          
+          <div class="problem-columns">
+            <div class="problem-column">
+              <p>Environmental consultancies face constant resource allocation challenges. Project demands fluctuate, specialized skills are scattered across the team, and without clear visibility into capacity, you're either turning away work or burning out your best people. Manual resource planning leads to costly misallocations and missed opportunities.</p>
+            </div>
+            <div class="problem-column">
+              <p>Poor resource optimization creates a cascade of problems: profitable projects get understaffed, junior team members lack growth opportunities, and senior experts waste time on routine tasks. Your firm operates below capacity while feeling overwhelmed, leaving money on the table and frustrating both clients and staff.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="solution-section">
-      <div class="container">
-        <h2>Our Solution: Strategic Resource Management Playbooks</h2>
-        <p class="solution-description">
-          Transform capacity chaos into strategic allocation through intelligent planning, skills-based matching, 
-          and predictive demand forecasting that maximizes both team utilization and project profitability.
-        </p>
-      </div>
-    </section>
-
+    <!-- 3. Playbooks Portfolio Section -->
     <section class="playbooks-section">
       <div class="container">
-        <h2>Available Resource Optimization Playbooks</h2>
+        <div class="section-header">
+          <h2>Resource Optimization Playbooks</h2>
+          <p class="section-subtitle">Pre-built solutions for resource allocation challenges</p>
+        </div>
         
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Foundation Playbook</h3>
-            <div class="level-specs">45 hours • 6 weeks</div>
+        <div class="playbooks-grid">
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-teal-primary);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Capacity Planning Dashboard</h3>
+              <p>Real-time visualization of team availability, skills, and project allocations</p>
+              <div class="playbook-meta">
+                <span class="metric">Improves utilization by 35%</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Capacity planning dashboards, project templates, budget tracking</p>
-            <ul>
-              <li>Real-time capacity planning dashboards</li>
-              <li>Standardized project templates and workflows</li>
-              <li>Budget tracking and profitability analysis</li>
-              <li>Resource allocation optimization tools</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> 30% improvement in team utilization, better project profitability</p>
-          </div>
-        </div>
 
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Advanced Playbook</h3>
-            <div class="level-specs">50 hours • 7 weeks</div>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-navy-primary);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Skills Matrix Optimizer</h3>
+              <p>Dynamic matching of project needs to team capabilities with automated recommendations</p>
+              <div class="playbook-meta">
+                <span class="metric">Reduces project delays by 50%</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> Real-time optimization algorithms, skills-based matching</p>
-            <ul>
-              <li>Intelligent resource allocation algorithms</li>
-              <li>Skills-based project matching and assignment</li>
-              <li>Real-time capacity optimization recommendations</li>
-              <li>Advanced profitability analytics and forecasting</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> 50% improvement in utilization rates, strategic capacity expansion</p>
-          </div>
-        </div>
 
-        <div class="level-card">
-          <div class="level-header">
-            <h3>Complete Playbook</h3>
-            <div class="level-specs">60 hours • 8 weeks</div>
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-orange-accent);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Workload Balancing System</h3>
+              <p>Automated alerts and reallocation suggestions to prevent burnout and underutilization</p>
+              <div class="playbook-meta">
+                <span class="metric">Increases team satisfaction by 45%</span>
+              </div>
+            </div>
           </div>
-          <div class="level-content">
-            <p><strong>Playbook delivery:</strong> AI-powered demand forecasting, automated contractor sourcing</p>
-            <ul>
-              <li>AI-powered demand forecasting and capacity planning</li>
-              <li>Automated contractor sourcing and onboarding</li>
-              <li>Predictive project staffing recommendations</li>
-              <li>Strategic resource optimization across multiple projects</li>
-            </ul>
-            <p class="impact"><strong>Impact:</strong> Eliminate capacity bottlenecks, predictive scaling capabilities</p>
+
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-success-green);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Project Profitability Analyzer</h3>
+              <p>Track resource costs against project budgets with early warning systems</p>
+              <div class="playbook-meta">
+                <span class="metric">Improves margins by 20%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="playbook-card">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background-color: var(--color-info-blue);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Resource Forecasting Tool</h3>
+              <p>Predictive capacity planning based on pipeline and historical patterns</p>
+              <div class="playbook-meta">
+                <span class="metric">Enables 25% more project delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="playbook-card featured">
+            <div class="playbook-image">
+              <div class="image-placeholder" style="background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);"></div>
+            </div>
+            <div class="playbook-content">
+              <h3>Custom Resource Optimization Playbook</h3>
+              <p>Tailored allocation system designed for your team structure and project types</p>
+              <div class="playbook-meta">
+                <span class="metric">Maximizes your specific resource potential</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ideal-state">
+    <!-- 4. Implementation Process -->
+    <section class="process-section">
       <div class="container">
-        <h2>Your Ideal State</h2>
-        <div class="ideal-content">
-          <p class="ideal-vision">
-            <strong>Perfect resource utilization with predictive capacity planning:</strong> 
-            Your team operates at optimal capacity with intelligent workload balancing, predictive 
-            scaling recommendations, and automated resource acquisition that eliminates bottlenecks 
-            before they impact project delivery.
-          </p>
+        <div class="section-header">
+          <h2>Your Implementation Journey</h2>
+          <p class="section-subtitle">From resource chaos to systematic optimization in 4 steps</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <Icon name="magnifying-glass" class="step-icon" />
+            <h3>Discovery & Assessment</h3>
+            <p>We analyze your current resource allocation patterns, team capacity, and existing tools to identify the highest-impact optimization opportunities for your firm.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <Icon name="shield-check" class="step-icon" />
+            <h3>Playbook Selection</h3>
+            <p>Together we prioritize playbooks based on your utilization goals, team capacity, and strategic vision for resource optimization excellence.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <Icon name="cog" class="step-icon" />
+            <h3>Build & Integration</h3>
+            <p>We implement your selected playbooks within your existing systems, customizing workflows and training your team for optimal resource management.</p>
+          </div>
+          
+          <div class="step-connector">→</div>
+          
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <Icon name="rocket-launch" class="step-icon" />
+            <h3>Launch & Optimize</h3>
+            <p>Go live with systematic resource optimization, then continuously improve based on utilization metrics and team feedback.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="system-flexibility">
+    <!-- 5. Ideal State Section -->
+    <section class="ideal-state-section">
       <div class="container">
-        <h2>We Work With Your Current Tools</h2>
-        <p class="flexibility-description">
-          Whether you're using Microsoft Project, Asana, Trello, custom spreadsheets, or resource planning software - we'll integrate with your preferred systems while demonstrating the power of unified resource intelligence.
-        </p>
+        <div class="section-header">
+          <h2>Your Resource Optimization Transformation</h2>
+        </div>
+        
+        <div class="ideal-state-content">
+          <p class="lead-text">Imagine having complete visibility into team capacity, with automated resource allocation that matches the right skills to every project. Your team operates at optimal utilization while maintaining work-life balance and delivering exceptional results.</p>
+          
+          <div class="transformation-grid">
+            <div class="before-after">
+              <div class="before">
+                <h4>Before</h4>
+                <ul>
+                  <li><span class="icon-red"><Icon name="x-circle" type="outline" /></span>Constant fire-fighting mode</li>
+                  <li><span class="icon-red"><Icon name="users" type="outline" /></span>Uneven work distribution</li>
+                  <li><span class="icon-red"><Icon name="cog" type="outline" /></span>Skills-project mismatches</li>
+                  <li><span class="icon-red"><Icon name="magnifying-glass" type="outline" /></span>No capacity visibility</li>
+                  <li><span class="icon-red"><Icon name="arrow-trending-up" type="outline" /></span>Declining project margins</li>
+                </ul>
+              </div>
+              <div class="after">
+                <h4>After</h4>
+                <ul>
+                  <li><span class="icon-teal"><Icon name="check-circle" type="outline" /></span>Proactive resource planning</li>
+                  <li><span class="icon-teal"><Icon name="users" type="outline" /></span>Balanced team workloads</li>
+                  <li><span class="icon-teal"><Icon name="cog" type="outline" /></span>Optimal skills deployment</li>
+                  <li><span class="icon-teal"><Icon name="chart-bar-square" type="outline" /></span>Clear capacity forecasting</li>
+                  <li><span class="icon-teal"><Icon name="arrow-trending-up" type="outline" /></span>Improved profitability</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p class="closing-text">The result: Maximum team productivity without burnout, consistent project profitability, and a scalable practice that grows efficiently with your existing resources.</p>
+        </div>
       </div>
     </section>
 
-    <section class="cta-section">
+    <!-- 6. Tool Integration Section -->
+    <section class="tools-section">
       <div class="container">
-        <h2>Ready to Optimize Your Resources?</h2>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn btn-primary">Start Foundation Playbook</a>
-          <a href="/assessment" class="btn btn-secondary">Take Operational Assessment</a>
+        <div class="section-header">
+          <h2>We Work With Your Current Tools</h2>
+          <p class="section-subtitle">Our playbooks integrate seamlessly with the platforms you already use</p>
+        </div>
+        
+        <div class="tools-grid">
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="cog" type="outline" /></span>
+              <h3>Project Management</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Monday.com</span>
+              <span class="tool-item">Smartsheet</span>
+              <span class="tool-item">Asana</span>
+              <span class="tool-item">ClickUp</span>
+              <span class="tool-item">Microsoft Project</span>
+              <span class="tool-item">Trello</span>
+              <span class="tool-item">Basecamp</span>
+              <span class="tool-item">Wrike</span>
+              <span class="tool-item">Jira</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="share" type="outline" /></span>
+              <h3>Communication</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Microsoft Teams</span>
+              <span class="tool-item">Slack</span>
+              <span class="tool-item">Zoom</span>
+              <span class="tool-item">Google Workspace</span>
+              <span class="tool-item">Discord</span>
+              <span class="tool-item">Mattermost</span>
+              <span class="tool-item">Webex</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="presentation-chart-line" type="outline" /></span>
+              <h3>Document Management</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">SharePoint</span>
+              <span class="tool-item">Dropbox</span>
+              <span class="tool-item">Box</span>
+              <span class="tool-item">OneDrive</span>
+              <span class="tool-item">Google Drive</span>
+              <span class="tool-item">NetDocuments</span>
+              <span class="tool-item">Confluence</span>
+              <span class="tool-item">Evernote</span>
+              <span class="tool-item">Notion</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="chart-bar-square" type="outline" /></span>
+              <h3>Data & Analytics</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Power BI</span>
+              <span class="tool-item">Tableau</span>
+              <span class="tool-item">Excel</span>
+              <span class="tool-item">Google Sheets</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="magnifying-glass" type="outline" /></span>
+              <h3>Field Data Collection</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Survey123</span>
+              <span class="tool-item">Fieldmaps</span>
+              <span class="tool-item">Fulcrum</span>
+              <span class="tool-item">SampleServe</span>
+              <span class="tool-item">Wildnote</span>
+              <span class="tool-item">QNOPY</span>
+              <span class="tool-item">Locus Mobile</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="globe-alt" type="outline" /></span>
+              <h3>Environmental Modeling</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">ArcGIS</span>
+              <span class="tool-item">QGIS</span>
+              <span class="tool-item">AERMOD</span>
+              <span class="tool-item">MODFLOW</span>
+              <span class="tool-item">MIKE Suite</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="beaker" type="outline" /></span>
+              <h3>Laboratory & Compliance</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">LabVantage</span>
+              <span class="tool-item">CloudLIMS</span>
+              <span class="tool-item">VelocityEHS</span>
+              <span class="tool-item">ERA Environmental</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="building-office" type="outline" /></span>
+              <h3>Business Systems</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">QuickBooks</span>
+              <span class="tool-item">Xero</span>
+              <span class="tool-item">Salesforce</span>
+              <span class="tool-item">HubSpot</span>
+              <span class="tool-item">Toggl</span>
+            </div>
+          </div>
+          
+          <div class="tool-category-card">
+            <div class="category-header">
+              <span class="category-icon"><Icon name="leaf" type="outline" /></span>
+              <h3>Environmental Platforms</h3>
+            </div>
+            <div class="tools-list">
+              <span class="tool-item">Aldoa</span>
+              <span class="tool-item">EVX Software</span>
+              <span class="tool-item">Coretime</span>
+              <span class="tool-item">Scoro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Expected Results -->
+    <section class="results-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Proven Results</h2>
+          <p class="section-subtitle">What to expect from systematic resource optimization</p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">35%</div>
+            <div class="stat-label">Improvement in utilization rates</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50%</div>
+            <div class="stat-label">Reduction in project delays</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">25%</div>
+            <div class="stat-label">Increase in project capacity</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20%</div>
+            <div class="stat-label">Improvement in margins</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Related Tracks -->
+    <section class="related-tracks-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tracks That Work Well Together</h2>
+          <p class="section-subtitle">Multiply your resource optimization success with complementary tracks</p>
+        </div>
+        
+        <div class="related-tracks-grid">
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="users" type="outline" />
+            </div>
+            <h3>Multi-Party Coordination</h3>
+            <p>Optimize resources across complex stakeholder projects</p>
+            <a href="/solutions/multi-party-coordination" class="track-link">Learn More →</a>
+          </div>
+          
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="shield-check" type="outline" />
+            </div>
+            <h3>Business Intelligence</h3>
+            <p>Use data to drive smarter resource allocation decisions</p>
+            <a href="/solutions/business-intelligence" class="track-link">Learn More →</a>
+          </div>
+          
+          <div class="related-track-card">
+            <div class="track-icon">
+              <Icon name="cpu-chip" type="outline" />
+            </div>
+            <h3>Quality Assurance</h3>
+            <p>Ensure optimized resources maintain quality standards</p>
+            <a href="/solutions/quality-assurance" class="track-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Resource Optimization Questions</h2>
+          <p class="section-subtitle">Common questions about resource optimization playbooks and implementation</p>
+        </div>
+        
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+              <span>How do Resource Optimization playbooks handle team members with multiple skills?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-1" hidden>
+              <p>Our Skills Matrix Optimizer specifically accounts for multi-skilled team members, helping you leverage their full capabilities while avoiding burnout. The system tracks all competencies and suggests optimal deployments based on project needs and individual capacity.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+              <span>Can these playbooks help with contractor and subcontractor management?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-2" hidden>
+              <p>Absolutely. Our resource optimization systems treat contractors as extended team members, tracking their availability, skills, and performance just like internal staff, ensuring seamless resource planning across your entire delivery capability.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+              <span>What if our projects are too unpredictable for systematic resource planning?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-3" hidden>
+              <p>Even highly variable projects have patterns. Our playbooks include buffer management and scenario planning capabilities that help you maintain flexibility while still optimizing resource allocation. The Custom Resource Optimization Playbook can address unique variability challenges.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+              <span>How quickly can we see utilization improvements?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-4" hidden>
+              <p>Most firms see initial improvements within 2-3 weeks as visibility alone drives better decisions. Full utilization optimization typically materializes within 6-8 weeks as teams adopt new allocation processes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+              <span>Will this create too much overhead in planning time?</span>
+              <svg class="icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div class="faq-answer" id="faq-5" hidden>
+              <p>Actually, the opposite occurs. While initial setup requires investment, automated resource planning saves 5-10 hours weekly compared to manual methods, while delivering far superior allocation decisions.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Bottom CTA -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="cta-hero-box">
+          <h2>Ready to maximize your team's potential?</h2>
+          <p class="subtitle">Transform resource chaos into optimized team performance</p>
+          
+          <div class="trust-signals">
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="shield-check" type="outline" />
+              </div>
+              <span>Proven resource optimization methodologies</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="clock" type="outline" />
+              </div>
+              <span>6-8 week implementation timeline</span>
+            </div>
+            <div class="trust-signal">
+              <div style="width: 20px; height: 20px; color: white;">
+                <Icon name="trophy" type="outline" />
+              </div>
+              <span>35% improvement in utilization rates</span>
+            </div>
+          </div>
+          
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary-orange">Start Your First Playbook</a>
+            <a href="/assessment" class="btn btn-secondary-white">Take Assessment</a>
+          </div>
+          
+          <p class="closing-text">Stop leaving capacity on the table. Start maximizing your team's potential with systematic resource optimization.</p>
         </div>
       </div>
     </section>
@@ -139,277 +558,925 @@ import Footer from '../../components/Footer.astro';
 </BaseLayout>
 
 <style>
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
+  color: var(--color-white);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-family: var(--font-family-primary);
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.hero-content .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-white);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Problem Section */
+.problem-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.problem-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.problem-content h2 {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+}
+
+.problem-pullquote {
+  background: var(--color-white);
+  border-left: 4px solid var(--color-teal-primary);
+  padding: 2rem;
+  margin: 2rem auto 3rem;
+  max-width: 800px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.problem-pullquote p {
+  font-size: var(--font-size-large);
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dark-gray);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+  position: relative;
+}
+
+.problem-pullquote p::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--color-teal-primary);
+  position: absolute;
+  left: -1rem;
+  top: -0.5rem;
+  line-height: 1;
+}
+
+.problem-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.problem-column p {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+/* Playbooks Section */
+.playbooks-section {
+  padding: 5rem 0;
+}
+
+.playbooks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.playbook-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.playbook-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.playbook-card.featured {
+  border: 2px solid var(--color-teal-primary);
+}
+
+.playbook-card {
+  display: flex;
+  min-height: 160px;
+}
+
+.playbook-image {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: var(--font-weight-semibold);
+}
+
+.playbook-content {
+  width: 60%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.playbook-content h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 0.75rem;
+}
+
+.playbook-content p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.playbook-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric {
+  font-size: var(--font-size-small);
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Process Section */
+.process-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.step-item {
+  text-align: center;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.step-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.step-number {
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-large);
+  margin: 0 auto 1rem;
+}
+
+.step-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-teal-primary);
+  margin-bottom: 1rem;
+}
+
+.step-item h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.step-item p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+}
+
+.step-connector {
+  font-size: 2rem;
+  color: var(--color-teal-primary);
+  font-weight: bold;
+}
+
+/* Ideal State Section */
+.ideal-state-section {
+  padding: 5rem 0;
+}
+
+.ideal-state-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead-text {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+}
+
+.transformation-grid {
+  margin: 3rem 0;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+.before, .after {
+  background: var(--color-off-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.before h4, .after h4 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+}
+
+.before h4 {
+  color: var(--color-orange-accent);
+}
+
+.after h4 {
+  color: var(--color-teal-primary);
+}
+
+.before ul, .after ul {
+  list-style: none;
+  padding: 0;
+}
+
+.before li, .after li {
+  padding: 0.5rem 0;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-red {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.icon-teal {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-teal-primary);
+  flex-shrink: 0;
+}
+
+.closing-text {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
+  margin-top: 2rem;
+}
+
+/* Tools Section */
+.tools-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.tool-category-card {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--color-teal-primary);
+  transition: all var(--transition-normal);
+}
+
+.tool-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.category-icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-teal-primary);
+  flex-shrink: 0;
+}
+
+.category-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tool-category-card h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin: 0;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-item {
+  background: var(--color-off-white);
+  color: var(--color-dark-gray);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+}
+
+.tool-item:hover {
+  background: var(--color-teal-primary);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+/* Results Section */
+.results-section {
+  padding: 5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-teal-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Related Tracks Section */
+.related-tracks-section {
+  padding: 5rem 0;
+  background: var(--color-off-white);
+}
+
+.related-tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.related-track-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.related-track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.related-track-card .track-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-teal-primary);
+  margin: 0 auto 1rem;
+}
+
+.related-track-card h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark-gray);
+  margin-bottom: 1rem;
+}
+
+.related-track-card p {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+.track-link {
+  color: var(--color-teal-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+}
+
+.track-link:hover {
+  color: var(--color-teal-primary-hover);
+}
+
+/* FAQ Section */
+.faq-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  transition: all var(--transition-normal);
+  gap: 1rem;
+}
+
+.faq-question:hover {
+  background-color: var(--color-off-white);
+  color: var(--color-teal-primary);
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--color-teal-primary);
+  outline-offset: -2px;
+  background-color: var(--color-off-white);
+}
+
+.faq-question span {
+  flex: 1;
+  text-align: left;
+}
+
+.icon-chevron {
+  flex-shrink: 0;
+  color: var(--color-teal-primary);
+  transition: transform 300ms ease;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease, padding 300ms ease;
+  background-color: var(--color-white);
+}
+
+.faq-answer[hidden] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.faq-answer:not([hidden]) {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--color-dark-gray);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  padding-top: 1rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  background: var(--color-off-white);
+  padding: 5rem 0;
+}
+
+.cta-hero-box {
+  background: linear-gradient(135deg, var(--color-orange-accent) 0%, var(--color-teal-primary) 100%);
+  color: var(--color-white);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.cta-hero-box h2 {
+  font-family: var(--font-family-primary);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--color-white);
+}
+
+.cta-hero-box .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.trust-signals {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.trust-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-small);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.closing-text {
+  margin-top: 1.5rem;
+  font-size: var(--font-size-large);
+  opacity: 0.9;
+}
+
+/* Common Section Styles */
 .container {
   max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--spacing-2);
 }
 
-.track-hero {
-  background: linear-gradient(135deg, var(--color-teal-primary) 0%, var(--color-navy-primary) 100%);
-  color: var(--color-white);
-  padding: var(--spacing-8) 0;
-}
-
-.track-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.15);
-  padding: var(--spacing-1) var(--spacing-2);
-  border-radius: var(--radius-xl);
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-semibold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-2);
-  backdrop-filter: blur(10px);
-}
-
-.track-hero h1 {
-  font-size: 3rem;
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-2);
-  line-height: var(--line-height-tight);
-}
-
-.track-description {
-  font-size: var(--font-size-large);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-4);
-  opacity: 0.95;
-  line-height: var(--line-height-relaxed);
-}
-
-.progressive-levels {
-  margin-top: var(--spacing-4);
-}
-
-.level-indicator {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  font-weight: var(--font-weight-semibold);
-  font-family: var(--font-family-primary);
-  justify-content: center;
-}
-
-.level {
-  background: rgba(255, 255, 255, 0.15);
-  padding: var(--spacing-1) var(--spacing-2);
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(10px);
-}
-
-.arrow {
-  font-size: 1.5rem;
-  opacity: 0.8;
-}
-
-.implementation-levels {
-  padding: var(--spacing-8) 0;
-}
-
-.implementation-levels h2 {
+.section-header {
   text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-family-primary);
   font-size: 2.5rem;
   font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-6);
   color: var(--color-dark-gray);
+  margin-bottom: 1rem;
 }
 
-.level-card {
-  background: var(--color-white);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
-  margin-bottom: var(--spacing-4);
-  overflow: hidden;
-  border-left: 4px solid var(--color-orange-accent);
-}
-
-.level-header {
-  background: var(--color-off-white);
-  padding: var(--spacing-3) var(--spacing-4);
-  border-bottom: 1px solid var(--color-light-gray);
-}
-
-.level-header h3 {
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-semibold);
-  font-family: var(--font-family-primary);
-  color: var(--color-dark-gray);
-  margin-bottom: var(--spacing-1);
-}
-
-.level-specs {
-  color: var(--color-medium-gray);
-  font-weight: var(--font-weight-semibold);
-  font-family: var(--font-family-primary);
-}
-
-.level-content {
-  padding: var(--spacing-4);
-}
-
-.level-content ul {
-  margin: var(--spacing-2) 0;
-  padding-left: var(--spacing-3);
-}
-
-.level-content li {
-  margin-bottom: var(--spacing-1);
-  color: var(--color-medium-gray);
-  line-height: var(--line-height-relaxed);
-}
-
-.impact {
-  background: var(--color-foundation-bg);
-  color: var(--color-success-green);
-  padding: var(--spacing-2);
-  border-radius: var(--radius-md);
-  border-left: 4px solid var(--color-success-green);
-  margin-top: var(--spacing-2);
-  line-height: var(--line-height-relaxed);
-}
-
-.ideal-state {
-  background: var(--color-off-white);
-  padding: var(--spacing-8) 0;
-}
-
-.ideal-state h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-4);
-  color: var(--color-dark-gray);
-}
-
-.ideal-vision {
+.section-subtitle {
   font-size: var(--font-size-large);
-  font-family: var(--font-family-primary);
-  line-height: var(--line-height-relaxed);
   color: var(--color-dark-gray);
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.system-flexibility {
-  padding: var(--spacing-8) 0;
-}
-
-.system-flexibility h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: var(--font-weight-semibold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-2);
-  color: var(--color-dark-gray);
-}
-
-.flexibility-description {
-  text-align: center;
-  font-size: var(--font-size-large);
-  font-family: var(--font-family-primary);
-  color: var(--color-medium-gray);
-  max-width: 700px;
-  margin: 0 auto;
   line-height: var(--line-height-relaxed);
 }
 
-.cta-section {
-  background: var(--color-orange-accent);
-  color: var(--color-white);
-  padding: var(--spacing-8) 0;
-  text-align: center;
-}
-
-.cta-section h2 {
-  font-size: 2.5rem;
-  font-weight: var(--font-weight-semibold);
-  font-family: var(--font-family-primary);
-  margin-bottom: var(--spacing-4);
-}
-
-.cta-buttons {
-  display: flex;
-  gap: var(--spacing-2);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
+/* Button Styles */
 .btn {
-  padding: 14px var(--spacing-4);
+  padding: 0.875rem 2rem;
   border-radius: var(--radius-md);
   font-weight: var(--font-weight-semibold);
   font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
   text-decoration: none;
   transition: all var(--transition-normal);
-  font-size: var(--font-size-body);
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
+  display: inline-block;
 }
 
-.btn-primary {
-  background-color: var(--color-white);
-  color: var(--color-orange-accent);
+.btn-primary-orange {
+  background-color: var(--color-orange-accent);
+  color: var(--color-white);
+  border-color: var(--color-orange-accent);
 }
 
-.btn-primary:hover {
-  background-color: var(--color-off-white);
+.btn-primary-orange:hover {
+  background-color: var(--color-orange-accent-hover);
+  border-color: var(--color-orange-accent-hover);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 122, 71, 0.3);
 }
 
-.btn-secondary {
+.btn-secondary-white {
   background-color: transparent;
   color: var(--color-white);
-  border: 2px solid var(--color-white);
+  border-color: var(--color-white);
 }
 
-.btn-secondary:hover {
+.btn-secondary-white:hover {
   background-color: var(--color-white);
-  color: var(--color-orange-accent);
-  transform: translateY(-2px);
+  color: var(--color-teal-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  .step-connector {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
 }
 
 @media (max-width: 768px) {
-  .track-hero {
-    padding: var(--spacing-6) 0;
+  /* Hero */
+  .hero-content h1 {
+    font-size: 2rem;
   }
   
-  .track-hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .level-indicator {
+  .hero-ctas {
     flex-direction: column;
-    gap: var(--spacing-1);
+    align-items: center;
   }
   
-  .level-indicator .arrow {
-    transform: rotate(90deg);
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 300px;
   }
   
+  /* Problem Section */
+  .problem-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .problem-pullquote {
+    margin: 2rem 1rem 3rem;
+    padding: 1.5rem;
+  }
+  
+  .problem-pullquote p::before {
+    left: -0.5rem;
+  }
+  
+  /* Playbooks Grid */
+  .playbooks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .playbook-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .playbook-image, .playbook-content {
+    width: 100%;
+  }
+  
+  .image-placeholder {
+    height: 120px;
+  }
+  
+  /* Steps */
+  .step-connector {
+    display: none;
+  }
+  
+  /* Before/After */
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Tools Grid */
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .tool-category-card {
+    padding: 1.25rem;
+  }
+  
+  .category-header {
+    gap: 0.5rem;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  /* Related Tracks */
+  .related-tracks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Trust Signals */
+  .trust-signals {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* CTA Buttons */
   .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
   
-  .implementation-levels {
-    padding: var(--spacing-6) 0;
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
   }
   
-  .ideal-state {
-    padding: var(--spacing-6) 0;
+  /* Section Headers */
+  .section-header h2 {
+    font-size: 2rem;
   }
   
-  .system-flexibility {
-    padding: var(--spacing-6) 0;
+  /* Final CTA */
+  .cta-hero-box {
+    padding: 3rem 2rem;
+    margin: 0 1rem;
   }
   
-  .cta-section {
-    padding: var(--spacing-6) 0;
+  .cta-hero-box h2 {
+    font-size: 2rem;
   }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // FAQ Accordion functionality
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const chevron = item.querySelector('.icon-chevron');
+    
+    question.addEventListener('click', () => {
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other items (optional - remove these lines to allow multiple open)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherQuestion = otherItem.querySelector('.faq-question');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherChevron = otherItem.querySelector('.icon-chevron');
+          
+          otherQuestion.setAttribute('aria-expanded', 'false');
+          otherAnswer.setAttribute('hidden', '');
+          otherAnswer.style.maxHeight = '0px';
+          otherChevron.style.transform = 'rotate(0deg)';
+        }
+      });
+      
+      // Toggle current item
+      if (isExpanded) {
+        // Close
+        question.setAttribute('aria-expanded', 'false');
+        answer.setAttribute('hidden', '');
+        answer.style.maxHeight = '0px';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        // Open
+        question.setAttribute('aria-expanded', 'true');
+        answer.removeAttribute('hidden');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+    
+    // Keyboard accessibility
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        question.click();
+      }
+    });
+  });
+});
+</script>
