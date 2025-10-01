@@ -18,7 +18,7 @@
     "deploy:prod": "npm run build && echo 'Ready for production deployment'"
   },
   "dependencies": {
-    "astro": "^5.13.6",
+    "astro": "^5.14.1",
     "heroicons": "^2.2.0"
   },
   "devDependencies": {
