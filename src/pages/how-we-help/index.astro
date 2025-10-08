@@ -2,45 +2,1453 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
 ---
 
-<BaseLayout title="How We Help - GaiaOps" description="Learn how GaiaOps helps environmental consultancies achieve operational excellence through systematic implementation.">
-  <Header />
-  
-  <main id="main-content">
-    <section class="hero">
+<BaseLayout 
+  title="How We Help - Systematic Operational Transformation | GaiaOps" 
+  description="Discover how GaiaOps transforms environmental consultancies through unlimited playbook implementations. No hourly billing, no per-project fees—just results-driven operational excellence."
+>
+<Header />
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">How We Help</li>
+    </ol>
+  </div>
+</nav>
+
+<main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
       <div class="container">
-        <h1>How We Help</h1>
-        <p>Coming Soon - Under Construction</p>
+        <h1>Most consultants aren't built to solve your problems—they're built to bill hours.</h1>
+        <p class="hero-subtitle">We're different. Our unlimited implementation model means we only succeed when you do. No hourly billing. No per-project fees. No feature upsells. Just systematic transformation that sticks.</p>
+        
+        <div class="hero-cta">
+          <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form"
+             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form'});return false;"
+             class="btn btn-primary-orange">
+            Book Discovery Call
+          </a>
+          <a href="/assessment" class="btn btn-secondary">
+            Take Assessment
+          </a>
+        </div>
       </div>
     </section>
+
+    <!-- Section 1: The Misalignment Problem -->
+    <section class="misalignment-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Your Previous Attempts Failed</h2>
+          <p class="subtitle">It's not you. The traditional service models are fundamentally misaligned with your success.</p>
+        </div>
+
+        <div class="problem-cards">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <Icon name="clock" type="outline" class="w-12 h-12" />
+            </div>
+            <h3>Hourly Consultants Maximize Hours</h3>
+            <p>The more hours they bill, the more they earn—regardless of results. This creates perverse incentives to extend timelines, avoid efficient solutions, and build dependency. Your goal is speed and simplicity. Theirs is complexity and billable hours.</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <Icon name="cube" type="outline" class="w-12 h-12" />
+            </div>
+            <h3>Software Vendors Push Features</h3>
+            <p>They sell fixed solutions with rigid feature sets, pushing you toward higher subscription tiers whether you need them or not. They optimize for their product roadmap, not your specific operational challenges, leaving gaps that require expensive customization.</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <Icon name="document-text" type="outline" class="w-12 h-12" />
+            </div>
+            <h3>Fixed-Price Providers Deliver to Minimum Spec</h3>
+            <p>They bid to win, then deliver to minimum requirements with maximum efficiency—even if that means the wrong solution poorly implemented. Once the contract is signed, their incentive shifts to completing work as quickly and cheaply as possible.</p>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <p>Sound familiar? There's a better way.</p>
+          <a href="#our-solution" class="btn btn-primary-orange">See How We're Different</a>
+          <span class="cta-divider">or</span>
+          <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form"
+             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form'});return false;"
+             class="btn btn-secondary">
+            Book Discovery Call
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: The GaiaOps Solution -->
+    <section class="solution-section" id="our-solution">
+      <div class="container">
+        <div class="section-header">
+          <h2>True Alignment Through Productized Service</h2>
+          <p class="subtitle">Our unlimited implementation subscription model fundamentally realigns incentives—we succeed only when you succeed.</p>
+        </div>
+
+        <div class="solution-content">
+          <div class="solution-text">
+            <div class="solution-block">
+              <h3>Value-Driven Success Alignment</h3>
+              <p>We're paid for <strong>value delivered over time</strong>, not hours consumed or features sold. If your operations don't improve measurably, you'll cancel—making your success our primary business imperative.</p>
+            </div>
+
+            <div class="solution-block">
+              <h3>Unlimited Implementation, Controlled Delivery</h3>
+              <p>Unlike traditional models that either charge per project or offer fixed solutions, we provide <strong>unlimited playbook implementations</strong> (one active at a time) within your monthly subscription. This means:</p>
+              <ul>
+                <li><strong>No project minimums or maximums</strong> constraining our solution design</li>
+                <li><strong>No hourly billing</strong> creating artificial scarcity or timeline pressure</li>
+                <li><strong>No feature limitations</strong> forcing you into inadequate pre-built solutions</li>
+                <li><strong>No implementation fees</strong> for additional optimizations and improvements</li>
+              </ul>
+            </div>
+
+            <div class="solution-block">
+              <h3>Productive Constraints Drive Better Outcomes</h3>
+              <p>Our <strong>one implementation at a time</strong> model creates productive constraints that benefit you:</p>
+              <p><strong>For Your Team:</strong> Ensures focused, thorough implementation with proper adoption before moving to the next optimization. Prevents system overwhelm and change fatigue.</p>
+              <p><strong>For GaiaOps:</strong> Enables deep, specialized work on each implementation, building comprehensive expertise in environmental consultancy operations while maintaining sustainable delivery economics.</p>
+            </div>
+
+            <div class="solution-block">
+              <h3>Maintenance Without Manipulation</h3>
+              <p>Completed implementations receive ongoing <strong>maintenance and optimization support</strong> within your subscription. We design solutions that work for you, not systems that create dependency.</p>
+            </div>
+          </div>
+
+          <div class="solution-stats">
+            <div class="stat-card">
+              <div class="stat-number">6-8</div>
+              <div class="stat-label">implementations per year</div>
+              <div class="stat-context">Systematic Growth pace</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number">10-12</div>
+              <div class="stat-label">implementations per year</div>
+              <div class="stat-context">Operations Excellence pace</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number">30-day</div>
+              <div class="stat-label">satisfaction guarantee</div>
+              <div class="stat-context">Risk-free first implementation</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number">Cancel</div>
+              <div class="stat-label">anytime</div>
+              <div class="stat-context">After 30 days notice</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <p>Ready to experience the difference?</p>
+          <a href="/assessment" class="btn btn-primary-orange">Take Assessment</a>
+          <span class="cta-divider">or</span>
+          <a href="/pricing" class="btn btn-secondary">View Pricing Details</a>
+        </div>
+      </div>
+    </section>
+
+<!-- Section 3: How It Works -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Your Transformation Pathway</h2>
+          <p class="subtitle">A proven, systematic approach that transforms operational chaos into sustainable excellence.</p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="step-icon">
+              <Icon name="magnifying-glass" type="outline" class="w-8 h-8" />
+            </div>
+            <div class="step-content">
+              <div class="step-number">Week 1</div>
+              <h3>Discovery & Assessment</h3>
+              <p>Comprehensive evaluation of your current systems, workflows, and pain points using environmental industry-specific assessment tools. We identify the highest-impact implementation priorities and establish baseline metrics for success measurement.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-icon">
+              <Icon name="cog" type="outline" class="w-8 h-8" />
+            </div>
+            <div class="step-content">
+              <div class="step-number">Weeks 2-5</div>
+              <h3>Systematic Implementation</h3>
+              <p>Deployment of proven playbook components customized to your organizational specifics. Each playbook follows documented best practices while accommodating your unique requirements, regulatory contexts, and operational constraints.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-icon">
+              <Icon name="academic-cap" type="outline" class="w-8 h-8" />
+            </div>
+            <div class="step-content">
+              <div class="step-number">Weeks 5-6</div>
+              <h3>Adoption & Training</h3>
+              <p>Comprehensive team training and change management support ensures new systems become embedded organizational capabilities, not unused tools. Success metrics track adoption rates and operational impact.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-icon">
+              <Icon name="arrow-trending-up" type="outline" class="w-8 h-8" />
+            </div>
+            <div class="step-content">
+              <div class="step-number">Weeks 7+</div>
+              <h3>Optimization & Expansion</h3>
+              <p>Ongoing refinement based on usage data and feedback, with systematic planning for next-priority implementations. This phase ensures sustained value delivery and identifies additional optimization opportunities.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="process-note">Timeline varies by implementation complexity and customization needs. Most playbooks complete in 6-8 weeks.</p>
+
+        <div class="section-cta">
+          <p>Ready to start your transformation?</p>
+          <a href="/assessment" class="btn btn-primary-orange">Start Your Journey</a>
+          <span class="cta-divider">or</span>
+          <a href="/how-we-help/digital-operations-levels" class="btn btn-secondary">See Digital Operations Levels</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: The Playbook Portfolio -->
+    <section class="tracks-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Seven Transformation Tracks, Dozens of Playbooks</h2>
+          <p class="subtitle">Industry-specific solutions built from real environmental consultancy implementations. Choose your priority, we'll build the roadmap.</p>
+        </div>
+
+        <div class="tracks-grid-wrapper">
+          <!-- Row 1: 2 cards -->
+          <div class="tracks-row tracks-row-2">
+            <a href="/solutions/multi-party-coordination" class="simple-track-card">
+              <div class="track-icon-simple">
+                <Icon name="user-group" type="outline" class="w-8 h-8" />
+              </div>
+              <h3>Multi-Party Coordination</h3>
+              <p>Master complex stakeholder management and multi-party workflows</p>
+            </a>
+
+            <a href="/solutions/client-relationships" class="simple-track-card">
+              <div class="track-icon-simple">
+                <Icon name="heart" type="outline" class="w-8 h-8" />
+              </div>
+              <h3>Client Relationships</h3>
+              <p>Build systematic client engagement and retention systems</p>
+            </a>
+          </div>
+
+          <!-- Row 2: 3 cards -->
+          <div class="tracks-row tracks-row-3">
+            <a href="/solutions/resource-optimization" class="simple-track-card">
+              <div class="track-icon-simple">
+                <Icon name="adjustments-horizontal" type="outline" class="w-8 h-8" />
+              </div>
+              <h3>Resource Optimization</h3>
+              <p>Maximize team utilization and project profitability</p>
+            </a>
+
+            <a href="/solutions/quality-assurance" class="simple-track-card">
+              <div class="track-icon-simple">
+                <Icon name="shield-check" type="outline" class="w-8 h-8" />
+              </div>
+              <h3>Quality Assurance</h3>
+              <p>Ensure consistent excellence in every deliverable</p>
+            </a>
+
+            <a href="/solutions/business-intelligence" class="simple-track-card">
+              <div class="track-icon-simple">
+                <Icon name="chart-bar" type="outline" class="w-8 h-8" />
+              </div>
+              <h3>Business Intelligence</h3>
+              <p>Transform data into strategic operational insights</p>
+            </a>
+          </div>
+
+          <!-- Row 3: 2 cards -->
+          <div class="tracks-row tracks-row-2">
+            <a href="/solutions/growth-systems" class="simple-track-card">
+              <div class="track-icon-simple">
+                <Icon name="arrow-trending-up" type="outline" class="w-8 h-8" />
+              </div>
+              <h3>Growth Systems</h3>
+              <p>Build predictable business development processes</p>
+            </a>
+
+            <a href="/solutions/strategic-advantage" class="simple-track-card">
+              <div class="track-icon-simple">
+                <Icon name="star" type="outline" class="w-8 h-8" />
+              </div>
+              <h3>Strategic Advantage</h3>
+              <p>Differentiate through operational excellence</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="integration-callout">
+          <div class="callout-icon">
+            <Icon name="check-circle" type="outline" class="w-8 h-8" />
+          </div>
+          <div class="callout-content">
+            <h3>We Work With What You Have</h3>
+            <p>Every implementation integrates with your existing tools and workflows. We assess what's working, optimize what isn't, and connect everything into a unified operational system. No forced platform migrations or expensive tool replacements.</p>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <p>Explore our transformation tracks</p>
+          <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form"
+             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form'});return false;"
+             class="btn btn-primary-orange">
+            Book Discovery Call
+          </a>
+          <span class="cta-divider">or</span>
+          <a href="/solutions" class="btn btn-secondary">Browse All Solutions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Why Environmental Consultancies -->
+    <section class="specialization-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Specialization Matters</h2>
+          <p class="subtitle">Environmental consultancies face operational challenges that generalist consultants simply don't understand.</p>
+        </div>
+
+        <div class="specialization-content">
+          <div class="challenges-list">
+            <h3>The Challenges We Understand</h3>
+            <ul>
+              <li>
+                <Icon name="check-circle" type="solid" class="w-6 h-6" />
+                <div>
+                  <strong>Multi-stakeholder complexity:</strong> Projects involve clients, regulators, contractors, and community groups—each with different communication needs and timelines
+                </div>
+              </li>
+              <li>
+                <Icon name="check-circle" type="solid" class="w-6 h-6" />
+                <div>
+                  <strong>Regulatory documentation requirements:</strong> Compliance workflows that must be audit-ready with version control and approval chains
+                </div>
+              </li>
+              <li>
+                <Icon name="check-circle" type="solid" class="w-6 h-6" />
+                <div>
+                  <strong>Project-based revenue cycles:</strong> Feast-or-famine workloads requiring sophisticated resource planning and capacity management
+                </div>
+              </li>
+              <li>
+                <Icon name="check-circle" type="solid" class="w-6 h-6" />
+                <div>
+                  <strong>Technical report generation:</strong> Time-intensive documentation that pulls from multiple data sources and requires standardization
+                </div>
+              </li>
+              <li>
+                <Icon name="check-circle" type="solid" class="w-6 h-6" />
+                <div>
+                  <strong>Client portal expectations:</strong> Environmental transparency demands that differentiate from other professional services
+                </div>
+              </li>
+              <li>
+                <Icon name="check-circle" type="solid" class="w-6 h-6" />
+                <div>
+                  <strong>Specialized software integration:</strong> Industry tools like GIS, sampling databases, and compliance platforms that must connect seamlessly
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="why-generic-fails">
+            <h3>Why Generic Solutions Fail</h3>
+            <blockquote>
+              "Every consultancy thinks they're unique, and in some ways they are. But the underlying operational challenges in environmental consulting are remarkably similar—and fundamentally different from other professional services."
+            </blockquote>
+            
+            <div class="focus-benefits">
+              <p><strong>Our focus means:</strong></p>
+              <ul>
+                <li>Playbooks built from dozens of environmental firm implementations</li>
+                <li>Understanding of sector-specific regulations and compliance needs</li>
+                <li>Integration expertise with environmental industry software</li>
+                <li>Recognition of the unique project delivery and stakeholder coordination challenges</li>
+                <li>Frameworks that account for technical rigor and scientific documentation standards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <p>See if we're the right fit for your firm</p>
+          <a href="/assessment" class="btn btn-primary-orange">See If We're a Fit</a>
+          <span class="cta-divider">or</span>
+          <a href="/about" class="btn btn-secondary">Read About Our Approach</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Risk Mitigation - 30-Day Guarantee -->
+    <section class="guarantee-section">
+      <div class="container">
+        <div class="guarantee-card">
+          <div class="guarantee-content">
+            <div class="guarantee-badge">
+              <Icon name="shield-check" type="solid" class="w-16 h-16" />
+            </div>
+            <div class="guarantee-text">
+              <h2>Zero Risk. Proven Results.</h2>
+              <p class="guarantee-description">
+                We're confident in our ability to deliver measurable operational improvements. That's why we offer a <strong>30-day satisfaction guarantee</strong> on your first implementation. If you're not seeing clear progress and value within the first month, we'll refund your investment—no questions asked.
+              </p>
+              <p class="guarantee-note">
+                After your initial implementation, you can cancel anytime with 30 days' notice. We succeed only when you succeed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Final CTA - Dual Path -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-content">
+          <h2>Ready to Transform Your Operations?</h2>
+          <p class="final-cta-subtitle">
+            Choose your path to systematic operational excellence
+          </p>
+
+          <div class="cta-cards">
+            <div class="cta-card cta-card-primary">
+              <div class="cta-card-icon">
+                <Icon name="rocket-launch" type="outline" class="w-12 h-12" />
+              </div>
+              <h3>Start with Discovery</h3>
+              <p>Book a 30-minute call to discuss your specific operational challenges and see if we're the right fit.</p>
+              <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form"
+                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form'});return false;"
+                 class="btn btn-primary-orange btn-large">
+                Book Discovery Call
+              </a>
+            </div>
+
+            <div class="cta-card cta-card-secondary">
+              <div class="cta-card-icon">
+                <Icon name="clipboard-document-check" type="outline" class="w-12 h-12" />
+              </div>
+              <h3>Assess Your Readiness</h3>
+              <p>Take our 10-minute assessment to identify your operational maturity level and priority improvement areas.</p>
+              <a href="/assessment" class="btn btn-secondary btn-large">
+                Take Free Assessment
+              </a>
+            </div>
+          </div>
+
+          <div class="alternative-path">
+            <p>Want to explore our solutions first?</p>
+            <a href="/solutions" class="text-link">Browse Our Seven Transformation Tracks →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <Footer />
 </BaseLayout>
 
 <style>
-.hero {
-  background: linear-gradient(135deg, var(--color-navy-primary) 0%, var(--color-teal-primary) 100%);
-  color: var(--color-white);
-  padding: 5rem 0;
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+  padding: 6rem 2rem;
   text-align: center;
 }
 
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #1B365D;
   margin-bottom: 1rem;
 }
 
-.hero p {
+.subtitle {
   font-size: 1.25rem;
+  color: #6B7280;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Misalignment Section */
+.misalignment-section {
+  padding: 5rem 2rem;
+  background-color: #F8F9FA;
+}
+
+.problem-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.problem-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+}
+
+.problem-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #D97642 0%, #E67E22 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.problem-icon :global(svg) {
+  color: white;
+  width: 32px;
+  height: 32px;
+}
+
+.problem-card h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+}
+
+.problem-card p {
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
+/* Solution Section */
+.solution-section {
+  padding: 5rem 2rem;
+  background-color: white;
+}
+
+.solution-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .solution-content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.solution-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.solution-block h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+}
+
+.solution-block p {
+  color: #2C3E50;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.solution-block ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.solution-block ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  color: #2C3E50;
+  line-height: 1.7;
+}
+
+.solution-block ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2A7F7E;
+  font-weight: bold;
+}
+
+.solution-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #2A7F7E 0%, #1B365D 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(42, 127, 126, 0.3);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.stat-context {
+  display: block;
+  font-size: 0.875rem;
   opacity: 0.9;
 }
+
+/* Section CTAs */
+.section-cta {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.section-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: #1B365D;
+  font-weight: 500;
+}
+
+.cta-divider {
+  margin: 0 1rem;
+  color: #9CA3AF;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary-orange {
+  background-color: #D97642;
+  color: white;
+  border: 2px solid #D97642;
+}
+
+.btn-primary-orange:hover {
+  background-color: #C5663A;
+  border-color: #C5663A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 118, 66, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #1B365D;
+  border: 2px solid #1B365D;
+}
+
+.btn-secondary:hover {
+  background-color: #1B365D;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.hero-section .btn-secondary {
+  color: white;
+  border-color: white;
+}
+
+.hero-section .btn-secondary:hover {
+  background-color: white;
+  color: #1B365D;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .problem-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-divider {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: ">";
+  margin: 0 0.5rem;
+  color: #6B7280;
+}
+
+.breadcrumb a {
+  color: #2A7F7E;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #1B365D;
+  text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+/* Process Section */
+.process-section {
+  padding: 5rem 2rem;
+  background: #1B365D;
+  color: white;
+}
+
+.process-section .section-header h2,
+.process-section .section-header .subtitle {
+  color: white;
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-timeline {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.process-step {
+  text-align: center;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.step-icon :global(svg) {
+  color: white;
+}
+
+.step-number {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+.process-step h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.process-step p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: white;
+  opacity: 0.95;
+}
+
+.process-note {
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: white;
+  opacity: 0.95;
+  margin-top: 2rem;
+}
+
+.process-section .btn-secondary {
+  background-color: white;
+  color: #1B365D;
+  border-color: white;
+}
+
+.process-section .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1B365D;
+}
+
+/* Tracks Section - 2-3-2 Layout with Orange Accents */
+.tracks-section {
+  padding: 5rem 2rem;
+  background-color: white;
+}
+
+.tracks-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tracks-row {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.tracks-row-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tracks-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .tracks-row-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tracks-row-2,
+  .tracks-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.simple-track-card {
+  background: white;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.simple-track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(42, 127, 126, 0.15);
+  border-color: #2A7F7E;
+}
+
+.track-icon-simple {
+  width: 64px;
+  height: 64px;
+  background: #2A7F7E;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.track-icon-simple :global(svg) {
+  color: white;
+}
+
+.simple-track-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+}
+
+.simple-track-card p {
+  color: #2C3E50;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Specialization Section - Two Column Layout */
+.specialization-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+}
+
+.specialization-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .specialization-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.challenges-list h3,
+.why-generic-fails h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #D97642;
+}
+
+.challenges-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.challenges-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid #2A7F7E;
+}
+
+.challenges-list li :global(svg) {
+  color: #2A7F7E;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  width: 24px;
+  height: 24px;
+}
+
+.why-generic-fails blockquote {
+  background: white;
+  border-left: 4px solid #D97642;
+  padding: 1.5rem;
+  margin: 0 0 2rem 0;
+  font-style: italic;
+  color: #2C3E50;
+  line-height: 1.7;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.focus-benefits {
+  background: #F0F8F8;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #2A7F7E;
+}
+
+.focus-benefits p {
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.focus-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.focus-benefits li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  color: #2C3E50;
+  line-height: 1.7;
+}
+
+.focus-benefits li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2A7F7E;
+  font-weight: bold;
+}
+
+/* Tracks Section - Simplified Cards */
+.tracks-section {
+  padding: 5rem 2rem;
+  background-color: white;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tracks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.simple-track-card {
+  background: white;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.simple-track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(42, 127, 126, 0.15);
+  border-color: #2A7F7E;
+}
+
+.track-icon-simple :global(svg) {
+  color: white;
+}
+
+.simple-track-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+}
+
+.simple-track-card p {
+  color: #2C3E50;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Guarantee Section - Card Treatment */
+.guarantee-section {
+  padding: 5rem 2rem;
+  background: #F8F9FA;
+}
+
+.guarantee-card {
+  background: white;
+  border: 2px solid #2A7F7E;
+  border-radius: 12px;
+  padding: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.guarantee-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.guarantee-badge {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  background: #2A7F7E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guarantee-badge :global(svg) {
+  color: white;
+  width: 64px;
+  height: 64px;
+}
+
+.guarantee-text h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1B365D;
+}
+
+.guarantee-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #2C3E50;
+}
+
+.guarantee-note {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #5a6c7d;
+}
+
+@media (max-width: 768px) {
+  .guarantee-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .guarantee-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .guarantee-badge {
+    width: 100px;
+    height: 100px;
+  }
+
+  .guarantee-badge :global(svg) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+}
+
+.final-cta-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.final-cta-content h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.final-cta-subtitle {
+  font-size: 1.375rem;
+  margin-bottom: 3rem;
+  color: white;
+  opacity: 0.95;
+}
+
+.cta-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .cta-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cta-card {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cta-card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #D97642 0%, #E67E22 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.cta-card-icon :global(svg) {
+  color: white;
+  width: 48px;
+  height: 48px;
+}
+
+.cta-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 1rem;
+}
+
+.cta-card p {
+  font-size: 1rem;
+  color: #2C3E50;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.alternative-path {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.alternative-path p {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  opacity: 0.9;
+}
+
+.text-link {
+  color: white;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: opacity 0.3s ease;
+}
+
+.text-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 4rem 2rem;
+  }
+
+  .cta-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+}
+
+/* Integration Callout */
+.integration-callout {
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+  border: 2px solid #2A7F7E;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.callout-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  background: #2A7F7E;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.callout-icon :global(svg) {
+  color: white;
+  width: 32px;
+  height: 32px;
+}
+
+.callout-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+}
+
+.callout-content p {
+  color: #2C3E50;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .integration-callout {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
 </style>
+
+<script>
+  // Calendly widget script
+  if (typeof Calendly === 'undefined') {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }
+</script>
