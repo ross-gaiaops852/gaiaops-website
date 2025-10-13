@@ -1,0 +1,373 @@
+---
+// IntegrationShowcaseWithLogos.astro
+// Production-ready integration showcase with real app logos
+// Uses Simple Icons CDN for logo delivery
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  className?: string;
+}
+
+const { 
+  title = "Seamlessly Integrate Your Existing Tools",
+  subtitle = "We work with the platforms your team already uses",
+  ctaText = "See All Integrations",
+  ctaLink = "/contact",
+  className = ""
+} = Astro.props;
+
+// Real app integrations with logos from Simple Icons CDN
+const integrations = [
+  { 
+    name: 'Microsoft Outlook', 
+    logo: 'https://cdn.simpleicons.org/microsoftoutlook/0078D4',
+    color: '#0078D4',
+    delay: 0 
+  },
+  { 
+    name: 'Slack', 
+    logo: 'https://cdn.simpleicons.org/slack/4A154B',
+    color: '#4A154B',
+    delay: 0.1 
+  },
+  { 
+    name: 'Zoom', 
+    logo: 'https://cdn.simpleicons.org/zoom/2D8CFF',
+    color: '#2D8CFF',
+    delay: 0.2 
+  },
+  { 
+    name: 'Notion', 
+    logo: 'https://cdn.simpleicons.org/notion/000000',
+    color: '#000000',
+    delay: 0.3 
+  },
+  { 
+    name: 'Google Sheets', 
+    logo: 'https://cdn.simpleicons.org/googlesheets/34A853',
+    color: '#34A853',
+    delay: 0.4 
+  },
+  { 
+    name: 'Google Drive', 
+    logo: 'https://cdn.simpleicons.org/googledrive/4285F4',
+    color: '#4285F4',
+    delay: 0.5 
+  },
+  { 
+    name: 'Gmail', 
+    logo: 'https://cdn.simpleicons.org/gmail/EA4335',
+    color: '#EA4335',
+    delay: 0.6 
+  },
+  { 
+    name: 'ClickUp', 
+    logo: 'https://cdn.simpleicons.org/clickup/7B68EE',
+    color: '#7B68EE',
+    delay: 0.7,
+    featured: true 
+  },
+  { 
+    name: 'Monday.com', 
+    logo: 'https://cdn.simpleicons.org/monday/FF3D57',
+    color: '#FF3D57',
+    delay: 0.8 
+  },
+  { 
+    name: 'Asana', 
+    logo: 'https://cdn.simpleicons.org/asana/F06A6A',
+    color: '#F06A6A',
+    delay: 0.9 
+  },
+  { 
+    name: 'Salesforce', 
+    logo: 'https://cdn.simpleicons.org/salesforce/00A1E0',
+    color: '#00A1E0',
+    delay: 1.0 
+  },
+  { 
+    name: 'Stripe', 
+    logo: 'https://cdn.simpleicons.org/stripe/008CDD',
+    color: '#008CDD',
+    delay: 1.1 
+  },
+  { 
+    name: 'Trello', 
+    logo: 'https://cdn.simpleicons.org/trello/0052CC',
+    color: '#0052CC',
+    delay: 1.2 
+  },
+  { 
+    name: 'Airtable', 
+    logo: 'https://cdn.simpleicons.org/airtable/18BFFF',
+    color: '#18BFFF',
+    delay: 1.3 
+  },
+];
+---
+
+<section class={`py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 ${className}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">
+        {title}
+      </h2>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Integration Grid -->
+    <div class="integration-container">
+      <div class="integration-grid">
+        {integrations.map((app) => (
+          <div 
+            class={`integration-card ${app.featured ? 'featured' : ''}`}
+            style={`--app-color: ${app.color}; --delay: ${app.delay}s;`}
+          >
+            <div class="card-inner">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="app-logo-container">
+                  <img 
+                    src={app.logo} 
+                    alt={`${app.name} logo`}
+                    class="app-logo"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="app-name">{app.name}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Decorative grid overlay -->
+      <div class="grid-overlay" aria-hidden="true"></div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+      <p class="text-lg text-slate-600 mb-6">
+        Plus hundreds more through Zapier, Make, and other integration partners
+      </p>
+      <a 
+        href={ctaLink}
+        class="inline-flex items-center px-8 py-4 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+      >
+        {ctaText}
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Container */
+  .integration-container {
+    position: relative;
+    padding: 2rem 0;
+  }
+
+  /* Grid layout */
+  .integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Cards */
+  .integration-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: var(--delay);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .card-inner {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .integration-card:hover .card-inner {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Featured card */
+  .integration-card.featured .card-inner {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid var(--app-color);
+    box-shadow: 
+      0 4px 6px -1px var(--app-color, rgba(0, 0, 0, 0.1)),
+      0 2px 4px -1px var(--app-color, rgba(0, 0, 0, 0.06));
+  }
+
+  .integration-card.featured .app-logo-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Glow effect */
+  .card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--app-color) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .integration-card:hover .card-glow {
+    opacity: 0.08;
+  }
+
+  /* Card content */
+  .card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Logo container */
+  .app-logo-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .integration-card:hover .app-logo-container {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+  }
+
+  /* Logo image */
+  .app-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* App name */
+  .app-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Decorative grid overlay */
+  .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(45deg);
+    transform-origin: center top;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .integration-grid {
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card-inner {
+      padding: 1.5rem 1rem;
+    }
+
+    .app-logo-container {
+      width: 56px;
+      height: 56px;
+      padding: 0.625rem;
+    }
+
+    .integration-card.featured .app-logo-container {
+      width: 64px;
+      height: 64px;
+    }
+
+    .app-name {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .integration-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .card-inner {
+      padding: 1.25rem 0.75rem;
+    }
+
+    /* Show fewer on very small screens */
+    .integration-card:nth-child(n+9) {
+      display: none;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .integration-card {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+
+    .card-inner,
+    .app-logo-container {
+      transition: none;
+    }
+  }
+</style>

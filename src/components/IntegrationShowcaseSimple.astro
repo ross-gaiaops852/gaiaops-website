@@ -1,0 +1,276 @@
+---
+// IntegrationShowcaseSimple.astro
+// Simplified version with 2D cards that appear in an isometric-style layout
+// Better performance and easier to customize
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  className?: string;
+}
+
+const { 
+  title = "Seamlessly Integrate Your Existing Tools",
+  subtitle = "We work with the platforms your team already uses",
+  className = ""
+} = Astro.props;
+
+// App integrations - easily customizable
+const integrations = [
+  { name: 'Microsoft Outlook', color: '#0078D4', delay: 0 },
+  { name: 'ChatGPT', color: '#10A37F', delay: 0.1 },
+  { name: 'Twilio', color: '#F22F46', delay: 0.2 },
+  { name: 'Zoom', color: '#2D8CFF', delay: 0.3 },
+  { name: 'Notion', color: '#000000', delay: 0.4 },
+  { name: 'Google Sheets', color: '#34A853', delay: 0.5 },
+  { name: 'Slack', color: '#4A154B', delay: 0.6 },
+  { name: 'ClickUp', color: '#7B68EE', delay: 0.7, featured: true },
+  { name: 'Monday.com', color: '#FF3D57', delay: 0.8 },
+  { name: 'Google Drive', color: '#4285F4', delay: 0.9 },
+  { name: 'Gmail', color: '#EA4335', delay: 1.0 },
+  { name: 'Calendly', color: '#006BFF', delay: 1.1 },
+  { name: 'Salesforce', color: '#00A1E0', delay: 1.2 },
+  { name: 'Stripe', color: '#635BFF', delay: 1.3 },
+];
+---
+
+<section class={`py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 ${className}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">
+        {title}
+      </h2>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Integration Grid -->
+    <div class="integration-container">
+      <div class="integration-grid">
+        {integrations.map((app) => (
+          <div 
+            class={`integration-card ${app.featured ? 'featured' : ''}`}
+            style={`--app-color: ${app.color}; --delay: ${app.delay}s;`}
+          >
+            <div class="card-inner">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="app-icon-placeholder" style={`background: ${app.color};`}>
+                  <div class="icon-shine"></div>
+                </div>
+                <p class="app-name">{app.name}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Decorative grid overlay -->
+      <div class="grid-overlay" aria-hidden="true"></div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+      <p class="text-lg text-slate-600 mb-6">
+        Plus hundreds more through our integration partners
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-flex items-center px-8 py-4 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+      >
+        See All Integrations
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Container with perspective */
+  .integration-container {
+    position: relative;
+    padding: 2rem 0;
+  }
+
+  /* Isometric-style grid layout */
+  .integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Individual integration cards */
+  .integration-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: var(--delay);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .card-inner {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .integration-card:hover .card-inner {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Featured card (larger, more prominent) */
+  .integration-card.featured .card-inner {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid var(--app-color);
+  }
+
+  .integration-card.featured .app-icon-placeholder {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Subtle glow effect */
+  .card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--app-color) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .integration-card:hover .card-glow {
+    opacity: 0.1;
+  }
+
+  /* Card content */
+  .card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* App icon placeholder */
+  .app-icon-placeholder {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Icon shine effect */
+  .icon-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 70%
+    );
+    animation: shine 3s infinite;
+  }
+
+  /* App name */
+  .app-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Decorative grid overlay */
+  .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(45deg);
+    transform-origin: center top;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .integration-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card-inner {
+      padding: 1.5rem 1rem;
+    }
+
+    .app-icon-placeholder {
+      width: 56px;
+      height: 56px;
+    }
+
+    .integration-card.featured .app-icon-placeholder {
+      width: 64px;
+      height: 64px;
+    }
+
+    .app-name {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .integration-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

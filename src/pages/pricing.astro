@@ -2,45 +2,2472 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Icon from '../components/Icon.astro';
 ---
 
-<BaseLayout title="Pricing - GaiaOps" description="Transparent pricing for operational excellence. Choose the plan that fits your environmental consultancy's growth stage.">
+<BaseLayout
+  title="Pricing - GaiaOps | Transparent, Value-Driven Investment"
+  description="Choose the right operational excellence plan for your environmental consultancy. From single implementations to ongoing systematic growth."
+>
   <Header />
-  
+
   <main id="main-content">
-    <section class="hero">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
       <div class="container">
-        <h1>Pricing</h1>
-        <p>Detailed pricing information coming soon...</p>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li aria-current="page">Pricing</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Transparent, Value-Driven Pricing</h1>
+        <p class="hero-subtitle">Investment that scales with your growth. No surprises, no hidden fees.</p>
+
+        <div class="hero-cta">
+          <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_hero&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_hero&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+             class="btn btn-primary-orange">
+            Book Discovery Call
+          </a>
+          <a href="/assessment" class="btn btn-secondary">
+            Take Assessment
+          </a>
+        </div>
       </div>
     </section>
+
+    <!-- Section 2: Three-Tier Pricing Cards -->
+    <section class="pricing-section">
+      <div class="container">
+        <div class="pricing-grid">
+
+          <!-- Card 1: Jumpstart -->
+          <div class="pricing-card">
+            <h3>Digital Operations Jumpstart</h3>
+            <div class="price">$7,497</div>
+            <div class="period">one-time</div>
+            <div class="timeline">6-8 weeks</div>
+            <p class="best-for">Best For: Firms wanting to test with a single implementation</p>
+
+            <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_card&utm_campaign=gaiaops-discovery&utm_content=jumpstart"
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_card&utm_campaign=gaiaops-discovery&utm_content=jumpstart'});return false;"
+               class="btn btn-card-secondary">
+              Get Started with Jumpstart
+            </a>
+
+            <ul class="features">
+              <li>One complete playbook implementation</li>
+              <li>Same implementation as subscription clients receive</li>
+              <li>40-50 hours of focused work</li>
+              <li>Full training and documentation</li>
+              <li>30-day satisfaction guarantee</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Systematic Growth - MOST POPULAR -->
+          <div class="pricing-card featured">
+            <div class="popular-badge">MOST POPULAR</div>
+            <h3>Systematic Growth</h3>
+            <div class="price">$2,997<span class="price-period">/month</span></div>
+            <div class="period">+ $1,997 onboarding (one-time)</div>
+            <div class="timeline">Ongoing with implementations every 6-8 weeks</div>
+            <p class="best-for">Best For: Most environmental consultancies seeking sustainable transformation</p>
+
+            <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_card&utm_campaign=gaiaops-discovery&utm_content=systematic-growth"
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_card&utm_campaign=gaiaops-discovery&utm_content=systematic-growth'});return false;"
+               class="btn btn-card-primary">
+              Start Systematic Growth
+            </a>
+
+            <ul class="features">
+              <li><strong>Unlimited playbook implementations</strong> (1 queued at a time)</li>
+              <li>Monthly strategy sessions (2 hours)</li>
+              <li>Ongoing optimization support</li>
+              <li>Comprehensive training and documentation</li>
+              <li>Priority email support (24-hour response)</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Operations Excellence -->
+          <div class="pricing-card premium">
+            <h3>Operations Excellence</h3>
+            <div class="price">$4,997<span class="price-period">/month</span></div>
+            <div class="period">+ $2,997 onboarding (one-time)</div>
+            <div class="timeline">Ongoing with implementations every 4-5 weeks</div>
+            <p class="best-for">Best For: Firms ready for accelerated transformation</p>
+
+            <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_card&utm_campaign=gaiaops-discovery&utm_content=operations-excellence"
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_card&utm_campaign=gaiaops-discovery&utm_content=operations-excellence'});return false;"
+               class="btn btn-card-secondary">
+              Begin Operations Excellence
+            </a>
+
+            <ul class="features">
+              <li><strong>Unlimited playbook implementations</strong> (1+ queued at a time)</li>
+              <li>Accelerated implementation pace (4-5 weeks vs 6-8)</li>
+              <li>Bi-weekly strategy sessions (1 hour each)</li>
+              <li>Premium priority support (12-hour response)</li>
+              <li>Parallel implementation capability</li>
+              <li>Advanced optimization support</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- CTAs below pricing cards -->
+        <div class="pricing-cta">
+          <p class="cta-text">Not sure which plan is right for you?</p>
+          <div class="cta-buttons">
+            <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_bottom&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_bottom&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+               class="btn btn-primary-orange">
+              Book Discovery Call
+            </a>
+            <a href="/assessment" class="btn btn-secondary-navy">
+              Take Assessment
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Value Comparison Table -->
+    <section id="pricing-comparison" class="comparison-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What's Included in Each Plan</h2>
+          <p class="section-subtitle">Compare features across all three plans</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="feature-column">Feature</th>
+                <th class="plan-column">Jumpstart</th>
+                <th class="plan-column featured-column">Systematic Growth</th>
+                <th class="plan-column">Operations Excellence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-name">Playbook Implementations</td>
+                <td>1 implementation</td>
+                <td><strong>Unlimited</strong> (1 queued)</td>
+                <td><strong>Unlimited</strong> (1+ queued)</td>
+              </tr>
+              <tr>
+                <td class="feature-name">Implementation Timeline</td>
+                <td>6-8 weeks</td>
+                <td>6-8 weeks each</td>
+                <td>4-5 weeks each</td>
+              </tr>
+              <tr>
+                <td class="feature-name">Strategy Sessions</td>
+                <td>Kickoff + Completion</td>
+                <td>Monthly (2 hours)</td>
+                <td>Bi-weekly (1 hour)</td>
+              </tr>
+              <tr>
+                <td class="feature-name">Training & Documentation</td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-name">Ongoing Optimization Support</td>
+                <td>—</td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-name">Email Support</td>
+                <td>48-hour response</td>
+                <td>24-hour response</td>
+                <td>12-hour response</td>
+              </tr>
+              <tr>
+                <td class="feature-name">Parallel Implementation Capability</td>
+                <td>—</td>
+                <td>—</td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-name">30-Day Satisfaction Guarantee</td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-name">Estimated Annual Implementations</td>
+                <td>1</td>
+                <td>6-8 per year</td>
+                <td>10-12 per year</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- CTAs below comparison table -->
+        <div class="comparison-cta">
+          <p class="cta-text">Ready to transform your operations?</p>
+          <div class="cta-buttons">
+            <a href="/assessment" class="btn btn-primary-orange">
+              Take Free Assessment
+            </a>
+            <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_comparison&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_comparison&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+               class="btn btn-secondary-teal">
+              Schedule a Call
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: ROI Calculator -->
+    <section class="roi-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Calculate Your Return on Investment</h2>
+          <p class="section-subtitle">See how operational excellence transforms into tangible business value</p>
+        </div>
+
+        <div class="roi-calculator">
+          <div class="calculator-inputs">
+            <div class="input-group">
+              <label for="annual-revenue">Annual Revenue</label>
+              <div class="input-wrapper">
+                <span class="input-prefix">$</span>
+                <input type="text" id="annual-revenue" value="2,000,000" data-raw-value="2000000">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="team-size">Team Size</label>
+              <input type="number" id="team-size" value="12" min="1" max="50">
+            </div>
+
+            <div class="input-group">
+              <label for="billable-rate">Average Billable Rate ($/hour)</label>
+              <div class="input-wrapper">
+                <span class="input-prefix">$</span>
+                <input type="number" id="billable-rate" value="150" min="50" max="500">
+              </div>
+            </div>
+
+            <button id="calculate-roi-btn" class="btn btn-calculate">
+              Calculate ROI
+            </button>
+          </div>
+
+          <div class="calculator-results">
+            <div class="results-header">
+              <h3>Your Estimated Annual Value</h3>
+              <div class="info-tooltip">
+                <span class="info-icon">
+                  <Icon name="question-mark-circle" type="outline" />
+                </span>
+                <div class="tooltip-content">
+                  Based on improving team utilization from 65% to 80% through operational efficiency gains. Assumes 2,080 working hours per year per person. Calculation: [(80% - 65%) × 2,080 × Team Size] × Billable Rate - Annual Investment ($2,997/mo + $1,997 setup)
+                </div>
+              </div>
+            </div>
+
+            <div class="result-cards">
+              <div class="result-card">
+                <div class="result-icon">
+                  <span class="icon-teal">
+                    <Icon name="clock" type="outline" />
+                  </span>
+                </div>
+                <div class="result-label">Time Savings</div>
+                <div class="result-value" id="time-savings">3,744 hours/year</div>
+                <div class="result-context">Utilization: 65% → 80%</div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-icon">
+                  <span class="icon-teal">
+                    <Icon name="currency-dollar" type="outline" />
+                  </span>
+                </div>
+                <div class="result-label">Revenue Impact</div>
+                <div class="result-value" id="revenue-impact">$561,600</div>
+                <div class="result-context">From increased billable capacity</div>
+              </div>
+
+              <div class="result-card highlight">
+                <div class="result-icon">
+                  <span class="icon-orange">
+                    <Icon name="arrow-trending-up" type="outline" />
+                  </span>
+                </div>
+                <div class="result-label">Net ROI (Year 1)</div>
+                <div class="result-value" id="net-roi">$523,639</div>
+                <div class="result-context">After $37,961 investment</div>
+              </div>
+            </div>
+
+            <div class="roi-note">
+              <p><strong>Conservative Estimate:</strong> Based on improving utilization from 65% to 80% through operational efficiency gains. Actual results vary by implementation quality and team adoption.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTAs below ROI calculator -->
+        <div class="roi-cta">
+          <p class="cta-text">See how this translates to your firm</p>
+          <div class="cta-buttons">
+            <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_roi&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_roi&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+               class="btn btn-primary-orange">
+              Discuss Your ROI
+            </a>
+            <a href="/assessment" class="btn btn-secondary-navy">
+              Get Personalized Assessment
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Why Subscription vs One-Time -->
+    <section class="subscription-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Subscription vs. One-Time Projects?</h2>
+          <p class="section-subtitle">Operational excellence isn't a single implementation—it's systematic transformation</p>
+        </div>
+
+        <div class="subscription-comparison">
+          <div class="comparison-column traditional">
+            <div class="column-header">
+              <h3>Traditional One-Time Projects</h3>
+              <span class="column-badge limited">Limited Impact</span>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <span class="icon-x">✗</span>
+                <div>
+                  <strong>Single point solution</strong>
+                  <p>Addresses one problem, ignores systemic issues</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-x">✗</span>
+                <div>
+                  <strong>Implementation then abandonment</strong>
+                  <p>No ongoing optimization or maintenance support</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-x">✗</span>
+                <div>
+                  <strong>High per-project costs</strong>
+                  <p>$15,000-$40,000 per implementation with consultants</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-x">✗</span>
+                <div>
+                  <strong>Misaligned incentives</strong>
+                  <p>Vendors profit from complexity and prolonged timelines</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-x">✗</span>
+                <div>
+                  <strong>Inconsistent methodology</strong>
+                  <p>Different vendors = different approaches = chaos</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="comparison-column subscription">
+            <div class="column-header">
+              <h3>GaiaOps Subscription Model</h3>
+              <span class="column-badge unlimited">Unlimited Value</span>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Systematic transformation</strong>
+                  <p>6-12 implementations per year building on each other</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Ongoing optimization</strong>
+                  <p>Continuous improvement and maintenance included</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Predictable investment</strong>
+                  <p>Fixed monthly rate, unlimited implementations (1+ queued)</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Success-aligned economics</strong>
+                  <p>We only succeed when you do—cancellable anytime</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Consistent methodology</strong>
+                  <p>Same proven playbooks, integrated systems, compounding value</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="value-statement">
+          <div class="value-content">
+            <span class="icon-wrapper">
+              <span class="icon-orange-large">
+                <Icon name="light-bulb" type="outline" />
+              </span>
+            </span>
+            <div class="value-text">
+              <h4>The Reality: Your operational challenges aren't isolated problems</h4>
+              <p>They're interconnected symptoms of systemic gaps. A subscription model allows us to address root causes through sequential, integrated implementations—not just apply band-aids to symptoms.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTAs below subscription section -->
+        <div class="subscription-cta">
+          <p class="cta-text">Ready to experience the subscription advantage?</p>
+          <div class="cta-buttons">
+            <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_subscription&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_subscription&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+               class="btn btn-secondary-teal">
+              Talk to Our Team
+            </a>
+            <a href="/assessment" class="btn btn-primary-orange">
+              Start Your Assessment
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: 30-Day Satisfaction Guarantee -->
+    <section class="guarantee-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>30-Day Satisfaction Guarantee</h2>
+          <p class="section-subtitle">Try your first implementation completely risk-free</p>
+        </div>
+
+        <div class="guarantee-content">
+          <div class="guarantee-main">
+            <div class="guarantee-icon-large">
+              <span class="icon-teal-xlarge">
+                <Icon name="shield-check" type="outline" />
+              </span>
+            </div>
+
+            <h3>How Our Guarantee Works</h3>
+            <p class="guarantee-intro">We're so confident in our methodology that we offer an unconditional 30-day satisfaction guarantee on your first implementation.</p>
+
+            <div class="guarantee-steps">
+              <div class="guarantee-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Choose Your First Implementation</h4>
+                  <p>Select any playbook from our library—Multi-Party Coordination, Client Relationships, Resource Optimization, or any other operational challenge.</p>
+                </div>
+              </div>
+
+              <div class="guarantee-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>We Implement & Train</h4>
+                  <p>Complete implementation with full training, documentation, and support. Experience our methodology firsthand over 6-8 weeks.</p>
+                </div>
+              </div>
+
+              <div class="guarantee-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Evaluate & Decide</h4>
+                  <p>If you're not completely satisfied within 30 days of implementation completion, we'll refund 100% of your investment—no questions asked.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guarantee-benefits">
+            <h3>What This Means for You</h3>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <span class="icon-teal">
+                  <Icon name="check-circle" type="outline" />
+                </span>
+              </div>
+              <div class="benefit-text">
+                <h4>Zero Financial Risk</h4>
+                <p>Test our entire methodology with a real implementation. If it doesn't deliver value, you pay nothing.</p>
+              </div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <span class="icon-teal">
+                  <Icon name="clock" type="outline" />
+                </span>
+              </div>
+              <div class="benefit-text">
+                <h4>Full Implementation Period</h4>
+                <p>30 days starts after implementation completion—not when you sign up. You get the full experience before deciding.</p>
+              </div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <span class="icon-teal">
+                  <Icon name="hand-raised" type="outline" />
+                </span>
+              </div>
+              <div class="benefit-text">
+                <h4>No Questions Asked</h4>
+                <p>If you're not satisfied, simply let us know within 30 days. No complicated process, no justifications required.</p>
+              </div>
+            </div>
+
+            <div class="benefit-card highlight">
+              <div class="benefit-icon">
+                <span class="icon-orange">
+                  <Icon name="heart" type="outline" />
+                </span>
+              </div>
+              <div class="benefit-text">
+                <h4>Keep What You've Learned</h4>
+                <p>Even if you request a refund, you keep all documentation, training materials, and implemented systems. Our investment in your success.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="guarantee-trust">
+          <p><strong>Why we can offer this guarantee:</strong> Our playbooks are battle-tested across dozens of environmental consultancies. We know they work. When properly implemented and adopted, they consistently deliver measurable operational improvements. Your success is our business model.</p>
+        </div>
+      </div>
+
+      <div class="guarantee-cta">
+        <p class="cta-text">Ready to experience risk-free operational transformation?</p>
+        <div class="cta-buttons">
+          <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=guarantee_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=guarantee_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+             class="btn btn-primary-orange">
+            Schedule Discovery Call
+          </a>
+          <a href="/assessment" class="btn btn-secondary-teal">
+            Take Free Assessment
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: FAQ Accordion -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p class="section-subtitle">Get answers to common questions about our pricing and services</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="question-text">Can we customize the playbooks?</span>
+              <span class="icon-teal faq-icon">
+                <Icon name="chevron-down" type="outline" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, all playbooks are customized to your specific tools and workflows. Custom development is welcomed at all tiers. We don't believe in one-size-fits-all solutions—every implementation is tailored to your firm's unique operational needs, existing tech stack, and team preferences.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="question-text">What if we need more than one implementation at a time?</span>
+              <span class="icon-teal faq-icon">
+                <Icon name="chevron-down" type="outline" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Operations Excellence tier includes this capability. Systematic Growth can add concurrent implementations for $1,000/month. This allows you to accelerate your transformation by implementing multiple playbooks across different operational tracks simultaneously.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="question-text">Can we start with Jumpstart then move to subscription?</span>
+              <span class="icon-teal faq-icon">
+                <Icon name="chevron-down" type="outline" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely! Many clients start with Jumpstart to experience our methodology, then transition to ongoing subscriptions. We'll credit your jumpstart investment toward subscription onboarding. This gives you a risk-free way to test our approach before committing to ongoing transformation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span class="question-text">Do you work with our existing tools?</span>
+              <span class="icon-teal faq-icon">
+                <Icon name="chevron-down" type="outline" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We integrate with your current tech stack (ClickUp, Asana, Monday, etc.) and only recommend changes when it significantly improves outcomes. We're tool-agnostic and focused on building systems that work within your existing infrastructure. If you're happy with your tools, we'll make them work better.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Final CTA -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-content">
+          <h2>Ready to Transform Your Operations?</h2>
+          <p class="final-cta-subtitle">
+            Choose your path to systematic operational excellence
+          </p>
+
+          <div class="cta-cards">
+            <div class="cta-card cta-card-primary">
+              <div class="cta-card-icon">
+                <Icon name="rocket-launch" type="outline" />
+              </div>
+              <h3>Start with Discovery</h3>
+              <p>Book a 30-minute call to discuss your specific operational challenges and see if we're the right fit.</p>
+              <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_cta&utm_campaign=gaiaops-discovery&utm_content=final_cta_discovery"
+                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=pricing_cta&utm_campaign=gaiaops-discovery&utm_content=final_cta_discovery'});return false;"
+                 class="btn btn-primary-orange btn-large">
+                Book Discovery Call
+              </a>
+            </div>
+
+            <div class="cta-card cta-card-secondary">
+              <div class="cta-card-icon">
+                <Icon name="clipboard-document-check" type="outline" />
+              </div>
+              <h3>Compare Your Options</h3>
+              <p>Review our pricing tiers side-by-side and choose the engagement model that matches your transformation goals.</p>
+              <a href="#pricing-comparison" class="btn btn-secondary btn-large">
+                View Detailed Comparison
+              </a>
+            </div>
+          </div>
+
+          <div class="alternative-path">
+            <p>Questions about which tier is right for you?</p>
+            <a href="/contact" class="text-link">Contact our team →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <Footer />
 </BaseLayout>
 
 <style>
-.hero {
-  background: linear-gradient(135deg, var(--color-navy-primary) 0%, var(--color-teal-primary) 100%);
-  color: var(--color-white);
-  padding: 5rem 0;
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: ">";
+  margin: 0 0.5rem;
+  color: #6B7280;
+}
+
+.breadcrumb a {
+  color: #2A7F7E;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #1B365D;
+  text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+  padding: 6rem 2rem;
   text-align: center;
 }
 
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
+/* Button Styles */
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-family-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-orange {
+  background-color: #D97642;
+  color: white;
+}
+
+.btn-primary-orange:hover {
+  background-color: #C36739;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 118, 66, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #2A7F7E;
+  border: 2px solid #2A7F7E;
+}
+
+.btn-secondary:hover {
+  background-color: #2A7F7E;
+  color: white;
+  border-color: #2A7F7E;
+  transform: translateY(-2px);
+}
+
+/* For buttons on gradient backgrounds */
+.hero-section .btn-secondary {
+  background-color: white;
+  color: #1B365D;
+  border: 2px solid white;
+}
+
+.hero-section .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1B365D;
+}
+
+/* Pricing Section */
+.pricing-section {
+  background: #F8F9FA;
+  padding: 5rem 2rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: white;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(42, 127, 126, 0.15);
+  border-color: #2A7F7E;
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B365D;
   margin-bottom: 1rem;
 }
 
-.hero p {
+.pricing-card .price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2A7F7E;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.pricing-card .price-period {
   font-size: 1.25rem;
+  font-weight: 400;
+  color: #6B7280;
+}
+
+.pricing-card .period {
+  font-size: 0.95rem;
+  color: #6B7280;
+  margin-bottom: 0.75rem;
+}
+
+.pricing-card .timeline {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.pricing-card .best-for {
+  font-size: 0.95rem;
+  color: #2C3E50;
+  background: #F0FAF9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #2A7F7E;
+}
+
+.pricing-card .btn {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.btn-card-primary {
+  background-color: #2A7F7E;
+  color: white;
+}
+
+.btn-card-primary:hover {
+  background-color: #236968;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(42, 127, 126, 0.3);
+}
+
+.btn-card-secondary {
+  background-color: transparent;
+  color: #1B365D;
+  border: 2px solid #1B365D;
+}
+
+.btn-card-secondary:hover {
+  background-color: #1B365D;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pricing-card .features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card .features li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 0.95rem;
+  color: #2C3E50;
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.pricing-card .features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card .features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2A7F7E;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Featured Card (Most Popular) */
+.pricing-card.featured {
+  border-color: #2A7F7E;
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(42, 127, 126, 0.2);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 16px 40px rgba(42, 127, 126, 0.25);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #D97642;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* Premium Card Styling */
+.pricing-card.premium {
+  border-color: #D4D4D4;
+}
+
+.pricing-card.premium:hover {
+  border-color: #1B365D;
+}
+
+/* Pricing CTAs */
+.pricing-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.pricing-cta .cta-text {
+  font-size: 1.25rem;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.pricing-cta .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary-navy {
+  background-color: transparent;
+  color: #1B365D;
+  border: 2px solid #1B365D;
+}
+
+.btn-secondary-navy:hover {
+  background-color: #1B365D;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Comparison Section */
+.comparison-section {
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #6B7280;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.comparison-table thead {
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+}
+
+.comparison-table th {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.comparison-table th.feature-column {
+  text-align: left;
+  width: 30%;
+}
+
+.comparison-table th.plan-column {
+  width: 23.33%;
+}
+
+.comparison-table th.featured-column {
+  background: rgba(42, 127, 126, 0.2);
+  position: relative;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background: #F8F9FA;
+}
+
+.comparison-table td {
+  padding: 1.25rem 1rem;
+  text-align: center;
+  color: #2C3E50;
+  font-size: 0.95rem;
+}
+
+.comparison-table td.feature-name {
+  text-align: left;
+  font-weight: 600;
+  color: #1B365D;
+}
+
+.comparison-table .check-icon {
+  color: #2A7F7E;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.comparison-table td:nth-child(3) {
+  background: rgba(42, 127, 126, 0.03);
+}
+
+.comparison-table strong {
+  color: #2A7F7E;
+  font-weight: 700;
+}
+
+/* Comparison CTAs */
+.comparison-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.comparison-cta .cta-text {
+  font-size: 1.25rem;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.comparison-cta .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary-teal {
+  background-color: transparent;
+  color: #2A7F7E;
+  border: 2px solid #2A7F7E;
+}
+
+.btn-secondary-teal:hover {
+  background-color: #2A7F7E;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ROI Calculator Section */
+.roi-section {
+  background: #F8F9FA;
+  padding: 5rem 2rem;
+}
+
+.roi-calculator {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.calculator-inputs {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 2rem;
+}
+
+.input-group:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-prefix {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  padding-left: 2rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1B365D;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #2A7F7E;
+  box-shadow: 0 0 0 3px rgba(42, 127, 126, 0.1);
+}
+
+.calculator-results {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.calculator-results h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin: 0;
+  text-align: center;
+}
+
+.info-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: help;
+}
+
+.info-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #1B365D;
+  transition: color 0.3s ease;
+}
+
+.info-tooltip:hover .info-icon {
+  color: #2A7F7E;
+}
+
+.tooltip-content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  background: white;
+  border: 2px solid #1B365D;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 320px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #2C3E50;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.info-tooltip:hover .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-calculate {
+  width: 100%;
+  background-color: #2A7F7E;
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  margin-top: 0.5rem;
+}
+
+.btn-calculate:hover {
+  background-color: #236968;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(42, 127, 126, 0.3);
+}
+
+.result-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.result-card {
+  background: #F8F9FA;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid #E5E7EB;
+  transition: all 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(42, 127, 126, 0.1);
+  border-color: #2A7F7E;
+}
+
+.result-card.highlight {
+  background: linear-gradient(135deg, #2A7F7E 0%, #1B365D 100%);
+  color: white;
+  border-color: #2A7F7E;
+}
+
+.result-card.highlight .result-label,
+.result-card.highlight .result-value,
+.result-card.highlight .result-context {
+  color: white;
+}
+
+.result-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-teal,
+.icon-orange {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  color: #2A7F7E;
+}
+
+.icon-orange {
+  color: #D97642;
+}
+
+.result-card.highlight .icon-orange {
+  color: white;
+}
+
+.result-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6B7280;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2A7F7E;
+  margin-bottom: 0.5rem;
+}
+
+.result-context {
+  font-size: 0.8125rem;
+  color: #6B7280;
+  font-style: italic;
+}
+
+.roi-note {
+  background: #FEF3E7;
+  border-left: 4px solid #D97642;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+.roi-note p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
+.roi-note strong {
+  color: #D97642;
+}
+
+/* ROI CTAs */
+.roi-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.roi-cta .cta-text {
+  font-size: 1.25rem;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.roi-cta .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Subscription Section */
+.subscription-section {
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.subscription-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.comparison-column {
+  background: #F8F9FA;
+  border-radius: 12px;
+  padding: 2.5rem;
+  border: 2px solid #E5E7EB;
+}
+
+.comparison-column.traditional {
+  border-color: #E5E7EB;
+}
+
+.comparison-column.subscription {
+  border-color: #2A7F7E;
+  background: linear-gradient(to bottom, rgba(42, 127, 126, 0.03), white);
+}
+
+.column-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.column-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+}
+
+.column-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.column-badge.limited {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.column-badge.unlimited {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.comparison-list li:last-child {
+  margin-bottom: 0;
+}
+
+.icon-x {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #FEE2E2;
+  color: #DC2626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.icon-check {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #D1FAE5;
+  color: #059669;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.comparison-list strong {
+  display: block;
+  color: #1B365D;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.comparison-list p {
+  margin: 0;
+  color: #6B7280;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.value-statement {
+  background: linear-gradient(135deg, #FEF3E7 0%, #FFF5EB 100%);
+  border-left: 4px solid #D97642;
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.icon-wrapper {
+  flex-shrink: 0;
+}
+
+.icon-orange-large {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  color: #D97642;
+}
+
+.value-text h4 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.value-text p {
+  margin: 0;
+  font-size: 1.0625rem;
+  color: #2C3E50;
+  line-height: 1.7;
+}
+
+/* Subscription CTAs */
+.subscription-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.subscription-cta .cta-text {
+  font-size: 1.25rem;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.subscription-cta .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Guarantee Section */
+.guarantee-section {
+  background: #F8F9FA;
+  padding: 5rem 2rem;
+}
+
+.guarantee-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.guarantee-main {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.guarantee-icon-large {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.icon-teal-xlarge {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  color: #2A7F7E;
+}
+
+.guarantee-main h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.guarantee-intro {
+  font-size: 1.125rem;
+  color: #2C3E50;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.guarantee-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.guarantee-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #2A7F7E 0%, #1B365D 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.step-content h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  margin: 0;
+  color: #6B7280;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.guarantee-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.guarantee-benefits h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  border: 2px solid #E5E7EB;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(42, 127, 126, 0.15);
+  border-color: #2A7F7E;
+}
+
+.benefit-card.highlight {
+  background: linear-gradient(135deg, #FEF3E7 0%, #FFF5EB 100%);
+  border-color: #D97642;
+}
+
+.benefit-card.highlight:hover {
+  border-color: #D97642;
+  box-shadow: 0 4px 12px rgba(217, 118, 66, 0.2);
+}
+
+.benefit-icon {
+  flex-shrink: 0;
+}
+
+.benefit-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-text p {
+  margin: 0;
+  color: #6B7280;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.guarantee-trust {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #2A7F7E;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.guarantee-trust p {
+  margin: 0;
+  font-size: 1.0625rem;
+  color: #2C3E50;
+  line-height: 1.7;
+}
+
+.guarantee-trust strong {
+  color: #1B365D;
+  font-weight: 700;
+}
+
+.guarantee-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.guarantee-cta .cta-text {
+  font-size: 1.25rem;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.guarantee-cta .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #2A7F7E;
+  box-shadow: 0 4px 12px rgba(42, 127, 126, 0.1);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #F8F9FA;
+}
+
+.faq-item.active .faq-question {
+  background-color: #F8F9FA;
+}
+
+.question-text {
+  flex: 1;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1B365D;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+.faq-icon {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #2A7F7E;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 2rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 2rem 1.5rem 2rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  font-family: 'Crimson Pro', serif;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+}
+
+.final-cta-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.final-cta-content h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.final-cta-subtitle {
+  font-size: 1.375rem;
+  margin-bottom: 3rem;
+  color: white;
+  opacity: 0.95;
+}
+
+.cta-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .cta-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cta-card {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cta-card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #D97642 0%, #E67E22 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.cta-card-icon :global(svg) {
+  color: white;
+  width: 48px;
+  height: 48px;
+}
+
+.cta-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 1rem;
+}
+
+.cta-card p {
+  font-size: 1rem;
+  color: #2C3E50;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.alternative-path {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.alternative-path p {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: white;
   opacity: 0.9;
 }
+
+.text-link {
+  color: white;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: opacity 0.3s ease;
+}
+
+.text-link:hover {
+  opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .pricing-section {
+    padding: 3rem 1rem;
+  }
+
+  .comparison-section {
+    padding: 3rem 1rem;
+  }
+
+  .roi-section {
+    padding: 3rem 1rem;
+  }
+
+  .subscription-section {
+    padding: 3rem 1rem;
+  }
+
+  .guarantee-section {
+    padding: 3rem 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pricing-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .pricing-card .price {
+    font-size: 2.5rem;
+  }
+
+  .pricing-cta .cta-buttons,
+  .comparison-cta .cta-buttons,
+  .roi-cta .cta-buttons,
+  .subscription-cta .cta-buttons {
+    flex-direction: column;
+  }
+
+  .pricing-cta .cta-text,
+  .comparison-cta .cta-text,
+  .roi-cta .cta-text,
+  .subscription-cta .cta-text {
+    font-size: 1.125rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1rem 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .comparison-table th {
+    font-size: 0.875rem;
+  }
+
+  .comparison-table th.feature-column,
+  .comparison-table td.feature-name {
+    font-size: 0.8125rem;
+  }
+
+  .comparison-table .check-icon {
+    font-size: 1.25rem;
+  }
+
+  .roi-calculator {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .result-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .result-value {
+    font-size: 1.75rem;
+  }
+
+  .calculator-inputs,
+  .calculator-results {
+    padding: 2rem 1.5rem;
+  }
+
+  .results-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tooltip-content {
+    width: 280px;
+    font-size: 0.8125rem;
+    padding: 0.875rem;
+  }
+
+  .btn-calculate {
+    font-size: 1rem;
+  }
+
+  .subscription-comparison {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .comparison-column {
+    padding: 2rem 1.5rem;
+  }
+
+  .column-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .value-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .icon-orange-large {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .value-text h4 {
+    font-size: 1.25rem;
+  }
+
+  .value-text p {
+    font-size: 1rem;
+  }
+
+  .value-statement {
+    padding: 2rem 1.5rem;
+  }
+
+  .guarantee-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .guarantee-main {
+    padding: 2rem 1.5rem;
+  }
+
+  .icon-teal-xlarge {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .guarantee-main h3 {
+    font-size: 1.5rem;
+  }
+
+  .guarantee-intro {
+    font-size: 1rem;
+  }
+
+  .guarantee-step {
+    gap: 1rem;
+  }
+
+  .step-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+  }
+
+  .step-content h4 {
+    font-size: 1rem;
+  }
+
+  .guarantee-benefits h3 {
+    font-size: 1.25rem;
+  }
+
+  .benefit-card {
+    padding: 1.25rem;
+  }
+
+  .guarantee-trust {
+    padding: 1.5rem;
+  }
+
+  .guarantee-trust p {
+    font-size: 1rem;
+  }
+
+  .guarantee-cta .cta-text {
+    font-size: 1.125rem;
+  }
+
+  .guarantee-cta .cta-buttons {
+    flex-direction: column;
+  }
+
+  .faq-section {
+    padding: 3rem 1rem;
+  }
+
+  .faq-question {
+    padding: 1.25rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .faq-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.25rem 1.5rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.9375rem;
+  }
+
+  .final-cta-section {
+    padding: 4rem 2rem;
+  }
+
+  .cta-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+}
+
 </style>
+
+<script>
+  // ROI Calculator Logic
+  document.addEventListener('DOMContentLoaded', function() {
+    const revenueInput = document.getElementById('annual-revenue');
+    const teamSizeInput = document.getElementById('team-size');
+    const billableRateInput = document.getElementById('billable-rate');
+    const calculateBtn = document.getElementById('calculate-roi-btn');
+
+    const timeSavingsEl = document.getElementById('time-savings');
+    const revenueImpactEl = document.getElementById('revenue-impact');
+    const netRoiEl = document.getElementById('net-roi');
+
+    // Format number with commas
+    function formatNumberWithCommas(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    // Remove commas and get raw number
+    function parseFormattedNumber(str) {
+      return parseFloat(str.replace(/,/g, '')) || 0;
+    }
+
+    // Format annual revenue input with commas
+    function formatRevenueInput() {
+      if (!revenueInput) return;
+
+      const cursorPosition = revenueInput.selectionStart;
+      const oldValue = revenueInput.value;
+      const rawValue = parseFormattedNumber(revenueInput.value);
+
+      if (!isNaN(rawValue) && rawValue >= 0) {
+        const formatted = formatNumberWithCommas(rawValue);
+        revenueInput.value = formatted;
+        revenueInput.dataset.rawValue = rawValue.toString();
+
+        // Restore cursor position approximately
+        const addedCommas = formatted.length - oldValue.replace(/,/g, '').length;
+        const newPosition = Math.min(cursorPosition + addedCommas, formatted.length);
+        revenueInput.setSelectionRange(newPosition, newPosition);
+      }
+    }
+
+    // Handle revenue input formatting
+    if (revenueInput) {
+      revenueInput.addEventListener('input', function(e) {
+        // Allow only numbers and commas
+        let value = e.target.value.replace(/[^\d,]/g, '');
+        e.target.value = value;
+      });
+
+      revenueInput.addEventListener('blur', formatRevenueInput);
+
+      // Format on load
+      formatRevenueInput();
+    }
+
+    function calculateROI() {
+      console.log('Calculate ROI button clicked');
+
+      // Get current values from inputs
+      const revenueValue = revenueInput?.value || '0';
+      const teamSizeValue = teamSizeInput?.value || 0;
+      const billableRateValue = billableRateInput?.value || 0;
+
+      console.log('Input values:', { revenueValue, teamSizeValue, billableRateValue });
+
+      const revenue = parseFormattedNumber(revenueValue);
+      const teamSize = parseInt(teamSizeValue);
+      const billableRate = parseFloat(billableRateValue);
+
+      console.log('Parsed values:', { revenue, teamSize, billableRate });
+
+      // NEW LOGIC: 65% → 80% utilization improvement
+      const avgHoursPerPerson = 2080; // Standard work year
+      const currentUtilization = 0.65; // 65% current utilization
+      const improvedUtilization = 0.80; // 80% after improvements
+
+      // Current billable hours per person: 65% × 2,080 = 1,352
+      const currentBillableHours = avgHoursPerPerson * currentUtilization;
+
+      // Improved billable hours per person: 80% × 2,080 = 1,664
+      const improvedBillableHours = avgHoursPerPerson * improvedUtilization;
+
+      // Hours gained per person: 1,664 - 1,352 = 312
+      const hoursGainedPerPerson = improvedBillableHours - currentBillableHours;
+
+      // Total time savings across team
+      const savedHours = hoursGainedPerPerson * teamSize;
+
+      // Calculate revenue impact
+      const revenueImpact = savedHours * billableRate;
+
+      // Calculate net ROI (Systematic Growth plan)
+      const monthlyFee = 2997;
+      const onboardingFee = 1997;
+      const annualInvestment = (monthlyFee * 12) + onboardingFee; // $37,961
+      const netRoi = revenueImpact - annualInvestment;
+
+      console.log('Calculated values:', { savedHours, revenueImpact, netRoi });
+
+      // Update UI
+      if (timeSavingsEl) {
+        const displayValue = `${Math.round(savedHours).toLocaleString()} hours/year`;
+        console.log('Updating time savings to:', displayValue);
+        timeSavingsEl.textContent = displayValue;
+      }
+      if (revenueImpactEl) {
+        const displayValue = `$${Math.round(revenueImpact).toLocaleString()}`;
+        console.log('Updating revenue impact to:', displayValue);
+        revenueImpactEl.textContent = displayValue;
+      }
+      if (netRoiEl) {
+        const roiDisplay = netRoi >= 0 ? `$${Math.round(netRoi).toLocaleString()}` : `-$${Math.round(Math.abs(netRoi)).toLocaleString()}`;
+        console.log('Updating net ROI to:', roiDisplay);
+        netRoiEl.textContent = roiDisplay;
+      }
+
+      console.log('ROI calculation complete');
+    }
+
+    // Add click event to Calculate button
+    if (calculateBtn) {
+      console.log('Calculate button found, attaching event listener');
+      calculateBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Button clicked');
+        calculateROI();
+      });
+    } else {
+      console.error('Calculate button not found');
+    }
+
+    // Optional: Allow Enter key in inputs to trigger calculation
+    [revenueInput, teamSizeInput, billableRateInput].forEach(input => {
+      input?.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          calculateROI();
+        }
+      });
+    });
+
+    // Initial calculation on page load
+    calculateROI();
+  });
+
+  // FAQ Accordion Logic
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+
+      question?.addEventListener('click', function() {
+        const isActive = item.classList.contains('active');
+
+        // Close all FAQ items
+        faqItems.forEach(faqItem => {
+          faqItem.classList.remove('active');
+        });
+
+        // If the clicked item wasn't active, open it
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  });
+</script>

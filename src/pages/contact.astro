@@ -2,45 +2,357 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Icon from '../components/Icon.astro';
+
+const pageTitle = 'Contact Us | GaiaOps';
+const pageDescription = 'Get in touch with GaiaOps to discuss operational excellence for your environmental consultancy.';
 ---
 
-<BaseLayout title="Contact - GaiaOps" description="Get in touch with GaiaOps to discuss operational excellence for your environmental consultancy.">
+<BaseLayout title={pageTitle} description={pageDescription}>
   <Header />
-  
-  <main id="main-content">
-    <section class="hero">
+
+  <main>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
       <div class="container">
-        <h1>Contact</h1>
-        <p>This page is under construction.</p>
+        <nav class="breadcrumb">
+          <a href="/">Home</a>
+          <span>></span>
+          <span>Contact</span>
+        </nav>
       </div>
     </section>
+
+    <!-- Section 1: Hero -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Let's Start a Conversation</h1>
+        <p class="hero-subtitle">
+          Whether you're ready to transform your operations or just curious about what's possible, we're here to help.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Two-Column Contact Layout -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <p class="section-subtitle">Choose the best way to connect with us</p>
+        </div>
+
+        <div class="contact-columns">
+          <!-- Left Column: ClickUp Contact Form -->
+          <div class="contact-column">
+            <h3 class="column-heading">Send Us a Message</h3>
+            <p class="column-subheading">Fill out the form and we'll respond within 24 hours</p>
+            <div class="form-container">
+              <iframe
+                class="clickup-embed clickup-dynamic-height"
+                src="https://forms.clickup.com/90161013375/f/2kz07rkz-4676/1UO9JFZY6YYJ6C62UR"
+                onwheel=""
+                width="100%"
+                height="100%"
+                style="background: transparent; border: 1px solid #ccc;"
+                title="Contact Form"
+                aria-label="GaiaOps Contact Form">
+              </iframe>
+              <script async src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"></script>
+            </div>
+          </div>
+
+          <!-- Right Column: Calendly Schedule -->
+          <div class="contact-column">
+            <h3 class="column-heading">Schedule a Call</h3>
+            <p class="column-subheading">Book a time that works for you</p>
+            <div class="calendly-container">
+              <!-- Calendly inline widget begin -->
+              <div class="calendly-inline-widget"
+                   data-url="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=embed&utm_campaign=contact-page&utm_content=routing-form"
+                   style="min-width:320px;height:700px;"
+                   title="Schedule a Call"
+                   aria-label="Schedule a call with GaiaOps">
+              </div>
+              <script type="text/javascript"
+                      src="https://assets.calendly.com/assets/external/widget.js"
+                      async>
+              </script>
+              <!-- Calendly inline widget end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Response Expectation -->
+    <section class="response-note-section">
+      <div class="container">
+        <p class="response-note">
+          We typically respond within 24 hours during business days (Monday-Friday, 9am-5pm PST)
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <Footer />
 </BaseLayout>
 
 <style>
-.hero {
-  background: linear-gradient(135deg, var(--color-navy-primary) 0%, var(--color-teal-primary) 100%);
-  color: var(--color-white);
-  padding: 5rem 0;
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: ">";
+  margin: 0 0.5rem;
+  color: #6B7280;
+}
+
+.breadcrumb a {
+  color: #2A7F7E;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #1B365D;
+  text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+  padding: 6rem 2rem;
   text-align: center;
 }
 
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  opacity: 0.9;
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #2C3E50;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Contact Section - Two Column Layout */
+.contact-section {
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.contact-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contact-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.contact-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2A7F7E;
+  margin-bottom: 0.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.column-subheading {
+  font-size: 1rem;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-container {
+  flex: 1;
+  background: #F8F9FA;
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 600px;
+}
+
+.form-container iframe {
+  border-radius: 8px;
+}
+
+.calendly-container {
+  flex: 1;
+  background: #F8F9FA;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* Response Note Section */
+.response-note-section {
+  background: #F8F9FA;
+  padding: 2rem;
+  text-align: center;
+}
+
+.response-note {
+  font-size: 0.9375rem;
+  color: #2C3E50;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-primary-orange {
+  background-color: #D97642;
+  color: white;
+  border: 2px solid #D97642;
+}
+
+.btn-primary-orange:hover {
+  background-color: #C5663A;
+  border-color: #C5663A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 118, 66, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #2A7F7E;
+  border: 2px solid #2A7F7E;
+}
+
+.btn-secondary:hover {
+  background-color: #2A7F7E;
+  color: white;
+  border-color: #2A7F7E;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+
+  .contact-columns {
+    gap: 2.5rem;
+  }
+
+  .column-heading {
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    padding: 0.75rem;
+  }
+
+  .calendly-container {
+    padding: 0.75rem;
+  }
+
+  .response-note-section {
+    padding: 1.5rem 1rem;
+  }
 }
 </style>

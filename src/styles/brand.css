@@ -2,12 +2,12 @@
 
 :root {
   /* Primary Brand Colors */
-  --color-teal-primary: #4A9B8B;
-  --color-teal-primary-hover: #3a8070;
-  --color-navy-primary: #1E3A5F;
+  --color-teal-primary: #2A7F7E;
+  --color-teal-primary-hover: #1f6160;
+  --color-navy-primary: #1B365D;
   --color-navy-primary-hover: #162d47;
-  --color-orange-accent: #E07A47;
-  --color-orange-accent-hover: #d4653d;
+  --color-orange-accent: #D97642;
+  --color-orange-accent-hover: #c55f30;
 
   /* Supporting Colors */
   --color-dark-gray: #2D3748;

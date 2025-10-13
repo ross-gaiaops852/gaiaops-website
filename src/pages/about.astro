@@ -1,0 +1,2764 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Icon from '../components/Icon.astro';
+
+const pageTitle = 'About Us | GaiaOps';
+const pageDescription = 'Built specifically for environmental organizations through research, environmental science expertise, and digital operations mastery.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li aria-current="page">About</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Built Specifically for Environmental Organizations. Nothing Else.</h1>
+        <p class="hero-subtitle">
+          After studying 48 environmental firms and completing 5 in-depth expert interviews, we identified a critical gap: no one serves the unique operational needs of environmental businesses. We're changing that.
+        </p>
+        <p class="hero-supporting">
+          Environmental organizations—from consultancies managing complex compliance projects to engineering firms installing innovative water solutions—deserve operational support designed for their reality. Not generic business consulting adapted for your sector. Not software vendors focused only on technical tools. Systematic operational excellence built from the ground up for environmental work.
+        </p>
+        <p class="hero-cta-text">
+          <strong>We're launching with a founding cohort of select environmental organizations. Is yours one of them?</strong>
+        </p>
+        <div class="hero-ctas">
+          <a
+            href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=about_hero_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=about_hero_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+            class="btn btn-primary-orange"
+          >
+            Book Discovery Call
+          </a>
+          <a href="/how-we-help" class="btn btn-secondary-white">
+            Learn More About Our Approach
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: The Problem We're Solving -->
+    <section class="problem-section">
+      <div class="container">
+        <h2 class="section-heading">You Shouldn't Have to Choose Between Mission and Operations</h2>
+
+        <div class="two-column-container">
+          <!-- Main Content (Left) -->
+          <div class="main-content">
+            <div class="content-block">
+              <h3 class="content-heading">The Reality</h3>
+              <p>We see this pattern across environmental organizations every day:</p>
+              <p class="inline-quote">
+                "Field data scattered across five different systems, manually compiled for every report. Project managers spending 8 hours each week solving resource allocation puzzles in spreadsheets. Quality review processes that exist only in people's heads, not documented systems. Client onboarding that takes two weeks when it should take two days."
+              </p>
+              <p>
+                <strong>The result?</strong> Environmental professionals spending 30-40% of their time on administrative chaos instead of advancing environmental outcomes. Talented teams trapped in operational firefighting rather than focusing on the mission-critical work that drew them to this field.
+              </p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-heading">The Root Cause</h3>
+              <p>This isn't a failure of the people doing environmental work—it's a failure of the support infrastructure available to them:</p>
+
+              <div class="cause-item">
+                <h4>Generic business consultants</h4>
+                <p>Don't understand environmental workflows. They've never coordinated field data from a wetland delineation, managed multi-party regulatory reporting, or navigated seasonal workflow variations. Their solutions miss the nuances that make environmental operations unique.</p>
+              </div>
+
+              <div class="cause-item">
+                <h4>Environmental software vendors</h4>
+                <p>Focus on technical tools—GIS platforms, lab management systems, compliance databases—but not the operational systems that connect these tools into seamless workflows. You end up with powerful software that requires manual integration.</p>
+              </div>
+
+              <div class="cause-item">
+                <h4>In-house solutions</h4>
+                <p>Are limited by the very operational constraints you're trying to solve. Your team has environmental expertise, not enterprise-grade digital operations mastery. Building systematic operational excellence isn't a side project—it requires dedicated expertise.</p>
+              </div>
+
+              <p class="consequence">
+                <strong>The consequence:</strong> Environmental organizations remain stuck in operational chaos despite doing exceptional environmental work.
+              </p>
+            </div>
+
+            <div class="content-cta">
+              <p>This is why GaiaOps exists. <a href="/how-we-help" class="text-link">Explore our specialized approach →</a></p>
+            </div>
+          </div>
+
+          <!-- Sidebar (Right) -->
+          <aside class="sidebar">
+            <div class="sidebar-card stat-box">
+              <span class="stat-number">30-40%</span>
+              <p class="stat-label">Time wasted on administrative chaos instead of environmental work</p>
+            </div>
+
+            <div class="sidebar-card insight-box">
+              <h4>The Pattern We See</h4>
+              <p>Environmental professionals didn't enter this field to fight spreadsheets and disconnected systems. Every hour spent on operational firefighting is an hour not spent advancing environmental outcomes.</p>
+            </div>
+
+            <div class="sidebar-card insight-box">
+              <h4>Why Generic Solutions Fail</h4>
+              <p>Environmental operations are fundamentally different. Seasonal workflows, multi-party coordination, regulatory complexity, and field data management require specialized operational expertise.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Why We're Uniquely Positioned -->
+    <section class="positioning-section">
+      <div class="container">
+        <h2 class="section-heading">The Rare Combination: Environmental Expertise + Digital Operations Mastery</h2>
+        <p class="section-intro">
+          Most operational consultants have never walked a transect line, coordinated a Phase I ESA, or managed stormwater compliance reporting. Our founder has. And he's also built the digital operations systems that high-growth companies rely on to manage complexity at scale.
+        </p>
+        <p class="section-intro-emphasis">
+          This combination is rare—and it's exactly what environmental organizations need.
+        </p>
+
+        <div class="expertise-grid">
+          <!-- Column 1: Environmental Foundation -->
+          <div class="expertise-column">
+            <div class="column-header">
+              <span class="icon-teal-large">
+                <Icon name="academic-cap" type="outline" />
+              </span>
+              <h3>Environmental Foundation</h3>
+            </div>
+
+            <div class="expertise-item">
+              <h4>Bachelor of Science in Ecology & Biodiversity</h4>
+              <p>Not a footnote on a resume—the foundation for understanding how environmental work actually happens.</p>
+            </div>
+
+            <div class="expertise-item">
+              <h4>Research Experience with Real-World Complexity</h4>
+              <p>Contributing researcher on the Rio Tinto-funded Punakaiki Coastal Restoration Project, managing multi-stakeholder coordination across corporate partners (Rio Tinto), government agencies (Department of Conservation), and community organizations. Designed systematic monitoring protocols for multi-year projects spanning 100,000+ planted trees. Co-authored published research demonstrating systematic documentation for client deliverables and regulatory submissions.</p>
+            </div>
+
+            <div class="expertise-item">
+              <h4>Field Work That Informs Operations Understanding</h4>
+              <p>Executed 12-month controlled experiments across three sites, analyzed 15,000-30,000 seed samples, conducted self-funded research in Nothofagus forests. This wasn't abstract academia—it was hands-on experience with the field data coordination, site logistics, and seasonal workflow challenges that environmental businesses face daily.</p>
+            </div>
+
+            <div class="critical-insight">
+              <p>"During my work on projects like the Punakaiki Coastal Restoration Project, I personally managed field data coordination, multi-stakeholder project management, and regulatory reporting requirements. I understand your workflows from the inside—not from a consulting textbook."</p>
+            </div>
+          </div>
+
+          <!-- Column 2: Digital Operations Mastery -->
+          <div class="expertise-column">
+            <div class="column-header">
+              <span class="icon-teal-large">
+                <Icon name="cpu-chip" type="outline" />
+              </span>
+              <h3>Digital Operations Mastery</h3>
+            </div>
+
+            <div class="expertise-item">
+              <h4>Co-founder & CEO, BitPrime (2017-2022)</h4>
+              <p>Founded and scaled New Zealand's premier cryptocurrency exchange from concept to established financial services provider, serving 35,000 customers and processing NZD $300M+ in transactions while scaling to 30+ employees.</p>
+              <p class="relevance">The relevant expertise for environmental organizations:</p>
+              <ul>
+                <li><strong>Risk Management at Scale:</strong> Managed NZD $40M+ in assets with zero security breaches through systematic risk management protocols</li>
+                <li><strong>Regulatory Navigation:</strong> Successfully navigated evolving financial services frameworks while maintaining institutional relationships when competitors lost banking access</li>
+                <li><strong>Systematic Process Optimization:</strong> Optimized workflows across customer service, compliance, and operations functions, increasing throughput through systematic process improvement</li>
+                <li><strong>Multi-stakeholder Coordination:</strong> Served as industry spokesperson in consultations with Financial Markets Authority and Reserve Bank, bridging technical complexity with regulatory requirements</li>
+              </ul>
+            </div>
+
+            <div class="ops-quote">
+              <p>"The same systematic risk management that protected $40M in cryptocurrency assets ensures your field data never goes missing and compliance deadlines are never missed."</p>
+            </div>
+
+            <div class="expertise-item">
+              <h4>Head of New Zealand Operations, Swyftx (2022)</h4>
+              <p>Led strategic oversight during market expansion for Australia's top-rated cryptocurrency exchange, managing operations across multiple regulatory jurisdictions. Spearheaded comprehensive AML/CFT policy updates, built relationships with financial institutions across complex regulatory landscapes, and translated local requirements into actionable insights for broader organization.</p>
+            </div>
+
+            <div class="expertise-item">
+              <h4>Business Intelligence & AI Solutions Architect, Task Rescue (2023-2024)</h4>
+              <p>Specialized in developing tailored automation workflows for professional services firms—the direct precursor to GaiaOps. Designed custom AI solutions automating complex processes for field data collection, regulatory reporting, and compliance workflows. Built systematic automation approaches for scaling operations efficiently while maintaining meticulous documentation for quality assurance and regulatory standards.</p>
+            </div>
+
+            <div class="ops-quote">
+              <p>"I've seen what works at enterprise scale—systematic process optimization, intelligent automation, and operational frameworks that compound in value over time. I'm bringing that expertise to environmental organizations."</p>
+            </div>
+
+            <div class="expertise-item">
+              <h4>Strategic Product & Operations Leadership, Ruby Play Network (2024-2025)</h4>
+              <p>Served as strategic partner to the CEO within a fast-scaling gaming rewards company (70+ employees), managing complex technical projects with multiple stakeholders across regulatory dependencies. Established planning cadences and reporting processes creating clarity across concurrent projects with different timelines.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="institutional-perspective">
+          <h3>The Institutional Perspective</h3>
+          <p>This isn't a solo consulting practice. From day one, GaiaOps has been built as an institution—systematic processes, documented methodologies, proven frameworks. The founder's role is building and refining the operational excellence system, not being the system.</p>
+          <p>As we scale from founder-led implementations to a team of specialists, every client benefits from continuously improving playbooks, accumulated best practices, and systematic approaches that work regardless of who implements them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Research-Driven Foundation -->
+    <section class="research-section">
+      <div class="container">
+        <h2 class="section-heading">Built on Research, Not Assumptions</h2>
+        <p class="section-intro">
+          Before implementing our first playbook, we invested six months in systematic market research and hypothesis validation. This isn't consulting wisdom adapted from generic business—it's operational excellence designed specifically for environmental work.
+        </p>
+
+        <div class="research-stats">
+          <div class="stat-card">
+            <div class="stat-number">48</div>
+            <div class="stat-label">Environmental Organizations Studied</div>
+            <p class="stat-detail">Across company sizes (5-50 employees), service types (consultancies, engineering firms, testing labs, water management), geographic markets (California, Pacific Northwest, national), and digital maturity levels (Level 0 through Level 3).</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">25</div>
+            <div class="stat-label">Testable Hypotheses Developed</div>
+            <p class="stat-detail">About operational pain points, solution requirements, implementation approaches, pricing models, and success metrics. Every hypothesis tested against real-world feedback from environmental professionals.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Expert Interviews Completed</div>
+            <p class="stat-detail">In-depth conversations with operations managers and firm leaders from environmental consultancies, validating pain points and refining our understanding of environmental business operations.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">7</div>
+            <div class="stat-label">Core Playbooks Designed</div>
+            <p class="stat-detail">Based on validated pain points and proven operational frameworks, adapted specifically for environmental workflows—not generic templates applied to your industry.</p>
+          </div>
+        </div>
+
+        <div class="learnings-section">
+          <h3 class="subsection-title">What We Learned</h3>
+
+          <div class="learning-quote">
+            <p>"Client onboarding takes 3-4x longer than necessary due to manual intake processes and disconnected systems."</p>
+            <p class="quote-context">Environmental organizations lose 10-15 hours per new client relationship on administrative setup that could be automated, delaying project starts and frustrating clients expecting immediate action.</p>
+          </div>
+
+          <div class="learning-quote">
+            <p>"Resource allocation decisions happen in spreadsheets or someone's head, not systematic tools."</p>
+            <p class="quote-context">Project managers make daily staffing decisions without visibility into team capacity, project profitability, or skills matching—leading to overallocation, burnout, and missed opportunities.</p>
+          </div>
+
+          <div class="learning-quote">
+            <p>"Quality assurance exists as tribal knowledge, not documented workflows."</p>
+            <p class="quote-context">Critical review processes depend on specific individuals remembering specific steps. When those people are unavailable or leave, quality control breaks down and regulatory compliance becomes inconsistent.</p>
+          </div>
+
+          <div class="learning-quote">
+            <p>"Firms at Level 0-2 digital maturity have the highest ROI potential for operational transformation."</p>
+            <p class="quote-context">Organizations using basic email, spreadsheets, and disconnected point solutions see the most dramatic improvements—often 30-50% productivity gains—because there's so much low-hanging fruit.</p>
+          </div>
+        </div>
+
+        <div class="research-cta">
+          <p><strong>Where does your organization fall on the digital operations maturity spectrum?</strong></p>
+          <a href="/assessment" class="btn btn-primary-orange">Take Our Free Digital Operations Assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Commitment to the Sector -->
+    <section class="commitment-section">
+      <div class="container">
+        <h2 class="section-heading">Why Environmental Organizations? Why Now?</h2>
+
+        <div class="two-column-container">
+          <!-- Main Content (Left) -->
+          <div class="main-content">
+            <div class="content-block">
+              <h3 class="content-heading">The Personal Connection</h3>
+              <p>The path to GaiaOps began in environmental science research—conducting field work, managing multi-stakeholder projects, and experiencing firsthand how operational inefficiencies limit environmental work.</p>
+
+              <p class="inline-quote">
+                "During research projects, I watched talented environmental professionals spend hours each week on administrative tasks that could be systematized. Every hour wasted on manual data compilation or chasing project status updates was an hour not spent advancing environmental outcomes. That inefficiency wasn't just inconvenient—it was directly limiting environmental impact."
+              </p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-heading">The Strategic Opportunity</h3>
+              <p>The climate crisis and environmental challenges create daily urgency for the organizations working on solutions. These teams need to operate at maximum efficiency—not to increase profits (though that helps), but to maximize the environmental work they can accomplish with finite resources.</p>
+
+              <p><strong>Operational excellence multiplies environmental impact.</strong> When your team processes permits 50% faster, you're not just saving administrative time—you're accelerating environmental protection projects. When you serve 30% more clients with the same team size, you're multiplying your organization's total environmental contribution.</p>
+
+              <p>When environmental organizations operate more efficiently, they serve more clients, complete more projects, and create greater environmental change. This is how operational transformation translates directly into environmental outcomes.</p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-heading">Our Long-Term Vision</h3>
+              <p>We're not building a consulting practice that might pivot to the next opportunity. We're building the premier operational excellence institution for environmental organizations—systematic, proven frameworks that enable any environmental business to advance from operational chaos to systematic excellence.</p>
+
+              <p><strong>Progressive advancement</strong> through operational maturity levels. <strong>Continuous playbook refinement</strong> based on hundreds of implementations across diverse environmental organizations. <strong>A movement</strong> toward systematic excellence as the standard, not the exception, in environmental business.</p>
+
+              <p class="vision-statement">This is a 10-20 year commitment to transforming how environmental organizations operate. We're in this for the long term because the environmental challenges we're addressing require sustained, systematic effort.</p>
+            </div>
+          </div>
+
+          <!-- Sidebar (Right) -->
+          <aside class="sidebar">
+            <div class="sidebar-card insight-box">
+              <h4>Environmental Background</h4>
+              <p>Founded by someone who has walked transect lines, managed field data, and coordinated multi-stakeholder environmental projects—not a business consultant adapting generic frameworks.</p>
+            </div>
+
+            <div class="sidebar-card stat-box stat-box-orange">
+              <span class="stat-number">50%</span>
+              <p class="stat-label">Faster permit processing accelerates environmental protection projects</p>
+            </div>
+
+            <div class="sidebar-card insight-box">
+              <h4>Impact Multiplier</h4>
+              <p>Every systematic improvement enables environmental organizations to serve more clients and create greater change with the same resources. This is how operations directly translate to environmental outcomes.</p>
+            </div>
+
+            <div class="sidebar-card stat-box">
+              <span class="stat-number">10-20 years</span>
+              <p class="stat-label">Our commitment timeframe—building for the long term, not quick exits</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Founding Cohort Opportunity -->
+    <section class="cohort-section">
+      <div class="container">
+        <h2 class="section-heading">Join Our Founding Cohort</h2>
+
+        <div class="cohort-content">
+          <div class="honest-positioning">
+            <h3 class="subsection-title">The Reality (Honest Positioning)</h3>
+            <p>We're launching. We don't have extensive case studies yet—because we're building them with our first cohort of environmental organizations. We're close to finalizing our first client agreement, and we're looking for 4-5 more forward-thinking organizations to join the founding cohort.</p>
+            <p><strong>This is your opportunity to shape the future of environmental operations excellence while receiving exceptional value and attention.</strong></p>
+          </div>
+
+          <div class="benefits-section">
+            <h3 class="subsection-title">What This Means for You</h3>
+
+            <div class="benefit-grid">
+              <div class="benefit-item">
+                <span class="icon-check">
+                  <Icon name="check-circle" type="outline" />
+                </span>
+                <div class="benefit-content">
+                  <h4>Waived Onboarding Fees</h4>
+                  <p>Founding cohort members receive completely waived implementation fees—saving $1,997-2,997 on your initial setup. You pay only the monthly subscription rate, with no upfront investment required beyond your first month.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <span class="icon-check">
+                  <Icon name="check-circle" type="outline" />
+                </span>
+                <div class="benefit-content">
+                  <h4>Enhanced Support & Attention</h4>
+                  <p>As a founding cohort member, you'll receive significantly more attention and responsiveness than we'll be able to offer once we're managing 15+ active clients. Weekly check-ins during implementation, priority access to our founder, rapid response to questions and concerns.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <span class="icon-check">
+                  <Icon name="check-circle" type="outline" />
+                </span>
+                <div class="benefit-content">
+                  <h4>Co-Creation Opportunity</h4>
+                  <p>Direct input into playbook development and prioritization. Your specific operational challenges may become the next standardized playbook that benefits the entire environmental sector. You're not just a client—you're a partner in building the operational excellence frameworks that will define industry best practices.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <span class="icon-check">
+                  <Icon name="check-circle" type="outline" />
+                </span>
+                <div class="benefit-content">
+                  <h4>Case Study Partnership</h4>
+                  <p>We'll work with you to document your transformation journey in detail—measuring before/after metrics, capturing team feedback, and creating compelling case studies. You'll have final approval over what's shared publicly, and you'll benefit from the credibility of being recognized as an industry innovator.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <span class="icon-check">
+                  <Icon name="check-circle" type="outline" />
+                </span>
+                <div class="benefit-content">
+                  <h4>30-Day Cancellation Notice</h4>
+                  <p>We're confident in our value delivery, so we're not requiring long-term commitments. Cancel with 30 days' notice if we're not meeting your expectations—though we're confident you'll see measurable improvements within your first 60-90 days.</p>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <span class="icon-check">
+                  <Icon name="check-circle" type="outline" />
+                </span>
+                <div class="benefit-content">
+                  <h4>Mutual Success Alignment</h4>
+                  <p>We succeed only when you succeed. Our subscription model means we're invested in your long-term operational transformation, not just collecting a one-time project fee and moving on.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="looking-for-section">
+            <h3 class="subsection-title">What We're Looking For</h3>
+
+            <div class="criteria-list">
+              <div class="criteria-item">
+                <span class="icon-arrow">
+                  <Icon name="arrow-right" type="outline" />
+                </span>
+                <div>
+                  <h4>Environmental organizations with 5-30 employees</h4>
+                  <p>Our operational frameworks are optimized for organizations at this size range—large enough to have real operational complexity, small enough for rapid transformation.</p>
+                </div>
+              </div>
+
+              <div class="criteria-item">
+                <span class="icon-arrow">
+                  <Icon name="arrow-right" type="outline" />
+                </span>
+                <div>
+                  <h4>Firms at Level 0-2 digital maturity with clear improvement opportunity</h4>
+                  <p>If you're using basic email, spreadsheets, and disconnected point solutions, you're exactly who we're built to help. The ROI potential is highest when there's room for significant improvement.</p>
+                </div>
+              </div>
+
+              <div class="criteria-item">
+                <span class="icon-arrow">
+                  <Icon name="arrow-right" type="outline" />
+                </span>
+                <div>
+                  <h4>Leadership committed to operational transformation</h4>
+                  <p>This requires executive buy-in and team participation. We need leaders who recognize that systematic operational excellence isn't optional—it's essential for scaling environmental impact.</p>
+                </div>
+              </div>
+
+              <div class="criteria-item">
+                <span class="icon-arrow">
+                  <Icon name="arrow-right" type="outline" />
+                </span>
+                <div>
+                  <h4>Willingness to provide feedback and participate in case study development</h4>
+                  <p>We're looking for partners who will help us refine our playbooks and document transformation results. Your insights directly improve the frameworks that will serve hundreds of future environmental organizations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="investment-section">
+            <h3 class="subsection-title">The Investment</h3>
+
+            <div class="pricing-options">
+              <div class="pricing-card">
+                <h4>Systematic Growth</h4>
+                <p class="tier-subtitle">(Our Core Offering)</p>
+                <div class="price-main">
+                  <span class="price-amount">$2,997</span>
+                  <span class="price-period">/month</span>
+                </div>
+                <div class="price-onboarding">
+                  <span class="price-strike">Onboarding: $1,997</span>
+                  <span class="price-waived">WAIVED for Founding Cohort</span>
+                </div>
+                <div class="price-total">
+                  <strong>First Month Total: $2,997</strong> <span class="price-comparison">(vs. $4,994 standard)</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>One active playbook implementation at a time</li>
+                  <li>New implementations every 6-8 weeks</li>
+                  <li>Monthly strategy sessions (2 hours)</li>
+                  <li>Ongoing optimization support</li>
+                  <li>Comprehensive training and documentation</li>
+                  <li>Complete 6-8 major transformations in year one</li>
+                </ul>
+              </div>
+
+              <div class="pricing-card featured">
+                <div class="featured-badge">Accelerated</div>
+                <h4>Operations Excellence</h4>
+                <p class="tier-subtitle">(For Accelerated Transformation)</p>
+                <div class="price-main">
+                  <span class="price-amount">$4,997</span>
+                  <span class="price-period">/month</span>
+                </div>
+                <div class="price-onboarding">
+                  <span class="price-strike">Onboarding: $2,997</span>
+                  <span class="price-waived">WAIVED for Founding Cohort</span>
+                </div>
+                <div class="price-total">
+                  <strong>First Month Total: $4,997</strong> <span class="price-comparison">(vs. $7,994 standard)</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>Unlimited playbook implementations</li>
+                  <li>Accelerated pace (new implementation every 4-5 weeks)</li>
+                  <li>Bi-weekly strategy sessions</li>
+                  <li>Premium priority support</li>
+                  <li>Parallel implementation capability</li>
+                  <li>Complete 10-12 major transformations in year one</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="roi-statement">
+              <p><strong>Expected ROI:</strong> 30%+ productivity improvement, 20%+ reduction in administrative overhead, measurable increases in team capacity and client satisfaction. Most organizations see ROI within 90 days.</p>
+              <a href="/pricing" class="text-link">See full pricing details and compare all tiers →</a>
+            </div>
+          </div>
+
+          <div class="guarantee-section">
+            <h3 class="subsection-title">Risk Reversal: Our Confidence Guarantee</h3>
+            <div class="guarantee-box">
+              <span class="icon-shield">
+                <Icon name="shield-check" type="outline" />
+              </span>
+              <div class="guarantee-content">
+                <h4>30-Day Satisfaction Guarantee</h4>
+                <p>If you're not seeing measurable improvement in your priority operational area within 30 days of implementation completion, we'll provide a proportional refund. This demonstrates our confidence in the methodology and aligns our success with yours.</p>
+                <p class="guarantee-statement"><strong>We stand behind our work. Period.</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cohort-cta">
+            <a
+              href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=about_cohort_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=about_cohort_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+              class="btn btn-primary-orange btn-large"
+            >
+              Apply for Founding Cohort
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: What You're Actually Getting -->
+    <section class="playbooks-section">
+      <div class="container">
+        <h2 class="section-heading">Systematic Excellence, One Playbook at a Time</h2>
+
+        <div class="playbook-intro">
+          <p>Each "playbook" is a proven operational framework adapted specifically for environmental business workflows. Not generic templates—systematic approaches built on research, refined through expert interviews, and designed for the unique complexity of environmental work.</p>
+          <p><strong>One active playbook implementation at a time</strong> ensures your team isn't overwhelmed with change. <strong>Unlimited implementations</strong> means we're never artificially restricting your transformation journey. <strong>Comprehensive training and documentation</strong> ensures lasting change that doesn't depend on our ongoing involvement.</p>
+          <p class="timeline-note"><strong>Implementation Timeline:</strong> 6-8 weeks per playbook (Systematic Growth) or 4-5 weeks (Operations Excellence). Comprehensive support from discovery and planning through go-live and optimization.</p>
+        </div>
+
+        <div class="playbook-example">
+          <h3 class="subsection-title">Concrete Example: Client Onboarding Automation</h3>
+          <p class="example-intro">Let's make this concrete. Here's what the <strong>Client Onboarding Automation</strong> playbook implementation actually looks like:</p>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker">Week 1</div>
+              <div class="timeline-content">
+                <h4>Discovery & Current Workflow Mapping</h4>
+                <ul>
+                  <li>Detailed analysis of your existing client intake process</li>
+                  <li>Identification of bottlenecks, pain points, and manual touchpoints</li>
+                  <li>Mapping of information flow from first contact to project kickoff</li>
+                  <li>Agreement on success metrics and optimization priorities</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">Weeks 2-3</div>
+              <div class="timeline-content">
+                <h4>Configuration & Build</h4>
+                <ul>
+                  <li>Automated intake form setup with conditional logic for different project types</li>
+                  <li>Document collection workflows with automatic reminders and status tracking</li>
+                  <li>Client portal configuration providing visibility into project status and milestones</li>
+                  <li>Integration with your existing project management and communication tools</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">Weeks 4-5</div>
+              <div class="timeline-content">
+                <h4>Testing & Refinement</h4>
+                <ul>
+                  <li>Pilot testing with 2-3 new client onboardings</li>
+                  <li>Team feedback collection and workflow adjustments</li>
+                  <li>Edge case identification and handling procedures</li>
+                  <li>Quality assurance verification against success criteria</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">Week 6</div>
+              <div class="timeline-content">
+                <h4>Training & Documentation</h4>
+                <ul>
+                  <li>Comprehensive team training on new onboarding workflows</li>
+                  <li>Documentation of standard operating procedures</li>
+                  <li>Troubleshooting guide and common scenarios handbook</li>
+                  <li>Handover of system ownership to your team</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">Weeks 7+</div>
+              <div class="timeline-content">
+                <h4>Optimization Support</h4>
+                <ul>
+                  <li>Ongoing refinement based on real-world usage</li>
+                  <li>Troubleshooting and adjustment as edge cases emerge</li>
+                  <li>Performance monitoring against agreed success metrics</li>
+                  <li>Continuous improvement recommendations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="results-box">
+            <h4>Typical Results</h4>
+            <p>60-80% reduction in onboarding administration time, faster project starts (2-3 days vs. 10-14 days), improved client experience with professional automated touchpoints, and reduced risk of missing critical intake information.</p>
+          </div>
+        </div>
+
+        <div class="all-tracks-section">
+          <h3 class="subsection-title">Choose Your Transformation Path</h3>
+          <p class="section-subtitle-text">Start with any track and expand systematically as you grow</p>
+
+          <!-- Row 1: 2 cards centered -->
+          <div class="tracks-grid row-2">
+            <a href="/solutions/client-relationships" class="track-card-link">
+              <div class="track-card">
+                <div class="track-icon">
+                  <Icon name="users" type="outline" />
+                </div>
+                <h4>Client Relationships Management</h4>
+                <div class="benefit-metric">60% faster client onboarding</div>
+              </div>
+            </a>
+
+            <a href="/solutions/resource-optimization" class="track-card-link">
+              <div class="track-card">
+                <div class="track-icon">
+                  <Icon name="cpu-chip" type="outline" />
+                </div>
+                <h4>Resource Optimization Systems</h4>
+                <div class="benefit-metric">30% better team utilization</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Row 2: 3 cards -->
+          <div class="tracks-grid row-3">
+            <a href="/solutions/quality-assurance" class="track-card-link">
+              <div class="track-card">
+                <div class="track-icon">
+                  <Icon name="shield-check" type="outline" />
+                </div>
+                <h4>Quality Assurance Workflows</h4>
+                <div class="benefit-metric">50% reduction in quality issues</div>
+              </div>
+            </a>
+
+            <a href="/solutions/business-intelligence" class="track-card-link">
+              <div class="track-card">
+                <div class="track-icon">
+                  <Icon name="presentation-chart-line" type="outline" />
+                </div>
+                <h4>Business Intelligence Systems</h4>
+                <div class="benefit-metric">75% faster report generation</div>
+              </div>
+            </a>
+
+            <a href="/solutions/growth-systems" class="track-card-link">
+              <div class="track-card">
+                <div class="track-icon">
+                  <Icon name="rocket-launch" type="outline" />
+                </div>
+                <h4>Growth Systems Automation</h4>
+                <div class="benefit-metric">50% more clients, same team size</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Premium Divider -->
+          <div class="premium-divider">
+            <div class="divider-line"></div>
+            <span class="divider-label">Premium Tracks (Excellence Plan Only)</span>
+            <div class="divider-line"></div>
+          </div>
+
+          <!-- Row 3: 2 premium cards centered -->
+          <div class="tracks-grid row-2">
+            <a href="/solutions/multi-party-coordination" class="track-card-link">
+              <div class="track-card premium-card">
+                <div class="premium-badge">PREMIUM</div>
+                <div class="track-icon premium-icon">
+                  <Icon name="share" type="outline" />
+                </div>
+                <h4>Multi-Party Coordination Systems</h4>
+                <p class="premium-description">Advanced stakeholder orchestration with automated workflows, compliance tracking, and real-time coordination dashboards for complex multi-party projects.</p>
+                <div class="benefit-metric">40% reduction in coordination overhead</div>
+              </div>
+            </a>
+
+            <a href="/solutions/strategic-advantage" class="track-card-link">
+              <div class="track-card premium-card">
+                <div class="premium-badge">PREMIUM</div>
+                <div class="track-icon premium-icon">
+                  <Icon name="trophy" type="outline" />
+                </div>
+                <h4>Strategic Advantage Track</h4>
+                <p class="premium-description">Market differentiation through operational excellence, competitive intelligence systems, and strategic positioning frameworks that command premium pricing.</p>
+                <div class="benefit-metric">Industry leadership positioning</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Who's Behind This -->
+    <section class="ross-bio-section">
+      <div class="container">
+        <h2 class="section-heading">Meet Ross Carter-Brown, Founder</h2>
+
+        <div class="two-column-container">
+          <!-- Main Content (Left) -->
+          <div class="main-content">
+            <div class="content-block">
+              <p class="current-role"><strong>Founder & Lead Consultant, GaiaOps</strong></p>
+              <p>Ross founded GaiaOps to bridge a critical gap he identified through both environmental science experience and digital operations leadership: environmental organizations deserve operational support designed specifically for their unique workflows, not generic business consulting adapted to their sector.</p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-heading">Background</h3>
+              <p>Ross brings a rare combination of environmental science foundation and enterprise-grade digital operations expertise:</p>
+
+              <p><strong>Environmental Science:</strong> Bachelor of Science in Ecology & Biodiversity from Lincoln University (NZ), with research experience across ecological restoration, field data management, and multi-stakeholder project coordination. Contributing researcher on the Rio Tinto-funded Punakaiki Coastal Restoration Project, with co-authored published research in restoration ecology.</p>
+
+              <p><strong>Digital Operations Leadership:</strong> Co-founded and led BitPrime (New Zealand's leading cryptocurrency exchange) from concept to 35,000 customers and NZD $300M+ in transactions. Managed NZD $40M+ in assets with comprehensive risk management frameworks. Led New Zealand operations for Swyftx (Australia's top-rated exchange) during market expansion. Served as strategic partner to the CEO at Ruby Play Network (70+ employees), managing complex technical projects across regulatory dependencies.</p>
+
+              <p><strong>Systematic Process Optimization:</strong> Business Intelligence & AI Solutions Architect at Task Rescue, developing tailored automation workflows for professional services firms. Expertise in workflow automation, AI-enhanced project management, and technology integration for complex operational environments.</p>
+
+              <p><strong>Regulatory & Compliance Expertise:</strong> Industry spokesperson in consultations with New Zealand's Financial Markets Authority and Reserve Bank. Member of BlockchainNZ Executive Council. Appointed as industry expert to Ministry of Justice Advisory Group for AML/CFT Act statutory review. Deep experience navigating complex regulatory landscapes and translating technical complexity for regulatory audiences.</p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-heading">Personal Philosophy</h3>
+              <p class="inline-quote">
+                "Operational efficiency isn't just about saving time—it's about multiplying environmental impact. Every systematic improvement enables environmental organizations to serve more clients and create greater change with the same resources. The climate crisis creates daily urgency for environmental organizations to maximize their effectiveness. I'm committed to providing the operational infrastructure that lets environmental professionals focus on the mission-critical work only they can do."
+              </p>
+            </div>
+
+            <div class="bio-connect">
+              <a href="https://linkedin.com/in/rosscarterbrown" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Connect with Ross on LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Sidebar (Right) -->
+          <aside class="sidebar">
+            <div class="sidebar-card credential-card">
+              <h4 class="credential-heading">Key Credentials</h4>
+              <div class="credential">
+                <strong>BSc Ecology & Biodiversity</strong>
+                Lincoln University (NZ)
+              </div>
+              <div class="credential">
+                <strong>Co-founder & CEO, BitPrime</strong>
+                35,000 customers, $300M+ transactions
+              </div>
+              <div class="credential">
+                <strong>Head of NZ Operations, Swyftx</strong>
+                Australia's top-rated exchange
+              </div>
+              <div class="credential">
+                <strong>BI & AI Solutions Architect</strong>
+                Task Rescue - Professional services automation
+              </div>
+              <div class="credential">
+                <strong>Industry Expert</strong>
+                NZ Ministry of Justice AML/CFT Advisory Group
+              </div>
+            </div>
+
+            <div class="sidebar-card stat-box">
+              <span class="stat-number">$300M+</span>
+              <p class="stat-label">Transaction volume managed in financial services operations</p>
+            </div>
+
+            <div class="sidebar-card insight-box">
+              <h4>Rare Combination</h4>
+              <p>Environmental science foundation + enterprise digital operations mastery. This isn't consulting theory—it's hands-on experience from both worlds.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: How We Work (Values) -->
+    <section class="values-section">
+      <div class="container">
+        <h2 class="section-heading">Our Values in Action</h2>
+        <p class="section-intro">Our values aren't aspirational statements—they're operational principles that guide every client engagement and playbook development.</p>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <span class="icon-value">
+              <Icon name="rocket-launch" type="outline" />
+            </span>
+            <h3>Impact First</h3>
+            <p><strong>We measure success by the environmental work we enable, not just the systems we build.</strong></p>
+            <p>Every decision prioritizes freeing your team to focus on environmental outcomes. We're not interested in building elaborate systems that look impressive but don't translate to more environmental work accomplished. If a solution doesn't measurably increase your capacity for environmental impact, we refine until it does.</p>
+          </div>
+
+          <div class="value-card">
+            <span class="icon-value">
+              <Icon name="cog" type="outline" />
+            </span>
+            <h3>Systems Over Heroics</h3>
+            <p><strong>We solve problems through repeatable, documented processes that last beyond any individual.</strong></p>
+            <p>Environmental organizations shouldn't depend on individual heroics or tribal knowledge for operational excellence. We build systematic approaches that work regardless of who's using them—ensuring your operational excellence survives team changes, growth, and time.</p>
+          </div>
+
+          <div class="value-card">
+            <span class="icon-value">
+              <Icon name="share" type="outline" />
+            </span>
+            <h3>Radical Transparency</h3>
+            <p><strong>We communicate directly about what's working, what's not, and what we're learning along the way.</strong></p>
+            <p>No consultant-speak. No hiding behind jargon. If we encounter challenges during implementation, we communicate them immediately with proposed solutions. If we're uncertain about the best approach, we say so and work collaboratively to determine the right path. If something isn't delivering expected value, we adjust or stop doing it.</p>
+          </div>
+
+          <div class="value-card">
+            <span class="icon-value">
+              <Icon name="heart" type="outline" />
+            </span>
+            <h3>Sustainable Excellence</h3>
+            <p><strong>We build quality through smart systems, not burnout—for our team and yours.</strong></p>
+            <p>Operational excellence shouldn't come at the cost of your team's wellbeing. We design solutions that reduce stress and cognitive load, not increase it. We implement at a pace your organization can sustain, not an arbitrary timeline that creates change fatigue. Excellence is measured by lasting improvement, not initial enthusiasm followed by abandonment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Ready to Talk -->
+    <section class="final-cta-section">
+      <div class="container">
+        <h2>Let's Explore If We're the Right Fit</h2>
+        <p class="final-cta-intro">
+          We're selective about founding cohort members because we're committed to delivering exceptional results. Not every environmental organization is ready for systematic operational transformation, and that's okay. Let's have an honest conversation about whether we're the right fit for your current situation.
+        </p>
+
+        <div class="cta-grid">
+          <div class="cta-option primary-option">
+            <span class="icon-cta-large">
+              <Icon name="rocket-launch" type="outline" />
+            </span>
+            <h3>Book a Discovery Call</h3>
+            <p>30-minute conversation to understand your specific operational challenges, explore whether our playbooks align with your priority needs, and determine if joining the founding cohort makes sense for your organization.</p>
+            <p class="cta-note"><strong>No obligation. No sales pressure.</strong> Just an honest assessment of fit and mutual expectations. If we're not the right solution for you right now, we'll tell you directly and potentially suggest alternative approaches.</p>
+            <a
+              href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=about_final_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=about_final_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+              class="btn btn-primary-orange btn-large"
+            >
+              Book Discovery Call
+            </a>
+          </div>
+
+          <div class="cta-option">
+            <span class="icon-cta">
+              <Icon name="clipboard-document-check" type="outline" />
+            </span>
+            <h3>Assess Your Operational Maturity</h3>
+            <p>10-minute self-assessment to identify your current digital operations maturity level and your highest-priority improvement areas. Receive custom recommendations based on your responses, including which playbooks would deliver the greatest ROI for your organization.</p>
+            <p class="cta-benefit">Even if you don't work with GaiaOps, this assessment provides valuable insights into your operational baseline and transformation priorities.</p>
+            <a href="/assessment" class="btn btn-secondary btn-large">
+              Take Free Assessment
+            </a>
+          </div>
+
+          <div class="cta-option">
+            <span class="icon-cta">
+              <Icon name="document-text" type="outline" />
+            </span>
+            <h3>Learn More About Our Approach</h3>
+            <p>Want to understand our methodology before scheduling a conversation? Explore the Progressive Operational Excellence Framework and see how systematic advancement works across seven operational tracks.</p>
+            <a href="/how-we-help" class="btn btn-secondary btn-large">
+              How We Help
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: ">";
+  margin: 0 0.5rem;
+  color: #6B7280;
+}
+
+.breadcrumb a {
+  color: #2A7F7E;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #1B365D;
+  text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-family-primary);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-family-primary);
+}
+
+.hero-supporting {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-family-primary);
+}
+
+.hero-cta-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: white;
+  font-family: var(--font-family-primary);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+}
+
+.btn-primary-orange {
+  background-color: #D97642;
+  color: white;
+  border: 2px solid #D97642;
+}
+
+.btn-primary-orange:hover {
+  background-color: #C5663A;
+  border-color: #C5663A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 118, 66, 0.3);
+}
+
+.btn-secondary-white {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary-white:hover {
+  background-color: white;
+  color: #1B365D;
+  transform: translateY(-2px);
+}
+
+/* Two-Column Layout System */
+.two-column-container {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-content {
+  border-left: 4px solid #2A7F7E;
+  padding-left: 30px;
+}
+
+.content-block {
+  margin-bottom: 3rem;
+}
+
+.content-heading {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: #1B365D;
+  margin-bottom: 1.5rem;
+}
+
+.main-content p {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+}
+
+.inline-quote {
+  font-family: var(--font-family-secondary);
+  background: #F8F9FA;
+  border-left: 4px solid #D97642;
+  padding: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #2C3E50;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.sidebar {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.sidebar-card {
+  background: #FFFFFF;
+  border: 1px solid #F8F9FA;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #2A7F7E 0%, #1f6160 100%);
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(42, 127, 126, 0.2);
+}
+
+.stat-box-orange {
+  background: linear-gradient(135deg, #D97642 0%, #c55f30 100%);
+  box-shadow: 0 4px 12px rgba(217, 118, 66, 0.2);
+}
+
+.stat-number {
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.insight-box {
+  background: #F8F9FA;
+  border-left: 3px solid #D97642;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.insight-box h4 {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #D97642;
+  margin-bottom: 12px;
+}
+
+.insight-box p {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #2C3E50;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.credential-card {
+  background: #FFFFFF;
+  border-left: 3px solid #2A7F7E;
+}
+
+.credential-heading {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #2A7F7E;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #F8F9FA;
+}
+
+.credential {
+  font-size: 0.9rem;
+  color: #2C3E50;
+  padding: 12px 0;
+  border-bottom: 1px solid #F8F9FA;
+  font-family: var(--font-family-primary);
+}
+
+.credential:last-child {
+  border-bottom: none;
+}
+
+.credential strong {
+  color: #1B365D;
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.current-role {
+  font-size: 1.25rem;
+  color: #1B365D;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.bio-connect {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+/* Problem Section */
+.problem-section {
+  background: #F8F9FA;
+  padding: 5rem 2rem;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 3rem;
+  font-family: var(--font-family-primary);
+}
+
+.cause-item {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid #2A7F7E;
+}
+
+.cause-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-family-primary);
+}
+
+.cause-item p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2C3E50;
+  font-family: var(--font-family-primary);
+}
+
+.consequence {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #E5E7EB;
+  font-size: 1.125rem !important;
+  color: #1B365D !important;
+  font-weight: 600;
+}
+
+.content-cta {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+}
+
+.content-cta p {
+  font-size: 1.125rem;
+  color: #2C3E50;
+  margin: 0;
+  font-family: var(--font-family-primary);
+}
+
+.text-link {
+  color: #2A7F7E;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #2A7F7E;
+  transition: all 0.3s ease;
+}
+
+.text-link:hover {
+  color: #1B365D;
+  border-bottom-color: #1B365D;
+}
+
+/* Positioning Section */
+.positioning-section {
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  font-family: var(--font-family-secondary);
+}
+
+.section-intro-emphasis {
+  text-align: center;
+  font-size: 1.375rem;
+  line-height: 1.6;
+  color: #1B365D;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-weight: 600;
+  font-family: var(--font-family-primary);
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+.expertise-column {
+  background: #F8F9FA;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #2A7F7E;
+}
+
+.icon-teal-large {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  color: #2A7F7E;
+  flex-shrink: 0;
+}
+
+.column-header h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin: 0;
+  font-family: var(--font-family-primary);
+}
+
+.expertise-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.expertise-item:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.expertise-item h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-family-primary);
+}
+
+.expertise-item p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-family-primary);
+}
+
+.expertise-item p:last-child {
+  margin-bottom: 0;
+}
+
+.relevance {
+  font-weight: 600;
+  color: #1B365D !important;
+  margin-top: 1rem;
+  font-family: var(--font-family-primary) !important;
+}
+
+.expertise-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+}
+
+.expertise-item ul li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: var(--font-family-primary);
+}
+
+.expertise-item ul li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #2A7F7E;
+  font-weight: bold;
+}
+
+.expertise-item ul li:last-child {
+  margin-bottom: 0;
+}
+
+.critical-insight,
+.ops-quote {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #D97642;
+  margin-top: 2rem;
+}
+
+.critical-insight p,
+.ops-quote p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #1B365D;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+  font-family: var(--font-family-secondary);
+}
+
+.institutional-perspective {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.institutional-perspective h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.institutional-perspective p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-secondary);
+}
+
+.institutional-perspective p:last-child {
+  margin-bottom: 0;
+}
+
+/* Research Section */
+.research-section {
+  background: #F8F9FA;
+  padding: 5rem 2rem;
+}
+
+.research-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: #F8F9FA;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid #2A7F7E;
+  box-shadow: 0 4px 12px rgba(42, 127, 126, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(42, 127, 126, 0.25);
+  border-color: #2A7F7E;
+}
+
+.research-section .stat-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #1B365D !important;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family-primary);
+  opacity: 1 !important;
+  display: block;
+  text-shadow: none;
+}
+
+.research-section .stat-label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1B365D !important;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+  opacity: 1 !important;
+  display: block;
+  text-shadow: none;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #D97642;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
+.stat-detail {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #2C3E50;
+  font-family: var(--font-family-primary);
+}
+
+.learnings-section {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.learning-quote {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #2A7F7E;
+  margin-bottom: 2rem;
+}
+
+.learning-quote p:first-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1B365D;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.quote-context {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin: 0;
+  font-family: var(--font-family-secondary);
+}
+
+.research-cta {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #2A7F7E;
+}
+
+.research-cta p {
+  font-size: 1.25rem;
+  color: #1B365D;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+/* Commitment Section */
+.commitment-section {
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.commitment-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.commitment-block {
+  background: #F8F9FA;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #2A7F7E;
+}
+
+.commitment-block p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.commitment-block p:last-child {
+  margin-bottom: 0;
+}
+
+.commitment-quote {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #D97642;
+  margin-top: 1.5rem;
+}
+
+.commitment-quote p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #1B365D;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+  font-family: var(--font-family-secondary);
+}
+
+.highlight-text {
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #D97642;
+}
+
+.vision-statement {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #1B365D !important;
+  padding-top: 1.5rem;
+  border-top: 2px solid #2A7F7E;
+  margin-top: 1.5rem;
+}
+
+/* Cohort Section */
+.cohort-section {
+  background: #F8F9FA;
+  padding: 5rem 2rem;
+}
+
+.cohort-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.honest-positioning {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  border-left: 4px solid #D97642;
+  text-align: center;
+}
+
+.honest-positioning p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.honest-positioning p:last-child {
+  margin-bottom: 0;
+}
+
+.benefits-section,
+.looking-for-section,
+.investment-section,
+.guarantee-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.icon-check {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  color: #2A7F7E;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.benefit-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.benefit-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin: 0;
+  font-family: var(--font-family-primary);
+}
+
+.criteria-list {
+  margin-top: 2rem;
+}
+
+.criteria-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.criteria-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.icon-arrow {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #2A7F7E;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.criteria-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.criteria-item p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin: 0;
+  font-family: var(--font-family-primary);
+}
+
+.pricing-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 1024px) {
+  .pricing-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pricing-card {
+  background: #F8F9FA;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #2A7F7E;
+}
+
+.pricing-card.featured {
+  border-color: #2A7F7E;
+  box-shadow: 0 8px 24px rgba(42, 127, 126, 0.2);
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(42, 127, 126, 0.3);
+  border-color: #1B365D;
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #D97642;
+  color: white;
+  padding: 0.375rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: var(--font-family-primary);
+}
+
+.pricing-card h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-family-primary);
+}
+
+.tier-subtitle {
+  font-size: 0.9375rem;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.price-main {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1B365D;
+  font-family: var(--font-family-primary);
+}
+
+.price-period {
+  font-size: 1.125rem;
+  color: #2C3E50;
+  font-family: var(--font-family-primary);
+}
+
+.price-onboarding {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.price-strike {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  text-decoration: line-through;
+  font-family: var(--font-family-primary);
+}
+
+.price-waived {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #D97642;
+  font-family: var(--font-family-primary);
+}
+
+.price-total {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.price-total strong {
+  font-size: 1.125rem;
+  color: #1B365D;
+  font-family: var(--font-family-primary);
+}
+
+.price-comparison {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  font-family: var(--font-family-primary);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-features li {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #2C3E50;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: var(--font-family-primary);
+}
+
+.pricing-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2A7F7E;
+  font-weight: bold;
+}
+
+.roi-statement {
+  text-align: center;
+  padding: 1.5rem;
+  background: #F8F9FA;
+  border-radius: 8px;
+}
+
+.roi-statement p {
+  font-size: 1rem;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.guarantee-box {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 2rem;
+  background: #F8F9FA;
+  border-radius: 12px;
+  border: 2px solid #2A7F7E;
+  margin-top: 1.5rem;
+}
+
+.icon-shield {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  color: #2A7F7E;
+  flex-shrink: 0;
+}
+
+.guarantee-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.guarantee-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.guarantee-content p:last-child {
+  margin-bottom: 0;
+}
+
+.guarantee-statement {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  color: #1B365D !important;
+}
+
+.cohort-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-large {
+  padding: 1.125rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+/* Playbooks Section */
+.playbooks-section {
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.playbook-intro {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.playbook-intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.timeline-note {
+  font-size: 1rem !important;
+  color: #1B365D !important;
+  font-weight: 600 !important;
+  font-family: var(--font-family-primary) !important;
+}
+
+.playbook-example {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  background: #F8F9FA;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #2A7F7E;
+}
+
+.example-intro {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin-bottom: 2rem;
+  font-family: var(--font-family-primary);
+}
+
+.timeline {
+  margin: 2rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  flex-shrink: 0;
+  width: 100px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: white;
+  background: #2A7F7E;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-align: center;
+  font-family: var(--font-family-primary);
+  align-self: flex-start;
+}
+
+.timeline-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-family-primary);
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-content ul li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: var(--font-family-primary);
+}
+
+.timeline-content ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2A7F7E;
+  font-weight: bold;
+}
+
+.results-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #D97642;
+  margin-top: 2rem;
+}
+
+.results-box h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #D97642;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.results-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin: 0;
+  font-family: var(--font-family-primary);
+}
+
+/* All Tracks Section - Transformation Path Cards */
+.all-tracks-section {
+  margin: 4rem auto 0;
+  max-width: 1200px;
+}
+
+.all-tracks-section .subsection-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle-text {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--color-medium-gray);
+  margin-bottom: 3rem;
+  font-family: var(--font-family-primary);
+}
+
+.tracks-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tracks-grid.row-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.tracks-grid.row-3 {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .tracks-grid.row-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tracks-grid.row-2,
+  .tracks-grid.row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.track-card-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.track-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid var(--color-light-gray);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-card-link:hover .track-card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: #e5e5e5;
+}
+
+.track-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-teal-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-navy-primary);
+  font-family: var(--font-family-primary);
+}
+
+.benefit-metric {
+  color: var(--color-teal-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.9rem;
+  margin-top: auto;
+  font-family: var(--font-family-primary);
+}
+
+/* Premium Divider */
+.premium-divider {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0 3rem;
+  gap: 1rem;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-light-gray);
+}
+
+.divider-label {
+  background: var(--color-white);
+  padding: 0 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-medium-gray);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-family-primary);
+}
+
+/* Premium Cards */
+.premium-card {
+  background: var(--color-white);
+  border-color: var(--color-light-gray);
+  padding: 2.5rem;
+  position: relative;
+}
+
+.premium-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #D97642;
+  color: var(--color-white);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-family-primary);
+}
+
+.premium-icon {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.premium-description {
+  color: var(--color-dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding: 0 0.5rem;
+  font-family: var(--font-family-primary);
+}
+
+/* Ross Bio Section */
+.ross-bio-section {
+  background: #F8F9FA;
+  padding: 5rem 2rem;
+}
+
+.bio-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bio-intro {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #2A7F7E;
+}
+
+.current-role {
+  font-size: 1.375rem;
+  color: #1B365D;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.bio-intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2C3E50;
+  margin-bottom: 0;
+  font-family: var(--font-family-primary);
+}
+
+.bio-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.bio-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.bio-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.bio-section p:last-child {
+  margin-bottom: 0;
+}
+
+.philosophy-quote {
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.philosophy-quote h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.philosophy-quote p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: white;
+  font-style: italic;
+  margin: 0;
+  font-family: var(--font-family-secondary);
+}
+
+.bio-connect {
+  text-align: center;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #2A7F7E;
+  border: 2px solid #2A7F7E;
+}
+
+.btn-secondary:hover {
+  background-color: #2A7F7E;
+  color: white;
+  border-color: #2A7F7E;
+  transform: translateY(-2px);
+}
+
+/* Values Section */
+.values-section {
+  background: white;
+  padding: 5rem 2rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+@media (min-width: 768px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.value-card {
+  background: #F8F9FA;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(42, 127, 126, 0.15);
+}
+
+.icon-value {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  color: #2A7F7E;
+  flex-shrink: 0;
+  margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1B365D;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.value-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.value-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  background: linear-gradient(135deg, #1B365D 0%, #2A7F7E 100%);
+  color: white;
+  padding: 6rem 2rem;
+}
+
+.final-cta-section h2 {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-family: var(--font-family-primary);
+}
+
+.final-cta-intro {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  color: white;
+  font-family: var(--font-family-secondary);
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .cta-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cta-option {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-option:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cta-option.primary-option {
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+  border: 3px solid #D97642;
+}
+
+.icon-cta-large {
+  display: inline-flex;
+  width: 4rem;
+  height: 4rem;
+  color: #D97642;
+  flex-shrink: 0;
+  margin-bottom: 1.5rem;
+}
+
+.icon-cta {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  color: #2A7F7E;
+  flex-shrink: 0;
+  margin-bottom: 1.5rem;
+}
+
+.cta-option h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B365D;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-primary);
+}
+
+.cta-option p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.cta-note,
+.cta-benefit {
+  font-size: 0.9375rem !important;
+  font-style: italic;
+  color: #1B365D !important;
+  font-family: var(--font-family-primary) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .problem-section {
+    padding: 3rem 1rem;
+  }
+
+  .cause-item {
+    padding-left: 1rem;
+  }
+
+  /* Two-column responsive */
+  .two-column-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .main-content {
+    border-left: none;
+    padding-left: 0;
+    border-top: 4px solid #2A7F7E;
+    padding-top: 20px;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .content-heading {
+    font-size: 1.5rem;
+  }
+
+  .positioning-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-intro,
+  .section-intro-emphasis {
+    font-size: 1rem;
+  }
+
+  .expertise-column {
+    padding: 1.5rem;
+  }
+
+  .icon-teal-large {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .column-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .expertise-item h4 {
+    font-size: 1.125rem;
+  }
+
+  .institutional-perspective {
+    padding: 2rem 1.5rem;
+  }
+
+  .institutional-perspective h3 {
+    font-size: 1.5rem;
+  }
+
+  .institutional-perspective p {
+    font-size: 1rem;
+  }
+
+  .research-section,
+  .commitment-section,
+  .cohort-section,
+  .playbooks-section,
+  .ross-bio-section,
+  .values-section {
+    padding: 3rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+
+  .learning-quote {
+    padding: 1.5rem;
+  }
+
+  .commitment-block,
+  .benefits-section,
+  .looking-for-section,
+  .investment-section,
+  .guarantee-section {
+    padding: 1.5rem;
+  }
+
+  .guarantee-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icon-shield {
+    margin: 0 auto 1rem;
+  }
+
+  .playbook-example {
+    padding: 1.5rem;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .timeline-marker {
+    width: auto;
+    align-self: flex-start;
+  }
+
+  .bio-intro,
+  .bio-section,
+  .philosophy-quote {
+    padding: 1.5rem;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+
+  .icon-value {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .final-cta-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .icon-cta-large {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .icon-cta {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+</style>

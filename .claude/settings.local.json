@@ -3,7 +3,8 @@
     "allow": [
       "Bash(curl:*)",
       "Bash(npm install:*)",
-      "Bash(move src/pages/services/* src/pages/solutions/)"
+      "Bash(move src/pages/services/* src/pages/solutions/)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []
