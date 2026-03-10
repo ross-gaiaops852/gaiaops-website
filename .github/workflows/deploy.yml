@@ -193,37 +193,19 @@ jobs:
         with:
           script: |
             const status = '${{ steps.status.outputs.status }}';
-            const message = status === 'success' 
+            const message = status === 'success'
               ? '✅ **Quality Checks Passed!**\n\nYour changes look good. The build completed successfully and all quality checks passed.'
               : '❌ **Quality Checks Failed**\n\nPlease review the failed checks and fix any issues before merging.';
-            
+            const details = [
+              '**Details:**',
+              '- Build: ${{ needs.build-and-test.result }}',
+              '- Health Check: ${{ needs.wait-and-monitor.result }}',
+              '- Branch: `${{ github.ref_name }}`',
+              '- Commit: `${{ github.sha }}`'
+            ].join('\n');
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `${message}\n\n**Details:**\n- Build: ${{ needs.build-and-test.result }}\n- Health Check: ${{ needs.wait-and-monitor.result }}\n- Branch: \`${{ github.ref_name }}\`\n- Commit: \`${{ github.sha }}\``
+              body: message + '\n\n' + details
             })
-
-      - name: 📧 Optional: Email notification
-        if: env.SMTP_SERVER != '' && github.ref == 'refs/heads/main'
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: ${{ secrets.SMTP_SERVER }}
-          server_port: ${{ secrets.SMTP_PORT }}
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "${{ steps.status.outputs.message }}"
-          body: |
-            GaiaOps Website Build Report
-            
-            Status: ${{ steps.status.outputs.status }}
-            Repository: ${{ github.repository }}
-            Branch: ${{ github.ref_name }}
-            Commit: ${{ github.sha }}
-            Build: #${{ github.run_number }}
-            
-            Site URL: ${{ steps.status.outputs.url }}
-            
-            View build details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          to: ${{ secrets.NOTIFICATION_EMAIL }}
-          from: GaiaOps CI/CD <noreply@gaiaops.com>
