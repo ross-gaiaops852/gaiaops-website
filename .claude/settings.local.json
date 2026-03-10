@@ -4,7 +4,15 @@
       "Bash(curl:*)",
       "Bash(npm install:*)",
       "Bash(move src/pages/services/* src/pages/solutions/)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(dir \"C:\\Users\\rcart\\gaiaops-website\\docs\" /s /b)",
+      "Bash(cat:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(python scripts/generate_legal_pages.py:*)",
+      "Bash(python:*)",
+      "Bash(dir \"C:\\Users\\rcart\\gaiaops-website\\src\\pages\")",
+      "Bash(findstr:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
