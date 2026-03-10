@@ -3,9 +3,10 @@ export interface Props {
   name: string;
   type?: 'outline' | 'solid';
   class?: string;
+  style?: string;
 }
 
-const { name, type = 'outline', class: className = '' } = Astro.props;
+const { name, type = 'outline', class: className = '', style } = Astro.props;
 
 // Define a map of commonly used icons
 const iconMap: Record<string, Record<string, string>> = {
@@ -130,9 +131,10 @@ const iconMap: Record<string, Record<string, string>> = {
 // Get the icon SVG
 let iconSvg = iconMap[name]?.[type] || `<svg class="${className}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>`;
 
-// Add class to the SVG if provided
-if (className) {
-  iconSvg = iconSvg.replace('<svg', `<svg class="${className}"`);
+// Add class and style to the SVG if provided
+if (className || style) {
+  const attrs = [className ? `class="${className}"` : '', style ? `style="${style}"` : ''].filter(Boolean).join(' ');
+  iconSvg = iconSvg.replace('<svg', `<svg ${attrs}`);
 }
 ---
 
