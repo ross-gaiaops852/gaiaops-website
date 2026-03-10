@@ -534,7 +534,7 @@
     // Handle window resize to ensure proper behavior when switching between mobile/desktop
     window.addEventListener('resize', function() {
       if (currentOpenDropdown) {
-        const { button, menu } = currentOpenDropdown;
+        const { menu } = currentOpenDropdown;
         // Clear any conflicting styles when switching between mobile/desktop
         if (isMobileView()) {
           menu.style.opacity = '';
