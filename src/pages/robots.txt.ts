@@ -14,7 +14,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: ${site || url.origin}/sitemap-index.xml
+Sitemap: ${(site || url.origin).toString().replace(/\/$/, '')}/sitemap-index.xml
 
 # Block admin/private paths even in production
 Disallow: /admin/
