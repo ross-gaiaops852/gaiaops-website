@@ -12,6 +12,10 @@ on:
       - 'astro.config.mjs'
       - 'tsconfig.json'
   
+  # Weekly full link check (including external links)
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9am UTC
+
   # Allow manual workflow runs
   workflow_dispatch:
 
@@ -60,6 +64,9 @@ jobs:
         run: npm run build
         env:
           PUBLIC_SITE_URL: ${{ github.ref == 'refs/heads/main' && 'https://gaiaops-production-n8rje.sevalla.page' || 'https://gaiaops-dev-f1kaz.sevalla.page' }}
+
+      - name: 🔗 Check for broken links
+        run: npm run check-links
 
       - name: 📊 Generate build info
         run: |
