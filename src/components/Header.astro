@@ -1,21 +1,29 @@
 ---
+
 ---
 
 <header class="header">
   <!-- Skip to main content link for keyboard users -->
-  <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
-  
+  <a href="#main-content" class="sr-only focus:not-sr-only"
+    >Skip to main content</a
+  >
+
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-brand">
       <a href="/" class="brand-link">
-        <img src="/images/logos/gaiaops-primary.png" alt="GaiaOps - Progressive Operational Excellence" class="brand-logo" loading="lazy" />
+        <img
+          src="/images/logos/gaiaops-primary.png"
+          alt="GaiaOps - Progressive Operational Excellence"
+          class="brand-logo"
+          loading="lazy"
+        />
       </a>
     </div>
-    
+
     <!-- Mobile Hamburger Menu Button -->
-    <button 
-      class="mobile-menu-toggle" 
-      id="mobile-menu-toggle" 
+    <button
+      class="mobile-menu-toggle"
+      id="mobile-menu-toggle"
       aria-label="Open navigation menu"
       aria-expanded="false"
       aria-controls="nav-menu"
@@ -25,14 +33,14 @@
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
     </button>
-    
+
     <!-- Desktop Navigation -->
     <div class="nav-menu" id="nav-menu">
       <div class="nav-dropdown mobile-dropdown">
         <div class="nav-dropdown-wrapper">
           <a href="/solutions" class="nav-link dropdown-main-link">Solutions</a>
-          <button 
-            class="dropdown-trigger dropdown-arrow" 
+          <button
+            class="dropdown-trigger dropdown-arrow"
             id="solutions-button"
             aria-expanded="false"
             aria-haspopup="true"
@@ -41,57 +49,179 @@
             type="button"
             aria-label="Toggle Solutions menu"
           >
-            <svg class="chevron-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <svg
+              class="chevron-icon"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
         </div>
-        <div 
-          class="dropdown-menu mobile-submenu" 
+        <div
+          class="dropdown-menu mobile-submenu"
           id="solutions-menu"
           role="menu"
           aria-labelledby="solutions-button"
           hidden
         >
-          <a href="/solutions/multi-party-coordination" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">
-            <svg class="w-4 h-4 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          <a
+            href="/solutions/multi-party-coordination"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1"
+          >
+            <svg
+              class="w-4 h-4 mr-2 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              ></path>
             </svg>
             Multi-Party Coordination
           </a>
-          <a href="/solutions/client-relationships" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">
-            <svg class="w-4 h-4 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          <a
+            href="/solutions/client-relationships"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1"
+          >
+            <svg
+              class="w-4 h-4 mr-2 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              ></path>
             </svg>
             Client Relationships
           </a>
-          <a href="/solutions/resource-optimization" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">
-            <svg class="w-4 h-4 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+          <a
+            href="/solutions/resource-optimization"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1"
+          >
+            <svg
+              class="w-4 h-4 mr-2 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"
+              ></path>
             </svg>
             Resource Optimization
           </a>
-          <a href="/solutions/quality-assurance" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">
-            <svg class="w-4 h-4 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          <a
+            href="/solutions/quality-assurance"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1"
+          >
+            <svg
+              class="w-4 h-4 mr-2 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path>
             </svg>
             Quality Assurance
           </a>
-          <a href="/solutions/business-intelligence" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">
-            <svg class="w-4 h-4 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          <a
+            href="/solutions/business-intelligence"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1"
+          >
+            <svg
+              class="w-4 h-4 mr-2 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              ></path>
             </svg>
             Business Intelligence
           </a>
-          <a href="/solutions/growth-systems" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">
-            <svg class="w-4 h-4 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          <a
+            href="/solutions/growth-systems"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1"
+          >
+            <svg
+              class="w-4 h-4 mr-2 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
             </svg>
             Growth Systems
           </a>
-          <a href="/solutions/strategic-advantage" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">
-            <svg class="w-4 h-4 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+          <a
+            href="/solutions/strategic-advantage"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1"
+          >
+            <svg
+              class="w-4 h-4 mr-2 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+              ></path>
             </svg>
             Strategic Advantage
           </a>
@@ -103,8 +233,8 @@
       <div class="nav-dropdown mobile-dropdown">
         <div class="nav-dropdown-wrapper">
           <a href="/resources" class="nav-link dropdown-main-link">Resources</a>
-          <button 
-            class="dropdown-trigger dropdown-arrow" 
+          <button
+            class="dropdown-trigger dropdown-arrow"
             id="resources-button"
             aria-expanded="false"
             aria-haspopup="true"
@@ -113,38 +243,79 @@
             type="button"
             aria-label="Toggle Resources menu"
           >
-            <svg class="chevron-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <svg
+              class="chevron-icon"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
         </div>
-        <div 
-          class="dropdown-menu mobile-submenu" 
+        <div
+          class="dropdown-menu mobile-submenu"
           id="resources-menu"
           role="menu"
           aria-labelledby="resources-button"
           hidden
         >
-          <a href="/resources/case-studies" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">Case Studies</a>
-          <a href="/resources/guides" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">Implementation Guides</a>
-          <a href="/resources/reports" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">Industry Reports</a>
-          <a href="/resources/blog" class="dropdown-link mobile-dropdown-link" role="menuitem" tabindex="-1">Blog</a>
+          <a
+            href="/resources/case-studies"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1">Case Studies</a
+          >
+          <a
+            href="/resources/guides"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1">Implementation Guides</a
+          >
+          <a
+            href="/resources/reports"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1">Industry Reports</a
+          >
+          <a
+            href="/resources/blog"
+            class="dropdown-link mobile-dropdown-link"
+            role="menuitem"
+            tabindex="-1">Blog</a
+          >
         </div>
       </div>
       <a href="/contact" class="nav-link">Contact</a>
-      
+
       <!-- Mobile CTA buttons inside menu -->
       <div class="mobile-cta">
-        <button class="btn btn-secondary" onclick="alert('Assessment coming soon!')">Operational Assessment</button>
-        <a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=header_mobile_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form"
-           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=header_mobile_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
-           class="btn btn-primary">Discovery Call</a>
+        <button
+          class="btn btn-secondary"
+          onclick="alert('Assessment coming soon!')"
+          >Operational Assessment</button
+        >
+        <a
+          href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=header_mobile_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=header_mobile_cta&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+          class="btn btn-primary">Discovery Call</a
+        >
       </div>
     </div>
-    
+
     <!-- Desktop CTA -->
     <div class="nav-cta desktop-cta">
-      <button class="btn btn-secondary" onclick="alert('Assessment coming soon!')">Operational Assessment</button>
+      <button
+        class="btn btn-secondary"
+        onclick="alert('Assessment coming soon!')"
+        >Operational Assessment</button
+      >
       <a href="/contact" class="btn btn-primary">Discovery Call</a>
     </div>
   </nav>
@@ -152,58 +323,77 @@
 
 <script>
   // Comprehensive keyboard navigation and accessibility
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const mobileToggle = document.getElementById('mobile-menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     const solutionsButton = document.getElementById('solutions-button');
     const solutionsMenu = document.getElementById('solutions-menu');
     const resourcesButton = document.getElementById('resources-button');
     const resourcesMenu = document.getElementById('resources-menu');
-    
-    let currentOpenDropdown: { button: HTMLElement; menu: HTMLElement } | null = null;
+
+    let currentOpenDropdown: { button: HTMLElement; menu: HTMLElement } | null =
+      null;
     let currentFocusIndex = -1;
     let keyboardMode = false; // Track if we're in keyboard mode
-    
+
     // Highlight current page in navigation
     function highlightCurrentPage() {
       const currentPath = window.location.pathname;
-      const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-trigger)');
-      
-      navLinks.forEach(link => {
-        const linkPath = new URL((link as HTMLAnchorElement).href, window.location.origin).pathname;
-        if (linkPath === currentPath || (currentPath.startsWith(linkPath) && linkPath !== '/')) {
+      const navLinks = document.querySelectorAll(
+        '.nav-link:not(.dropdown-trigger)'
+      );
+
+      navLinks.forEach((link) => {
+        const linkPath = new URL(
+          (link as HTMLAnchorElement).href,
+          window.location.origin
+        ).pathname;
+        if (
+          linkPath === currentPath ||
+          (currentPath.startsWith(linkPath) && linkPath !== '/')
+        ) {
           link.classList.add('current-page');
         }
       });
-      
+
       // Handle dropdown links in submenus
       const dropdownLinks = document.querySelectorAll('.dropdown-link');
-      dropdownLinks.forEach(link => {
-        const linkPath = new URL((link as HTMLAnchorElement).href, window.location.origin).pathname;
+      dropdownLinks.forEach((link) => {
+        const linkPath = new URL(
+          (link as HTMLAnchorElement).href,
+          window.location.origin
+        ).pathname;
         if (linkPath === currentPath) {
           link.classList.add('current-page');
         }
       });
     }
-    
+
     // Call the function
     highlightCurrentPage();
-    
+
     // Track input method to prevent unwanted focus rings
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Tab' || e.key.startsWith('Arrow') || e.key === 'Enter' || e.key === ' ') {
+    document.addEventListener('keydown', function (e) {
+      if (
+        e.key === 'Tab' ||
+        e.key.startsWith('Arrow') ||
+        e.key === 'Enter' ||
+        e.key === ' '
+      ) {
         keyboardMode = true;
         // Remove mouse-hover class from all dropdown triggers when keyboard is used
-        document.querySelectorAll('.dropdown-trigger.mouse-hover').forEach(el => {
-          el.classList.remove('mouse-hover');
-        });
+        document
+          .querySelectorAll('.dropdown-trigger.mouse-hover')
+          .forEach((el) => {
+            el.classList.remove('mouse-hover');
+          });
       }
     });
-    
-    document.addEventListener('mousedown', function() {
+
+    document.addEventListener('mousedown', function () {
       keyboardMode = false;
     });
-    
+
     // Mobile menu toggle functionality
     function toggleMobileMenu() {
       if (!navMenu || !mobileToggle) return;
@@ -228,50 +418,56 @@
         }
       }
     }
-    
+
     // Check if we're in mobile view
     function isMobileView() {
       return window.innerWidth <= 768;
     }
-    
+
     // Dropdown functionality
-    function openDropdown(button: HTMLElement, menu: HTMLElement, focusFirst = false) {
+    function openDropdown(
+      button: HTMLElement,
+      menu: HTMLElement,
+      focusFirst = false
+    ) {
       if (isMobileView()) {
         // Mobile dropdown toggle
         toggleMobileDropdown(button, menu);
         return;
       }
-      
+
       // Desktop dropdown behavior
       closeAllDropdowns();
-      
+
       menu.removeAttribute('hidden');
       menu.style.opacity = '1';
       menu.style.visibility = 'visible';
       menu.style.transform = 'translateY(0)';
-      
+
       button.setAttribute('aria-expanded', 'true');
       currentOpenDropdown = { button, menu };
-      
+
       // Focus first menu item only if opened via keyboard
       if (focusFirst) {
-        const firstMenuItem = menu.querySelector('[role="menuitem"]') as HTMLElement | null;
+        const firstMenuItem = menu.querySelector(
+          '[role="menuitem"]'
+        ) as HTMLElement | null;
         if (firstMenuItem) {
           firstMenuItem.focus();
           currentFocusIndex = 0;
         }
       }
     }
-    
+
     // Mobile dropdown toggle functionality
     function toggleMobileDropdown(button: HTMLElement, menu: HTMLElement) {
       const isExpanded = button.getAttribute('aria-expanded') === 'true';
-      
+
       // Clear any inline styles that might interfere
       menu.style.opacity = '';
       menu.style.visibility = '';
       menu.style.transform = '';
-      
+
       if (isExpanded) {
         menu.setAttribute('hidden', '');
         menu.classList.remove('active');
@@ -282,26 +478,30 @@
         button.setAttribute('aria-expanded', 'true');
       }
     }
-    
-    function closeDropdown(button: HTMLElement, menu: HTMLElement, returnFocus = true) {
+
+    function closeDropdown(
+      button: HTMLElement,
+      menu: HTMLElement,
+      returnFocus = true
+    ) {
       menu.setAttribute('hidden', '');
       menu.style.opacity = '0';
       menu.style.visibility = 'hidden';
       menu.style.transform = 'translateY(-10px)';
-      
+
       button.setAttribute('aria-expanded', 'false');
-      
+
       // Only return focus if we're in keyboard mode or explicitly requested
       if (returnFocus && keyboardMode) {
         button.focus();
       }
-      
+
       if (currentOpenDropdown && currentOpenDropdown.menu === menu) {
         currentOpenDropdown = null;
       }
       currentFocusIndex = -1;
     }
-    
+
     function closeAllDropdowns(returnFocus = true) {
       if (isMobileView()) {
         // On mobile, just close the dropdowns without desktop styling
@@ -325,71 +525,86 @@
         }
       }
     }
-    
+
     // Keyboard navigation within dropdown
     function navigateDropdown(menu: HTMLElement, direction: string) {
-      const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
-      
+      const menuItems = Array.from(
+        menu.querySelectorAll('[role="menuitem"]')
+      ) as HTMLElement[];
+
       if (direction === 'down') {
-        currentFocusIndex = currentFocusIndex < menuItems.length - 1 ? currentFocusIndex + 1 : 0;
+        currentFocusIndex =
+          currentFocusIndex < menuItems.length - 1 ? currentFocusIndex + 1 : 0;
       } else if (direction === 'up') {
-        currentFocusIndex = currentFocusIndex > 0 ? currentFocusIndex - 1 : menuItems.length - 1;
+        currentFocusIndex =
+          currentFocusIndex > 0 ? currentFocusIndex - 1 : menuItems.length - 1;
       }
-      
+
       if (menuItems[currentFocusIndex]) {
         menuItems[currentFocusIndex].focus();
       }
     }
-    
+
     // Mouse hover support for dropdowns (desktop only)
-    function setupHoverSupport(button: HTMLElement, menu: HTMLElement, wrapper: HTMLElement | null | undefined) {
+    function setupHoverSupport(
+      button: HTMLElement,
+      menu: HTMLElement,
+      wrapper: HTMLElement | null | undefined
+    ) {
       const dropdown = wrapper || button.parentElement;
       if (!dropdown) return;
 
-      dropdown.addEventListener('mouseenter', function() {
+      dropdown.addEventListener('mouseenter', function () {
         if (isMobileView()) return; // Skip hover on mobile
-        
+
         keyboardMode = false; // Ensure we're in mouse mode
         button.classList.add('mouse-hover'); // Mark as mouse interaction
         openDropdown(button, menu, false); // Never focus on mouse hover
       });
-      
-      dropdown.addEventListener('mouseleave', function() {
+
+      dropdown.addEventListener('mouseleave', function () {
         if (isMobileView()) return; // Skip hover on mobile
-        
+
         button.classList.remove('mouse-hover'); // Remove mouse interaction marker
         // Only close if not focused via keyboard
-        if (!keyboardMode && document.activeElement !== button && !menu.contains(document.activeElement)) {
+        if (
+          !keyboardMode &&
+          document.activeElement !== button &&
+          !menu.contains(document.activeElement)
+        ) {
           closeDropdown(button, menu, false); // Don't return focus during mouse interactions
         }
       });
     }
-    
+
     // Event listeners
     if (mobileToggle && navMenu) {
       mobileToggle.addEventListener('click', toggleMobileMenu);
-      
+
       // Mobile menu keyboard support
-      mobileToggle.addEventListener('keydown', function(e) {
+      mobileToggle.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           toggleMobileMenu();
         }
       });
     }
-    
+
     // Solutions dropdown
     if (solutionsButton && solutionsMenu) {
-      const solutionsWrapper = solutionsButton.closest('.nav-dropdown-wrapper')?.parentElement;
+      const solutionsWrapper = solutionsButton.closest(
+        '.nav-dropdown-wrapper'
+      )?.parentElement;
       setupHoverSupport(solutionsButton, solutionsMenu, solutionsWrapper);
-      
-      solutionsButton.addEventListener('click', function(e) {
+
+      solutionsButton.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent any default button behavior
-        
+
         if (isMobileView()) {
           toggleMobileDropdown(solutionsButton, solutionsMenu);
         } else {
-          const isOpen = solutionsButton.getAttribute('aria-expanded') === 'true';
+          const isOpen =
+            solutionsButton.getAttribute('aria-expanded') === 'true';
           if (isOpen) {
             closeDropdown(solutionsButton, solutionsMenu);
           } else {
@@ -397,16 +612,17 @@
           }
         }
       });
-      
-      solutionsButton.addEventListener('keydown', function(e) {
-        switch(e.key) {
+
+      solutionsButton.addEventListener('keydown', function (e) {
+        switch (e.key) {
           case 'Enter':
           case ' ':
             e.preventDefault();
             if (isMobileView()) {
               toggleMobileDropdown(solutionsButton, solutionsMenu);
             } else {
-              const isOpen = solutionsButton.getAttribute('aria-expanded') === 'true';
+              const isOpen =
+                solutionsButton.getAttribute('aria-expanded') === 'true';
               if (isOpen) {
                 closeDropdown(solutionsButton, solutionsMenu);
               } else {
@@ -428,19 +644,22 @@
         }
       });
     }
-    
+
     // Resources dropdown
     if (resourcesButton && resourcesMenu) {
-      const resourcesWrapper = resourcesButton.closest('.nav-dropdown-wrapper')?.parentElement;
+      const resourcesWrapper = resourcesButton.closest(
+        '.nav-dropdown-wrapper'
+      )?.parentElement;
       setupHoverSupport(resourcesButton, resourcesMenu, resourcesWrapper);
-      
-      resourcesButton.addEventListener('click', function(e) {
+
+      resourcesButton.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent any default button behavior
-        
+
         if (isMobileView()) {
           toggleMobileDropdown(resourcesButton, resourcesMenu);
         } else {
-          const isOpen = resourcesButton.getAttribute('aria-expanded') === 'true';
+          const isOpen =
+            resourcesButton.getAttribute('aria-expanded') === 'true';
           if (isOpen) {
             closeDropdown(resourcesButton, resourcesMenu);
           } else {
@@ -448,16 +667,17 @@
           }
         }
       });
-      
-      resourcesButton.addEventListener('keydown', function(e) {
-        switch(e.key) {
+
+      resourcesButton.addEventListener('keydown', function (e) {
+        switch (e.key) {
           case 'Enter':
           case ' ':
             e.preventDefault();
             if (isMobileView()) {
               toggleMobileDropdown(resourcesButton, resourcesMenu);
             } else {
-              const isOpen = resourcesButton.getAttribute('aria-expanded') === 'true';
+              const isOpen =
+                resourcesButton.getAttribute('aria-expanded') === 'true';
               if (isOpen) {
                 closeDropdown(resourcesButton, resourcesMenu);
               } else {
@@ -479,14 +699,14 @@
         }
       });
     }
-    
+
     // Dropdown menu item keyboard navigation
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (!currentOpenDropdown) return;
-      
+
       const menu = currentOpenDropdown.menu;
-      
-      switch(e.key) {
+
+      switch (e.key) {
         case 'ArrowDown':
           e.preventDefault();
           navigateDropdown(menu, 'down');
@@ -505,17 +725,19 @@
           break;
       }
     });
-    
+
     // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       if (!(e.target as HTMLElement)?.closest('.nav-dropdown')) {
         closeAllDropdowns(false); // Don't return focus when clicking outside
       }
     });
-    
+
     // Close mobile menu when clicking on a link (but not dropdown triggers)
-    const navLinks = navMenu?.querySelectorAll('.nav-link:not(.dropdown-trigger), .dropdown-link, .btn');
-    navLinks?.forEach(link => {
+    const navLinks = navMenu?.querySelectorAll(
+      '.nav-link:not(.dropdown-trigger), .dropdown-link, .btn'
+    );
+    navLinks?.forEach((link) => {
       link.addEventListener('click', () => {
         if (navMenu?.classList.contains('active')) {
           toggleMobileMenu();
@@ -523,16 +745,16 @@
         closeAllDropdowns();
       });
     });
-    
+
     // Escape key closes mobile menu
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navMenu?.classList.contains('active')) {
         toggleMobileMenu();
       }
     });
-    
+
     // Handle window resize to ensure proper behavior when switching between mobile/desktop
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
       if (currentOpenDropdown) {
         const { menu } = currentOpenDropdown;
         // Clear any conflicting styles when switching between mobile/desktop
@@ -543,17 +765,21 @@
         }
       }
     });
-    
+
     // Mobile header hide/show on scroll functionality
     let lastScrollTop = 0;
     let ticking = false;
-    
+
     function handleScroll() {
       if (!isMobileView()) return; // Only apply on mobile
 
       const header = document.querySelector('.header');
-      if (!header) { ticking = false; return; }
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (!header) {
+        ticking = false;
+        return;
+      }
+      const currentScroll =
+        window.pageYOffset || document.documentElement.scrollTop;
 
       // Don't hide header if mobile menu is open
       if (navMenu && navMenu.classList.contains('active')) {
@@ -584,17 +810,17 @@
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
       ticking = false;
     }
-    
+
     function requestTick() {
       if (!ticking) {
         requestAnimationFrame(handleScroll);
         ticking = true;
       }
     }
-    
+
     // Add scroll listener with throttling
     window.addEventListener('scroll', requestTick);
-    
+
     // Initialize header state
     const header = document.querySelector('.header');
     if (isMobileView() && header) {
@@ -605,571 +831,571 @@
 </script>
 
 <style>
-.header {
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-light-gray);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  transition: transform 0.3s ease-in-out;
-  will-change: transform;
-}
-
-/* Mobile header hide/show states - only apply on mobile */
-@media (max-width: 768px) {
   .header {
-    position: fixed;
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-light-gray);
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 50;
+    transition: transform 0.3s ease-in-out;
     will-change: transform;
   }
-  
-  .header-hidden {
-    transform: translateY(-100%);
+
+  /* Mobile header hide/show states - only apply on mobile */
+  @media (max-width: 768px) {
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+
+    .header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .header-visible {
+      transform: translateY(0);
+    }
+
+    /* Add body padding to account for fixed header */
+    body {
+      padding-top: 80px;
+    }
   }
-  
-  .header-visible {
-    transform: translateY(0);
-  }
-  
-  /* Add body padding to account for fixed header */
-  body {
-    padding-top: 80px;
-  }
-}
 
-.nav {
-  max-width: var(--container-xl);
-  margin: 0 auto;
-  padding: var(--spacing-2) var(--spacing-2);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand-logo {
-  height: 40px;
-  width: auto;
-  transition: opacity var(--transition-normal);
-}
-
-.brand-link:hover .brand-logo {
-  opacity: 0.9;
-}
-
-.brand-link:focus-visible {
-  outline: 2px solid var(--color-teal-primary);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4);
-}
-
-.nav-link {
-  color: var(--color-dark-gray);
-  text-decoration: none;
-  font-weight: var(--font-weight-medium);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-small);
-  transition: color var(--transition-normal);
-}
-
-.nav-link:hover {
-  color: var(--color-teal-primary);
-}
-
-.nav-link:focus-visible {
-  outline: 2px solid var(--color-teal-primary);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
-
-/* Active/current page styling */
-.nav-link.current-page {
-  color: var(--color-teal-primary);
-  font-weight: var(--font-weight-semibold);
-  position: relative;
-}
-
-.nav-link.current-page::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: var(--color-teal-primary);
-  border-radius: 1px;
-}
-
-.nav-dropdown {
-  position: relative;
-}
-
-.nav-dropdown-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.dropdown-main-link {
-  /* Inherits nav-link styles */
-}
-
-.dropdown-arrow {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-normal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dropdown-arrow:hover {
-  background-color: rgba(74, 155, 139, 0.1);
-}
-
-.dropdown-arrow:focus-visible {
-  outline: 2px solid var(--color-teal-primary);
-  outline-offset: 2px;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--color-white);
-  border: 1px solid var(--color-light-gray);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  padding: var(--spacing-1) 0;
-  min-width: 250px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all var(--transition-normal);
-}
-
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown .dropdown-menu:not([hidden]) {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown-link {
-  display: flex;
-  align-items: center;
-  padding: var(--spacing-1) var(--spacing-2);
-  color: var(--color-dark-gray);
-  text-decoration: none;
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-small);
-  transition: all var(--transition-normal);
-}
-
-.dropdown-link:hover {
-  background-color: var(--color-off-white);
-  color: var(--color-teal-primary);
-}
-
-.dropdown-link:focus-visible {
-  background-color: var(--color-off-white);
-  color: var(--color-teal-primary);
-  outline: 2px solid var(--color-teal-primary);
-  outline-offset: -2px;
-}
-
-/* Current page styling for dropdown links */
-.dropdown-link.current-page {
-  background-color: var(--color-teal-primary);
-  color: var(--color-white);
-  font-weight: var(--font-weight-semibold);
-}
-
-.dropdown-link.current-page:hover {
-  background-color: var(--color-teal-primary);
-  color: var(--color-white);
-}
-
-/* Prevent focus rings on dropdown menu items when opened via mouse */
-.dropdown-menu [role="menuitem"]:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* Only show focus rings when actually keyboard navigating */
-.dropdown-menu [role="menuitem"]:focus-visible {
-  background-color: var(--color-off-white);
-  color: var(--color-teal-primary);
-  outline: 2px solid var(--color-teal-primary);
-  outline-offset: -2px;
-}
-
-/* Icon styling for dropdown links */
-.dropdown-link svg {
-  flex-shrink: 0;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
-.h-4 {
-  height: 1rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-/* Skip to main content link */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.focus\:not-sr-only:focus-visible {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-  background-color: var(--color-teal-primary);
-  color: var(--color-white);
-  font-weight: var(--font-weight-medium);
-  text-decoration: none;
-  border-radius: var(--radius-md);
-  z-index: 100;
-}
-
-/* Dropdown trigger button styling */
-.dropdown-trigger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  font: inherit;
-}
-
-/* Prevent focus rings during mouse hover */
-.dropdown-trigger.mouse-hover:focus,
-.dropdown-trigger.mouse-hover:focus-visible {
-  outline: none !important;
-}
-
-.nav-cta {
-  display: flex;
-  gap: var(--spacing-2);
-}
-
-.btn {
-  padding: 10px var(--spacing-2);
-  border-radius: var(--radius-md);
-  font-weight: var(--font-weight-medium);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-small);
-  text-decoration: none;
-  transition: all var(--transition-normal);
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: var(--color-orange-accent);
-  color: var(--color-white);
-}
-
-.btn-primary:hover {
-  background-color: var(--color-orange-accent-hover);
-  transform: translateY(-1px);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--color-navy-primary);
-  border: 2px solid var(--color-navy-primary);
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-navy-primary);
-  color: var(--color-white);
-}
-
-.btn:focus-visible {
-  outline: 2px solid var(--color-teal-primary);
-  outline-offset: 2px;
-}
-
-/* Mobile Menu Toggle Button */
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.75rem;
-  min-width: 48px;
-  min-height: 48px;
-  border-radius: var(--radius-md);
-  transition: background-color var(--transition-normal);
-  z-index: 51;
-}
-
-.mobile-menu-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.mobile-menu-toggle:active {
-  background-color: rgba(0, 0, 0, 0.1);
-  transform: scale(0.98);
-}
-
-.hamburger-line {
-  width: 24px;
-  height: 2px;
-  background-color: var(--color-dark-gray);
-  margin: 3px 0;
-  transition: all var(--transition-normal);
-  border-radius: 2px;
-}
-
-/* Hamburger animation when active */
-.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
-}
-
-.mobile-menu-toggle:focus-visible {
-  outline: 2px solid var(--color-teal-primary);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
-
-/* Mobile CTA - hidden by default */
-.mobile-cta {
-  display: none;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem 0 0;
-  margin-top: auto;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.mobile-cta .btn {
-  width: 100%;
-  text-align: center;
-  padding: 1rem;
-  min-height: 48px;
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-}
-
-/* Desktop CTA */
-.desktop-cta {
-  display: flex;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
   .nav {
-    padding: var(--spacing-2);
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: var(--spacing-2) var(--spacing-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    height: 40px;
+    width: auto;
+    transition: opacity var(--transition-normal);
+  }
+
+  .brand-link:hover .brand-logo {
+    opacity: 0.9;
+  }
+
+  .brand-link:focus-visible {
+    outline: 2px solid var(--color-teal-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+  }
+
+  .nav-link {
+    color: var(--color-dark-gray);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-small);
+    transition: color var(--transition-normal);
+  }
+
+  .nav-link:hover {
+    color: var(--color-teal-primary);
+  }
+
+  .nav-link:focus-visible {
+    outline: 2px solid var(--color-teal-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Active/current page styling */
+  .nav-link.current-page {
+    color: var(--color-teal-primary);
+    font-weight: var(--font-weight-semibold);
     position: relative;
   }
-  
-  /* Show mobile menu toggle */
-  .mobile-menu-toggle {
+
+  .nav-link.current-page::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-teal-primary);
+    border-radius: 1px;
+  }
+
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown-wrapper {
     display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
-  
-  /* Hide desktop CTA on mobile */
-  .desktop-cta {
-    display: none;
+
+  .dropdown-main-link {
+    /* Inherits nav-link styles */
   }
-  
-  /* Mobile menu styling */
-  .nav-menu {
+
+  .dropdown-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dropdown-arrow:hover {
+    background-color: rgba(74, 155, 139, 0.1);
+  }
+
+  .dropdown-arrow:focus-visible {
+    outline: 2px solid var(--color-teal-primary);
+    outline-offset: 2px;
+  }
+
+  .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
-    right: 0;
     background: var(--color-white);
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1.5rem;
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
-    border-top: 1px solid var(--color-light-gray);
-    gap: 0;
+    padding: var(--spacing-1) 0;
+    min-width: 250px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all var(--transition-normal);
-    z-index: 50;
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
   }
-  
-  /* Show mobile menu when active */
-  .nav-menu.active {
+
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown .dropdown-menu:not([hidden]) {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  
-  /* Mobile menu links */
-  .nav-link {
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    text-align: left;
-    font-size: var(--font-size-base);
-    min-height: 48px;
+
+  .dropdown-link {
     display: flex;
     align-items: center;
+    padding: var(--spacing-1) var(--spacing-2);
+    color: var(--color-dark-gray);
+    text-decoration: none;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-small);
     transition: all var(--transition-normal);
   }
-  
-  .nav-link:hover {
+
+  .dropdown-link:hover {
+    background-color: var(--color-off-white);
     color: var(--color-teal-primary);
-    background-color: rgba(6, 182, 212, 0.05);
-    padding-left: 0.5rem;
-    border-radius: var(--radius-sm);
   }
-  
-  /* Mobile current page styling */
-  .nav-link.current-page::after {
-    display: none; /* Hide desktop underline */
+
+  .dropdown-link:focus-visible {
+    background-color: var(--color-off-white);
+    color: var(--color-teal-primary);
+    outline: 2px solid var(--color-teal-primary);
+    outline-offset: -2px;
   }
-  
-  .nav-link.current-page {
-    background-color: rgba(6, 182, 212, 0.1);
-    border-radius: var(--radius-sm);
-    margin: 0 -0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+
+  /* Current page styling for dropdown links */
+  .dropdown-link.current-page {
+    background-color: var(--color-teal-primary);
+    color: var(--color-white);
+    font-weight: var(--font-weight-semibold);
   }
-  
-  /* Add tap feedback for mobile links */
-  .nav-link:active {
-    background-color: rgba(6, 182, 212, 0.15);
+
+  .dropdown-link.current-page:hover {
+    background-color: var(--color-teal-primary);
+    color: var(--color-white);
+  }
+
+  /* Prevent focus rings on dropdown menu items when opened via mouse */
+  .dropdown-menu [role='menuitem']:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Only show focus rings when actually keyboard navigating */
+  .dropdown-menu [role='menuitem']:focus-visible {
+    background-color: var(--color-off-white);
+    color: var(--color-teal-primary);
+    outline: 2px solid var(--color-teal-primary);
+    outline-offset: -2px;
+  }
+
+  /* Icon styling for dropdown links */
+  .dropdown-link svg {
+    flex-shrink: 0;
+  }
+
+  .w-4 {
+    width: 1rem;
+  }
+
+  .h-4 {
+    height: 1rem;
+  }
+
+  .mr-2 {
+    margin-right: 0.5rem;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+
+  /* Skip to main content link */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .focus\:not-sr-only:focus-visible {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    background-color: var(--color-teal-primary);
+    color: var(--color-white);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    z-index: 100;
+  }
+
+  /* Dropdown trigger button styling */
+  .dropdown-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+  }
+
+  /* Prevent focus rings during mouse hover */
+  .dropdown-trigger.mouse-hover:focus,
+  .dropdown-trigger.mouse-hover:focus-visible {
+    outline: none !important;
+  }
+
+  .nav-cta {
+    display: flex;
+    gap: var(--spacing-2);
+  }
+
+  .btn {
+    padding: 10px var(--spacing-2);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: var(--color-orange-accent);
+    color: var(--color-white);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-orange-accent-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-navy-primary);
+    border: 2px solid var(--color-navy-primary);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-navy-primary);
+    color: var(--color-white);
+  }
+
+  .btn:focus-visible {
+    outline: 2px solid var(--color-teal-primary);
+    outline-offset: 2px;
+  }
+
+  /* Mobile Menu Toggle Button */
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-normal);
+    z-index: 51;
+  }
+
+  .mobile-menu-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-menu-toggle:active {
+    background-color: rgba(0, 0, 0, 0.1);
     transform: scale(0.98);
   }
-  
-  /* Mobile dropdown styling - Override desktop styles completely */
-  .nav-menu .nav-dropdown-wrapper {
-    justify-content: space-between;
-    width: 100%;
+
+  .hamburger-line {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-dark-gray);
+    margin: 3px 0;
+    transition: all var(--transition-normal);
+    border-radius: 2px;
   }
-  
-  .nav-menu .dropdown-main-link {
-    flex: 1;
+
+  /* Hamburger animation when active */
+  .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
   }
-  
-  .nav-menu .dropdown-arrow {
-    padding: 0.5rem;
+
+  .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
   }
-  
-  .nav-menu .chevron-icon {
-    transition: transform 0.2s ease;
+
+  .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
   }
-  
-  .nav-menu .dropdown-arrow[aria-expanded="true"] .chevron-icon {
-    transform: rotate(180deg);
+
+  .mobile-menu-toggle:focus-visible {
+    outline: 2px solid var(--color-teal-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
   }
-  
-  .nav-menu .dropdown-menu.mobile-submenu {
-    /* Override all desktop dropdown styles */
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    width: auto !important;
-    min-width: auto !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
-    transform: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: rgba(6, 182, 212, 0.05) !important;
-    margin: 0 !important;
-    margin-top: 0 !important;
-    border-radius: var(--radius-md) !important;
-    padding: 0 !important;
-    transition: all 0.3s ease !important;
-  }
-  
-  .nav-menu .dropdown-menu.mobile-submenu.active {
-    opacity: 1 !important;
-    visibility: visible !important;
-    max-height: 500px !important;
-    padding: 0.5rem 0 !important;
-    background: rgba(6, 182, 212, 0.05) !important;
-    display: block !important;
-  }
-  
-  .nav-menu .mobile-dropdown-link {
-    padding: 0.75rem 1rem;
-    font-size: var(--font-size-small);
-    margin: 0;
-    min-height: 44px;
-    border-bottom: none;
-  }
-  
-  .nav-menu .mobile-dropdown-link:hover {
-    background-color: rgba(6, 182, 212, 0.1);
-    padding-left: 1.5rem;
-  }
-  
-  /* Show mobile CTA */
+
+  /* Mobile CTA - hidden by default */
   .mobile-cta {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 0 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-cta .btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    min-height: 48px;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  /* Desktop CTA */
+  .desktop-cta {
     display: flex;
   }
-  
-  .brand-logo {
-    height: 32px;
-  }
-}
 
-@media (max-width: 480px) {
-  .btn {
-    font-size: var(--font-size-caption);
-    padding: 8px var(--spacing-2);
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .nav {
+      padding: var(--spacing-2);
+      position: relative;
+    }
+
+    /* Show mobile menu toggle */
+    .mobile-menu-toggle {
+      display: flex;
+    }
+
+    /* Hide desktop CTA on mobile */
+    .desktop-cta {
+      display: none;
+    }
+
+    /* Mobile menu styling */
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-white);
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-lg);
+      border-top: 1px solid var(--color-light-gray);
+      gap: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all var(--transition-normal);
+      z-index: 50;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+
+    /* Show mobile menu when active */
+    .nav-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Mobile menu links */
+    .nav-link {
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      text-align: left;
+      font-size: var(--font-size-base);
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      transition: all var(--transition-normal);
+    }
+
+    .nav-link:hover {
+      color: var(--color-teal-primary);
+      background-color: rgba(6, 182, 212, 0.05);
+      padding-left: 0.5rem;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Mobile current page styling */
+    .nav-link.current-page::after {
+      display: none; /* Hide desktop underline */
+    }
+
+    .nav-link.current-page {
+      background-color: rgba(6, 182, 212, 0.1);
+      border-radius: var(--radius-sm);
+      margin: 0 -0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Add tap feedback for mobile links */
+    .nav-link:active {
+      background-color: rgba(6, 182, 212, 0.15);
+      transform: scale(0.98);
+    }
+
+    /* Mobile dropdown styling - Override desktop styles completely */
+    .nav-menu .nav-dropdown-wrapper {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .nav-menu .dropdown-main-link {
+      flex: 1;
+    }
+
+    .nav-menu .dropdown-arrow {
+      padding: 0.5rem;
+    }
+
+    .nav-menu .chevron-icon {
+      transition: transform 0.2s ease;
+    }
+
+    .nav-menu .dropdown-arrow[aria-expanded='true'] .chevron-icon {
+      transform: rotate(180deg);
+    }
+
+    .nav-menu .dropdown-menu.mobile-submenu {
+      /* Override all desktop dropdown styles */
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      width: auto !important;
+      min-width: auto !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      max-height: 0 !important;
+      overflow: hidden !important;
+      transform: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      background: rgba(6, 182, 212, 0.05) !important;
+      margin: 0 !important;
+      margin-top: 0 !important;
+      border-radius: var(--radius-md) !important;
+      padding: 0 !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .nav-menu .dropdown-menu.mobile-submenu.active {
+      opacity: 1 !important;
+      visibility: visible !important;
+      max-height: 500px !important;
+      padding: 0.5rem 0 !important;
+      background: rgba(6, 182, 212, 0.05) !important;
+      display: block !important;
+    }
+
+    .nav-menu .mobile-dropdown-link {
+      padding: 0.75rem 1rem;
+      font-size: var(--font-size-small);
+      margin: 0;
+      min-height: 44px;
+      border-bottom: none;
+    }
+
+    .nav-menu .mobile-dropdown-link:hover {
+      background-color: rgba(6, 182, 212, 0.1);
+      padding-left: 1.5rem;
+    }
+
+    /* Show mobile CTA */
+    .mobile-cta {
+      display: flex;
+    }
+
+    .brand-logo {
+      height: 32px;
+    }
   }
-  
-  .mobile-cta .btn {
-    text-align: center;
+
+  @media (max-width: 480px) {
+    .btn {
+      font-size: var(--font-size-caption);
+      padding: 8px var(--spacing-2);
+    }
+
+    .mobile-cta .btn {
+      text-align: center;
+    }
   }
-}
 </style>

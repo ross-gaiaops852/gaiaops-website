@@ -651,6 +651,43 @@ briefcase
 
 ---
 
+## 🔧 LINTING & FORMATTING ISSUES
+
+### Issue: ESLint "can't find config file" or flat config errors
+
+**First Encountered**: March 11, 2026
+**Frequency**: One-time (migration)
+**Severity**: High (blocks CI)
+
+**Problem**: ESLint 9.x dropped support for `.eslintrc.*` files. It requires the flat config format (`eslint.config.js`).
+
+**Solution**: The project uses `eslint.config.js` (flat config). Do NOT create `.eslintrc.json`.
+
+**Key files**:
+- `eslint.config.js` — ESLint flat config (the source of truth)
+- `.prettierignore` — files excluded from Prettier formatting
+- `.prettierrc` — Prettier settings
+
+### Issue: Prettier/ESLint parser errors on Astro files
+
+**Problem**: Some `.astro` files trigger parser bugs:
+- `<script>` tags between template sections cause `astro-eslint-parser` to fail
+- Complex CSS in `<style>` blocks causes Prettier PostCSS parser errors
+- Bare `>` characters in text (e.g., breadcrumbs) confuse the Astro parser
+
+**Solution**:
+- ESLint: Add problematic files to the `ignores` array in `eslint.config.js`
+- Prettier: Add problematic files to `.prettierignore`
+- Replace bare `>` with `&gt;` in HTML text content
+- These files are still validated by `astro check` (TypeScript)
+
+**Prevention**:
+1. Run `npm run test` before committing (catches lint + format + type errors)
+2. When creating new `.astro` files with `<script>` tags, test with `npm run lint:check`
+3. Use `&gt;` instead of `>` in text content (e.g., breadcrumb separators)
+
+---
+
 ## 📝 CONTENT & CTA ISSUES
 
 ### Issue: Calendly URLs Missing UTM Parameters / Broken Calendly Links

@@ -1,7 +1,7 @@
 # GaiaOps Development Configuration
 **For**: Claude Opus 4.6 / Claude Sonnet 4.6 (Desktop/Web Chat + Claude Code Sessions)
 **Last Updated**: March 11, 2026
-**Version**: 3.3
+**Version**: 3.4
 **Project Phase**: MVP Phase 2 - SEO & Cleanup
 **Current Status**: All core pages live, SEO indexing fixed, Google Search Console configured, sitemap auto-generated
 
@@ -696,6 +696,25 @@ npm update
 > Internal broken links fail the build; external broken links are reported as warnings.
 > This also runs automatically in CI on every push, and weekly on Mondays at 9am UTC.
 
+### Linting & Formatting Configuration
+
+**ESLint** uses flat config (`eslint.config.js`, not `.eslintrc.json`). Migrated to ESLint 9 flat config in March 2026.
+
+**Known ESLint parser limitations** — these files are ignored from ESLint linting because they trigger `astro-eslint-parser` bugs with `<script>` tag placement. They are still validated by `astro check`:
+- `src/pages/index.astro`
+- `src/pages/solutions/index.astro`
+
+**Prettier** uses `.prettierrc` with the `prettier-plugin-astro` plugin. A `.prettierignore` file excludes:
+- `docs/` — markdown code blocks get misparsed as real code
+- `src/pages/privacy-policy.astro` and `src/pages/terms-of-service.astro` — trigger a Prettier PostCSS parser bug
+- `src/layouts/BaseLayout.astro` — ternary in template confuses the parser
+
+**Preventing formatting drift:**
+1. Always run `npm run test` before committing — it runs lint, format check, and type check
+2. If Prettier or ESLint fails on a new file, check if it's a parser limitation and add it to `.prettierignore` or `eslint.config.js` ignores
+3. Never skip `format:check` in CI — formatting issues compound quickly if left unchecked
+4. When adding new `.astro` files with inline `<script>` tags between sections, test with `npm run lint:check` to verify the parser handles it
+
 ### Environment Variables
 
 | Variable | Purpose | Dev (Sevalla) | Production (Sevalla) | Local |
@@ -1095,6 +1114,14 @@ git log --oneline -5
 
 ## 🔄 VERSION HISTORY
 
+**Version 3.4** (March 11, 2026)
+- Migrated ESLint from `.eslintrc.json` to `eslint.config.js` (flat config for ESLint 9.x)
+- Fixed YAML syntax error in CI pipeline that broke all workflow runs since creation
+- Added `.prettierignore` for files with known parser bugs (docs, PostCSS, BaseLayout)
+- Formatted entire codebase with Prettier for CI compliance
+- Fixed unused imports across 9 files and HTML entity issues in templates
+- Documented linting/formatting configuration and known parser limitations
+
 **Version 3.3** (March 11, 2026)
 - Fixed all Calendly 404s: replaced defunct `ross-gaiaops/discovery-call` with routing form URL across 4 files (16 instances)
 - Added centralized Calendly config (`src/config/calendly.ts`)
@@ -1169,5 +1196,5 @@ git log --oneline -5
 **Questions? Use Claude Desktop for strategic guidance, Claude Code for implementation.**
 
 **Last Updated**: March 11, 2026
-**Version**: 3.3
+**Version**: 3.4
 **Maintained By**: Claude Opus 4.6 (with Ross)

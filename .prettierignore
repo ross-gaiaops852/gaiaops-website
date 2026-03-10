@@ -1,0 +1,13 @@
+dist/
+.astro/
+node_modules/
+
+# Docs contain code blocks that Prettier misparses as real code
+docs/
+
+# These Astro files trigger a known Prettier PostCSS parser bug
+src/pages/privacy-policy.astro
+src/pages/terms-of-service.astro
+
+# BaseLayout has a ternary in the template that Prettier can't parse
+src/layouts/BaseLayout.astro

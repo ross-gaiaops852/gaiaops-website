@@ -4,9 +4,12 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<BaseLayout title="Thank You - Discovery Call - GaiaOps" description="Thank you for booking a discovery call. We look forward to discussing your operational goals.">
+<BaseLayout
+  title="Thank You - Discovery Call - GaiaOps"
+  description="Thank you for booking a discovery call. We look forward to discussing your operational goals."
+>
   <Header />
-  
+
   <main id="main-content">
     <section class="hero">
       <div class="container">
@@ -20,27 +23,31 @@ import Footer from '../../components/Footer.astro';
 </BaseLayout>
 
 <style>
-.hero {
-  background: linear-gradient(135deg, var(--color-navy-primary) 0%, var(--color-teal-primary) 100%);
-  color: var(--color-white);
-  padding: 5rem 0;
-  text-align: center;
-}
+  .hero {
+    background: linear-gradient(
+      135deg,
+      var(--color-navy-primary) 0%,
+      var(--color-teal-primary) 100%
+    );
+    color: var(--color-white);
+    padding: 5rem 0;
+    text-align: center;
+  }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
 
-.hero p {
-  font-size: 1.25rem;
-  opacity: 0.9;
-}
+  .hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
 </style>
