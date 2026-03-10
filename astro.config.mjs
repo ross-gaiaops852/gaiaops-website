@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://gaiaops.io',
+  site: process.env.SITE_URL || 'https://gaiaops.io',
   integrations: [sitemap()],
 });
