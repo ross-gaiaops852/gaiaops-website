@@ -2350,7 +2350,7 @@ import Icon from '../components/Icon.astro';
       revenueInput.addEventListener('input', function(e) {
         // Allow only numbers and commas
         const target = e.target as HTMLInputElement;
-        let value = target.value.replace(/[^\d,]/g, '');
+        const value = target.value.replace(/[^\d,]/g, '');
         target.value = value;
       });
 
