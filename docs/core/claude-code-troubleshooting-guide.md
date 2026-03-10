@@ -653,51 +653,49 @@ briefcase
 
 ## 📝 CONTENT & CTA ISSUES
 
-### Issue: Calendly URLs Missing UTM Parameters
+### Issue: Calendly URLs Missing UTM Parameters / Broken Calendly Links
 
-**First Encountered**: October 8, 2025  
-**Last Encountered**: October 8, 2025  
-**Frequency**: Medium  
-**Severity**: Medium (affects tracking)
+**First Encountered**: October 8, 2025
+**Last Encountered**: March 11, 2026
+**Frequency**: Medium
+**Severity**: High (broken links = lost leads; missing UTM = lost tracking)
 
 **Problem Description:**
-Calendly links don't include proper UTM tracking parameters, making it impossible to track which page/CTA generated the booking.
+Calendly links either point to defunct meeting types (404) or don't include proper UTM tracking parameters.
+
+In March 2026, we discovered the `ross-gaiaops/discovery-call` meeting type had been retired, causing 404s on 16 CTAs across homepage, solutions, header, and footer.
 
 **Root Cause:**
-- Copying old Calendly links without updating
-- Not referencing the UTM structure CSV
-- Manually typing URLs instead of copy-pasting from reference
+- Calendly meeting type retired without updating website links
+- No automated link checking to detect broken external URLs
+- Links hardcoded in multiple files instead of centralized
 
-**Solution:**
+**Solution (Implemented March 11, 2026):**
 
-1. **Reference the Calendly UTM CSV** (gaiaops-calendly-utm-links.csv)
-2. **Use base URL + UTM parameters:**
+1. **All CTAs now use the routing form**: `https://calendly.com/d/cspg-g8f-tsd`
+2. **Centralized config**: URL defined in `src/config/calendly.ts`
+3. **Automated link checking**: `npm run check-links` detects broken links
+4. **CI integration**: Link check runs on every push + weekly Monday schedule
 
-```astro
-<!-- Standard website CTA pattern -->
-<a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=[page-specific]&utm_content=routing-form">
-  Book Discovery Call
-</a>
+```typescript
+// Use the centralized helper for new CTAs:
+import { calendlyUrl } from '../config/calendly';
+const url = calendlyUrl('page_section_name');
+```
 
-<!-- Examples by page: -->
-<!-- Homepage hero -->
-utm_campaign=homepage-hero
-
-<!-- How We Help page -->
-utm_campaign=how-we-help
-
-<!-- Track pages -->
-utm_campaign=multi-party-coordination
-utm_campaign=client-relationships
-<!-- etc -->
+```html
+<!-- HTML pattern (always set href for JS-disabled fallback): -->
+<a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=[placement]&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=[placement]&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+   class="btn btn-primary-orange">Book Discovery Call</a>
 ```
 
 **Prevention:**
-1. Keep Calendly UTM CSV reference open during CTA updates
-2. Copy-paste URLs from CSV (don't manually type)
-3. Create a UTM builder tool or snippet library
-4. Do bulk find/replace for old URLs site-wide
-5. Include UTM structure in session plans
+1. Use `src/config/calendly.ts` for the base URL (single source of truth)
+2. Run `npm run check-links` after builds to catch broken links
+3. CI pipeline catches broken links automatically on every push
+4. Weekly scheduled CI run catches external URLs that go stale
+5. See full UTM reference table in `gaiaops-development-config-v3.md`
 
 **Related Issues:**
 - Analytics showing "direct" traffic instead of page source
@@ -1072,5 +1070,5 @@ White:           #FFFFFF  (primary background)
 
 **Remember**: This is a living document. Add to it after every session. The more we document, the fewer issues we'll encounter!
 
-**Last Updated**: October 8, 2025  
-**Next Review**: After next coding session (planned for Calendly CTA updates)
+**Last Updated**: March 11, 2026
+**Next Review**: After next coding session

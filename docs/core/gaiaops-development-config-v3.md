@@ -1,7 +1,7 @@
 # GaiaOps Development Configuration
 **For**: Claude Opus 4.6 / Claude Sonnet 4.6 (Desktop/Web Chat + Claude Code Sessions)
-**Last Updated**: March 10, 2026
-**Version**: 3.2
+**Last Updated**: March 11, 2026
+**Version**: 3.3
 **Project Phase**: MVP Phase 2 - SEO & Cleanup
 **Current Status**: All core pages live, SEO indexing fixed, Google Search Console configured, sitemap auto-generated
 
@@ -378,8 +378,8 @@ gaiaops-website/
 │   │   ├── robots.txt.ts (dynamic, environment-aware)
 │   │   └── book-call.astro ✅
 │   ├── components/
-│   │   ├── Header.astro (navigation - needs Calendly URL updates)
-│   │   ├── Footer.astro (5-column layout - needs Calendly URL updates)
+│   │   ├── Header.astro (navigation - Calendly routing form CTAs)
+│   │   ├── Footer.astro (5-column layout - Calendly routing form CTA)
 │   │   ├── Icon.astro (heroicons wrapper - contains iconMap)
 │   │   └── ui/ (various card components)
 │   ├── layouts/
@@ -679,12 +679,22 @@ npm run test
 # Preview production build
 npm run preview
 
+# Check for broken links (requires build first)
+npm run check-links
+
+# Build then check links in one command
+npm run check-links:local
+
 # Update dependencies (use cautiously)
 npm update
 ```
 
 > **Note**: `astro check` runs as part of the build script (`astro check && astro build`).
 > Type checking also runs via `npm run check` and `npm run test`.
+>
+> **Link checking**: `npm run check-links` runs against the `dist/` directory.
+> Internal broken links fail the build; external broken links are reported as warnings.
+> This also runs automatically in CI on every push, and weekly on Mondays at 9am UTC.
 
 ### Environment Variables
 
@@ -742,58 +752,49 @@ updates:
 
 ## 🎯 CALENDLY URL STRUCTURE
 
-### The 5 Core Calendly URLs
+### Centralized Config
 
-**1. Routing Form** (Primary - use for most website CTAs)
+The Calendly base URL and UTM helper are defined in `src/config/calendly.ts`:
+```typescript
+import { CALENDLY_BASE_URL, calendlyUrl } from '../config/calendly';
+
+// Generate a full URL with UTM params:
+const url = calendlyUrl('home_hero');
+// → https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=home_hero&utm_campaign=gaiaops-discovery&utm_content=routing-form
+```
+
+**If the Calendly URL ever changes, update it in `src/config/calendly.ts` only.**
+
+### Routing Form (Primary - ALL website CTAs)
 ```
 Base: https://calendly.com/d/cspg-g8f-tsd
 ```
-
-**2. Operations Transformation Call**
-```
-Base: https://calendly.com/ross-gaiaops/operations-transformation-call
-```
-
-**3. Coffee Chat**
-```
-Base: https://calendly.com/ross-gaiaops/coffee-chat
-```
-
-**4. Partnership Discussion**
-```
-Base: https://calendly.com/ross-gaiaops/partnership-discussion
-```
-
-**5. Client Check-in** (Existing clients only)
-```
-Base: https://calendly.com/ross-gaiaops/client-check-in-30m
-```
+All website CTAs point to this routing form, which asks qualifying questions and routes to the correct meeting type. The old direct meeting URL (`ross-gaiaops/discovery-call`) was retired in March 2026.
 
 ### UTM Parameter Structure
 
-**Format**: `?utm_source=[source]&utm_medium=[medium]&utm_campaign=[campaign]&utm_content=[content]`
+**Format**: `?utm_source=website&utm_medium=[placement]&utm_campaign=gaiaops-discovery&utm_content=routing-form`
 
-**For Website CTAs** (most common):
+**Current UTM medium values by location:**
+
+| Page | utm_medium values |
+|------|------------------|
+| Homepage | `home_hero`, `home_social_proof`, `home_transformation`, `home_operations`, `home_solutions`, `home_integrations`, `home_pricing_preview`, `home_final_cta` |
+| Solutions | `solutions_foundation`, `solutions_advanced`, `solutions_excellence`, `solutions_integrations`, `solutions_faq`, `solutions_pricing` |
+| Pricing | `pricing_hero`, `pricing_card`, `pricing_bottom`, `pricing_comparison`, `pricing_roi`, `pricing_subscription`, `guarantee_cta`, `pricing_cta` |
+| About | `about_hero_cta`, `about_cohort_cta`, `about_final_cta` |
+| How We Help | `cta` (used for all CTAs on this page) |
+| Contact | `embed` (inline widget, not popup) |
+| Header | `header_mobile_cta` |
+| Footer | `footer_cta` |
+
+### CTA HTML Pattern
+```html
+<a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=[placement]&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=[placement]&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+   class="btn btn-primary-orange">Book Discovery Call</a>
 ```
-utm_source=website
-utm_medium=cta
-utm_campaign=[page-specific]
-utm_content=routing-form
-```
-
-**Examples by Page:**
-```
-Homepage Hero:
-https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=homepage-hero&utm_content=routing-form
-
-How We Help:
-https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=how-we-help&utm_content=routing-form
-
-Track Pages (example - Multi-Party Coordination):
-https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=multi-party-coordination&utm_content=routing-form
-```
-
-**Reference**: Full UTM mapping in `gaiaops-calendly-utm-links.csv` (in project files)
+> **Important**: Always set `href` to the full URL (not `href=""`). This provides a fallback for users with JS disabled.
 
 ---
 
@@ -1094,6 +1095,13 @@ git log --oneline -5
 
 ## 🔄 VERSION HISTORY
 
+**Version 3.3** (March 11, 2026)
+- Fixed all Calendly 404s: replaced defunct `ross-gaiaops/discovery-call` with routing form URL across 4 files (16 instances)
+- Added centralized Calendly config (`src/config/calendly.ts`)
+- Added broken link detection: `npm run check-links` using linkinator
+- Added link checking to CI pipeline (every push + weekly Monday schedule)
+- Updated Calendly URL documentation with full UTM medium reference table
+
 **Version 3.2** (March 10, 2026)
 - TypeScript errors fixed (287 → 0), `astro check` restored to build script
 - Updated current priorities (TS errors completed, remaining tasks renumbered)
@@ -1160,6 +1168,6 @@ git log --oneline -5
 
 **Questions? Use Claude Desktop for strategic guidance, Claude Code for implementation.**
 
-**Last Updated**: March 10, 2026
-**Version**: 3.2
+**Last Updated**: March 11, 2026
+**Version**: 3.3
 **Maintained By**: Claude Opus 4.6 (with Ross)

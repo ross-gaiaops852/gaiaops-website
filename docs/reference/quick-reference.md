@@ -417,22 +417,22 @@ git diff src/pages/[file].astro
 ```
 
 ### Calendly CTA with UTM (Site-wide):
-```astro
-<a 
-  href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=cta&utm_campaign=track-client-relationships&utm_content=routing-form"
-  class="btn btn-primary-orange"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Book Discovery Call
-</a>
+
+The base URL is centralized in `src/config/calendly.ts`. All CTAs use the routing form popup:
+
+```html
+<a href="https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=[placement]&utm_campaign=gaiaops-discovery&utm_content=routing-form"
+   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cspg-g8f-tsd?utm_source=website&utm_medium=[placement]&utm_campaign=gaiaops-discovery&utm_content=routing-form'});return false;"
+   class="btn btn-primary-orange">Book Discovery Call</a>
 ```
 
 **UTM Structure:**
 - `utm_source=website` (always)
-- `utm_medium=cta` (for buttons) or `hero` (for hero CTAs)
-- `utm_campaign=[page-specific]` (e.g., `homepage-hero`, `track-client-relationships`)
+- `utm_medium=[placement]` — describes CTA location (e.g., `home_hero`, `pricing_card`, `footer_cta`)
+- `utm_campaign=gaiaops-discovery` (standard for all website CTAs)
 - `utm_content=routing-form` (always)
+
+**Link checking:** Run `npm run check-links` after builds to catch broken links. See full UTM table in `gaiaops-development-config-v3.md`.
 
 ---
 
