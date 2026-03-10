@@ -2306,9 +2306,9 @@ import Icon from '../components/Icon.astro';
 <script>
   // ROI Calculator Logic
   document.addEventListener('DOMContentLoaded', function() {
-    const revenueInput = document.getElementById('annual-revenue');
-    const teamSizeInput = document.getElementById('team-size');
-    const billableRateInput = document.getElementById('billable-rate');
+    const revenueInput = document.getElementById('annual-revenue') as HTMLInputElement | null;
+    const teamSizeInput = document.getElementById('team-size') as HTMLInputElement | null;
+    const billableRateInput = document.getElementById('billable-rate') as HTMLInputElement | null;
     const calculateBtn = document.getElementById('calculate-roi-btn');
 
     const timeSavingsEl = document.getElementById('time-savings');
@@ -2316,12 +2316,12 @@ import Icon from '../components/Icon.astro';
     const netRoiEl = document.getElementById('net-roi');
 
     // Format number with commas
-    function formatNumberWithCommas(num) {
+    function formatNumberWithCommas(num: number) {
       return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
     // Remove commas and get raw number
-    function parseFormattedNumber(str) {
+    function parseFormattedNumber(str: string) {
       return parseFloat(str.replace(/,/g, '')) || 0;
     }
 
@@ -2329,7 +2329,7 @@ import Icon from '../components/Icon.astro';
     function formatRevenueInput() {
       if (!revenueInput) return;
 
-      const cursorPosition = revenueInput.selectionStart;
+      const cursorPosition = revenueInput.selectionStart ?? 0;
       const oldValue = revenueInput.value;
       const rawValue = parseFormattedNumber(revenueInput.value);
 
@@ -2349,8 +2349,9 @@ import Icon from '../components/Icon.astro';
     if (revenueInput) {
       revenueInput.addEventListener('input', function(e) {
         // Allow only numbers and commas
-        let value = e.target.value.replace(/[^\d,]/g, '');
-        e.target.value = value;
+        const target = e.target as HTMLInputElement;
+        let value = target.value.replace(/[^\d,]/g, '');
+        target.value = value;
       });
 
       revenueInput.addEventListener('blur', formatRevenueInput);
@@ -2364,8 +2365,8 @@ import Icon from '../components/Icon.astro';
 
       // Get current values from inputs
       const revenueValue = revenueInput?.value || '0';
-      const teamSizeValue = teamSizeInput?.value || 0;
-      const billableRateValue = billableRateInput?.value || 0;
+      const teamSizeValue = teamSizeInput?.value || '0';
+      const billableRateValue = billableRateInput?.value || '0';
 
       console.log('Input values:', { revenueValue, teamSizeValue, billableRateValue });
 

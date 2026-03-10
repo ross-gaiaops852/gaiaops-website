@@ -436,16 +436,17 @@ import { tracks } from '../utils/trackData.ts';
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        const carousel = document.getElementById('logoCarousel');
+        const carousel = document.getElementById('logoCarousel') as HTMLElement | null;
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
+        if (!carousel) return;
         const slides = carousel.querySelectorAll('.logo-slide');
         let currentSlide = 0;
-        let autoScrollInterval;
+        let autoScrollInterval: ReturnType<typeof setInterval> | undefined;
 
         function updateCarousel() {
           const translateX = -currentSlide * 20;
-          carousel.style.transform = `translateX(${translateX}%)`;
+          carousel!.style.transform = `translateX(${translateX}%)`;
         }
 
         function nextSlide() {
@@ -467,13 +468,13 @@ import { tracks } from '../utils/trackData.ts';
         }
 
         // Event listeners
-        nextBtn.addEventListener('click', () => {
+        nextBtn?.addEventListener('click', () => {
           nextSlide();
           stopAutoScroll();
           setTimeout(startAutoScroll, 2000);
         });
 
-        prevBtn.addEventListener('click', () => {
+        prevBtn?.addEventListener('click', () => {
           prevSlide();
           stopAutoScroll();
           setTimeout(startAutoScroll, 2000);

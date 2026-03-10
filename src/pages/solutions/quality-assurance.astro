@@ -1431,29 +1431,34 @@ import { tracks } from '../../utils/trackData.ts';
 document.addEventListener('DOMContentLoaded', function() {
   // FAQ Accordion functionality
   const faqItems = document.querySelectorAll('.faq-item');
-  
+
   faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
-    const chevron = item.querySelector('.icon-chevron');
-    
+    const question = item.querySelector('.faq-question') as HTMLElement | null;
+    const answer = item.querySelector('.faq-answer') as HTMLElement | null;
+    const chevron = item.querySelector('.icon-chevron') as HTMLElement | null;
+    if (!question || !answer || !chevron) return;
+
     question.addEventListener('click', () => {
       const isExpanded = question.getAttribute('aria-expanded') === 'true';
-      
-      // Close all other items (optional - remove these lines to allow multiple open)
+
+      // Close all other items
       faqItems.forEach(otherItem => {
         if (otherItem !== item) {
-          const otherQuestion = otherItem.querySelector('.faq-question');
-          const otherAnswer = otherItem.querySelector('.faq-answer');
-          const otherChevron = otherItem.querySelector('.icon-chevron');
-          
-          otherQuestion.setAttribute('aria-expanded', 'false');
-          otherAnswer.setAttribute('hidden', '');
-          otherAnswer.style.maxHeight = '0px';
-          otherChevron.style.transform = 'rotate(0deg)';
+          const otherQuestion = otherItem.querySelector('.faq-question') as HTMLElement | null;
+          const otherAnswer = otherItem.querySelector('.faq-answer') as HTMLElement | null;
+          const otherChevron = otherItem.querySelector('.icon-chevron') as HTMLElement | null;
+
+          otherQuestion?.setAttribute('aria-expanded', 'false');
+          if (otherAnswer) {
+            otherAnswer.setAttribute('hidden', '');
+            otherAnswer.style.maxHeight = '0px';
+          }
+          if (otherChevron) {
+            otherChevron.style.transform = 'rotate(0deg)';
+          }
         }
       });
-      
+
       // Toggle current item
       if (isExpanded) {
         // Close
@@ -1469,9 +1474,9 @@ document.addEventListener('DOMContentLoaded', function() {
         chevron.style.transform = 'rotate(180deg)';
       }
     });
-    
+
     // Keyboard accessibility
-    question.addEventListener('keydown', (e) => {
+    question.addEventListener('keydown', (e: KeyboardEvent) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         question.click();

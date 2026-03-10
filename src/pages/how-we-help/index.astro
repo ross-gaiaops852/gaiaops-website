@@ -1445,6 +1445,7 @@ import Icon from '../../components/Icon.astro';
 
 <script>
   // Calendly widget script
+  declare const Calendly: unknown;
   if (typeof Calendly === 'undefined') {
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';

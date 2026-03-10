@@ -158,7 +158,7 @@
     const resourcesButton = document.getElementById('resources-button');
     const resourcesMenu = document.getElementById('resources-menu');
     
-    let currentOpenDropdown = null;
+    let currentOpenDropdown: { button: HTMLElement; menu: HTMLElement } | null = null;
     let currentFocusIndex = -1;
     let keyboardMode = false; // Track if we're in keyboard mode
     
@@ -168,7 +168,7 @@
       const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-trigger)');
       
       navLinks.forEach(link => {
-        const linkPath = new URL(link.href, window.location.origin).pathname;
+        const linkPath = new URL((link as HTMLAnchorElement).href, window.location.origin).pathname;
         if (linkPath === currentPath || (currentPath.startsWith(linkPath) && linkPath !== '/')) {
           link.classList.add('current-page');
         }
@@ -177,7 +177,7 @@
       // Handle dropdown links in submenus
       const dropdownLinks = document.querySelectorAll('.dropdown-link');
       dropdownLinks.forEach(link => {
-        const linkPath = new URL(link.href, window.location.origin).pathname;
+        const linkPath = new URL((link as HTMLAnchorElement).href, window.location.origin).pathname;
         if (linkPath === currentPath) {
           link.classList.add('current-page');
         }
@@ -204,9 +204,10 @@
     
     // Mobile menu toggle functionality
     function toggleMobileMenu() {
+      if (!navMenu || !mobileToggle) return;
       const isOpen = navMenu.classList.contains('active');
       const header = document.querySelector('.header');
-      
+
       if (isOpen) {
         navMenu.classList.remove('active');
         mobileToggle.classList.remove('active');
@@ -217,7 +218,7 @@
         mobileToggle.classList.add('active');
         mobileToggle.setAttribute('aria-expanded', 'true');
         mobileToggle.setAttribute('aria-label', 'Close navigation menu');
-        
+
         // Always show header when opening mobile menu
         if (isMobileView() && header) {
           header.classList.remove('header-hidden');
@@ -232,7 +233,7 @@
     }
     
     // Dropdown functionality
-    function openDropdown(button, menu, focusFirst = false) {
+    function openDropdown(button: HTMLElement, menu: HTMLElement, focusFirst = false) {
       if (isMobileView()) {
         // Mobile dropdown toggle
         toggleMobileDropdown(button, menu);
@@ -252,7 +253,7 @@
       
       // Focus first menu item only if opened via keyboard
       if (focusFirst) {
-        const firstMenuItem = menu.querySelector('[role="menuitem"]');
+        const firstMenuItem = menu.querySelector('[role="menuitem"]') as HTMLElement | null;
         if (firstMenuItem) {
           firstMenuItem.focus();
           currentFocusIndex = 0;
@@ -261,7 +262,7 @@
     }
     
     // Mobile dropdown toggle functionality
-    function toggleMobileDropdown(button, menu) {
+    function toggleMobileDropdown(button: HTMLElement, menu: HTMLElement) {
       const isExpanded = button.getAttribute('aria-expanded') === 'true';
       
       // Clear any inline styles that might interfere
@@ -280,7 +281,7 @@
       }
     }
     
-    function closeDropdown(button, menu, returnFocus = true) {
+    function closeDropdown(button: HTMLElement, menu: HTMLElement, returnFocus = true) {
       menu.setAttribute('hidden', '');
       menu.style.opacity = '0';
       menu.style.visibility = 'hidden';
@@ -324,8 +325,8 @@
     }
     
     // Keyboard navigation within dropdown
-    function navigateDropdown(menu, direction) {
-      const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+    function navigateDropdown(menu: HTMLElement, direction: string) {
+      const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
       
       if (direction === 'down') {
         currentFocusIndex = currentFocusIndex < menuItems.length - 1 ? currentFocusIndex + 1 : 0;
@@ -339,9 +340,10 @@
     }
     
     // Mouse hover support for dropdowns (desktop only)
-    function setupHoverSupport(button, menu, wrapper) {
+    function setupHoverSupport(button: HTMLElement, menu: HTMLElement, wrapper: HTMLElement | null | undefined) {
       const dropdown = wrapper || button.parentElement;
-      
+      if (!dropdown) return;
+
       dropdown.addEventListener('mouseenter', function() {
         if (isMobileView()) return; // Skip hover on mobile
         
@@ -376,7 +378,7 @@
     
     // Solutions dropdown
     if (solutionsButton && solutionsMenu) {
-      const solutionsWrapper = solutionsButton.closest('.nav-dropdown-wrapper').parentElement;
+      const solutionsWrapper = solutionsButton.closest('.nav-dropdown-wrapper')?.parentElement;
       setupHoverSupport(solutionsButton, solutionsMenu, solutionsWrapper);
       
       solutionsButton.addEventListener('click', function(e) {
@@ -427,7 +429,7 @@
     
     // Resources dropdown
     if (resourcesButton && resourcesMenu) {
-      const resourcesWrapper = resourcesButton.closest('.nav-dropdown-wrapper').parentElement;
+      const resourcesWrapper = resourcesButton.closest('.nav-dropdown-wrapper')?.parentElement;
       setupHoverSupport(resourcesButton, resourcesMenu, resourcesWrapper);
       
       resourcesButton.addEventListener('click', function(e) {
@@ -504,7 +506,7 @@
     
     // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {
-      if (!e.target.closest('.nav-dropdown')) {
+      if (!(e.target as HTMLElement)?.closest('.nav-dropdown')) {
         closeAllDropdowns(false); // Don't return focus when clicking outside
       }
     });
@@ -513,7 +515,7 @@
     const navLinks = navMenu?.querySelectorAll('.nav-link:not(.dropdown-trigger), .dropdown-link, .btn');
     navLinks?.forEach(link => {
       link.addEventListener('click', () => {
-        if (navMenu.classList.contains('active')) {
+        if (navMenu?.classList.contains('active')) {
           toggleMobileMenu();
         }
         closeAllDropdowns();
@@ -546,10 +548,11 @@
     
     function handleScroll() {
       if (!isMobileView()) return; // Only apply on mobile
-      
+
       const header = document.querySelector('.header');
+      if (!header) { ticking = false; return; }
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      
+
       // Don't hide header if mobile menu is open
       if (navMenu && navMenu.classList.contains('active')) {
         header.classList.remove('header-hidden');
@@ -558,10 +561,10 @@
         ticking = false;
         return;
       }
-      
+
       const scrollDifference = Math.abs(currentScroll - lastScrollTop);
       const scrollingDown = currentScroll > lastScrollTop;
-      
+
       if (currentScroll <= 0) {
         // At the top of the page
         header.classList.remove('header-hidden');
@@ -575,7 +578,7 @@
         header.classList.remove('header-hidden');
         header.classList.add('header-visible');
       }
-      
+
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
       ticking = false;
     }
@@ -592,7 +595,7 @@
     
     // Initialize header state
     const header = document.querySelector('.header');
-    if (isMobileView()) {
+    if (isMobileView() && header) {
       header.classList.add('header-visible');
       header.classList.remove('header-hidden');
     }

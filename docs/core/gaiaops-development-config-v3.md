@@ -1,9 +1,9 @@
 # GaiaOps Development Configuration
-**For**: Claude Sonnet 4.5 (Desktop/Web Chat Sessions)  
-**Last Updated**: October 8, 2025  
-**Version**: 3.0  
-**Project Phase**: MVP Phase 2 - Core Conversion Path Development  
-**Current Status**: "How We Help" page live, Calendly CTAs partially updated, 7 track pages live
+**For**: Claude Opus 4.6 / Claude Sonnet 4.6 (Desktop/Web Chat + Claude Code Sessions)
+**Last Updated**: March 10, 2026
+**Version**: 3.2
+**Project Phase**: MVP Phase 2 - SEO & Cleanup
+**Current Status**: All core pages live, SEO indexing fixed, Google Search Console configured, sitemap auto-generated
 
 ---
 
@@ -328,10 +328,11 @@ git checkout development
 - Integrated PowerShell terminal
 
 **Node Version**: v22.13.1  
-**Framework**: Astro.js 4.x  
-**Package Manager**: npm  
-**UI Library**: Heroicons (220 icons integrated)  
+**Framework**: Astro.js 5.x (5.14.4)
+**Package Manager**: npm
+**UI Library**: Heroicons (220 icons integrated)
 **CSS Framework**: Tailwind CSS (via Astro)
+**Sitemap**: @astrojs/sitemap (auto-generated at build)
 
 ### Dev Server
 ```powershell
@@ -368,11 +369,14 @@ gaiaops-website/
 │   │   │   ├── business-intelligence.astro ✅
 │   │   │   ├── growth-systems.astro ✅
 │   │   │   └── strategic-advantage.astro ✅
-│   │   ├── pricing.astro (stub - needs development)
-│   │   ├── about.astro (stub - needs development)
-│   │   ├── contact.astro (stub - needs development)
-│   │   ├── assessment.astro (stub - HIGH PRIORITY)
-│   │   └── book-call.astro (may need updating)
+│   │   ├── pricing.astro ✅
+│   │   ├── about.astro ✅
+│   │   ├── contact.astro ✅
+│   │   ├── assessment.astro ✅
+│   │   ├── privacy-policy.astro ✅
+│   │   ├── terms-of-service.astro ✅
+│   │   ├── robots.txt.ts (dynamic, environment-aware)
+│   │   └── book-call.astro ✅
 │   ├── components/
 │   │   ├── Header.astro (navigation - needs Calendly URL updates)
 │   │   ├── Footer.astro (5-column layout - needs Calendly URL updates)
@@ -383,9 +387,9 @@ gaiaops-website/
 │   └── styles/
 │       └── global.css (Tailwind + custom styles)
 ├── public/
-│   ├── robots.txt (environment-specific)
+│   ├── _redirects (Sevalla redirect rules)
 │   └── images/
-├── docs/ (local only - not in git)
+├── docs/ (tracked in git)
 │   ├── templates/
 │   ├── guides/
 │   └── references/
@@ -663,8 +667,14 @@ npm install
 # Start dev server
 npm run dev
 
-# Build for production (test locally)
+# Build for production (runs astro build only, no type checking)
 npm run build
+
+# Type check separately (not part of build)
+npm run check
+
+# Run full test suite (lint + format + type check)
+npm run test
 
 # Preview production build
 npm run preview
@@ -672,6 +682,34 @@ npm run preview
 # Update dependencies (use cautiously)
 npm update
 ```
+
+> **Note**: `astro check` runs as part of the build script (`astro check && astro build`).
+> Type checking also runs via `npm run check` and `npm run test`.
+
+### Environment Variables
+
+| Variable | Purpose | Dev (Sevalla) | Production (Sevalla) | Local |
+|----------|---------|---------------|----------------------|-------|
+| `SITE_URL` | Override Astro `site` property | `https://gaiaops-dev-f1kaz.sevalla.page` | Not set (defaults to `https://gaiaops.io`) | Not set |
+| `ENVIRONMENT` | Environment identifier | `development` | Not set | Not set |
+
+The `SITE_URL` variable controls SEO protection. When set to a `.sevalla.page` domain,
+the build produces blocking robots.txt and noindex meta tags. When not set, it defaults
+to `https://gaiaops.io` which enables full indexing.
+
+### SEO & Indexing Configuration
+
+**How it works:**
+- `astro.config.mjs` sets `site` from `SITE_URL` env var (or defaults to `https://gaiaops.io`)
+- `src/config/environment.ts` checks the hostname against production domain whitelist
+- `src/pages/robots.txt.ts` generates environment-appropriate robots.txt at build time
+- `src/layouts/BaseLayout.astro` conditionally renders noindex/index meta tags
+- `@astrojs/sitemap` auto-generates `sitemap-index.xml` from all pages
+
+**Google Search Console:**
+- Verified via DNS TXT record (March 2026)
+- Sitemap submitted: `https://gaiaops.io/sitemap-index.xml`
+- 26 pages discovered
 
 ### Dependabot PR Handling
 
@@ -944,34 +982,38 @@ npm run dev -- --port 4322
 
 ### Immediate Next Tasks (In Order)
 
-**1. Update Remaining Calendly CTAs Site-Wide** (High Priority)
-- [ ] Header component (`src/components/Header.astro`)
-- [ ] Footer component (`src/components/Footer.astro`)
-- [ ] Homepage (`src/pages/index.astro`)
-- [ ] All 7 track pages (`src/pages/solutions/*.astro`)
-- [ ] Solutions overview (`src/pages/solutions/index.astro`)
-- [ ] Pricing page (`src/pages/pricing.astro`)
-- [ ] About page (`src/pages/about.astro`)
-- [ ] Contact page (`src/pages/contact.astro`)
+**1. Dependabot Dependency Updates** (High Priority - Security)
+- Multiple stacked PRs from months of inactivity
+- Batch by risk level: dev deps first, then framework deps
+- See session plan: `docs/sessions/session-plan-dependency-updates-2026-03.md`
 
-**2. Digital Operations Assessment Tool** (Next Major Feature)
+**2. Security Vulnerabilities** (High Priority)
+- 18 npm audit vulnerabilities (5 high, 7 moderate, 4 low)
+- Assess production vs dev-only impact
+- See session plan: `docs/sessions/session-plan-security-vulnerabilities-2026-03.md`
+
+**3. Digital Operations Assessment Tool** (Next Major Feature)
 - Interactive assessment form
 - Scoring algorithm
 - Results page with recommendations
 - Lead capture integration
 
-**3. Complete Stub Pages**
-- Pricing page (3-tier display)
-- About page (company story)
-- Contact page (form integration)
-
-### Completed Work (October 2025)
+### Completed Work
 - ✅ Homepage (fully responsive, live)
 - ✅ All 7 solution track pages (live)
 - ✅ Solutions overview page (live)
-- ✅ "How We Help" page complete (live Oct 8)
+- ✅ "How We Help" page complete (live Oct 8, 2025)
+- ✅ Pricing page (live Oct 2025)
+- ✅ About page (live Oct 2025)
+- ✅ Contact page (live Oct 2025)
+- ✅ Assessment page (live Oct 2025)
+- ✅ Privacy Policy page (live Mar 2026)
+- ✅ Terms of Service page (live Mar 2026)
 - ✅ Navigation system (desktop + mobile)
-- ✅ Dependabot PRs cleared (Oct 8)
+- ✅ SEO indexing fix — robots.txt, sitemap, meta tags (Mar 10, 2026)
+- ✅ Google Search Console configured and sitemap submitted (Mar 10, 2026)
+- ✅ Environment-aware builds via SITE_URL env var (Mar 10, 2026)
+- ✅ Fixed 287 TypeScript errors, re-enabled `astro check` in build (Mar 10, 2026)
 
 ---
 
@@ -1052,6 +1094,21 @@ git log --oneline -5
 
 ## 🔄 VERSION HISTORY
 
+**Version 3.2** (March 10, 2026)
+- TypeScript errors fixed (287 → 0), `astro check` restored to build script
+- Updated current priorities (TS errors completed, remaining tasks renumbered)
+- Moved completed session plan to archive
+
+**Version 3.1** (March 10, 2026)
+- Updated Astro version reference (4.x → 5.x)
+- Added SEO & indexing configuration section
+- Added environment variables documentation (SITE_URL)
+- Updated build script documentation (astro check separated)
+- Updated project structure (new pages, robots.txt.ts, _redirects)
+- Updated current priorities (cleanup backlog)
+- Updated completed work through March 2026
+- Added Google Search Console setup notes
+
 **Version 3.0** (October 8, 2025)
 - Added hybrid workflow documentation
 - Updated Calendly URL structure
@@ -1103,6 +1160,6 @@ git log --oneline -5
 
 **Questions? Use Claude Desktop for strategic guidance, Claude Code for implementation.**
 
-**Last Updated**: October 8, 2025  
-**Version**: 3.0  
-**Maintained By**: Claude Sonnet 4.5 (with Ross)
+**Last Updated**: March 10, 2026
+**Version**: 3.2
+**Maintained By**: Claude Opus 4.6 (with Ross)
