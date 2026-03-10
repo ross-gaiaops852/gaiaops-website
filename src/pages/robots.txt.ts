@@ -3,9 +3,9 @@ import { getEnvironmentConfig } from '../config/environment';
 
 export const GET: APIRoute = ({ site, url }) => {
   const config = getEnvironmentConfig(url);
-  
+
   let robotsContent: string;
-  
+
   if (config.shouldIndex) {
     // Production: Allow indexing with comprehensive rules
     robotsContent = `# GaiaOps Production Robots - gaiaops.com
@@ -86,12 +86,14 @@ Disallow: /
 # Contact: For the live GaiaOps site, visit gaiaops.io
 `;
   }
-  
+
   return new Response(robotsContent, {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
-      'X-Robots-Tag': config.shouldIndex ? 'all' : 'noindex, nofollow, noarchive, nosnippet',
-      'Cache-Control': 'public, max-age=3600'
-    }
+      'X-Robots-Tag': config.shouldIndex
+        ? 'all'
+        : 'noindex, nofollow, noarchive, nosnippet',
+      'Cache-Control': 'public, max-age=3600',
+    },
   });
 };

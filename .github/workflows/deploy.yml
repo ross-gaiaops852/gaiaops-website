@@ -3,7 +3,7 @@
 on:
   # Trigger on push to main and development branches
   push:
-    branches: [ main, development ]
+    branches: [main, development]
     paths:
       - 'src/**'
       - 'public/**'
@@ -11,10 +11,10 @@ on:
       - 'package-lock.json'
       - 'astro.config.mjs'
       - 'tsconfig.json'
-  
+
   # Weekly full link check (including external links)
   schedule:
-    - cron: '0 9 * * 1'  # Every Monday at 9am UTC
+    - cron: '0 9 * * 1' # Every Monday at 9am UTC
 
   # Allow manual workflow runs
   workflow_dispatch:
@@ -35,7 +35,7 @@ jobs:
   build-and-test:
     name: 🔨 Build, Test & Quality Checks
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 📦 Checkout repository
         uses: actions/checkout@v4
@@ -102,10 +102,10 @@ jobs:
             SITE_URL="https://gaiaops-dev-f1kaz.sevalla.page"
             ENV="Development"
           fi
-          
+
           echo "Waiting for $ENV deployment to complete..."
           sleep 60  # Give Sevalla time to deploy
-          
+
           # Check if site is responding with new content
           for i in {1..10}; do
             if curl -f -s $SITE_URL > /dev/null; then
@@ -124,9 +124,9 @@ jobs:
           else
             SITE_URL="https://gaiaops-dev-f1kaz.sevalla.page"
           fi
-          
+
           echo "Running health check on $SITE_URL"
-          
+
           # Basic health check
           if curl -f -s -o /dev/null -w "%{http_code}" $SITE_URL | grep -q "200"; then
             echo "✅ Site health check passed"

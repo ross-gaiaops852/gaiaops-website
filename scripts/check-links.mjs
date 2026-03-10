@@ -48,13 +48,17 @@ if (broken.length > 0) {
 
   // Only fail the build for internal broken links
   const internalBroken = broken.filter(
-    (l) => l.url.includes('gaiaops') || l.url.startsWith('file://'),
+    (l) => l.url.includes('gaiaops') || l.url.startsWith('file://')
   );
   if (internalBroken.length > 0) {
-    console.log(`\n${internalBroken.length} internal broken link(s) found — failing build.`);
+    console.log(
+      `\n${internalBroken.length} internal broken link(s) found — failing build.`
+    );
     process.exit(1);
   } else {
-    console.log(`\nAll broken links are external — reporting as warnings only.`);
+    console.log(
+      `\nAll broken links are external — reporting as warnings only.`
+    );
   }
 } else {
   console.log(`\nNo broken links found!`);

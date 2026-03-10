@@ -9,10 +9,10 @@ interface Props {
   className?: string;
 }
 
-const { 
-  title = "Seamlessly Integrate Your Existing Tools",
-  subtitle = "We work with the platforms your team already uses",
-  className = ""
+const {
+  title = 'Seamlessly Integrate Your Existing Tools',
+  subtitle = 'We work with the platforms your team already uses',
+  className = '',
 } = Astro.props;
 
 // App integrations - easily customizable
@@ -34,7 +34,9 @@ const integrations = [
 ];
 ---
 
-<section class={`py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 ${className}`}>
+<section
+  class={`py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 ${className}`}
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="text-center mb-16">
@@ -49,22 +51,27 @@ const integrations = [
     <!-- Integration Grid -->
     <div class="integration-container">
       <div class="integration-grid">
-        {integrations.map((app) => (
-          <div 
-            class={`integration-card ${app.featured ? 'featured' : ''}`}
-            style={`--app-color: ${app.color}; --delay: ${app.delay}s;`}
-          >
-            <div class="card-inner">
-              <div class="card-glow"></div>
-              <div class="card-content">
-                <div class="app-icon-placeholder" style={`background: ${app.color};`}>
-                  <div class="icon-shine"></div>
+        {
+          integrations.map((app) => (
+            <div
+              class={`integration-card ${app.featured ? 'featured' : ''}`}
+              style={`--app-color: ${app.color}; --delay: ${app.delay}s;`}
+            >
+              <div class="card-inner">
+                <div class="card-glow" />
+                <div class="card-content">
+                  <div
+                    class="app-icon-placeholder"
+                    style={`background: ${app.color};`}
+                  >
+                    <div class="icon-shine" />
+                  </div>
+                  <p class="app-name">{app.name}</p>
                 </div>
-                <p class="app-name">{app.name}</p>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
 
       <!-- Decorative grid overlay -->
@@ -76,13 +83,22 @@ const integrations = [
       <p class="text-lg text-slate-600 mb-6">
         Plus hundreds more through our integration partners
       </p>
-      <a 
-        href="/contact" 
+      <a
+        href="/contact"
         class="inline-flex items-center px-8 py-4 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl hover:scale-105"
       >
         See All Integrations
-        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        <svg
+          class="ml-2 w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
       </a>
     </div>
@@ -120,7 +136,7 @@ const integrations = [
     background: white;
     border-radius: 16px;
     padding: 2rem 1.5rem;
-    box-shadow: 
+    box-shadow:
       0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,7 +145,7 @@ const integrations = [
 
   .integration-card:hover .card-inner {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 
+    box-shadow:
       0 20px 25px -5px rgba(0, 0, 0, 0.1),
       0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
@@ -215,7 +231,7 @@ const integrations = [
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
       linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
       linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;

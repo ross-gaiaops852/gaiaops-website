@@ -31,7 +31,12 @@ body {
 }
 
 /* Typography Base Styles */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-family: var(--font-family-primary);
   color: var(--color-dark-gray);
@@ -77,7 +82,8 @@ a:hover {
 }
 
 /* List Styles */
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding-left: var(--spacing-3);
 }
@@ -109,7 +115,9 @@ li {
 }
 
 /* Form Elements */
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-body);
   border: 1px solid var(--color-light-gray);
@@ -118,7 +126,9 @@ input, textarea, select {
   transition: border-color var(--transition-normal);
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   border-color: var(--color-teal-primary);
   box-shadow: 0 0 0 3px rgba(74, 155, 139, 0.1);
@@ -200,8 +210,13 @@ section {
 
 /* Loading States */
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .loading {
@@ -210,12 +225,14 @@ section {
 
 /* Progressive Enhancement */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   html {
     scroll-behavior: auto;
   }
@@ -234,12 +251,12 @@ section {
     color: black;
     background: white;
   }
-  
+
   a::after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
     font-size: 10pt;
   }
-  
+
   .btn {
     border: 1px solid black !important;
     background: white !important;
