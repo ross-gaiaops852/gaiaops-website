@@ -3,14 +3,16 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  noindex?: boolean;
 }
 
 import { getEnvironmentConfig } from '../config/environment';
 
-const { 
-  title, 
-  description = "GaiaOps - Progressive Operational Excellence for Environmental Consultancies", 
-  image = "/og-image.jpg" 
+const {
+  title,
+  description = "GaiaOps - Progressive Operational Excellence for Environmental Consultancies",
+  image = "/og-image.jpg",
+  noindex = false,
 } = Astro.props;
 
 // Get comprehensive environment configuration
@@ -29,7 +31,13 @@ const { shouldIndex } = config;
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Protection System - Multi-layer approach -->
-    {!shouldIndex ? (
+    {noindex ? (
+      <>
+        <!-- Page-level noindex (e.g. thank-you pages) -->
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
+      </>
+    ) : !shouldIndex ? (
       <>
         <!-- Primary robots directive -->
         <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
