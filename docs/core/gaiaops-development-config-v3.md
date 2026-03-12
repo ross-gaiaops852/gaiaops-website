@@ -1,9 +1,9 @@
 # GaiaOps Development Configuration
 **For**: Claude Opus 4.6 / Claude Sonnet 4.6 (Desktop/Web Chat + Claude Code Sessions)
-**Last Updated**: March 11, 2026
-**Version**: 3.4
+**Last Updated**: March 12, 2026
+**Version**: 3.5
 **Project Phase**: MVP Phase 2 - SEO & Cleanup
-**Current Status**: All core pages live, SEO indexing fixed, Google Search Console configured, sitemap auto-generated
+**Current Status**: All core pages live, SEO indexing fixed, Google Search Console configured, sitemap auto-generated with filtering
 
 ---
 
@@ -332,7 +332,7 @@ git checkout development
 **Package Manager**: npm
 **UI Library**: Heroicons (220 icons integrated)
 **CSS Framework**: Tailwind CSS (via Astro)
-**Sitemap**: @astrojs/sitemap (auto-generated at build)
+**Sitemap**: @astrojs/sitemap (auto-generated at build, filtered to exclude /thank-you/, /admin/, /api/, /_private/)
 
 ### Dev Server
 ```powershell
@@ -730,15 +730,18 @@ to `https://gaiaops.io` which enables full indexing.
 
 **How it works:**
 - `astro.config.mjs` sets `site` from `SITE_URL` env var (or defaults to `https://gaiaops.io`)
+- `astro.config.mjs` configures `@astrojs/sitemap` with a `filter` to exclude paths blocked by robots.txt (`/thank-you/`, `/admin/`, `/api/`, `/_private/`)
 - `src/config/environment.ts` checks the hostname against production domain whitelist
 - `src/pages/robots.txt.ts` generates environment-appropriate robots.txt at build time
-- `src/layouts/BaseLayout.astro` conditionally renders noindex/index meta tags
-- `@astrojs/sitemap` auto-generates `sitemap-index.xml` from all pages
+- `src/layouts/BaseLayout.astro` conditionally renders noindex/index meta tags; supports per-page `noindex` prop for pages that should never be indexed (e.g. thank-you pages)
+- `@astrojs/sitemap` auto-generates `sitemap-index.xml` from filtered pages (23 URLs)
+
+**Per-page noindex:** Add `noindex` prop to `BaseLayout` for pages that should never appear in search results, regardless of environment. This is used on all `/thank-you/*` pages as defense-in-depth alongside robots.txt.
 
 **Google Search Console:**
 - Verified via DNS TXT record (March 2026)
 - Sitemap submitted: `https://gaiaops.io/sitemap-index.xml`
-- 26 pages discovered
+- 23 pages in sitemap (previously 26; removed 3 thank-you pages that conflicted with robots.txt Disallow rules)
 
 ### Dependabot PR Handling
 
@@ -1032,6 +1035,7 @@ npm run dev -- --port 4322
 - ✅ Navigation system (desktop + mobile)
 - ✅ SEO indexing fix — robots.txt, sitemap, meta tags (Mar 10, 2026)
 - ✅ Google Search Console configured and sitemap submitted (Mar 10, 2026)
+- ✅ Fixed Search Console "Blocked by robots.txt" issue — filtered sitemap, added per-page noindex, cleaned up robots.txt (Mar 12, 2026)
 - ✅ Environment-aware builds via SITE_URL env var (Mar 10, 2026)
 - ✅ Fixed 287 TypeScript errors, re-enabled `astro check` in build (Mar 10, 2026)
 
@@ -1114,6 +1118,13 @@ git log --oneline -5
 
 ## 🔄 VERSION HISTORY
 
+**Version 3.5** (March 12, 2026)
+- Fixed Google Search Console "Blocked by robots.txt" issue (6 pages flagged)
+- Added sitemap filter in `astro.config.mjs` to exclude `/thank-you/`, `/admin/`, `/api/`, `/_private/` paths (26 → 23 URLs)
+- Added `noindex` prop to `BaseLayout.astro` for per-page indexing control
+- Applied `noindex` to all 3 thank-you pages as defense-in-depth
+- Cleaned up production robots.txt: removed redundant `Allow` directives and `Crawl-delay`
+
 **Version 3.4** (March 11, 2026)
 - Migrated ESLint from `.eslintrc.json` to `eslint.config.js` (flat config for ESLint 9.x)
 - Fixed YAML syntax error in CI pipeline that broke all workflow runs since creation
@@ -1195,6 +1206,6 @@ git log --oneline -5
 
 **Questions? Use Claude Desktop for strategic guidance, Claude Code for implementation.**
 
-**Last Updated**: March 11, 2026
-**Version**: 3.4
+**Last Updated**: March 12, 2026
+**Version**: 3.5
 **Maintained By**: Claude Opus 4.6 (with Ross)

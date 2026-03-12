@@ -7,32 +7,16 @@ export const GET: APIRoute = ({ site, url }) => {
   let robotsContent: string;
 
   if (config.shouldIndex) {
-    // Production: Allow indexing with comprehensive rules
-    robotsContent = `# GaiaOps Production Robots - gaiaops.com
+    // Production: Allow indexing with targeted disallow rules
+    robotsContent = `# GaiaOps Production Robots
 User-agent: *
 Allow: /
-Crawl-delay: 1
-
-# Sitemap location
-Sitemap: ${(site || url.origin).toString().replace(/\/$/, '')}/sitemap-index.xml
-
-# Block admin/private paths even in production
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_private/
 Disallow: /thank-you/
 
-# Allow important pages for SEO
-Allow: /solutions/
-Allow: /resources/
-Allow: /how-we-help/
-Allow: /about/
-Allow: /contact/
-Allow: /assessment/
-Allow: /pricing/
-
-# GaiaOps - Multiply Your Environmental Impact
-# Operational Excellence for Environmental Consultancies
+Sitemap: ${(site || url.origin).toString().replace(/\/$/, '')}/sitemap-index.xml
 `;
   } else {
     // Development/Staging: Comprehensive blocking
